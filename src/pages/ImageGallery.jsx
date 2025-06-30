@@ -3,16 +3,23 @@ import React, { useEffect, useState } from "react";
 const ImageGallery = () => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch(`https://corsproxy.io/?${encodeURIComponent('https://script.google.com/macros/s/AKfycbwUmgvSN5-eZ6r7uuOWh75Zfq-grckGz-PlkOK0tcYAL8wJVLMyZ-dG6PG2SmoCPeg5/exec')}`)
-      .then(response => response.json())
-      .then(data => {
+    fetch("https://script.google.com/macros/s/AKfycbwUmgvSN5-eZ6r7uuOWh75Zfq-grckGz-PlkOK0tcYAL8wJVLMyZ-dG6PG2SmoCPeg5/exec")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
         setImages(data);
         setLoading(false);
       })
-      .catch(error => {
-        console.error('Error fetching images through CORS proxy:', error);
+      .catch((error) => {
+        console.error("Error fetching images:", error);
+        setError(error);
         setLoading(false);
       });
   }, []);
@@ -21,6 +28,14 @@ const ImageGallery = () => {
     return (
       <main className="flex justify-center items-center min-h-screen">
         <p className="text-blue-700 text-lg">Loading gallery...</p>
+      </main>
+    );
+  }
+
+  if (error) {
+    return (
+      <main className="flex justify-center items-center min-h-screen">
+        <p className="text-red-600 text-lg">Failed to load images. Try again later.</p>
       </main>
     );
   }
