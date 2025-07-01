@@ -15,6 +15,8 @@ const Products = () => {
     <main className="max-w-7xl mx-auto px-4 py-12 space-y-16 text-gray-800">
 
       {/* Intro Section */}
+      <h1 className="text-3xl font-bold text-blue-900 mb-6">SYNERGY TELECOM PRODCUTS</h1>
+
       <section className="bg-gradient-to-r from-blue-100 via-white to-blue-50 p-8 rounded-2xl shadow-md">
         <p className="text-lg md:text-xl font-semibold leading-relaxed text-justify text-gray-800">
           We are one of the fastest-growing companies in North India specializing in the manufacturing of microwave components, IBS, and BTS installation materials. With massive stocks of RF connectors, cables, and microwave parts, we’re proud to be one of the largest RF component stockists in India. As authorized distributors of Professional Taiwan, we serve major clients like Ericsson, Nokia/Siemens, Alcatel/Lucent, Bharti, Vodafone, Idea, HFCL, Tellabs, Aricent, ITI, BSNL, Power Grid Corporation, and all OEMs and telecom operators.

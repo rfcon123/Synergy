@@ -38,9 +38,9 @@ const VideoGallery = () => {
         <aside className="bg-white rounded-xl shadow-md p-6 w-full lg:w-1/4 sticky top-6">
           <div className="text-center">
             <img
-              src="https://yt3.googleusercontent.com/ytc/APkrFKZAYZVW6A33ILQ_8Tx4gEQ4yAjbA-RarYCIYXurYQ=s176-c-k-c0x00ffffff-no-rj"
+              src="/image.png"
               alt="Synergy Telecom"
-              className="w-24 h-24 sm:w-28 sm:h-28 mx-auto rounded-full border-4 border-blue-600 mb-3"
+              className="w-20 h-20 sm:w-20 sm:h-20 mx-auto rounded-full border-4 border-blue-600 mb-3"
             />
             <h2 className="text-lg sm:text-xl font-bold text-blue-800 mb-1">Synergy Telecom Pvt. Ltd.</h2>
             <p className="text-xs sm:text-sm text-gray-500 mb-4">Official YouTube Channel</p>

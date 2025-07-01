@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import liion from '../assets/liion.jpg'; 
 
 const LiionBattery = () => {
   const [formData, setFormData] = useState({
@@ -48,19 +49,21 @@ const LiionBattery = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-100 py-10 px-4">
 
       {/* Top Image Banner */}
-      <div className="w-full mb-8">
-        <img
-          src="https://images.unsplash.com/photo-1581090700227-1e37b1904182?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80"
-          alt="Li-Ion Battery"
-          className="w-full max-h-[250px] sm:max-h-[300px] object-cover rounded-lg shadow"
-        />
-      </div>
-
-      {/* Page Heading */}
       <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-8">
         Li-Ion Battery Solutions
       </h1>
+      <div className="w-full mb-8">
+    <div className="flex justify-center items-center bg-gradient-to-b from-blue-50 to-white py-6 px-4">
+  <img
+    src={liion}
+    alt="Li-Ion Battery"
+    className="w-full max-w-5xl h-auto object-cover rounded-xl shadow-lg"
+  />
+</div>
 
+      </div>
+
+  
       {/* Responsive Grid - Stack on mobile, side by side on large */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
 

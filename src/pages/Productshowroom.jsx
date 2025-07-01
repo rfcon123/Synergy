@@ -1,115 +1,232 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import rfcable from '../assets/components/rfcable.jpg';
+import jumpercable from '../assets/components/jumpercable.jpg';
+import highfreqcable from '../assets/components/highfreqcable.jpg';
+import fakraconnector from '../assets/components/fakraconnector.jpg';
+// import 5gproduct from '../assets/components/5gproduct.jpg';
+import sfptransceiver from '../assets/components/sfptransreceiver.jpg';
+import helicalantenna from '../assets/components/helicalantenna.jpg';
+import hfandvhfantenna from '../assets/components/hfandvhfantenna.jpg';
+import fmeconnector from '../assets/components/fmeconnector.jpg';
+import patanjalisolarproducts from '../assets/components/patanjalisolarprodcuts.jpg';
+import highfrequencytermination from '../assets/components/highfrequencytermination.jpg';
+import tetrabandproducts from '../assets/components/tetrabandproducts.jpg';
+import cableassembly from '../assets/components/cableassembly.jpg';
+import solartrackingsystem from '../assets/components/solartrackingsystem.jpg';
+import elcomsolarproduct from '../assets/components/elcomsolarproducts.jpg';
+import surveillancetools from '../assets/components/surveillancetools.jpg';
+import telescopicmast from '../assets/components/telescopicmast.jpg';
+import combinermxproduct from '../assets/components/mxproduct.jpg';
+import amplifierandcombiner from '../assets/components/amplifier and combiner.jpg';
+import rfcoupler from '../assets/components/rfcoupler.jpg';
+import roxteccomsealbts from '../assets/components/roxteccomseal.jpg';
+import voipphone from '../assets/components/voipphone.jpg';
+import rfadapter from '../assets/components/rfadapter.jpg';
+import kronehighfrequencyadapter from '../assets/components/krone.jpg';
+import uyconnector from '../assets/components/uyconnector.jpg';
+import andrewcutter from '../assets/components/andrewcutter.jpg';
+import rfattenuator from '../assets/components/rfattenuator.jpg';
+import highfreqattenuator from '../assets/components/highfreqattenuator.jpg';
+import solarproduct from '../assets/components/solarproduct.jpg';
+import rfconnector from '../assets/components/rfconnector.jpg';
+import bmaconnector from '../assets/components/bmaconnector.jpg';
+import bncconnector from '../assets/components/bncconnector.jpg';
+import bqconnector from '../assets/components/bqconnector.jpg';
+import c4connector from '../assets/components/c4connector.jpg';
+import cconnector from '../assets/components/cconnector.jpg';
+import crc9connector from '../assets/components/crc9connector.jpg';
+import dinconnector from '../assets/components/dinconnector.jpg';
+// import 4.3-1.0connector from '../assets/components/4310connector.jpg';
+import ftypeconnector from '../assets/components/fconnector.jpg';
+import hnconnector from '../assets/components/hnconnector.jpg';
+import kmx3connector from '../assets/components/kmx3connector.jpg';
+import l9connector from '../assets/components/l9connector.jpg';
+import m4connector from '../assets/components/m4connector.jpg';
+import mcxconnector from '../assets/components/mcxconnector.jpg';
+import mmcxconnector from '../assets/components/mmcxconnector.jpg';
+import ntypeconnector from '../assets/components/ntypeconnector.jpg';
+import qmaconnector from '../assets/components/qmaconnector.jpg';
+import qnconnector from '../assets/components/qnconnector.jpg';
+import saaconnector from '../assets/components/saaconnector.jpg';
+import smaconnector from '../assets/components/smaconnector.jpg';
+import smbconnector from '../assets/components/smbconnector.jpg';
+import smcconnector from '../assets/components/smcconnector.jpg';
+import smpconnector from '../assets/components/smpconnector.jpg';
+import smzconnector from '../assets/components/smzconnector.jpg';
+import ssmbconnector from '../assets/components/ssmbconnector.jpg';
+import tncconnector from '../assets/components/tncconnector.jpg';
+import triaxialconnector from '../assets/components/triaxial connector.jpg';
+import tqconnector from '../assets/components/tqconnector.jpg';
+import uhfconnector from '../assets/components/uhfconnector.jpg';
+import highfreqconnector from '../assets/components/highfreqconnector.jpg';
+// import 1.85mmconnector from '../assets/components/185mmconnector.jpg';
+// import 2.4mmconnector from '../assets/components/24mmconnector.jpg';
+// import 2.92mmconnectors from '../assets/components/292mmconnectors.jpg';
+// import 3.5mmconnector from '../assets/components/35mmconnector.jpg';
+import circularconnector from '../assets/components/circularconnector.jpg';
+// import allconnectorcatalogue from '../assets/components/allconnectorcatalogue.jpg';
+import antennahornantenna from '../assets/components/hornantenna.jpg';
+import balun from '../assets/components/balun.jpg';
+import berylliumcopper from '../assets/components/berylliamcopper.jpg';
+import biastee from '../assets/components/biastee.jpg';
+import broadcastairgap from '../assets/components/broadcastairgapcablescatalogue.jpg';
 
-// Sample product data with reliable placeholder images
+import cablelugs from '../assets/components/cablelugs.jpg';
+import cabletie from '../assets/components/cabletie.jpg';
+import networkconnector from '../assets/components/networkconnector.jpg';
+import dcpowercable from '../assets/components/dc_powercable.jpg';
+import dcblock from '../assets/components/dcblock.jpg';
+import dctodcconverter from '../assets/components/dctodcconverter.jpg';
+import diplexer from '../assets/components/diplexer.jpg';
+import dummyload from '../assets/components/dummyload.jpg';
+// import emiemcshieldingproduct from '../assets/components/emiemcshieldingproduct.jpg';
+import environmentalchamber from '../assets/components/environmentalchamber.jpg';
+import feederclamp from '../assets/components/feederclamp.jpg';
+import feedthru from '../assets/components/feedthru.jpg';
+import flangeconnector from '../assets/components/flangeconnector.jpg';
+// import gpsgpsmodule from '../assets/components/gpsgpsmodule.jpg';
+import highfrequencyproduct from '../assets/components/highfrequencyproduct.jpg';
+import hoistinggrip from '../assets/components/hoistinggrip.jpg';
+import ibsproduct from '../assets/components/ibsproduct.jpg';
+import installationkit from '../assets/components/installationkit.jpg';
+import microwavecomponent from '../assets/components/microwavecomponent.jpg';
+import milgradecable from '../assets/components/milgradecable.jpg';
+import opticalfiberproducts from '../assets/components/opticalfiberproducts.jpg';
+import proskittoolkits from '../assets/components/proskittoolkits.jpg';
+import protectivecap from '../assets/components/protectivecap.jpg';
+import rechargeablebattery from '../assets/components/rechargeablebattery.jpg';
+import rfswitch from '../assets/components/rfswitch.jpg';
+import shieldbox from '../assets/components/shieldbox.jpg';
+import splitter from '../assets/components/splitter.jpg';
+import shrinkabletube from '../assets/components/shrinkabetube.jpg';
+import surgearrester from '../assets/components/surgearrester.jpg';
+import telecommunicationmast from '../assets/components/telecommunicationmast.jpg';
+import testmeasurementequipment from '../assets/components/spectrumanalyszer.jpg';
+import tools from '../assets/components/tools.jpg';
+import waveguideadaptor from '../assets/components/waveguideadapter.jpg';
+import waveguideflange from '../assets/components/waveguideflange.jpg';
+import waveguidecomponent from '../assets/components/waveguidecomponent.jpg';
+import j5gproduct from '../assets/components/j5gproduct.jpg';
+import j4310connector from '../assets/components/j4.3-1.0connector.jpg';
+import j185mmconnector from '../assets/components/j1.85mmconnector.jpg';
+import j24mmconnector from '../assets/components/j2.4mmconnector.jpg';
+import j292mmconnectors from '../assets/components/j2.92mmconnector.jpg';
+import j35mmconnector from '../assets/components/j3.5mmconnector.jpg';
+import antenna from '../assets/components/antenna.jpg';
+import emi_emcshieldingproduct from '../assets/components/emi_emcshieldingproduct.jpg';
+import gps_gpsmodule from '../assets/components/gps_gpsmodule.jpg';
+
+
+
 const productsData = [
-  { name: "RF Cable", image: "https://placehold.co/600x400?text=RF+Cable" },
-  { name: "Jumper Cable", image: "https://placehold.co/600x400?text=Jumper+Cable" },
-  { name: "High Freq Cable", image: "https://placehold.co/600x400?text=High+Freq+Cable" },
-  { name: "FAKRA CONNECTOR", image: "https://placehold.co/600x400?text=FAKRA+CONNECTOR" },
-  { name: "5G PRODUCT", image: "https://placehold.co/600x400?text=5G+PRODUCT" },
-  { name: "SFP TRANSCEIVER", image: "https://placehold.co/600x400?text=SFP+TRANSCEIVER" },
-  { name: "Helical Antenna", image: "https://placehold.co/600x400?text=Helical+Antenna" },
-  { name: "HF AND VHF ANTENNA", image: "https://placehold.co/600x400?text=HF+VHF+ANTENNA" },
-  { name: "FME CONNECTOR", image: "https://placehold.co/600x400?text=FME+CONNECTOR" },
-  { name: "Patanjali Solar Products", image: "https://placehold.co/600x400?text=Solar+Products" },
-  { name: "High Frequency Termination", image: "https://placehold.co/600x400?text=HF+Termination" },
-  { name: "TETRA BAND PRODUCTS", image: "https://placehold.co/600x400?text=TETRA+Products" },
-  { name: "Cable Assembly", image: "https://placehold.co/600x400?text=Cable+Assembly" },
-  { name: "SOLAR TRACKING SYSTEM", image: "https://placehold.co/600x400?text=Solar+Tracker" },
-  { name: "ELCOM SOLAR PRODUCT", image: "https://placehold.co/600x400?text=ELCOM+Solar" },
-  { name: "Surveillance Tools", image: "https://placehold.co/600x400?text=Surveillance" },
-  { name: "TELESCOPIC MAST", image: "https://placehold.co/600x400?text=Telescopic+Mast" },
-  { name: "COMBINER MX PRODUCT", image: "https://placehold.co/600x400?text=Combiner+MX" },
-  { name: "Amplifier and combiner", image: "https://placehold.co/600x400?text=Amplifier" },
-  { name: "RF Coupler", image: "https://placehold.co/600x400?text=RF+Coupler" },
-  { name: "Roxtec Comseal BTS", image: "https://placehold.co/600x400?text=Roxtec+BTS" },
-  { name: "VoIP Phone", image: "https://placehold.co/600x400?text=VoIP+Phone" },
-  { name: "RF Adapter", image: "https://placehold.co/600x400?text=RF+Adapter" },
-  { name: "Krone High Frequency Adapter", image: "https://placehold.co/600x400?text=Krone+HF" },
-  { name: "UY Connector", image: "https://placehold.co/600x400?text=UY+Connector" },
-  { name: "Andrew cutter", image: "https://placehold.co/600x400?text=Andrew+Cutter" },
-  { name: "RF Attenuator", image: "https://placehold.co/600x400?text=RF+Attenuator" },
-  { name: "High Freq Attenuator", image: "https://placehold.co/600x400?text=HF+Attenuator" },
-  { name: "Solar Product", image: "https://placehold.co/600x400?text=Solar+Product" },
-  { name: "RF Connector", image: "https://placehold.co/600x400?text=RF+Connector" },
-  { name: "BMA CONNECTOR", image: "https://placehold.co/600x400?text=BMA+Connector" },
-  { name: "BNC CONNECTOR", image: "https://placehold.co/600x400?text=BNC+Connector" },
-  { name: "BQ CONNECTOR", image: "https://placehold.co/600x400?text=BQ+Connector" },
-  { name: "C4 CONNECTOR", image: "https://placehold.co/600x400?text=C4+Connector" },
-  { name: "C CONNECTOR", image: "https://placehold.co/600x400?text=C+Connector" },
-  { name: "CRC9 CONNECTOR", image: "https://placehold.co/600x400?text=CRC9+Connector" },
-  { name: "DIN CONNECTOR", image: "https://placehold.co/600x400?text=DIN+Connector" },
-  { name: "4.3 - 1.0 CONNECTOR", image: "https://placehold.co/600x400?text=4.3-1.0+Connector" },
-  { name: "F TYPE CONNECTOR", image: "https://placehold.co/600x400?text=F+Type+Connector" },
-  { name: "HN CONNECTOR", image: "https://placehold.co/600x400?text=HN+Connector" },
-  { name: "KMX3 CONNECTOR", image: "https://placehold.co/600x400?text=KMX3+Connector" },
-  { name: "L9 CONNECTOR", image: "https://placehold.co/600x400?text=L9+Connector" },
-  { name: "M4 CONNECTOR", image: "https://placehold.co/600x400?text=M4+Connector" },
-  { name: "MCX CONNECTOR", image: "https://placehold.co/600x400?text=MCX+Connector" },
-  { name: "MMCX CONNECTOR", image: "https://placehold.co/600x400?text=MMCX+Connector" },
-  { name: "N TYPE CONNECTOR", image: "https://placehold.co/600x400?text=N+Type+Connector" },
-  { name: "QMA CONNECTOR", image: "https://placehold.co/600x400?text=QMA+Connector" },
-  { name: "QN CONNECTOR", image: "https://placehold.co/600x400?text=QN+Connector" },
-  { name: "SAA CONNECTOR", image: "https://placehold.co/600x400?text=SAA+Connector" },
-  { name: "SMA CONNECTOR", image: "https://placehold.co/600x400?text=SMA+Connector" },
-  { name: "SMB CONNECTOR", image: "https://placehold.co/600x400?text=SMB+Connector" },
-  { name: "SMC CONNECTOR", image: "https://placehold.co/600x400?text=SMC+Connector" },
-  { name: "SMP CONNECTOR", image: "https://placehold.co/600x400?text=SMP+Connector" },
-  { name: "SMZ CONNECTOR", image: "https://placehold.co/600x400?text=SMZ+Connector" },
-  { name: "SSMB CONNECTOR", image: "https://placehold.co/600x400?text=SSMB+Connector" },
-  { name: "TNC CONNECTOR", image: "https://placehold.co/600x400?text=TNC+Connector" },
-  { name: "TRIAXIAL CONNECTOR", image: "https://placehold.co/600x400?text=Triaxial+Connector" },
-  { name: "TQ CONNECTOR", image: "https://placehold.co/600x400?text=TQ+Connector" },
-  { name: "UHF CONNECTOR", image: "https://placehold.co/600x400?text=UHF+Connector" },
-  { name: "High Freq Connector", image: "https://placehold.co/600x400?text=HF+Connector" },
-  { name: "1.85mm Connector", image: "https://placehold.co/600x400?text=1.85mm+Connector" },
-  { name: "2.4mm Connector", image: "https://placehold.co/600x400?text=2.4mm+Connector" },
-  { name: "2.92mm Connectors", image: "https://placehold.co/600x400?text=2.92mm+Connector" },
-  { name: "3.5mm Connector", image: "https://placehold.co/600x400?text=3.5mm+Connector" },
-  { name: "CIRCULAR CONNECTOR", image: "https://placehold.co/600x400?text=Circular+Connector" },
-  { name: "All Connector Catalogue", image: "https://placehold.co/600x400?text=Connector+Catalog" },
-  { name: "Antenna Horn Antenna", image: "https://placehold.co/600x400?text=Horn+Antenna" },
-  { name: "Balun", image: "https://placehold.co/600x400?text=Balun" },
-  { name: "Beryllium Copper", image: "https://placehold.co/600x400?text=Beryllium+Copper" },
-  { name: "Bias Tee", image: "https://placehold.co/600x400?text=Bias+Tee" },
-  { name: "Broadcast Air Gap", image: "https://placehold.co/600x400?text=Air+Gap" },
-  { name: "Cables Catalogue", image: "https://placehold.co/600x400?text=Cables+Catalog" },
-  { name: "Cable Lugs", image: "https://placehold.co/600x400?text=Cable+Lugs" },
-  { name: "Cable Tie", image: "https://placehold.co/600x400?text=Cable+Tie" },
-  { name: "Network Connector", image: "https://placehold.co/600x400?text=Network+Connector" },
-  { name: "DC/Power Cable", image: "https://placehold.co/600x400?text=DC+Cable" },
-  { name: "DC Block", image: "https://placehold.co/600x400?text=DC+Block" },
-  { name: "DC TO DC CONVERTER", image: "https://placehold.co/600x400?text=DC+Converter" },
-  { name: "Diplexer", image: "https://placehold.co/600x400?text=Diplexer" },
-  { name: "Dummy load", image: "https://placehold.co/600x400?text=Dummy+Load" },
-  { name: "EMI/EMC Shielding Product", image: "https://placehold.co/600x400?text=EMI+Shielding" },
-  { name: "ENVIRONMENTAL CHAMBER", image: "https://placehold.co/600x400?text=Env+Chamber" },
-  { name: "Feeder Clamp", image: "https://placehold.co/600x400?text=Feeder+Clamp" },
-  { name: "Feed Thru", image: "https://placehold.co/600x400?text=Feed+Thru" },
-  { name: "Flange Connector", image: "https://placehold.co/600x400?text=Flange+Connector" },
-  { name: "GPS/GPS Module", image: "https://placehold.co/600x400?text=GPS+Module" },
-  { name: "High Frequency Product", image: "https://placehold.co/600x400?text=HF+Product" },
-  { name: "Hoisting Grip", image: "https://placehold.co/600x400?text=Hoisting+Grip" },
-  { name: "IBS Product", image: "https://placehold.co/600x400?text=IBS+Product" },
-  { name: "Installation Kit", image: "https://placehold.co/600x400?text=Installation+Kit" },
-  { name: "Microwave Component", image: "https://placehold.co/600x400?text=Microwave" },
-  { name: "MILGRADE CABLE", image: "https://placehold.co/600x400?text=MIL+Cable" },
-  { name: "Optical Fiber Products", image: "https://placehold.co/600x400?text=Fiber+Optic" },
-  { name: "Proskit Toolkits", image: "https://placehold.co/600x400?text=Proskit+Tools" },
-  { name: "Protective Cap", image: "https://placehold.co/600x400?text=Protective+Cap" },
-  { name: "Rechargeble Battery", image: "https://placehold.co/600x400?text=Battery" },
-  { name: "RF Switch", image: "https://placehold.co/600x400?text=RF+Switch" },
-  { name: "Shield Box", image: "https://placehold.co/600x400?text=Shield+Box" },
-  { name: "Splitter", image: "https://placehold.co/600x400?text=Splitter" },
-  { name: "Shrinkable Tube", image: "https://placehold.co/600x400?text=Shrink+Tube" },
-  { name: "Surge Arrester", image: "https://placehold.co/600x400?text=Surge+Arrester" },
-  { name: "TELECOMMUNICATION MAST", image: "https://placehold.co/600x400?text=Telecom+Mast" },
-  { name: "Test & Measurement Equipment", image: "https://placehold.co/600x400?text=Test+Equipment" },
-  { name: "Tools", image: "https://placehold.co/600x400?text=Tools" },
-  { name: "WAVEGUIDE ADAPTOR", image: "https://placehold.co/600x400?text=Waveguide" },
-  { name: "Waveguide Flange", image: "https://placehold.co/600x400?text=Waveguide+Flange" },
-  { name: "Waveguide component", image: "https://placehold.co/600x400?text=Waveguide" }
+  { name: "RF Cable", image: rfcable },
+  { name: "Jumper Cable", image: jumpercable },
+  { name: "High Freq Cable", image: highfreqcable },
+  { name: "Fakra Connector", image: fakraconnector },
+  { name: "SFP Transceiver", image: sfptransceiver },
+  { name: "5G Product", image: j5gproduct },
+  { name: "Helical Antenna", image: helicalantenna },
+  { name: "HF and VHF Antenna", image: hfandvhfantenna },
+  { name: "FME Connector", image: fmeconnector },
+  { name: "Patanjali Solar Products", image: patanjalisolarproducts },
+  { name: "High Frequency Termination", image: highfrequencytermination },
+  { name: "Tetra Band Products", image: tetrabandproducts },
+  { name: "Cable Assembly", image: cableassembly },
+  { name: "Solar Tracking System", image: solartrackingsystem },
+  { name: "Elcom Solar Product", image: elcomsolarproduct },
+  { name: "Surveillance Tools", image: surveillancetools },
+  { name: "Telescopic Mast", image: telescopicmast },
+  { name: "Combiner MX Product", image: combinermxproduct },
+  { name: "Amplifier and Combiner", image: amplifierandcombiner },
+  { name: "RF Coupler", image: rfcoupler },
+  { name: "Roxtec Comseal ", image: roxteccomsealbts },
+  { name: "VoIP Phone", image: voipphone },
+  { name: "RF Adapter", image: rfadapter },
+  { name: "Krone High Frequency Adapter", image: kronehighfrequencyadapter },
+  { name: "UY Connector", image: uyconnector },
+  { name: "Andrew Cutter", image: andrewcutter },
+  { name: "RF Attenuator", image: rfattenuator },
+  { name: "High Freq Attenuator", image: highfreqattenuator },
+  { name: "Solar Product", image: solarproduct },
+  { name: "RF Connector", image: rfconnector },
+  { name: "BMA Connector", image: bmaconnector },
+  { name: "BNC Connector", image: bncconnector },
+  { name: "BQ Connector", image: bqconnector },
+  { name: "C4 Connector", image: c4connector },
+  { name: "C Connector", image: cconnector },
+  { name: "CRC9 Connector", image: crc9connector },
+  { name: "DIN Connector", image: dinconnector },
+  { name: "4.3-1.0 Connector", image: j4310connector }, 
+  { name: "F Type Connector", image: ftypeconnector },
+  { name: "HN Connector", image: hnconnector },
+  { name: "KMX3 Connector", image: kmx3connector },
+  { name: "L9 Connector", image: l9connector },
+  { name: "M4 Connector", image: m4connector },
+  { name: "MCX Connector", image: mcxconnector },
+  { name: "MMCX Connector", image: mmcxconnector },
+  { name: "N Type Connector", image: ntypeconnector },
+  { name: "QMA Connector", image: qmaconnector },
+  { name: "QN Connector", image: qnconnector },
+  { name: "SAA Connector", image: saaconnector },
+  { name: "SMA Connector", image: smaconnector },
+  { name: "SMB Connector", image: smbconnector },
+  { name: "SMC Connector", image: smcconnector },
+  { name: "SMP Connector", image: smpconnector },
+  { name: "SMZ Connector", image: smzconnector },
+  { name: "SSMB Connector", image: ssmbconnector },
+  { name: "TNC Connector", image: tncconnector },
+  { name: "Triaxial Connector", image: triaxialconnector },
+  { name: "TQ Connector", image: tqconnector },
+  { name: "UHF Connector", image: uhfconnector },
+  { name: "High Freq Connector", image: highfreqconnector },
+  { name: "1.85mm Connector", image: j185mmconnector },
+  { name: "2.4mm Connector", image: j24mmconnector },
+  { name: "2.92mm Connectors", image: j292mmconnectors },
+  { name: "3.5mm Connector", image: j35mmconnector },
+  { name: "Circular Connector", image: circularconnector },
+  { name: "Antenna", image: antenna },
+  { name: "Horn Antenna", image: antennahornantenna },
+  { name: "Balun", image: balun },
+  { name: "Beryllium Copper", image: berylliumcopper },
+  { name: "Bias Tee", image: biastee },
+  { name: "Broadcast Air Gap", image: broadcastairgap },
+  { name: "Cable Lugs", image: cablelugs },
+  { name: "Cable Tie", image: cabletie },
+  { name: "Network Connector", image: networkconnector },
+  { name: "DC Power Cable", image: dcpowercable },
+  { name: "DC Block", image: dcblock },
+  { name: "DC to DC Converter", image: dctodcconverter },
+  { name: "Diplexer", image: diplexer },
+  { name: "Dummy Load", image: dummyload },
+  { name: "EMI/EMC Shielding Product", image: emi_emcshieldingproduct },
+  { name: "Environmental Chamber", image: environmentalchamber },
+  { name: "Feeder Clamp", image: feederclamp },
+  { name: "Feed Thru", image: feedthru },
+  { name: "Flange Connector", image: flangeconnector },
+  { name: "GPS/GPS Module", image: gps_gpsmodule },
+  { name: "High Frequency Product", image: highfrequencyproduct },
+  { name: "Hoisting Grip", image: hoistinggrip },
+  { name: "IBS Product", image: ibsproduct },
+  { name: "Installation Kit", image: installationkit },
+  { name: "Microwave Component", image: microwavecomponent },
+  { name: "Mil Grade Cable", image: milgradecable },
+  { name: "Optical Fiber Products", image: opticalfiberproducts },
+  { name: "Proskit Toolkits", image: proskittoolkits },
+  { name: "Protective Cap", image: protectivecap },
+  { name: "Rechargeable Battery", image: rechargeablebattery },
+  { name: "RF Switch", image: rfswitch },
+  { name: "Shield Box", image: shieldbox },
+  { name: "Splitter", image: splitter },
+  { name: "Shrinkable Tube", image: shrinkabletube },
+  { name: "Surge Arrester", image: surgearrester },
+  { name: "Telecommunication Mast", image: telecommunicationmast },
+  { name: "Test Measurement Equipment", image: testmeasurementequipment },
+  { name: "Tools", image: tools },
+  { name: "Waveguide Adaptor", image: waveguideadaptor },
+  { name: "Waveguide Flange", image: waveguideflange },
+  { name: "Waveguide Component", image: waveguidecomponent },
+
 ].map(product => ({
   ...product,
   slug: product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')
@@ -155,19 +272,19 @@ const ProductShowroom = () => {
               <Link
                 to={`/product/${product.slug}`}
                 key={index}
-                className="bg-white shadow-md rounded-xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col items-center text-center border border-gray-200 hover:border-blue-400"
+                className="bg-white shadow-md p-4 rounded-xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col items-center text-center border border-gray-200 hover:border-blue-400"
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-32 object-contain p-3 bg-gray-50"
+                  className="w-45 h-auto object-contain p-3 bg-white"
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src = "https://placehold.co/600x400?text=Image+Not+Found";
                   }}
                 />
                 <div className="p-4 flex-grow">
-                  <h3 className="text-sm font-semibold text-blue-700 leading-snug">
+                  <h3 className="text-lg font-bold text-black leading-snug">
                     {product.name}
                   </h3>
                 </div>
