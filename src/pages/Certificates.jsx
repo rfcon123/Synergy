@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// ✅ Import all certificate images first
+// ✅ Import Certificate Images
 import cert1 from "../assets/certificate/cert1.png";
 import cert2 from "../assets/certificate/cert2.png";
 import cert3 from "../assets/certificate/cert3.png";
@@ -41,42 +41,43 @@ const Certificates = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-50 via-white to-blue-50 px-4 py-10">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 text-center mb-8">
+        <h1 className="text-3xl md:text-5xl font-bold text-blue-800 text-center mb-8 tracking-tight">
           Our Certifications
         </h1>
 
+        {/* Grid of Certificates */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {certificates.map((cert, index) => (
             <div
               key={index}
-              className="cursor-pointer group flex flex-col items-center text-center"
               onClick={() => setSelectedImage(cert.src)}
+              className="cursor-pointer group flex flex-col items-center text-center transition-transform duration-300 hover:scale-[1.03]"
             >
-              <div className="relative w-full h-40 overflow-hidden rounded-lg shadow-md">
+              <div className="relative w-full h-40 overflow-hidden rounded-xl shadow-md hover:shadow-lg">
                 <img
                   src={cert.src}
                   alt={cert.title}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs font-medium">
+                <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs font-medium rounded-xl">
                   Click to Zoom
                 </div>
               </div>
-              <p className="mt-2 text-sm font-semibold text-gray-700">{cert.title}</p>
+              <p className="mt-2 text-sm font-semibold text-gray-800">{cert.title}</p>
             </div>
           ))}
         </div>
 
-        {/* Zoom Modal */}
+        {/* Modal View for Zoom */}
         {selectedImage && (
           <div
-            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
             onClick={() => setSelectedImage(null)}
           >
             <img
               src={selectedImage}
               alt="Zoomed Certificate"
-              className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-2xl transition-transform duration-300 scale-100"
+              className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl transition duration-300 scale-100"
             />
           </div>
         )}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import StyledButton from "../components/StyledButton";
 
 const catalogueLinks = [
   { name: "Patch Panel Antenna", link: "https://www.rfconnector.in/Product/Patch_Panel_Antenna.pdf" },
@@ -128,6 +129,15 @@ const ProductCatalogue = () => {
           🚫 No matching catalogue found.
         </p>
       )}
+
+      {/* Contact Support Button */}
+      <div className="mt-16 flex justify-center">
+        <StyledButton
+          label="Contact Support"
+          icon={true}
+          onClick={() => window.location.href = 'mailto:support@synergytelecom.com'}
+        />
+      </div>
     </div>
   );
 };

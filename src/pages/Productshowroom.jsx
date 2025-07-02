@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import StyledButton  from '../components/StyledButton';
 import rfcable from '../assets/components/rfcable.jpg';
 import jumpercable from '../assets/components/jumpercable.jpg';
 import highfreqcable from '../assets/components/highfreqcable.jpg';
@@ -244,12 +245,13 @@ const ProductShowroom = () => {
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen px-4 py-10 md:px-10">
       <div className="max-w-7xl mx-auto">
+        
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-blue-800 mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-blue-800 mb-4 tracking-tight">
             Explore Our Product Categories
           </h2>
-          <p className="text-gray-600 text-md md:text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-md md:text-lg max-w-2xl mx-auto leading-relaxed">
             Discover a wide range of high-quality products tailored to your telecom and RF needs.
           </p>
         </div>
@@ -265,33 +267,38 @@ const ProductShowroom = () => {
           />
         </div>
 
-        {/* Product grid */}
+        {/* Product Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product, index) => (
               <Link
                 to={`/product/${product.slug}`}
                 key={index}
-                className="bg-white shadow-md p-4 rounded-xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col items-center text-center border border-gray-200 hover:border-blue-400"
+                className="bg-white shadow-md p-4 rounded-xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col items-center text-center border border-gray-200 hover:border-blue-400 group"
               >
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-45 h-auto object-contain p-3 bg-white"
+                  className="w-45 h-auto object-contain p-3 bg-white transition-transform duration-300 group-hover:scale-[1.05]"
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src = "https://placehold.co/600x400?text=Image+Not+Found";
                   }}
                 />
                 <div className="p-4 flex-grow">
-                  <h3 className="text-lg font-bold text-black leading-snug">
+                  <h3 className="text-lg font-bold text-black leading-snug tracking-tight">
                     {product.name}
                   </h3>
                 </div>
+                {/* Styled Explore Button */}
                 <div className="pb-4">
-                  <span className="px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">
-                    Explore
-                  </span>
+                  <StyledButton
+                    label="Explore"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.location.href = `/product/${product.slug}`;
+                    }}
+                  />
                 </div>
               </Link>
             ))
@@ -300,11 +307,18 @@ const ProductShowroom = () => {
           )}
         </div>
 
-        {/* Footer Note */}
-        <div className="mt-12 text-center text-sm text-gray-500">
-          <p>
-            Need help finding the right product? <a href="/contact" className="text-blue-600 underline">Contact our team</a> for personalized assistance.
+        {/* Footer Note with Centered Contact Support Button */}
+        <div className="mt-16 text-center space-y-4">
+          <p className="text-sm text-gray-600">
+            Need help finding the right product? Reach out to our team for personalized assistance.
           </p>
+          <div className="flex justify-center">
+            <StyledButton
+              label="Contact Support"
+              icon={true}
+              onClick={() => window.location.href = 'mailto:support@synergytelecom.com'}
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -312,4 +326,3 @@ const ProductShowroom = () => {
 };
 
 export default ProductShowroom;
-

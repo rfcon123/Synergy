@@ -15,20 +15,23 @@ const Products = () => {
     <main className="max-w-7xl mx-auto px-4 py-12 space-y-16 text-gray-800">
 
       {/* Intro Section */}
-      <h1 className="text-3xl font-bold text-blue-900 mb-6">SYNERGY TELECOM PRODCUTS</h1>
-
-      <section className="bg-gradient-to-r from-blue-100 via-white to-blue-50 p-8 rounded-2xl shadow-md">
-        <p className="text-lg md:text-xl font-semibold leading-relaxed text-justify text-gray-800">
-          We are one of the fastest-growing companies in North India specializing in the manufacturing of microwave components, IBS, and BTS installation materials. With massive stocks of RF connectors, cables, and microwave parts, we’re proud to be one of the largest RF component stockists in India. As authorized distributors of Professional Taiwan, we serve major clients like Ericsson, Nokia/Siemens, Alcatel/Lucent, Bharti, Vodafone, Idea, HFCL, Tellabs, Aricent, ITI, BSNL, Power Grid Corporation, and all OEMs and telecom operators.
-        </p>
-        <p className="mt-4 text-blue-700 font-bold text-lg">
-          Need urgent supply? Check our live stock and send us your enquiry for the best prices!
-        </p>
+      <section>
+        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 tracking-tight">
+          SYNERGY TELECOM PRODUCTS
+        </h1>
+        <div className="bg-gradient-to-r from-blue-100 via-white to-blue-50 p-8 rounded-2xl shadow-md">
+          <p className="text-lg md:text-xl font-semibold leading-relaxed text-justify text-gray-800">
+            We are one of the fastest-growing companies in North India specializing in the manufacturing of microwave components, IBS, and BTS installation materials. With massive stocks of RF connectors, cables, and microwave parts, we’re proud to be one of the largest RF component stockists in India. As authorized distributors of Professional Taiwan, we serve major clients like Ericsson, Nokia/Siemens, Alcatel/Lucent, Bharti, Vodafone, Idea, HFCL, Tellabs, Aricent, ITI, BSNL, Power Grid Corporation, and all OEMs and telecom operators.
+          </p>
+          <p className="mt-4 text-blue-700 font-bold text-lg">
+            Need urgent supply? Check our live stock and send us your enquiry for the best prices!
+          </p>
+        </div>
       </section>
 
       {/* Product Line Section */}
       <section>
-        <h2 className="text-3xl font-bold text-blue-900 mb-6">Product Line</h2>
+        <h2 className="text-3xl font-bold text-blue-900 mb-6 tracking-tight">Product Line</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
@@ -72,9 +75,12 @@ const Products = () => {
               desc: `DC-DC Converters, AC-DC Converters, PCB-type PSUs, GPS and Accessories.`,
             },
           ].map((product, index) => (
-            <div key={index} className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg transition">
+            <div
+              key={index}
+              className="bg-white p-5 rounded-xl shadow-md hover:shadow-lg hover:scale-[1.02] transition duration-300"
+            >
               <h3 className="text-xl font-bold text-blue-800 mb-2">{product.title}</h3>
-              <p className="text-gray-700">{product.desc}</p>
+              <p className="text-gray-700 leading-relaxed">{product.desc}</p>
             </div>
           ))}
         </div>
@@ -82,12 +88,12 @@ const Products = () => {
 
       {/* Upcoming Products Section */}
       <section>
-        <h2 className="text-3xl font-bold text-blue-900 mb-6">Upcoming Products</h2>
+        <h2 className="text-3xl font-bold text-blue-900 mb-6 tracking-tight">Upcoming Products</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {upcomingProducts.map((product, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-blue-100 via-white to-blue-50 p-4 rounded-lg shadow hover:scale-[1.02] hover:shadow-xl transition text-center text-blue-800 font-medium"
+              className="bg-gradient-to-br from-blue-100 via-white to-blue-50 p-4 rounded-lg shadow-md hover:scale-[1.03] hover:shadow-xl transition duration-300 text-center text-blue-800 font-medium"
             >
               {product}
             </div>

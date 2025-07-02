@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import liion from '../assets/liion.jpg'; 
+import liion from '../assets/liion.jpg';
+import StyledButton  from '../components/StyledButton'; 
 
 const LiionBattery = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,18 @@ const LiionBattery = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Form submitted!');
+  };
+
+  const handleReset = () => {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      productRequested: '',
+      schedule: '',
+      specifications: '',
+    });
   };
 
   const specificationDetails = [
@@ -47,27 +60,23 @@ const LiionBattery = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-100 py-10 px-4">
-
-      {/* Top Image Banner */}
+      {/* Top Heading */}
       <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-8">
         Li-Ion Battery Solutions
       </h1>
-      <div className="w-full mb-8">
-    <div className="flex justify-center items-center bg-gradient-to-b from-blue-50 to-white py-6 px-4">
-  <img
-    src={liion}
-    alt="Li-Ion Battery"
-    className="w-full max-w-5xl h-auto object-cover rounded-xl shadow-lg"
-  />
-</div>
 
+      {/* Top Image */}
+      <div className="flex justify-center items-center bg-gradient-to-b from-blue-50 to-white py-6 px-4 mb-8">
+        <img
+          src={liion}
+          alt="Li-Ion Battery"
+          className="w-full max-w-5xl h-auto object-cover rounded-xl shadow-lg"
+        />
       </div>
 
-  
-      {/* Responsive Grid - Stack on mobile, side by side on large */}
+      {/* Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-
-        {/* Left - Specifications Table */}
+        {/* Left - Specification Table */}
         <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 sm:p-6 overflow-x-auto">
           <h2 className="text-lg sm:text-xl font-semibold text-blue-800 mb-4">Specification Details</h2>
           <table className="w-full text-sm">
@@ -92,7 +101,6 @@ const LiionBattery = () => {
         <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 sm:p-6">
           <h2 className="text-lg sm:text-xl font-semibold text-blue-800 mb-4">Battery Inquiry Form</h2>
           <form onSubmit={handleSubmit} className="space-y-4 text-sm">
-
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <input
                 type="text"
@@ -163,27 +171,17 @@ const LiionBattery = () => {
               className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
             ></textarea>
 
-            <div className="flex space-x-3">
-              <button
+            {/* Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3">
+              <StyledButton
+                label="Submit Inquiry"
+                icon={true}
                 type="submit"
-                className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 rounded font-medium transition"
-              >
-                Submit
-              </button>
-              <button
-                type="reset"
-                onClick={() => setFormData({
-                  firstName: '', lastName: '', email: '', phone: '', productRequested: '', schedule: '', specifications: ''
-                })}
-                className="flex-1 bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 rounded font-medium transition"
-              >
-                Reset
-              </button>
+              />
+              
             </div>
-
           </form>
         </div>
-
       </div>
     </div>
   );

@@ -1,143 +1,143 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const videos = [
-  { id: 'dQw4w9WgXcQ', title: 'Intro to RF Technology' },
-  { id: '3JZ_D3ELwOQ', title: 'Installing Antennas Efficiently' },
-  { id: 'eVTXPUF4Oz4', title: 'IBS Overview and Setup' },
-  { id: 'Zi_XLOBDo_Y', title: 'Optical Fiber Components' },
-  { id: 'kXYiU_JCYtU', title: 'BTS Material Insights' },
-  { id: 'fLexgOxsZu0', title: 'Synergy Telecom at Expo' },
-  { id: '2vjPBrBU-TM', title: 'Microwave Component Showcase' },
-  { id: 'uelHwf8o7_U', title: 'Live Cable Testing Demo' },
-  { id: 'ScNNfyq3d_w', title: 'Advanced RF Training' },
-  { id: 'ktvTqknDobU', title: 'Connector Compatibility Guide' },
-  { id: 'lWA2pjMjpBs', title: 'Warehouse Tour' },
-  { id: 'hLQl3WQQoQ0', title: 'Fiber Cable Making Process' },
-  { id: 'hT_nvWreIhg', title: 'How to Assemble Jumpers' },
-  { id: '09R8_2nJtjg', title: 'Meet Our Team' },
-  { id: '60ItHLz5WEA', title: 'RF Load Testing' },
-  { id: 'CevxZvSJLk8', title: 'Maintenance Tips' },
-  { id: 'RgKAFK5djSk', title: 'Our Government Projects' },
-  { id: 'fJ9rUzIMcZQ', title: 'Synergy Training Academy' },
-  { id: '6Ejga4kJUts', title: 'FAQ Answered Live' },
-  { id: 'y6Sxv-sUYtM', title: 'End-to-End Installation' },
-];
+const API_KEY = 'AIzaSyC8dDxqmC5YJ28Pxf0QJGtGmv7xaIXtTVU';
+const CHANNEL_ID = 'UC-iHA_voe080R3VJGCO0NuA';
 
 const VideoGallery = () => {
-  const [modal, setModal] = useState({ open: false, video: null });
+  const [videos, setVideos] = useState([]);
   const [search, setSearch] = useState('');
+  const [modal, setModal] = useState({ open: false, videoId: '', title: '' });
 
-  const filteredVideos = videos.filter(v =>
-    v.title.toLowerCase().includes(search.toLowerCase())
+  useEffect(() => {
+    const fetchAllVideos = async () => {
+      try {
+        const channelRes = await axios.get('https://www.googleapis.com/youtube/v3/channels', {
+          params: {
+            part: 'contentDetails',
+            id: CHANNEL_ID,
+            key: API_KEY,
+          },
+        });
+
+        const uploadPlaylistId = channelRes.data.items[0].contentDetails.relatedPlaylists.uploads;
+
+        let nextPageToken = '';
+        let allVideos = [];
+
+        do {
+          const playlistRes = await axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
+            params: {
+              part: 'snippet',
+              maxResults: 50,
+              playlistId: uploadPlaylistId,
+              pageToken: nextPageToken,
+              key: API_KEY,
+            },
+          });
+
+          const videoItems = playlistRes.data.items.map((item) => ({
+            id: item.snippet.resourceId.videoId,
+            title: item.snippet.title,
+            thumbnail: item.snippet.thumbnails.medium.url,
+          }));
+
+          allVideos = [...allVideos, ...videoItems];
+          nextPageToken = playlistRes.data.nextPageToken;
+        } while (nextPageToken);
+
+        setVideos(allVideos);
+      } catch (error) {
+        console.error('Error fetching YouTube videos:', error);
+      }
+    };
+
+    fetchAllVideos();
+  }, []);
+
+  const filteredVideos = videos.filter((video) =>
+    video.title.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-200 px-4 py-6">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6">
-        {/* Left Sidebar */}
-        <aside className="bg-white rounded-xl shadow-md p-6 w-full lg:w-1/4 sticky top-6">
-          <div className="text-center">
-            <img
-              src="/image.png"
-              alt="Synergy Telecom"
-              className="w-20 h-20 sm:w-20 sm:h-20 mx-auto rounded-full border-4 border-blue-600 mb-3"
-            />
-            <h2 className="text-lg sm:text-xl font-bold text-blue-800 mb-1">Synergy Telecom Pvt. Ltd.</h2>
-            <p className="text-xs sm:text-sm text-gray-500 mb-4">Official YouTube Channel</p>
-            <a
-              href="https://www.youtube.com/@synergytelecompvt.ltd.9887"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-red-600 text-white text-xs sm:text-sm px-4 py-2 rounded hover:bg-red-700 transition duration-200"
-            >
-              Subscribe
-            </a>
-          </div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 py-10 px-4">
+      <div className="max-w-7xl mx-auto">
 
-          <div className="mt-6">
-            <h3 className="text-sm sm:text-md font-semibold text-blue-700 mb-2">Categories</h3>
-            <ul className="text-gray-700 text-xs sm:text-sm space-y-1">
-              <li>• RF Solutions</li>
-              <li>• Fiber Optics</li>
-              <li>• BTS Setup</li>
-              <li>• Training</li>
-              <li>• Events</li>
-            </ul>
-          </div>
-        </aside>
+        {/* Page Title */}
+        <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">🎥 Synergy Telecom Video Library</h1>
 
-        {/* Main Content */}
-        <main className="w-full lg:w-3/4">
-          <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-6">🎬 Video Gallery</h1>
-
-          {/* Search */}
-          <div className="mb-6">
-            <input
-              type="text"
-              placeholder="Search videos..."
-              className="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 shadow"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
-
-          {/* Video Grid */}
-          <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-            {filteredVideos.map(video => (
-              <div
-                key={video.id}
-                className="bg-white rounded-lg shadow hover:shadow-xl transition cursor-pointer group"
-                onClick={() => setModal({ open: true, video })}
-              >
-                <div className="relative pb-[56.25%] overflow-hidden rounded-t-lg">
-                  <iframe
-                    src={`https://www.youtube.com/embed/${video.id}`}
-                    title={video.title}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0 w-full h-full"
-                  />
-                </div>
-                <div className="p-3">
-                  <h2 className="text-sm font-semibold text-gray-800 group-hover:text-blue-700 line-clamp-2">
-                    {video.title}
-                  </h2>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {filteredVideos.length === 0 && (
-            <p className="text-center text-gray-600 mt-10">No videos match your search.</p>
-          )}
-        </main>
-      </div>
-
-      {/* Modal */}
-      {modal.open && (
-        <div className=" fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full max-w-2xl relative">
-            <div className="relative pb-[56.25%]">
-              <iframe
-                src={`https://www.youtube.com/embed/${modal.video.id}?autoplay=1`}
-                title={modal.video.title}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              />
-            </div>
-            <div className="p-4 flex justify-between items-center">
-              <h2 className="text-base sm:text-lg font-bold">{modal.video.title}</h2>
-              <button
-                onClick={() => setModal({ open: false, video: null })}
-                className="text-sm bg-red-600 text-white px-4 py-1.5 rounded hover:bg-red-700"
-              >
-                Close
-              </button>
-            </div>
-          </div>
+        {/* Search Bar */}
+        <div className="mb-8 max-w-lg mx-auto">
+          <input
+            type="text"
+            placeholder="🔍 Search videos..."
+            className="w-full px-5 py-3 rounded-full border border-gray-300 shadow focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
         </div>
-      )}
+
+        {/* Video Grid */}
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {filteredVideos.map((video) => (
+            <div
+              key={video.id}
+              onClick={() => setModal({ open: true, videoId: video.id, title: video.title })}
+              className="cursor-pointer bg-white rounded-xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 group"
+            >
+              <div className="relative rounded-t-xl overflow-hidden">
+                <img
+                  src={video.thumbnail}
+                  alt={video.title}
+                  className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <h2 className="text-sm font-semibold text-gray-800 group-hover:text-blue-700 line-clamp-2">
+                  {video.title}
+                </h2>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Empty State */}
+        {filteredVideos.length === 0 && (
+          <p className="text-center text-gray-600 mt-12 text-lg">Loading Videos...</p>
+        )}
+
+        {/* Video Modal */}
+        {modal.open && (
+          <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 p-4">
+            <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-4xl overflow-hidden">
+              {/* Close Button */}
+              <button
+                onClick={() => setModal({ open: false, videoId: '', title: '' })}
+                className="absolute top-3 right-3 bg-red-600 text-white px-3 py-1 text-sm rounded hover:bg-red-700"
+              >
+                ✖ Close
+              </button>
+
+              {/* Video Iframe */}
+              <div className="relative pb-[56.25%]">
+                <iframe
+                  src={`https://www.youtube.com/embed/${modal.videoId}?autoplay=1`}
+                  title={modal.title}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full rounded-t-2xl"
+                />
+              </div>
+
+              {/* Title */}
+              <div className="p-4">
+                <h2 className="text-base font-bold">{modal.title}</h2>
+              </div>
+            </div>
+          </div>
+        )}
+
+      </div>
     </div>
   );
 };

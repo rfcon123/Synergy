@@ -18,7 +18,7 @@ const Header = () => {
         'Li-ion Battery',
         'Product Stock',
         'Product Price list',
-        'Group Products Data Sheet',
+        'Group Product Data Sheet',
       ],
     },
     { title: 'Defence and Aerospace', subHeaders: ['Company Representation'] },

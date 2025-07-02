@@ -1,17 +1,17 @@
 import React from 'react';
 import { Mail, Phone, MapPin, ArrowRight, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import StyledButton from '../components/StyledButton'; // ✅ Import your reusable button
 
 const ContactUs = () => {
   return (
     <div className="bg-gray-50 min-h-screen px-4 py-10 md:px-10">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-blue-800 mb-6">
-          Contact Us
-        </h2>
+
+        {/* 🔷 Heading */}
+        <h2 className="text-3xl md:text-5xl font-bold text-center text-blue-800 mb-6">Contact Us</h2>
 
         <p className="text-center text-gray-700 mb-6 text-lg">
-          
           Or send us your enquiry at{' '}
           <a
             href="mailto:info@rfconnector.in"
@@ -20,9 +20,11 @@ const ContactUs = () => {
             info@rfconnector.in
           </a>
         </p>
-        <p className="text-center text-gray-700 mb-12 text-lg">With over $2.7 million in ready stock of RF connectors, microwave components, and cables, we ensure fast and reliable dispatch for urgent telecom site needs. Managed by our FACT Software System for efficient processing and delivery.</p>
+        <p className="text-center text-gray-700 mb-12 text-lg">
+          With over $2.7 million in ready stock of RF connectors, microwave components, and cables, we ensure fast and reliable dispatch for urgent telecom site needs. Managed by our FACT Software System for efficient processing and delivery.
+        </p>
 
-        {/* Main Contact Cards */}
+        {/* 📞 Contact Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Email */}
           <a
@@ -32,7 +34,7 @@ const ContactUs = () => {
             <Mail className="mx-auto text-blue-600 mb-4" size={36} />
             <h3 className="text-xl font-semibold mb-1">Email Us</h3>
             <p className="text-gray-700 mb-1">pradeep@rfconnector.in</p>
-            <p className="text-gray-700"> pulkit@rfconnector.in﻿</p>
+            <p className="text-gray-700">pulkit@rfconnector.in</p>
           </a>
 
           {/* Call */}
@@ -43,7 +45,7 @@ const ContactUs = () => {
             <Phone className="mx-auto text-blue-600 mb-4" size={36} />
             <h3 className="text-xl font-semibold mb-1">Call Us</h3>
             <p className="text-gray-700 mb-1">+91-7217885948</p>
-            <p className="text-gray-700"> +1(416)333-6594</p>
+            <p className="text-gray-700">+1 (416) 333-6594</p>
           </a>
 
           {/* Visit */}
@@ -60,7 +62,7 @@ const ContactUs = () => {
           </a>
         </div>
 
-        {/* Office Details */}
+        {/* 🏢 Office Details */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {/* India Office */}
           <div className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl transition hover:scale-[1.02]">
@@ -68,30 +70,14 @@ const ContactUs = () => {
             <p className="text-gray-800 font-medium mb-1">Pradeep Kumar Agrawal</p>
             <p className="text-sm text-gray-600 mb-4">Director</p>
             <p className="text-gray-700 mb-1">SYNERGY TELECOM PVT LTD</p>
-            <p className="text-gray-700 mb-1">
-              WZ 47 Budella, Saini Chowk, Vikas Puri, New Delhi-110018
-            </p>
+            <p className="text-gray-700 mb-1">WZ 47 Budella, Saini Chowk, Vikas Puri, New Delhi-110018</p>
             <p className="mb-1">
-              📧{' '}
-              <a
-                href="mailto:pradeep@rfconnector.in"
-                className="text-blue-600 hover:underline"
-              >
-                pradeep@rfconnector.in
-              </a>
+              📧 <a href="mailto:pradeep@rfconnector.in" className="text-blue-600 hover:underline">pradeep@rfconnector.in</a>
             </p>
             <p className="mb-1">📞 +91-11-28533349</p>
             <p className="mb-1">📱 +91-7217885948</p>
             <p className="mb-1">
-              🌐{' '}
-              <a
-                href="https://www.synergyantenna.com/online-store.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                synergyantenna.com/online-store
-              </a>
+              🌐 <a href="https://www.synergyantenna.com/online-store.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">synergyantenna.com/online-store</a>
             </p>
           </div>
 
@@ -104,36 +90,86 @@ const ContactUs = () => {
             <p className="text-gray-700 mb-1">1 Reidmount Avenue, Scarborough, Ontario</p>
             <p className="text-gray-700 mb-1">Postal Code M1S 4V3, Canada</p>
             <p className="mb-1">
-              📧{' '}
-              <a
-                href="mailto:pulkit@rfconnector.in"
-                className="text-blue-600 hover:underline"
-              >
-                pulkit@rfconnector.in
-              </a>
+              📧 <a href="mailto:pulkit@rfconnector.in" className="text-blue-600 hover:underline">pulkit@rfconnector.in</a>
             </p>
             <p className="mb-1">📱 +1 (416) 333-6594</p>
           </div>
         </div>
 
-        {/* Help Section */}
-        <div className="bg-white rounded-xl shadow-xl p-8 mb-12 text-center">
-          <HelpCircle className="text-blue-700 mx-auto mb-4" size={42} />
-          <h3 className="text-2xl font-semibold text-blue-800 mb-2">
-            Need Help or Have Questions?
-          </h3>
-          <p className="text-gray-700 mb-4">
-            Reach out via email or explore our product catalogue for more details.
-          </p>
-          <a
-            href="mailto:support@synergytelecom.com"
-            className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+        {/* ✅ Contact Form */}
+        <section className="bg-white rounded-xl shadow-xl p-8 mb-16">
+          <h3 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Send Us a Message</h3>
+          <form
+            action="https://formsubmit.co/info@rfconnector.in"
+            method="POST"
+            className="grid gap-6"
           >
-            Contact Support
-          </a>
-        </div>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="New Contact Form Submission" />
+            <input type="hidden" name="_template" value="box" />
 
-        {/* Career CTA */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                name="Name"
+                placeholder="Your Name"
+                required
+                className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+              />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Your Email"
+                required
+                className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+              />
+            </div>
+
+            <input
+              type="text"
+              name="Phone"
+              placeholder="Phone Number (Optional)"
+              className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+            />
+
+            <textarea
+              name="Message"
+              rows="5"
+              placeholder="Your Message"
+              required
+              className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none resize-none"
+            ></textarea>
+
+            {/* ✅ StyledButton used here */}
+            <StyledButton
+              label="Send Message"
+              icon={true}
+              onClick={() => {}} // Not needed for FormSubmit, but required since StyledButton may expect an onClick prop
+              type="submit"
+            />
+          </form>
+        </section>
+
+        {/* ❓ Help Section */}
+      <div className="bg-white rounded-xl shadow-xl p-8 mb-12 text-center">
+  <HelpCircle className="text-blue-700 mx-auto mb-4" size={42} />
+  <h3 className="text-2xl font-semibold text-blue-800 mb-2">Need Help or Have Questions?</h3>
+  <p className="text-gray-700 mb-4">
+    Reach out via email or explore our product catalogue for more details.
+  </p>
+
+  {/* ✅ Flex wrapper for centering */}
+  <div className="flex justify-center">
+    <StyledButton
+      label="Contact Support"
+      icon={true}
+      onClick={() => window.location.href = 'mailto:support@synergytelecom.com'}
+    />
+  </div>
+</div>
+
+
+        {/* 🎯 Career CTA */}
         <div className="text-center mt-12">
           <p className="text-gray-800 mb-3 text-lg">Looking to grow with us?</p>
           <Link
@@ -144,6 +180,7 @@ const ContactUs = () => {
             <ArrowRight className="ml-2" size={20} />
           </Link>
         </div>
+
       </div>
     </div>
   );
