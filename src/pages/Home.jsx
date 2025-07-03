@@ -141,7 +141,7 @@ const Home = () => {
       {/* 🌐 Platform Links */}
       <section
         style={{ backgroundImage: `url(${hbg})` }}
-        className="w-full bg-cover bg-center relative bg-gradient-to-r from-gray-100/70 via-white to-gray-100/70 py-4 px-6 flex justify-center items-center space-x-6 sm:space-x-10 overflow-x-auto shadow-inner backdrop-blur-sm"
+        className="w-full bg-cover bg-center parallax-effect bg-gradient-to-r from-gray-100/70 via-white to-gray-100/70 py-4 px-6 flex justify-center items-center space-x-6 sm:space-x-10 overflow-x-auto shadow-inner backdrop-blur-sm"
       >
         {platformLinks.map((platform, index) => (
           <a
@@ -236,7 +236,7 @@ const Home = () => {
         className="py-16 px-4 bg-cover bg-center relative"
         style={{ backgroundImage: `url(${hbg})` }}
       >
-        <div className="absolute inset-0 bg-opacity-50"></div>
+        <div className="absolute parallax-effect inset-0 bg-opacity-50"></div>
         <div className="relative z-10 max-w-5xl mx-auto text-center text-blue-600">
           <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">About SYNERGY TELECOM</h2>
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">

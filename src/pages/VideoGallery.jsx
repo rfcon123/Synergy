@@ -64,14 +64,14 @@ const VideoGallery = () => {
       <div className="max-w-7xl mx-auto">
 
         {/* Page Title */}
-        <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">🎥 Synergy Telecom Video Library</h1>
+        <h1 className="text-4xl font-bold text-center text-blue-900 mb-8">Our Video Library</h1>
 
         {/* Search Bar */}
         <div className="mb-8 max-w-lg mx-auto">
           <input
             type="text"
-            placeholder="🔍 Search videos..."
-            className="w-full px-5 py-3 rounded-full border border-gray-300 shadow focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-700"
+            placeholder="Search videos..."
+            className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

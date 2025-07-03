@@ -82,7 +82,7 @@ const Groupproductdatasheet = () => {
       <div className="mb-12 max-w-lg mx-auto">
         <input
           type="text"
-          placeholder="Search datasheets..."
+          placeholder="Search Datasheets..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"

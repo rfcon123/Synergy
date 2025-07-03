@@ -73,8 +73,8 @@ const Productspricelist = () => {
         <div className="max-w-md mx-auto">
           <input
             type="text"
-            placeholder="🔍 Search products..."
-            className="w-full px-4 py-2 rounded-full border border-gray-300 shadow focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Search Products Price Lists..."
+            className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />

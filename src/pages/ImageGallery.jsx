@@ -49,7 +49,7 @@ const ImageGallery = () => {
           placeholder="Search images by name..."
           value={searchTerm}
           onChange={handleSearch}
-          className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none"
+          className="w-lg px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
         />
       </div>
 
