@@ -105,7 +105,7 @@ const ContactUs = () => {
 <section className="bg-white rounded-xl shadow-xl p-8 mb-16">
   <h3 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Send Us a Message</h3>
   <form
-    action="https://formsubmit.co/aditabhi9@gmail.com"
+    action="https://formsubmit.co/33c86efad5e4f7feaab2530deeffed42"
     method="POST"
     className="grid gap-6"
     onSubmit={() => alert('Your message has been sent!')}
