@@ -1,14 +1,36 @@
 import React from "react";
 
 const upcomingProducts = [
-  "Microwave Components",
-  "Digital Control RF Switches",
-  "Digital Control Phase Shifter",
-  "TCF Series - Flexible Microwave Cable Assemblies",
-  "TCF 110GHz Flexible Microwave Coaxial Cable Assemblies",
-  "Electronic Cable and Connectors",
-  "Color Coding using Light Emitting Diodes",
+  {
+    name: "Microwave Components",
+    link: "https://www.rfconnector.in/catalog/UpCommingProducts/PRODUCTS_INTRODUCTION.pdf"
+  },
+  {
+    name: "Digital Control RF Switches",
+    link: "https://www.rfconnector.in/catalog/UpCommingProducts/RF_Switches.pdf"
+  },
+  {
+    name: "Digital Control Phase Shifter",
+    link: "https://www.rfconnector.in/catalog/UpCommingProducts/Phase_shifters.pdf"
+  },
+  {
+    name: "TCF Series - Flexible Microwave Cable Assemblies",
+    link: "https://www.rfconnector.in/catalog/UpCommingProducts/TFC_Series.pdf"
+  },
+  {
+    name: "TCF 110GHz Flexible Microwave Coaxial Cable Assemblies",
+    link: "https://www.rfconnector.in/catalog/UpCommingProducts/TCF_110GHz.pdf"
+  },
+  {
+    name: "Electronic Cable and Connectors",
+    link: "#"
+  },
+  {
+    name: "Color Coding using Light Emitting Diodes",
+    link: "#"
+  }
 ];
+
 
 const Products = () => {
   return (
@@ -16,9 +38,11 @@ const Products = () => {
 
       {/* Intro Section */}
       <section>
-        <h1 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6 tracking-tight">
-          SYNERGY TELECOM PRODUCTS
-        </h1>
+         <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        Synergy Telecom Products
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
+
         <div className="bg-gradient-to-r from-blue-100 via-white to-blue-50 p-8 rounded-2xl shadow-md">
           <p className="text-lg md:text-xl font-semibold leading-relaxed text-justify text-gray-800">
             We are one of the fastest-growing companies in North India specializing in the manufacturing of microwave components, IBS, and BTS installation materials. With massive stocks of RF connectors, cables, and microwave parts, we’re proud to be one of the largest RF component stockists in India. As authorized distributors of Professional Taiwan, we serve major clients like Ericsson, Nokia/Siemens, Alcatel/Lucent, Bharti, Vodafone, Idea, HFCL, Tellabs, Aricent, ITI, BSNL, Power Grid Corporation, and all OEMs and telecom operators.
@@ -87,19 +111,28 @@ const Products = () => {
       </section>
 
       {/* Upcoming Products Section */}
-      <section>
-        <h2 className="text-3xl font-bold text-blue-900 mb-6 tracking-tight">Upcoming Products</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {upcomingProducts.map((product, index) => (
-            <div
-              key={index}
-              className="bg-gradient-to-br from-blue-100 via-white to-blue-50 p-4 rounded-lg shadow-md hover:scale-[1.03] hover:shadow-xl transition duration-300 text-center text-blue-800 font-medium"
-            >
-              {product}
-            </div>
-          ))}
-        </div>
-      </section>
+     <section className="mt-20">
+  <h2 className="text-3xl font-bold text-blue-900 mb-8 text-center tracking-tight">
+     Upcoming Products
+  </h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {upcomingProducts.map((product, index) => (
+      <a
+        key={index}
+        href={product.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block bg-gradient-to-br from-blue-100 via-white to-blue-50 p-6 rounded-xl shadow-lg hover:shadow-2xl hover:scale-[1.03] transition-all duration-300 text-center"
+      >
+        <span className="text-lg font-semibold text-blue-900 tracking-wide">
+          {product.name}
+        </span>
+        <span className="block mt-2 text-sm text-blue-600 font-medium">Coming Soon 🔒</span>
+      </a>
+    ))}
+  </div>
+</section>
+
     </main>
   );
 };

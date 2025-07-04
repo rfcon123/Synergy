@@ -61,10 +61,10 @@ const LiionBattery = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-100 py-10 px-4">
       {/* Top Heading */}
-      <h1 className="text-2xl sm:text-3xl font-bold text-center text-blue-900 mb-8">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
         Li-Ion Battery Solutions
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
       </h1>
-
       {/* Top Image */}
       <div className="flex justify-center items-center bg-gradient-to-b from-blue-50 to-white py-6 px-4 mb-8">
         <img

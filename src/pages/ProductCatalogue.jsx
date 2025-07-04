@@ -89,10 +89,11 @@ const ProductCatalogue = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 py-12 px-4 sm:px-8 lg:px-20">
+      
       {/* Heading */}
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10 relative">
+      <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
         Products Catalogue
-        <span className="block w-24 h-1 bg-gradient-to-r from-blue-400 to-blue-600 mx-auto mt-4 rounded-full"></span>
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
       </h1>
 
       {/* Search Bar */}
@@ -102,28 +103,28 @@ const ProductCatalogue = () => {
           placeholder="Search catalogue..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
+          className="w-full px-5 py-3 rounded-lg border border-blue-300 shadow focus:ring-2 focus:ring-blue-300 focus:outline-none transition"
         />
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6 sm:gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
         {filteredLinks.map((item, index) => (
           <a
             key={index}
             href={item.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="group bg-white border border-gray-200 hover:border-blue-500 rounded-2xl shadow-md hover:shadow-2xl p-6 flex items-center justify-center text-center h-28 sm:h-32 transition transform hover:-translate-y-1 hover:scale-[1.03] hover:bg-gradient-to-br from-blue-50 to-white duration-300"
+            className="group bg-white border border-gray-300 hover:border-blue-500 rounded-md shadow-sm hover:shadow-md p-5 flex items-center justify-center text-center h-28 sm:h-32 transition-transform transform hover:-translate-y-1 hover:bg-blue-50"
           >
-            <h3 className="text-base sm:text-lg font-semibold text-gray-700 group-hover:text-blue-800 leading-tight">
+            <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-blue-700 leading-snug">
               {item.name}
             </h3>
           </a>
         ))}
       </div>
 
-      {/* No Results */}
+      {/* No Results Message */}
       {filteredLinks.length === 0 && (
         <p className="text-center text-gray-500 mt-16 text-base animate-pulse">
           🚫 No matching catalogue found.
@@ -135,7 +136,9 @@ const ProductCatalogue = () => {
         <StyledButton
           label="Contact Support"
           icon={true}
-          onClick={() => window.location.href = 'mailto:support@synergytelecom.com'}
+          onClick={() =>
+            (window.location.href = "mailto:support@synergytelecom.com")
+          }
         />
       </div>
     </div>

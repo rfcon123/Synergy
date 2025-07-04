@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import hbg from '../assets/hbg.png'; // Ensure this path is correct
+import hbg from '../assets/hbg.png';
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -19,11 +19,12 @@ const Header = () => {
         'Product Stock',
         'Product Price list',
         'Group Product Data Sheet',
+        'Defence and Aerospace',
       ],
     },
-    { title: 'Defence and Aerospace', subHeaders: ['Company Representation'] },
+    { title: 'Cable Creator TM' }, // ✅ Now works without subHeaders
     { title: 'Gallery', subHeaders: ['Video Gallery', 'Image Gallery'] },
-    { title: 'Feedback', subHeaders: ['Career', 'Support'] },
+    { title: 'Feedback', subHeaders: ['Customer Feedback', 'Career'] },
   ];
 
   const formatPath = (text) =>
@@ -81,7 +82,7 @@ const Header = () => {
                     </Link>
 
                     {/* Dropdown */}
-                    {header.subHeaders.length > 0 && (
+                    {Array.isArray(header.subHeaders) && header.subHeaders.length > 0 && (
                       <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 bg-white text-black shadow-xl rounded-lg min-w-[240px] z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 ease-in-out">
                         <ul className="flex flex-col px-4 py-3 space-y-2">
                           {header.subHeaders.map((subHeader, subIndex) => (
@@ -120,7 +121,7 @@ const Header = () => {
                     >
                       {header.title}
                     </Link>
-                    {header.subHeaders.length > 0 && (
+                    {Array.isArray(header.subHeaders) && header.subHeaders.length > 0 && (
                       <button
                         onClick={() =>
                           setOpenMobileDropdown(openMobileDropdown === index ? null : index)
@@ -134,7 +135,7 @@ const Header = () => {
                     )}
                   </div>
 
-                  {openMobileDropdown === index && header.subHeaders.length > 0 && (
+                  {Array.isArray(header.subHeaders) && openMobileDropdown === index && (
                     <ul
                       id={`mobile-submenu-${index}`}
                       className="pl-6 mt-2 space-y-2 text-sm"

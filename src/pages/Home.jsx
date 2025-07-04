@@ -175,7 +175,7 @@ const Home = () => {
             <p className="text-sm sm:text-base mb-5 leading-relaxed text-gray-200">
               {hotProducts[currentSlide].description}
             </p>
-            <StyledButton label="Learn More" onClick={() => window.location.href = "#"} />
+            <StyledButton label="Learn More" onClick={() => window.location.href = "/product-showroom"} />
           </div>
         </div>
         <button
@@ -195,9 +195,11 @@ const Home = () => {
       {/* 🛒 Our Products Grid */}
 <section className="py-20 px-6 bg-gradient-to-b from-white to-gray-50">
   <div className="max-w-7xl mx-auto">
-    <h2 className="text-4xl sm:text-5xl font-bold text-center text-blue-900 mb-12 tracking-tight">
-      Our Products
-    </h2>
+    <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+       Our Products 
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
+
 
     <div className="overflow-x-auto">
       <div className="grid grid-rows-2 grid-flow-col auto-cols-max gap-6 pb-4 mx-auto w-max">
@@ -238,7 +240,11 @@ const Home = () => {
       >
         <div className="absolute parallax-effect inset-0 bg-opacity-50"></div>
         <div className="relative z-10 max-w-5xl mx-auto text-center text-blue-600">
-          <h2 className="text-3xl sm:text-4xl font-bold text-blue-900 mb-6">About SYNERGY TELECOM</h2>
+           <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        About Synergy Telecom
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
+
           <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
             <span className="font-semibold text-blue-800">SYNERGY TELECOM PRIVATE LIMITED</span> is a leading provider of cutting-edge telecom infrastructure solutions.
             We specialize in <span className="font-medium text-blue-700">RF Products, Solar Equipment, Microwave Antennas, IBS & BTS installations, and Elcom technologies</span>.
@@ -276,7 +282,11 @@ const Home = () => {
       {/* 🤝 Clients */}
       <section className="py-20 px-6 bg-gradient-to-r from-gray-100 via-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-blue-900 mb-12 tracking-tight">Our Trusted Clients</h2>
+           <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        Our Esteemed Clients
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
+
           <div className="relative overflow-hidden">
             <div
               className="inline-flex space-x-10 animate-scroll hover:[animation-play-state:paused]"

@@ -31,9 +31,10 @@ const DefenceandAerospace = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-10">
         {/* Description */}
        <section>
-  <h2 className="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 text-center">
-    About Our Defence & Aerospace Division
-  </h2>
+   <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        About Our Defence & Aerospace Division
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
 
   <p className="text-base sm:text-lg leading-relaxed text-justify text-gray-700 mb-4">
     We are one of the growing companies in manufacturing Microwave components, IBS and BTS installation material across India.

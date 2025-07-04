@@ -41,9 +41,10 @@ const Certificates = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-50 via-white to-blue-50 px-4 py-10">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-3xl md:text-5xl font-bold text-blue-800 text-center mb-8 tracking-tight">
-          Our Certifications
-        </h1>
+         <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        Our Certificates
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
 
         {/* Grid of Certificates */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">

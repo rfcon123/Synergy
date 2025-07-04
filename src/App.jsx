@@ -20,7 +20,8 @@ import ProductStock from './pages/ProductStock';
 import HotProducts from './pages/HotProducts';
 import Career from './pages/Career';
 import Productpricelist from './pages/Productspricelist';
-import Groupproductdatasheet from './pages/Groupproductdatasheet'; // ✅ Product Price List Page
+import Groupproductdatasheet from './pages/Groupproductdatasheet';
+import Feedback from './pages/Feedback' // ✅ Product Price List Page
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
         <Route path="/contact-us" element={<Contactus />} />
 
         {/* Products */}
+        <Route path="/gallery" element={<ImageGallery />} />
         <Route path="/product-showroom" element={<Productshowroom />} />
         <Route path="/products" element={<Products />} />
         <Route path="/product/:slug" element={<ProductDetail />} /> {/* ✅ Dynamic Product Detail Page */}
@@ -57,7 +59,9 @@ function App() {
         <Route path="/video-gallery" element={<VideoGallery />} />
 
         {/* Careers */}
-        <Route path="/career" element={<Career />} /> {/* ✅ Career Page */}
+        <Route path="/career" element={<Career />} /> 
+        <Route path="/feedback" element={<Feedback />} />
+        <Route path="/customer-feedback" element={<Feedback />} /> {/* ✅ Career Page */}
 
         {/* Old Pages (Currently Commented) */}
         {/*

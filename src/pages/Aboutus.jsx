@@ -56,7 +56,7 @@ const Aboutus = () => {
             label="View Company Profile Presentation"
             onClick={() =>
               window.open(
-                'https://onedrive.live.com/personalhttps://onedrive.live.com/personal/026ad11decce68b0/_layouts/15/Doc.aspx?sourcedoc=%7Becce68b0-d11d-206a-8002-420500000000%7D&action=default&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvcyFBckJvenV3ZDBXb0Npa0xDNUR5a0sybUZHZ0Ew',
+                'https://onedrive.live.com/:p:/g/personal/026AD11DECCE68B0/s!ArBozuwd0WoCikLC5DykK2mFGgA0?resid=26AD11DECCE68B0!1346&ithint=file%2Cpptx&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvcyFBckJvenV3ZDBXb0Npa0xDNUR5a0sybUZHZ0Ew',
                 '_blank'
               )
             }

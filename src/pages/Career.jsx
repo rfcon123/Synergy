@@ -13,7 +13,10 @@ const Career = () => {
 
         {/* Header */}
         <div className="text-center space-y-3">
-          <h1 className="text-4xl md:text-5xl font-bold text-blue-900">Join Our Team</h1>
+           <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        Join Our Team
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
           <p className="text-lg text-gray-700">
             Help shape the future of RF Technology and Telecom Solutions with Synergy Telecom Pvt. Ltd.
           </p>
@@ -64,13 +67,22 @@ const Career = () => {
 
         {/* Application Button - Fully Centered */}
         <div className="flex justify-center">
-          <StyledButton label="📝 Apply Now" onClick={handleApplyClick} />
+         <StyledButton
+  label="📝 Apply Now"
+  onClick={() =>
+    window.open(
+      'https://docs.google.com/forms/d/e/1FAIpQLSccTSfbsX73owONf0rg4Undqx_JGHBcQTROy5Wg6gxifeipnQ/viewform',
+      '_blank'
+    )
+  }
+/>
+
         </div>
 
         {/* Testimonials Placeholder */}
         <div className="text-center">
-          <h2 className="text-xl font-semibold text-blue-800">What Our Team Says</h2>
-          <p className="text-gray-600 italic">(*Employee testimonials coming soon...*)</p>
+          <h2 className="text-xl font-semibold text-blue-800">Our Company is...</h2>
+          <p className="text-gray-600 italic">Driven by innovation, powered by teamwork.</p>
         </div>
 
         {/* Contact Info */}

@@ -9,7 +9,11 @@ const ContactUs = () => {
       <div className="max-w-6xl mx-auto">
 
         {/* 🔷 Heading */}
-        <h2 className="text-3xl md:text-5xl font-bold text-center text-blue-800 mb-6">Contact Us</h2>
+         <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        Contact Us
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
+
 
         <p className="text-center text-gray-700 mb-6 text-lg">
           Or send us your enquiry at{' '}
@@ -28,24 +32,24 @@ const ContactUs = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
           {/* Email */}
           <a
-            href="mailto:support@synergytelecom.com"
+            href="mailto:info@rfconnector.in"
             className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition hover:scale-[1.03]"
           >
             <Mail className="mx-auto text-blue-600 mb-4" size={36} />
             <h3 className="text-xl font-semibold mb-1">Email Us</h3>
             <p className="text-gray-700 mb-1">pradeep@rfconnector.in</p>
-            <p className="text-gray-700">pulkit@rfconnector.in</p>
+            <p className="text-gray-700"> info@rfconnector.in</p>
           </a>
 
           {/* Call */}
           <a
-            href="tel:+919876543210"
+            href="tel:+91-7217885948"
             className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition hover:scale-[1.03]"
           >
             <Phone className="mx-auto text-blue-600 mb-4" size={36} />
             <h3 className="text-xl font-semibold mb-1">Call Us</h3>
             <p className="text-gray-700 mb-1">+91-7217885948</p>
-            <p className="text-gray-700">+1 (416) 333-6594</p>
+            <p className="text-gray-700">+91-11-28533349</p>
           </a>
 
           {/* Visit */}
@@ -97,58 +101,61 @@ const ContactUs = () => {
         </div>
 
         {/* ✅ Contact Form */}
-        <section className="bg-white rounded-xl shadow-xl p-8 mb-16">
-          <h3 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Send Us a Message</h3>
-          <form
-            action="https://formsubmit.co/info@rfconnector.in"
-            method="POST"
-            className="grid gap-6"
-          >
-            <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="New Contact Form Submission" />
-            <input type="hidden" name="_template" value="box" />
+       {/* ✅ Contact Form */}
+<section className="bg-white rounded-xl shadow-xl p-8 mb-16">
+  <h3 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Send Us a Message</h3>
+  <form
+    action="https://formsubmit.co/aditabhi9@gmail.com"
+    method="POST"
+    className="grid gap-6"
+    onSubmit={() => alert('Your message has been sent!')}
+  >
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_subject" value="New Contact Form Submission" />
+    <input type="hidden" name="_template" value="box" />
+    <input type="hidden" name="_autoresponse" value="Thank you for contacting Synergy Telecom. We'll get back to you shortly." />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                name="Name"
-                placeholder="Your Name"
-                required
-                className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
-              />
-              <input
-                type="email"
-                name="Email"
-                placeholder="Your Email"
-                required
-                className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
-              />
-            </div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <input
+        type="text"
+        name="Name"
+        placeholder="Your Name"
+        required
+        className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+      />
+      <input
+        type="email"
+        name="Email"
+        placeholder="Your Email"
+        required
+        className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+      />
+    </div>
 
-            <input
-              type="text"
-              name="Phone"
-              placeholder="Phone Number (Optional)"
-              className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
-            />
+    <input
+      type="text"
+      name="Phone"
+      placeholder="Phone Number (Optional)"
+      className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+    />
 
-            <textarea
-              name="Message"
-              rows="5"
-              placeholder="Your Message"
-              required
-              className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none resize-none"
-            ></textarea>
+    <textarea
+      name="Message"
+      rows="5"
+      placeholder="Your Message"
+      required
+      className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none resize-none"
+    ></textarea>
 
-            {/* ✅ StyledButton used here */}
-            <StyledButton
-              label="Send Message"
-              icon={true}
-              onClick={() => {}} // Not needed for FormSubmit, but required since StyledButton may expect an onClick prop
-              type="submit"
-            />
-          </form>
-        </section>
+    <StyledButton
+      label="Send Message"
+      icon={true}
+      type="submit"
+      onClick={() => {}} // Still required to prevent StyledButton error
+    />
+  </form>
+</section>
+
 
         {/* ❓ Help Section */}
       <div className="bg-white rounded-xl shadow-xl p-8 mb-12 text-center">
@@ -163,7 +170,7 @@ const ContactUs = () => {
     <StyledButton
       label="Contact Support"
       icon={true}
-      onClick={() => window.location.href = 'mailto:support@synergytelecom.com'}
+      onClick={() => window.location.href = 'mailto:info@synergytpl.com'}
     />
   </div>
 </div>

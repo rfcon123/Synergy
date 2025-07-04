@@ -248,9 +248,10 @@ const ProductShowroom = () => {
         
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl md:text-5xl font-bold text-blue-800 mb-4 tracking-tight">
-            Explore Our Product Categories
-          </h2>
+           <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        Explore Our Product Showroom
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
           <p className="text-gray-600 text-md md:text-lg max-w-2xl mx-auto leading-relaxed">
             Discover a wide range of high-quality products tailored to your telecom and RF needs.
           </p>
