@@ -104,13 +104,14 @@ const LiionBattery = () => {
       action="https://formsubmit.co/33c86efad5e4f7feaab2530deeffed42"
       method="POST"
       className="space-y-5 text-sm bg-white p-6 rounded-xl shadow-xl"
+      onSubmit={(e) => {alert('Thank you for your inquiry! We will get back to you soon.'); }}
     >
       {/* FormSubmit Hidden Config */}
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_subject" value="New Product Inquiry Submission" />
       <input type="hidden" name="_template" value="box" />
       <input type="hidden" name="_autoresponse" value="Thank you for your inquiry. Our team will reach out shortly." />
-      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+      <input type="hidden" name="_next" value="https://refec.netlify.app/" />
       <input type="text" name="_honey" style={{ display: 'none' }} />
 
       {/* Name Fields */}

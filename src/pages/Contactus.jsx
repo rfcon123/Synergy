@@ -108,13 +108,14 @@ const ContactUs = () => {
         action="https://formsubmit.co/33c86efad5e4f7feaab2530deeffed42"
         method="POST"
         className="grid gap-6"
+        onSubmit={(e) => alert('Thank you for your message! We will get back to you soon.')}
       >
         {/* FormSubmit hidden inputs */}
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_subject" value="New Contact Form Submission" />
         <input type="hidden" name="_template" value="box" />
         <input type="hidden" name="_autoresponse" value="Thank you for contacting Synergy Telecom. We'll get back to you shortly." />
-        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+        <input type="hidden" name="_next" value="https://refec.netlify.app/" />
 
         {/* Honeypot field to prevent spam bots */}
         <input type="text" name="_honey" style={{ display: 'none' }} />

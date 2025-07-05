@@ -18,7 +18,7 @@ const Feedback = () => {
           <input type="hidden" name="_subject" value="New Feedback Submission" />
           <input type="hidden" name="_template" value="box" />
           <input type="hidden" name="_autoresponse" value="Thank you for your feedback. We'll get back to you soon." />
-          <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+          <input type="hidden" name="_next" value="https://refec.netlify.app/" />
           <input type="text" name="_honey" style={{ display: 'none' }} />
 
           {/* Name Section */}
