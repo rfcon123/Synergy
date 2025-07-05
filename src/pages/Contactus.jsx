@@ -102,59 +102,69 @@ const ContactUs = () => {
 
         {/* ✅ Contact Form */}
        {/* ✅ Contact Form */}
-<section className="bg-white rounded-xl shadow-xl p-8 mb-16">
-  <h3 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Send Us a Message</h3>
-  <form
-    action="https://formsubmit.co/33c86efad5e4f7feaab2530deeffed42"
-    method="POST"
-    className="grid gap-6"
-    onSubmit={() => alert('Your message has been sent!')}
-  >
-    <input type="hidden" name="_captcha" value="false" />
-    <input type="hidden" name="_subject" value="New Contact Form Submission" />
-    <input type="hidden" name="_template" value="box" />
-    <input type="hidden" name="_autoresponse" value="Thank you for contacting Synergy Telecom. We'll get back to you shortly." />
+    <section className="bg-white rounded-xl shadow-xl p-8 mb-16">
+      <h3 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Send Us a Message</h3>
+      <form
+        action="https://formsubmit.co/33c86efad5e4f7feaab2530deeffed42"
+        method="POST"
+        className="grid gap-6"
+      >
+        {/* FormSubmit hidden inputs */}
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_subject" value="New Contact Form Submission" />
+        <input type="hidden" name="_template" value="box" />
+        <input type="hidden" name="_autoresponse" value="Thank you for contacting Synergy Telecom. We'll get back to you shortly." />
+        <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <input
-        type="text"
-        name="Name"
-        placeholder="Your Name"
-        required
-        className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
-      />
-      <input
-        type="email"
-        name="Email"
-        placeholder="Your Email"
-        required
-        className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
-      />
-    </div>
+        {/* Honeypot field to prevent spam bots */}
+        <input type="text" name="_honey" style={{ display: 'none' }} />
 
-    <input
-      type="text"
-      name="Phone"
-      placeholder="Phone Number (Optional)"
-      className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
-    />
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <input
+            type="text"
+            name="Name"
+            placeholder="Your Name"
+            required
+            className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+          />
+          <input
+            type="email"
+            name="Email"
+            placeholder="Your Email"
+            required
+            className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+          />
+        </div>
 
-    <textarea
-      name="Message"
-      rows="5"
-      placeholder="Your Message"
-      required
-      className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none resize-none"
-    ></textarea>
+        <input
+          type="number"
+          name="Phone"
+          placeholder="Phone Number"
+          className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+        />
 
-    <StyledButton
-      label="Send Message"
-      icon={true}
-      type="submit"
-      onClick={() => {}} // Still required to prevent StyledButton error
-    />
-  </form>
-</section>
+        <input
+          type="text"
+          name="Company"
+          placeholder="Your Company"
+          className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+        />
+
+        <textarea
+          name="Message"
+          rows="5"
+          placeholder="Your Message"
+          required
+          className="border border-gray-300 p-3 rounded-md focus:ring-2 focus:ring-blue-400 outline-none resize-none"
+        ></textarea>
+
+        <StyledButton
+          label="Send Message"
+          icon={true}
+          type="submit"
+        />
+      </form>
+    </section>
 
 
         {/* ❓ Help Section */}

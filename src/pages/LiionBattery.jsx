@@ -100,87 +100,89 @@ const LiionBattery = () => {
         {/* Right - Inquiry Form */}
         <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 sm:p-6">
           <h2 className="text-lg sm:text-xl font-semibold text-blue-800 mb-4">Battery Inquiry Form</h2>
-          <form onSubmit={handleSubmit} className="space-y-4 text-sm">
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <input
-                type="text"
-                name="firstName"
-                placeholder="First Name *"
-                value={formData.firstName}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
-                required
-              />
-              <input
-                type="text"
-                name="lastName"
-                placeholder="Last Name *"
-                value={formData.lastName}
-                onChange={handleChange}
-                className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
-                required
-              />
-            </div>
+         <form
+      action="https://formsubmit.co/33c86efad5e4f7feaab2530deeffed42"
+      method="POST"
+      className="space-y-5 text-sm bg-white p-6 rounded-xl shadow-xl"
+    >
+      {/* FormSubmit Hidden Config */}
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_subject" value="New Product Inquiry Submission" />
+      <input type="hidden" name="_template" value="box" />
+      <input type="hidden" name="_autoresponse" value="Thank you for your inquiry. Our team will reach out shortly." />
+      <input type="hidden" name="_next" value="https://yourdomain.com/thank-you" />
+      <input type="text" name="_honey" style={{ display: 'none' }} />
 
-            <input
-              type="email"
-              name="email"
-              placeholder="Email *"
-              value={formData.email}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
-              required
-            />
+      {/* Name Fields */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <input
+          type="text"
+          name="First Name"
+          placeholder="First Name *"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+          required
+        />
+        <input
+          type="text"
+          name="Last Name"
+          placeholder="Last Name *"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+          required
+        />
+      </div>
 
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Mobile Phone *"
-              value={formData.phone}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
-              required
-            />
+      {/* Contact Info */}
+      <input
+        type="email"
+        name="Email"
+        placeholder="Email *"
+        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+        required
+      />
+      <input
+        type="tel"
+        name="Phone"
+        placeholder="Mobile Phone *"
+        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+        required
+      />
 
-            <input
-              type="text"
-              name="productRequested"
-              placeholder="Product Requested *"
-              value={formData.productRequested}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
-              required
-            />
+      {/* Product Info */}
+      <input
+        type="text"
+        name="Product Requested"
+        placeholder="Product Requested *"
+        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+        required
+      />
 
-            <input
-              type="date"
-              name="schedule"
-              placeholder="Schedule of Product Requirement *"
-              value={formData.schedule}
-              onChange={handleChange}
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
-              required
-            />
+      <div>
+        <label className="block mb-1 font-medium text-gray-700">Required Date</label>
+        <input
+          type="date"
+          name="Schedule"
+          className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none"
+          required
+        />
+      </div>
 
-            <textarea
-              name="specifications"
-              placeholder="Product Specifications"
-              value={formData.specifications}
-              onChange={handleChange}
-              rows="4"
-              className="w-full px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-blue-400"
-            ></textarea>
+      {/* Specs */}
+      <textarea
+        name="Specifications"
+        placeholder="Product Specifications"
+        rows="4"
+        className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 outline-none resize-none"
+      ></textarea>
 
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-3">
-              <StyledButton
-                label="Submit Inquiry"
-                icon={true}
-                type="submit"
-              />
-              
-            </div>
-          </form>
+      {/* Button */}
+      <div className="pt-2">
+        <StyledButton
+          label="Submit Inquiry"
+          icon={true}
+          type="submit"
+        />
+      </div>
+    </form>
         </div>
       </div>
     </div>
