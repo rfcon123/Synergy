@@ -6,15 +6,15 @@ import hbg from '../assets/hbg.jpg';
 // ✅ Product Images
 import antenna from '../assets/components/antenna.jpg';
 import rfCables from '../assets/components/cableassembly.jpg';
-import balun from '../assets/components/balun.jpg';
-import jumperCable from '../assets/components/broadcastairgapcablescatalogue.jpg';
-import powerDividers from '../assets/components/combiner.jpg';
-import terminations from '../assets/components/dummyload.jpg';
-import switches from '../assets/components/diplexer.jpg';
+import j5g from '../assets/components/j5gproduct.jpg';
+import telescopicmast from '../assets/components/telescopicmast.jpg';
+import rfadapter from '../assets/components/rfadapter.jpg';
+import rfattenuator from '../assets/components/rfattenuator.jpg';
+import bnc from '../assets/components/bncconnector.jpg';
 import amplifiers from '../assets/components/amplifier and combiner.jpg';
-import couplers from '../assets/components/combiner.jpg';
-import waveguides from '../assets/components/bmaconnector.jpg';
-import cablelugs from '../assets/components/cablelugs.jpg';
+import rfcouplers from '../assets/components/rfcoupler.jpg';
+import fakra from '../assets/components/fakraconnector.jpg';
+import solarproduct from '../assets/components/solarproduct.jpg';
 import arrowIcon from '../assets/components/arrow.png';
 
 // ✅ Hot Products Carousel Images
@@ -45,31 +45,31 @@ import vi from '../assets/logos/vi.png';
 const imageMap = {
   antenna,
   rfCables,
-  balun,
-  jumperCable,
-  powerDividers,
-  terminations,
-  switches,
+  j5g,
+  telescopicmast,
+  rfadapter,
+  rfattenuator,
+  solarproduct,
   amplifiers,
-  couplers,
-  waveguides,
-  cablelugs,
+  rfcouplers,
+  fakra,
+  bnc,
   arrowIcon,
 };
 
 // ✅ Products Grid Data
 const productsData = [
-  { tag: "New", image: 'antenna', title: 'Microwave Antennas', link: "#" },
-  { image: 'rfCables', title: 'RF Cable Assemblies', link: "#" },
-  { image: 'balun', title: 'RF Baluns', link: "#" },
-  { image: 'jumperCable', title: 'Broadcast Airgap Cables', link: "#" },
-  { image: 'powerDividers', title: 'Power Dividers / Combiners', link: "#" },
-  { image: 'terminations', title: 'Terminations', link: "#" },
-  { image: 'switches', title: 'Diplexer Switches', link: "#" },
-  { image: 'amplifiers', title: 'Amplifiers', link: "#" },
-  { image: 'couplers', title: 'Couplers', link: "#" },
-  { image: 'waveguides', title: 'Waveguide Components', link: "#" },
-  { image: 'cablelugs', title: 'Cable Lugs', link: "#" },
+  { tag: "New", image: 'antenna', title: 'Antennas', link: "/product/antenna" },
+  { image: 'rfCables', title: 'RF Cable Assemblies', link: "/product/rf-cable" },
+  { image: 'j5g', title: '5g Products', link: "/product/5g-product" },
+  { image: 'fakra', title: 'Fakra Connector', link: "/product/fakra-connector" },
+  { image: 'telescopicmast', title: 'Telescopic Mast', link: "/product/telescopic-mast" },
+  { image: 'rfcouplers', title: 'RF coupler', link: "/product/rf-coupler" },
+  { image: 'rfadapter', title: 'RF Adapter', link: "/product/rf-adapter" },
+  { image: 'amplifiers', title: 'Amplifier and Combiner', link: "/product/amplifier-and-combiner" },
+  { image: 'solarproduct', title: 'Solar Product', link: "/product/solar-product" },
+  { image: 'rfattenuator', title: 'RF attenuator', link: "/product/rf-attenuator" },
+  { image: 'bnc', title: 'BNC Connector', link: "/product/bnc-connector" },
   { image: 'arrowIcon', title: 'See All Categories', link: "/product-showroom" },
 ];
 
