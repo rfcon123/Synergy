@@ -118,6 +118,10 @@ import j35mmconnector from '../assets/components/j3.5mmconnector.jpg';
 import antenna from '../assets/components/antenna.jpg';
 import emi_emcshieldingproduct from '../assets/components/emi_emcshieldingproduct.jpg';
 import gps_gpsmodule from '../assets/components/gps_gpsmodule.jpg';
+import combiner from '../assets/components/combiner.jpg';
+import highfreqadapter from '../assets/components/highfrequencyadapter.jpg';
+import bts from '../assets/components/bts.jpg';
+import catalogue from '../assets/components/catalogue.jpg';
 
 
 
@@ -139,16 +143,16 @@ const productsData = [
   { name: "Elcom Solar Product", slug: "elcom-solar-product", image: elcomsolarproduct },
   { name: "Surveillance Tools", slug: "surveillance-tools", image: surveillancetools },
   { name: "Telescopic Mast", slug: "telescopic-mast", image: telescopicmast },
-  { name: "Combiner", slug: "combiner", image: combinermxproduct },
+  { name: "Combiner", slug: "combiner", image: combiner },
   { name: "MX Product", slug: "mx-product", image: combinermxproduct },
   { name: "Amplifier and Combiner", slug: "amplifier-and-combiner", image: amplifierandcombiner },
   { name: "RF Coupler", slug: "rf-coupler", image: rfcoupler },
   { name: "Roxtec Comseal ", slug: "roxtec-comseal", image: roxteccomsealbts },
-  { name: "BTS", slug: "bts", image: roxteccomsealbts },
+  { name: "BTS", slug: "bts", image: bts },
   { name: "VoIP Phone", slug: "voip-phone", image: voipphone },
   { name: "RF Adapter", slug: "rf-adapter", image: rfadapter },
   { name: "Krone", slug: "krone", image: kronehighfrequencyadapter },
-  { name: "High Frequency Adapter", slug: "high-frequency-adapter", image: kronehighfrequencyadapter },
+  { name: "High Frequency Adapter", slug: "high-frequency-adapter", image: highfreqadapter },
   { name: "UY Connector", slug: "uy-connector", image: uyconnector },
   { name: "Andrew Cutter", slug: "andrew-cutter", image: andrewcutter },
   { name: "RF Attenuator", slug: "rf-attenuator", image: rfattenuator },
@@ -231,7 +235,7 @@ const productsData = [
   { name: "Waveguide Adaptor", slug: "waveguide-adaptor", image: waveguideadaptor },
   { name: "Waveguide Flange", slug: "waveguide-flange", image: waveguideflange },
   { name: "Waveguide Component", slug: "waveguide-component", image: waveguidecomponent },
-  { name: "All Connector Catalogue", slug: "all-connector-catalogue", image: feedthru },
+  { name: "All Connector Catalogue", slug: "all-connector-catalogue", image: catalogue },
 ].map(product => ({
   ...product,
   slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')
