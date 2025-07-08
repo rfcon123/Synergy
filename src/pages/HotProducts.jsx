@@ -345,7 +345,7 @@ const HotProducts = () => {
               placeholder="Search hot products..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full px-5 py-3 pl-12 border border-gray-300 rounded-full shadow-xl text-gray-700 font-medium focus:outline-none focus:ring-2 focus:ring-red-500"
+              className="w-full px-5 py-3 pl-12 border border-gray-300 rounded-md shadow-xl text-gray-700 font-medium focus:outline-none focus:ring-2 focus:ring-red-500"
             />
             <span className="absolute left-4 top-3 text-xl text-red-500">🔥</span>
           </div>
@@ -365,7 +365,7 @@ const HotProducts = () => {
 
               {/* Product Name */}
               <h2 className="text-xl font-bold text-red-600 mb-3 group-hover:text-red-700 transition">
-                - {item.name}
+                 {item.name}
               </h2>
 
               {/* Buttons */}

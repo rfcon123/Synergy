@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import productLinks from './Productlinks';
 import StyledButton  from '../components/StyledButton';
 import rfcable from '../assets/components/rfcable.jpg';
 import jumpercable from '../assets/components/jumpercable.jpg';
@@ -121,119 +122,122 @@ import gps_gpsmodule from '../assets/components/gps_gpsmodule.jpg';
 
 
 const productsData = [
-  { name: "RF Cable", image: rfcable },
-  { name: "Jumper Cable", image: jumpercable },
-  { name: "High Freq Cable", image: highfreqcable },
-  { name: "Fakra Connector", image: fakraconnector },
-  { name: "SFP Transceiver", image: sfptransceiver },
-  { name: "5G Product", image: j5gproduct },
-  { name: "Helical Antenna", image: helicalantenna },
-  { name: "HF and VHF Antenna", image: hfandvhfantenna },
-  { name: "FME Connector", image: fmeconnector },
-  { name: "Patanjali Solar Products", image: patanjalisolarproducts },
-  { name: "High Frequency Termination", image: highfrequencytermination },
-  { name: "Tetra Band Products", image: tetrabandproducts },
-  { name: "Cable Assembly", image: cableassembly },
-  { name: "Solar Tracking System", image: solartrackingsystem },
-  { name: "Elcom Solar Product", image: elcomsolarproduct },
-  { name: "Surveillance Tools", image: surveillancetools },
-  { name: "Telescopic Mast", image: telescopicmast },
-  { name: "Combiner MX Product", image: combinermxproduct },
-  { name: "Amplifier and Combiner", image: amplifierandcombiner },
-  { name: "RF Coupler", image: rfcoupler },
-  { name: "Roxtec Comseal ", image: roxteccomsealbts },
-  { name: "VoIP Phone", image: voipphone },
-  { name: "RF Adapter", image: rfadapter },
-  { name: "Krone High Frequency Adapter", image: kronehighfrequencyadapter },
-  { name: "UY Connector", image: uyconnector },
-  { name: "Andrew Cutter", image: andrewcutter },
-  { name: "RF Attenuator", image: rfattenuator },
-  { name: "High Freq Attenuator", image: highfreqattenuator },
-  { name: "Solar Product", image: solarproduct },
-  { name: "RF Connector", image: rfconnector },
-  { name: "BMA Connector", image: bmaconnector },
-  { name: "BNC Connector", image: bncconnector },
-  { name: "BQ Connector", image: bqconnector },
-  { name: "C4 Connector", image: c4connector },
-  { name: "C Connector", image: cconnector },
-  { name: "CRC9 Connector", image: crc9connector },
-  { name: "DIN Connector", image: dinconnector },
-  { name: "4.3-1.0 Connector", image: j4310connector }, 
-  { name: "F Type Connector", image: ftypeconnector },
-  { name: "HN Connector", image: hnconnector },
-  { name: "KMX3 Connector", image: kmx3connector },
-  { name: "L9 Connector", image: l9connector },
-  { name: "M4 Connector", image: m4connector },
-  { name: "MCX Connector", image: mcxconnector },
-  { name: "MMCX Connector", image: mmcxconnector },
-  { name: "N Type Connector", image: ntypeconnector },
-  { name: "QMA Connector", image: qmaconnector },
-  { name: "QN Connector", image: qnconnector },
-  { name: "SAA Connector", image: saaconnector },
-  { name: "SMA Connector", image: smaconnector },
-  { name: "SMB Connector", image: smbconnector },
-  { name: "SMC Connector", image: smcconnector },
-  { name: "SMP Connector", image: smpconnector },
-  { name: "SMZ Connector", image: smzconnector },
-  { name: "SSMB Connector", image: ssmbconnector },
-  { name: "TNC Connector", image: tncconnector },
-  { name: "Triaxial Connector", image: triaxialconnector },
-  { name: "TQ Connector", image: tqconnector },
-  { name: "UHF Connector", image: uhfconnector },
-  { name: "High Freq Connector", image: highfreqconnector },
-  { name: "1.85mm Connector", image: j185mmconnector },
-  { name: "2.4mm Connector", image: j24mmconnector },
-  { name: "2.92mm Connectors", image: j292mmconnectors },
-  { name: "3.5mm Connector", image: j35mmconnector },
-  { name: "Circular Connector", image: circularconnector },
-  { name: "Antenna", image: antenna },
-  { name: "Horn Antenna", image: antennahornantenna },
-  { name: "Balun", image: balun },
-  { name: "Beryllium Copper", image: berylliumcopper },
-  { name: "Bias Tee", image: biastee },
-  { name: "Broadcast Air Gap", image: broadcastairgap },
-  { name: "Cable Lugs", image: cablelugs },
-  { name: "Cable Tie", image: cabletie },
-  { name: "Network Connector", image: networkconnector },
-  { name: "DC Power Cable", image: dcpowercable },
-  { name: "DC Block", image: dcblock },
-  { name: "DC to DC Converter", image: dctodcconverter },
-  { name: "Diplexer", image: diplexer },
-  { name: "Dummy Load", image: dummyload },
-  { name: "EMI/EMC Shielding Product", image: emi_emcshieldingproduct },
-  { name: "Environmental Chamber", image: environmentalchamber },
-  { name: "Feeder Clamp", image: feederclamp },
-  { name: "Feed Thru", image: feedthru },
-  { name: "Flange Connector", image: flangeconnector },
-  { name: "GPS/GPS Module", image: gps_gpsmodule },
-  { name: "High Frequency Product", image: highfrequencyproduct },
-  { name: "Hoisting Grip", image: hoistinggrip },
-  { name: "IBS Product", image: ibsproduct },
-  { name: "Installation Kit", image: installationkit },
-  { name: "Microwave Component", image: microwavecomponent },
-  { name: "Mil Grade Cable", image: milgradecable },
-  { name: "Optical Fiber Products", image: opticalfiberproducts },
-  { name: "Proskit Toolkits", image: proskittoolkits },
-  { name: "Protective Cap", image: protectivecap },
-  { name: "Rechargeable Battery", image: rechargeablebattery },
-  { name: "RF Switch", image: rfswitch },
-  { name: "Shield Box", image: shieldbox },
-  { name: "Splitter", image: splitter },
-  { name: "Shrinkable Tube", image: shrinkabletube },
-  { name: "Surge Arrester", image: surgearrester },
-  { name: "Telecommunication Mast", image: telecommunicationmast },
-  { name: "Test Measurement Equipment", image: testmeasurementequipment },
-  { name: "Tools", image: tools },
-  { name: "Waveguide Adaptor", image: waveguideadaptor },
-  { name: "Waveguide Flange", image: waveguideflange },
-  { name: "Waveguide Component", image: waveguidecomponent },
-
+  { name: "RF Cable", slug: "rf-cable", image: rfcable },
+  { name: "Jumper Cable", slug: "jumper-cable", image: jumpercable },
+  { name: "High Freq Cable", slug: "high-freq-cable", image: highfreqcable },
+  { name: "Fakra Connector", slug: "fakra-connector", image: fakraconnector },
+  { name: "SFP Transceiver", slug: "sfp-transceiver", image: sfptransceiver },
+  { name: "5G Product", slug: "5g-product", image: j5gproduct },
+  { name: "Helical Antenna", slug: "helical-antenna", image: helicalantenna },
+  { name: "HF and VHF Antenna", slug: "hf-and-vhf-antenna", image: hfandvhfantenna },
+  { name: "FME Connector", slug: "fme-connector", image: fmeconnector },
+  { name: "Patanjali Solar Products", slug: "patanjali-solar-products", image: patanjalisolarproducts },
+  { name: "High Frequency Termination", slug: "high-frequency-termination", image: highfrequencytermination },
+  { name: "Tetra Band Products", slug: "tetra-band-products", image: tetrabandproducts },
+  { name: "Cable Assembly", slug: "cable-assembly", image: cableassembly },
+  { name: "Solar Tracking System", slug: "solar-tracking-system", image: solartrackingsystem },
+  { name: "Elcom Solar Product", slug: "elcom-solar-product", image: elcomsolarproduct },
+  { name: "Surveillance Tools", slug: "surveillance-tools", image: surveillancetools },
+  { name: "Telescopic Mast", slug: "telescopic-mast", image: telescopicmast },
+  { name: "Combiner", slug: "combiner", image: combinermxproduct },
+  { name: "MX Product", slug: "mx-product", image: combinermxproduct },
+  { name: "Amplifier and Combiner", slug: "amplifier-and-combiner", image: amplifierandcombiner },
+  { name: "RF Coupler", slug: "rf-coupler", image: rfcoupler },
+  { name: "Roxtec Comseal ", slug: "roxtec-comseal", image: roxteccomsealbts },
+  { name: "BTS", slug: "bts", image: roxteccomsealbts },
+  { name: "VoIP Phone", slug: "voip-phone", image: voipphone },
+  { name: "RF Adapter", slug: "rf-adapter", image: rfadapter },
+  { name: "Krone", slug: "krone", image: kronehighfrequencyadapter },
+  { name: "High Frequency Adapter", slug: "high-frequency-adapter", image: kronehighfrequencyadapter },
+  { name: "UY Connector", slug: "uy-connector", image: uyconnector },
+  { name: "Andrew Cutter", slug: "andrew-cutter", image: andrewcutter },
+  { name: "RF Attenuator", slug: "rf-attenuator", image: rfattenuator },
+  { name: "High Freq Attenuator", slug: "high-freq-attenuator", image: highfreqattenuator },
+  { name: "Solar Product", slug: "solar-product", image: solarproduct },
+  { name: "RF Connector", slug: "rf-connector", image: rfconnector },
+  { name: "BMA Connector", slug: "bma-connector", image: bmaconnector },
+  { name: "BNC Connector", slug: "bnc-connector", image: bncconnector },
+  { name: "BQ Connector", slug: "bq-connector", image: bqconnector },
+  { name: "C4 Connector", slug: "c4-connector", image: c4connector },
+  { name: "C Connector", slug: "c-connector", image: cconnector },
+  { name: "CRC9 Connector", slug: "crc9-connector", image: crc9connector },
+  { name: "DIN Connector", slug: "din-connector", image: dinconnector },
+  { name: "4.3-1.0 Connector", slug: "4.3-1.0-connector", image: j4310connector },
+  { name: "F Type Connector", slug: "f-type-connector", image: ftypeconnector },
+  { name: "HN Connector", slug: "hn-connector", image: hnconnector },
+  { name: "KMX3 Connector", slug: "kmx3-connector", image: kmx3connector },
+  { name: "L9 Connector", slug: "l9-connector", image: l9connector },
+  { name: "M4 Connector", slug: "m4-connector", image: m4connector },
+  { name: "MCX Connector", slug: "mcx-connector", image: mcxconnector },
+  { name: "MMCX Connector", slug: "mmcx-connector", image: mmcxconnector },
+  { name: "N Type Connector", slug: "n-type-connector", image: ntypeconnector },
+  { name: "QMA Connector", slug: "qma-connector", image: qmaconnector },
+  { name: "QN Connector", slug: "qn-connector", image: qnconnector },
+  { name: "SAA Connector", slug: "saa-connector", image: saaconnector },
+  { name: "SMA Connector", slug: "sma-connector", image: smaconnector },
+  { name: "SMB Connector", slug: "smb-connector", image: smbconnector },
+  { name: "SMC Connector", slug: "smc-connector", image: smcconnector },
+  { name: "SMP Connector", slug: "smp-connector", image: smpconnector },
+  { name: "SMZ Connector", slug: "smz-connector", image: smzconnector },
+  { name: "SSMB Connector", slug: "ssmb-connector", image: ssmbconnector },
+  { name: "TNC Connector", slug: "tnc-connector", image: tncconnector },
+  { name: "Triaxial Connector", slug: "triaxial-connector", image: triaxialconnector },
+  { name: "TQ Connector", slug: "tq-connector", image: tqconnector },
+  { name: "UHF Connector", slug: "uhf-connector", image: uhfconnector },
+  { name: "High Freq Connector", slug: "high-freq-connector", image: highfreqconnector },
+  { name: "1.85mm Connector", slug: "1-85mm-connector", image: j185mmconnector },
+  { name: "2.4mm Connector", slug: "2-4mm-connector", image: j24mmconnector },
+  { name: "2.92mm Connectors", slug: "2-92mm-connectors", image: j292mmconnectors },
+  { name: "3.5mm Connector", slug: "3-5mm-connector", image: j35mmconnector },
+  { name: "Circular Connector", slug: "circular-connector", image: circularconnector },
+  { name: "Antenna", slug: "antenna", image: antenna },
+  { name: "Horn Antenna", slug: "horn-antenna", image: antennahornantenna },
+  { name: "Balun", slug: "balun", image: balun },
+  { name: "Beryllium Copper", slug: "beryllium-copper", image: berylliumcopper },
+  { name: "Bias Tee", slug: "bias-tee", image: biastee },
+  { name: "Broadcast Air Gap", slug: "broadcast-air-gap", image: broadcastairgap },
+  { name: "Cable Lugs", slug: "cable-lugs", image: cablelugs },
+  { name: "Cable Tie", slug: "cable-tie", image: cabletie },
+  { name: "Network Connector", slug: "network-connector", image: networkconnector },
+  { name: "DC Power Cable", slug: "dc-power-cable", image: dcpowercable },
+  { name: "DC Block", slug: "dc-block", image: dcblock },
+  { name: "DC to DC Converter", slug: "dc-to-dc-converter", image: dctodcconverter },
+  { name: "Diplexer", slug: "diplexer", image: diplexer },
+  { name: "Dummy Load", slug: "dummy-load", image: dummyload },
+  { name: "EMI/EMC Shielding Product", slug: "emi-emc-shielding-product", image: emi_emcshieldingproduct },
+  { name: "Environmental Chamber", slug: "environmental-chamber", image: environmentalchamber },
+  { name: "Feeder Clamp", slug: "feeder-clamp", image: feederclamp },
+  { name: "Feed Thru", slug: "feed-thru", image: feedthru },
+  { name: "Flange Connector", slug: "flange-connector", image: flangeconnector },
+  { name: "GPS/GPS Module", slug: "gps-gps-module", image: gps_gpsmodule },
+  { name: "High Frequency Product", slug: "high-frequency-product", image: highfrequencyproduct },
+  { name: "Hoisting Grip", slug: "hoisting-grip", image: hoistinggrip },
+  { name: "IBS Product", slug: "ibs-product", image: ibsproduct },
+  { name: "Installation Kit", slug: "installation-kit", image: installationkit },
+  { name: "Microwave Component", slug: "microwave-component", image: microwavecomponent },
+  { name: "Mil Grade Cable", slug: "mil-grade-cable", image: milgradecable },
+  { name: "Optical Fiber Products", slug: "optical-fiber-products", image: opticalfiberproducts },
+  { name: "Proskit Toolkits", slug: "proskit-toolkits", image: proskittoolkits },
+  { name: "Protective Cap", slug: "protective-cap", image: protectivecap },
+  { name: "Rechargeable Battery", slug: "rechargeable-battery", image: rechargeablebattery },
+  { name: "RF Switch", slug: "rf-switch", image: rfswitch },
+  { name: "Shield Box", slug: "shield-box", image: shieldbox },
+  { name: "Splitter", slug: "splitter", image: splitter },
+  { name: "Shrinkable Tube", slug: "shrinkable-tube", image: shrinkabletube },
+  { name: "Surge Arrester", slug: "surge-arrester", image: surgearrester },
+  { name: "Telecommunication Mast", slug: "telecommunication-mast", image: telecommunicationmast },
+  { name: "Test Measurement Equipment", slug: "test-measurement-equipment", image: testmeasurementequipment },
+  { name: "Tools", slug: "tools", image: tools },
+  { name: "Waveguide Adaptor", slug: "waveguide-adaptor", image: waveguideadaptor },
+  { name: "Waveguide Flange", slug: "waveguide-flange", image: waveguideflange },
+  { name: "Waveguide Component", slug: "waveguide-component", image: waveguidecomponent },
+  { name: "All Connector Catalogue", slug: "all-connector-catalogue", image: feedthru },
 ].map(product => ({
   ...product,
-  slug: product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')
+  slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')
 }));
 
-export const productsWithSlugs = productsData; // Export for use in ProductDetail.jsx
+export const productsWithSlugs = productsData;
 
 const ProductShowroom = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -245,19 +249,16 @@ const ProductShowroom = () => {
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen px-4 py-10 md:px-10">
       <div className="max-w-7xl mx-auto">
-        
-        {/* Header */}
         <div className="text-center mb-10">
-           <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
-        Explore Our Product Showroom
-        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
-      </h1>
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+            Explore Our Product Showroom
+            <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+          </h1>
           <p className="text-gray-600 text-md md:text-lg max-w-2xl mx-auto leading-relaxed">
             Discover a wide range of high-quality products tailored to your telecom and RF needs.
           </p>
         </div>
 
-        {/* Search bar */}
         <div className="mb-10 max-w-lg mx-auto">
           <input
             type="text"
@@ -268,7 +269,6 @@ const ProductShowroom = () => {
           />
         </div>
 
-        {/* Product Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {filteredProducts.length > 0 ? (
             filteredProducts.map((product, index) => (
@@ -291,7 +291,6 @@ const ProductShowroom = () => {
                     {product.name}
                   </h3>
                 </div>
-                {/* Styled Explore Button */}
                 <div className="pb-4">
                   <StyledButton
                     label="Explore"
@@ -308,7 +307,6 @@ const ProductShowroom = () => {
           )}
         </div>
 
-        {/* Footer Note with Centered Contact Support Button */}
         <div className="mt-16 text-center space-y-4">
           <p className="text-sm text-gray-600">
             Need help finding the right product? Reach out to our team for personalized assistance.
