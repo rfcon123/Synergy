@@ -101,7 +101,7 @@ const LiionBattery = () => {
         <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4 sm:p-6">
           <h2 className="text-lg sm:text-xl font-semibold text-blue-800 mb-4">Battery Inquiry Form</h2>
          <form
-      action="https://formsubmit.co/experiment@rfconnector.in"
+      action="https://formsubmit.co/a324884fcd1e9c2d90a89172c4854bbb"
       method="POST"
       className="space-y-5 text-sm bg-white p-6 rounded-xl shadow-xl"
       onSubmit={(e) => {alert('Thank you for your inquiry! We will get back to you soon.'); }}

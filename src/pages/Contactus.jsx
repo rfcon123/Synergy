@@ -105,7 +105,7 @@ const ContactUs = () => {
     <section className="bg-white rounded-xl shadow-xl p-8 mb-16">
       <h3 className="text-2xl font-semibold text-blue-800 mb-4 text-center">Send Us a Message</h3>
       <form
-        action="https://formsubmit.co/experiment@rfconnector.in"
+        action="https://formsubmit.co/a324884fcd1e9c2d90a89172c4854bbb"
         method="POST"
         className="grid gap-6"
         onSubmit={(e) => alert('Thank you for your message! We will get back to you soon.')}

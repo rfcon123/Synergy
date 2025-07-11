@@ -9,7 +9,7 @@ const Feedback = () => {
         </h1>
 
         <form
-          action="https://formsubmit.co/experiment@rfconnector.in"
+          action="https://formsubmit.co/a324884fcd1e9c2d90a89172c4854bbb"
           method="POST"
           className="space-y-10"
         >
