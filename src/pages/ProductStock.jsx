@@ -1,93 +1,70 @@
-import React from "react";
-
-const productData = [
-  {
-    name: "BNC(F) TO BNC(F) 4H ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/BNC_F_BNC_F_ADAPTOR.pdf",
-    quantity: "682 NOS",
-  },
-  {
-    name: "BNC(F) TO BNC(F) BH ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/BNC_Female_to_BNc_Female_BH_Adaptor.pdf",
-    quantity: "502 NOS",
-  },
-  {
-    name: "BNC(F) TO SMA(M) ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/BNC_F_SMA_M_ADAPTOR.pdf",
-    quantity: "260 NOS",
-  },
-  {
-    name: "BNC(M) TO BNC(F) ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/BNC_M_BNC_F_ADAPTOR.pdf",
-    quantity: "262 NOS",
-  },
-  {
-    name: "BNC(M) TO BNC(M) ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/BNC_M_BNC_M_ADAPTOR.pdf",
-    quantity: "343 NOS",
-  },
-  {
-    name: "BNC(M) TO F(F) ADAPTOR 3GHZ",
-    link: "https://www.rfconnector.in/catalog/Connector_Adaptor/Coaxial_Adaptor/BNC_M_to_F_F.pdf",
-    quantity: "101 NOS",
-  },
-  {
-    name: "BNC(M) TO MINI UHF (F) ADAPTOR 3GHZ",
-    link: "https://www.rfconnector.in/catalog/Connector_Adaptor/Coaxial_Adaptor/BNC_to_BNC_Adaptor/BNC_M_MINI_UHF_F_ADAPTOR.pdf",
-    quantity: "95 NOS",
-  },
-  {
-    name: "BNC(M) TO N(F) ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/N_F_BNC_M_Adaptor.pdf",
-    quantity: "108 NOS",
-  },
-  {
-    name: "BNC(M) TO N(M) ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/N_M_BNC_M_Adaptor.pdf",
-    quantity: "374 NOS",
-  },
-  {
-    name: "BNC(M) TO SMA(F) ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/BNC_M_SMA_F_ADAPTOR.pdf",
-    quantity: "143 NOS",
-  },
-  {
-    name: "BNC(M) TO SMA(M) ADAPTOR 3GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/BNC_M_SMA_M_ST_ADAPTOR.pdf",
-    quantity: "177 NOS",
-  },
-  {
-    name: "BNC(M) TO TNC(F) ADAPTOR 3GHZ",
-    link: "https://www.rfconnector.in/catalog/Connector_Adaptor/Coaxial_Adaptor/BNC_M_TNC_F_ADAPTOR.pdf",
-    quantity: "375 NOS",
-  },
-  {
-    name: "BNC(M) TO UHF(F) ADAPTOR 3GHZ",
-    link: "https://www.rfconnector.in/catalog/Connector_Adaptor/Coaxial_Adaptor/BNC_to_BNC_Adaptor/BNC_M_UHF_F_ADAPTOR.pdf",
-    quantity: "2964 NOS",
-  },
-  {
-    name: "DIN(F) TO DIN(F) ADAPTOR 7.5GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/DIN_F_DIN_F_ADAPTOR.pdf",
-    quantity: "73 NOS",
-  },
-  {
-    name: "DIN(F) TO N(F) ADAPTOR 7.5GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/DIN_F_N_F.pdf",
-    quantity: "815 NOS",
-  },
-  {
-    name: "DIN(F) TO N(M) ADAPTOR 7.5GHZ",
-    link: "http://www.rfconnector.in/catalog/adaptor/DIN_F_to_N_M.pdf",
-    quantity: "395 NOS",
-  },
-];
+import React, { useState } from "react";
+import allProductData from "./output_data.json"; 
 
 const ProductStock = () => {
+const categories = [
+  "ANTENNAS",
+  "ATTENUATORS",
+  "BALUNS",
+  "CABLES",
+  "RF CABLES",
+  "CABLE TIE",
+  "COMBINERS",
+  "CONNECTORS",
+  "C4 CONNECTOR",
+  "DIN CONNECTOR",
+  "L9 CONNECTOR",
+  "N CONNECTOR",
+  "QMA CONNECTOR",
+  "SAA CONNECTOR",
+  "SMA CONNECTOR",
+  "SMB CONNECTOR",
+  "SMC CONNECTOR",
+  "SMZ CONNECTOR",
+  "SOLAR CONNECTOR",
+  "TNC CONNECTOR",
+  "UHF CONNECTOR",
+  "COUPLERS",
+  "DUMMYLOADS",
+  "EARTHING KITS",
+  "FEEDER CLAMP",
+  "SPLITERS",
+  "SURGE ARRESTORS",
+  "TOOLS",
+  "VARRIABLE ATTENUATORS"
+];
+
+
+  const [selectedCategory, setSelectedCategory] = useState("ANTENNAS");
+  const products = allProductData[selectedCategory] || [];
+
   return (
     <main className="max-w-6xl mx-auto px-4 py-10">
-      <h1 className="text-3xl font-bold text-blue-900 mb-6">RF Adaptors Stock</h1>
+       <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
+        Product Stock Status
+        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
+      </h1>
 
+      {/* Category Dropdown */}
+      <div className="mb-6">
+        <label htmlFor="category" className="block text-lg font-semibold text-gray-700 mb-2">
+          Select Category:
+        </label>
+        <select
+          id="category"
+          value={selectedCategory}
+          onChange={(e) => setSelectedCategory(e.target.value)}
+          className="border border-gray-300 px-4 py-2 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+        >
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      {/* Table */}
       <div className="overflow-x-auto shadow rounded-xl">
         <table className="min-w-full table-auto border-collapse">
           <thead>
@@ -97,26 +74,36 @@ const ProductStock = () => {
             </tr>
           </thead>
           <tbody className="text-gray-800">
-            {productData.map((item, index) => (
-              <tr
-                key={index}
-                className={`${
-                  index % 2 === 0 ? "bg-gray-100" : "bg-white"
-                } hover:bg-blue-50 transition`}
-              >
-                <td className="px-4 py-3">
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-700 hover:underline"
-                  >
-                    {item.name}
-                  </a>
+            {products.length === 0 ? (
+              <tr>
+                <td className="px-4 py-4" colSpan="2">
+                  No data available for this category.
                 </td>
-                <td className="px-4 py-3 font-semibold">{item.quantity}</td>
               </tr>
-            ))}
+            ) : (
+              products.map((item, index) => (
+                <tr
+                  key={index}
+                  className={`${
+                    index % 2 === 0 ? "bg-gray-100" : "bg-white"
+                  } hover:bg-blue-50 transition`}
+                >
+                  <td className="px-4 py-3">
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-700 hover:underline"
+                    >
+                      {item.name}
+                    </a>
+                  </td>
+                  <td className="px-4 py-3 font-semibold">
+                    {item.NOS || item.quantity || "N/A"}
+                  </td>
+                </tr>
+              ))
+            )}
           </tbody>
         </table>
       </div>
