@@ -43,13 +43,7 @@ const Header = () => {
       {/* 🔴 Red Banner */}
      <section className="bg-blue-700 text-white text-sm py-2 overflow-hidden">
   <marquee behavior="scroll" direction="left" scrollamount="15">
-    Introducing our fiber optic cable assemblies — available for same-day shipping in standard and custom lengths. | 
-    Same-day shipping if you order in the next 00:00 hours! | 
-    Tariff Information | 
-    U.S. and Canada: (866) 952-4771 | 
-    International: +1 (949) 261-1920 | 
-    Quick Order | 
-    Live Chat
+   testing text
   </marquee>
 </section>
 
