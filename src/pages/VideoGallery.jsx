@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-const API_KEY = 'AIzaSyC8dDxqmC5YJ28Pxf0QJGtGmv7xaIXtTVU';
-const CHANNEL_ID = 'UC-iHA_voe080R3VJGCO0NuA';
+const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
+const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
 
 const VideoGallery = () => {
   const [allVideos, setAllVideos] = useState([]);

@@ -53,6 +53,37 @@ const Products = () => {
         </div>
       </section>
 
+      <section>
+  <h2 className="text-3xl font-bold text-blue-900 mb-6 tracking-tight">Download Synergy Catalogs</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {[
+      {
+        name: "Synergy Full Line Catalog",
+        link: "https://rfconnector.in/synergyfulline.pdf",
+      },
+      {
+        name: "Synergy Product Catalogue 1",
+        link: "https://rfconnector.in/Product/synergy_catalogue1.pdf",
+      },
+      {
+        name: "Synergy RF Catalog",
+        link: "https://rfconnector.in/Product/synergyrf.pdf",
+      },
+    ].map((catalog, index) => (
+      <a
+        key={index}
+        href={catalog.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block bg-gradient-to-br from-blue-50 via-white to-blue-100 p-6 rounded-xl shadow hover:shadow-xl hover:scale-[1.02] transition-all duration-300 text-center"
+      >
+        <span className="text-lg font-semibold text-blue-800">{catalog.name}</span>
+        <span className="block mt-2 text-sm text-blue-600 font-medium">Download PDF</span>
+      </a>
+    ))}
+  </div>
+</section>
+
       {/* Product Line Section */}
       <section>
         <h2 className="text-3xl font-bold text-blue-900 mb-6 tracking-tight">Product Line</h2>

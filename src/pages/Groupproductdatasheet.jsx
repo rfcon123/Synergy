@@ -118,7 +118,7 @@ const Groupproductdatasheet = () => {
         <StyledButton
           label="Contact Support"
           icon={true}
-          onClick={() => window.location.href = 'mailto:support@synergytelecom.com'}
+          onClick={() => window.location.href = 'mailto:info@synergytpl.com'}
         />
       </div>
     </div>

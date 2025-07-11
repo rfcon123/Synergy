@@ -21,7 +21,10 @@ import HotProducts from './pages/HotProducts';
 import Career from './pages/Career';
 import Productpricelist from './pages/Productspricelist';
 import Groupproductdatasheet from './pages/Groupproductdatasheet';
-import Feedback from './pages/Feedback' // ✅ Product Price List Page
+import Feedback from './pages/Feedback' 
+import Cablecreator from './pages/Cablecreator'; 
+
+import Notfound from './pages/Notfound'; 
 
 function App() {
   return (
@@ -62,6 +65,9 @@ function App() {
         <Route path="/career" element={<Career />} /> 
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/customer-feedback" element={<Feedback />} /> {/* ✅ Career Page */}
+
+        <Route path="*" element={<Notfound />} />
+        <Route path="/cable-creator" element={<Cablecreator />} />
 
         {/* Old Pages (Currently Commented) */}
         {/*

@@ -6,7 +6,7 @@ const DefenceandAerospace = () => {
   return (
     <div className="bg-gray-50 text-gray-800">
       {/* Carousel */}
-      <div className="w-full">
+      {/* <div className="w-full">
         <Carousel
           showThumbs={false}
           infiniteLoop
@@ -25,7 +25,7 @@ const DefenceandAerospace = () => {
             </div>
           ))}
         </Carousel>
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-10">

@@ -137,7 +137,7 @@ const ProductCatalogue = () => {
           label="Contact Support"
           icon={true}
           onClick={() =>
-            (window.location.href = "mailto:support@synergytelecom.com")
+            (window.location.href = "mailto:info@synergytpl.com")
           }
         />
       </div>

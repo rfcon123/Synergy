@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Disallow: /dist/
+
+Disallow: /.vscode/
+Disallow: /.git/
+Disallow: /.zenencoder/
+
+Disallow: /test/
+
+Disallow: /*.json$
+Disallow: /*.svg$
+
+Sitemap: https://refec.netlify.app/sitemap.xml 

@@ -4,7 +4,7 @@ import team from '../assets/team.jpg';
 
 const Career = () => {
   const handleApplyClick = () => {
-    window.open('https://forms.gle/YourGoogleFormLinkHere', '_blank');
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSccTSfbsX73owONf0rg4Undqx_JGHBcQTROy5Wg6gxifeipnQ/viewform', '_blank');
   };
 
   return (
