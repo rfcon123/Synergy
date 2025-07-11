@@ -47,10 +47,11 @@ function Cablecreator() {
 
   const isEmpty = (val) => !val || val.toString().trim() === '';
 
+  // Enhanced getFieldClass for a bold, edgy look
   const getFieldClass = (invalid) =>
-    `w-full px-4 py-2 rounded-md border transition duration-300 outline-none
-      ${invalid ? 'border-red-400 bg-red-50' : 'border-gray-300 bg-white'}
-     focus:ring-2 focus:ring-blue-400 focus:border-blue-500`;
+    `w-full px-5 py-3 rounded-lg border-2 transition duration-300 outline-none text-gray-100 placeholder-gray-400
+    ${invalid ? 'border-red-600 bg-red-950 focus:ring-red-700' : 'border-gray-700 bg-gray-800 focus:ring-blue-600 focus:border-blue-700'}
+    focus:shadow-lg focus:shadow-blue-900`;
 
   const handleSubmit = () => {
     if (cable.code && connectorA.code && connectorB.code && length) {
@@ -66,15 +67,17 @@ function Cablecreator() {
   };
 
   const renderConnectorFields = (connector, setConnector, label) => (
-    <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition w-full flex flex-col items-center border border-gray-200">
-      <h2 className="text-xl font-semibold mb-4 text-blue-700">{label}</h2>
+    <div className="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 ease-in-out w-full flex flex-col items-center border border-gray-700 transform hover:-translate-y-2">
+      <h2 className="text-2xl font-extrabold mb-6 text-blue-400 tracking-wider uppercase border-b-2 border-blue-600 pb-3 w-full text-center">
+        {label}
+      </h2>
 
       {label === 'End 2 Connector' && (
         <button
           onClick={() => setConnector({ ...connectorA })}
-          className="mb-4 px-4 py-2 text-sm bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+          className="mb-6 px-6 py-2 text-sm bg-blue-700 text-white rounded-md hover:bg-blue-800 transition-all duration-200 ease-in-out shadow-lg hover:shadow-xl transform active:scale-95 focus:outline-none focus:ring-2 focus:ring-blue-500 border border-blue-600"
         >
-          Copy Connector 1
+          <i className="fas fa-copy mr-2"></i> Copy Connector 1
         </button>
       )}
 
@@ -87,9 +90,9 @@ function Cablecreator() {
             onChange={(e) =>
               setConnector((prev) => ({ ...prev, [key]: e.target.value }))
             }
-            className={`mb-3 ${getFieldClass(isEmpty(connector[key]))}`}
+            className={`mb-4 ${getFieldClass(isEmpty(connector[key]))} appearance-none cursor-pointer`}
           >
-            <option value="">Select {key}</option>
+            <option value="">Select {key.replace(/([A-Z])/g, ' $1').toLowerCase().replace(/^\w/, (c) => c.toUpperCase())}</option>
             {[...new Set(cableOptions.connectors.map((c) => c[key]))].map(
               (option) => (
                 <option key={option} value={option}>
@@ -108,7 +111,7 @@ function Cablecreator() {
           );
           setConnector(selected || {});
         }}
-        className={`mt-2 ${getFieldClass(isEmpty(connector.name))}`}
+        className={`mt-4 ${getFieldClass(isEmpty(connector.name))} appearance-none cursor-pointer`}
       >
         <option value="">Select Connector Type</option>
         {cableOptions.connectors.map((c) => (
@@ -121,11 +124,13 @@ function Cablecreator() {
   );
 
   const renderCableFields = () => (
-    <div className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition w-full flex flex-col items-center border border-gray-200">
-      <h2 className="text-xl font-semibold mb-4 text-blue-700">Cable</h2>
+    <div className="bg-gray-800 rounded-xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 ease-in-out w-full flex flex-col items-center border border-gray-700 transform hover:-translate-y-2">
+      <h2 className="text-2xl font-extrabold mb-6 text-blue-400 tracking-wider uppercase border-b-2 border-blue-600 pb-3 w-full text-center">
+        Cable
+      </h2>
       {Object.keys(cableOptions.cables[0])
         .filter((key) =>
-          !['pricePerMeter', 'code', 'type', 'compatibleConnectors'].includes(
+          !['pricePerMeter', 'code', 'type', 'compatibleConnectors', 'attenuationPerMeter'].includes(
             key
           )
         )
@@ -136,9 +141,9 @@ function Cablecreator() {
             onChange={(e) =>
               setCable((prev) => ({ ...prev, [key]: e.target.value }))
             }
-            className={`mb-3 ${getFieldClass(isEmpty(cable[key]))}`}
+            className={`mb-4 ${getFieldClass(isEmpty(cable[key]))} appearance-none cursor-pointer`}
           >
-            <option value="">Select {key}</option>
+            <option value="">Select {key.replace(/([A-Z])/g, ' $1').toLowerCase().replace(/^\w/, (c) => c.toUpperCase())}</option>
             {[...new Set(cableOptions.cables.map((c) => c[key]))].map(
               (option) => (
                 <option key={option} value={option}>
@@ -157,7 +162,7 @@ function Cablecreator() {
           );
           setCable(selected || {});
         }}
-        className={`mb-3 ${getFieldClass(isEmpty(cable.type))}`}
+        className={`mb-4 ${getFieldClass(isEmpty(cable.type))} appearance-none cursor-pointer`}
       >
         <option value="">Select Cable Type</option>
         {filteredCables.map((c) => (
@@ -172,49 +177,73 @@ function Cablecreator() {
         placeholder="Length (meters)"
         value={length}
         onChange={(e) => setLength(e.target.value)}
-        className={`${getFieldClass(isEmpty(length))}`}
+        className={`${getFieldClass(isEmpty(length))} mt-2`}
       />
     </div>
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-100 to-blue-50 py-12 px-4 font-sans">
-      <h1 className="text-4xl font-extrabold text-center mb-12 text-blue-900">
-        Custom RF Cable Assembly <span className="text-blue-600">Configurator</span>
+    <div className="min-h-screen bg-gradient-to-br from-blue-400 to-black py-16 px-4 font-sans antialiased text-gray-100">
+      <h1 className="text-5xl font-extrabold text-center mb-16 text-white drop-shadow-lg">
+        Custom RF Cable Assembly <span className="text-blue-500">Configurator</span>
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-7xl mx-auto">
         {renderConnectorFields(connectorA, setConnectorA, 'End 1 Connector')}
         {renderCableFields()}
         {renderConnectorFields(connectorB, setConnectorB, 'End 2 Connector')}
       </div>
 
-      <div className="flex justify-center mt-12">
-        <button
+      <div className="flex justify-center mt-16">
+       <button
           onClick={handleSubmit}
-          className="px-8 py-3 bg-green-600 text-white font-semibold rounded shadow hover:bg-green-700 transition"
+          className="
+            cursor-pointer
+            border-4 border-green-700
+            bg-green-600
+            text-white
+            font-semibold
+            px-8 py-4
+            rounded-xl
+            shadow-md
+            select-none
+            transition-all duration-150 ease-in-out
+            hover:bg-green-700
+            hover:shadow-lg
+            active:translate-y-[6px]
+            active:mb-[6px]
+            active:shadow-sm
+          "
         >
-          Generate Part Number & Price
+          <span className="text-lg tracking-wide">Generate Part Number & Price</span>
         </button>
       </div>
 
       {result && (
-        <div className="mt-12 mx-auto bg-white p-6 rounded-xl shadow-lg w-full max-w-2xl border border-gray-200">
-          <h3 className="text-2xl font-bold mb-4 text-blue-800">Configuration Summary</h3>
-          <p className="mb-2"><strong>Part Number:</strong> {result.partNumber}</p>
-          <p className="mb-2"><strong>Estimated Price:</strong> R {result.price}</p>
-          <hr className="my-4" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-gray-700 text-sm">
-            <p><strong>Cable Code:</strong> {cable.code}</p>
-            <p><strong>Connector A:</strong> {connectorA.code} ({connectorA.name})</p>
-            <p><strong>Connector B:</strong> {connectorB.code} ({connectorB.name})</p>
-            <p><strong>Impedance:</strong> {cable.impedance} Ohm</p>
-            <p><strong>Shields:</strong> {cable.shields}</p>
-            <p><strong>Flex Type:</strong> {cable.flexType}</p>
-            <p><strong>Color:</strong> {cable.color}</p>
-            <p><strong>Length:</strong> {length} meters</p>
-            <p><strong>Attenuation per Meter:</strong> {cable.attenuationPerMeter} dB/m</p>
-            <p><strong>Total Attenuation:</strong> {(cable.attenuationPerMeter * length).toFixed(2)} dB</p>
+        <div className="mt-16 mx-auto bg-gray-900 p-8 rounded-xl shadow-2xl w-full max-w-3xl border border-gray-700 animate-fade-in-up">
+          <h3 className="text-3xl font-extrabold mb-6 text-blue-400 border-b-2 border-blue-600 pb-3 uppercase tracking-wide">
+            Configuration Summary
+          </h3>
+          <p className="mb-3 text-lg">
+            <strong className="text-gray-300">Part Number:</strong>{' '}
+            <span className="text-green-400 font-mono break-words">{result.partNumber}</span>
+          </p>
+          <p className="mb-4 text-lg">
+            <strong className="text-gray-300">Estimated Price:</strong>{' '}
+            <span className="text-green-400 font-bold text-2xl">R {result.price}</span>
+          </p>
+          <hr className="my-6 border-gray-700" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-gray-300 text-base">
+            <p><strong>Cable Code:</strong> <span className="font-medium">{cable.code}</span></p>
+            <p><strong>Connector A:</strong> <span className="font-medium">{connectorA.code} ({connectorA.name})</span></p>
+            <p><strong>Connector B:</strong> <span className="font-medium">{connectorB.code} ({connectorB.name})</span></p>
+            <p><strong>Impedance:</strong> <span className="font-medium">{cable.impedance} Ohm</span></p>
+            <p><strong>Shields:</strong> <span className="font-medium">{cable.shields}</span></p>
+            <p><strong>Flex Type:</strong> <span className="font-medium">{cable.flexType}</span></p>
+            <p><strong>Color:</strong> <span className="font-medium">{cable.color}</span></p>
+            <p><strong>Length:</strong> <span className="font-medium">{length} meters</span></p>
+            <p><strong>Attenuation per Meter:</strong> <span className="font-medium">{cable.attenuationPerMeter} dB/m</span></p>
+            <p><strong>Total Attenuation:</strong> <span className="font-medium">{(cable.attenuationPerMeter * length).toFixed(2)} dB</span></p>
           </div>
         </div>
       )}

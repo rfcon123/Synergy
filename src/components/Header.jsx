@@ -40,13 +40,11 @@ const Header = () => {
 
   return (
     <>
-      {/* 🔴 Red Banner */}
-     <section className="bg-blue-700 text-white text-sm py-2 overflow-hidden">
-  <marquee behavior="scroll" direction="left" scrollamount="15">
-   Discover premium RF components and accessories — shop now! 
+<section className="bg-gradient-to-r from-gray-800 via-blue-900 to-gray-800 text-white text-sm py-2 overflow-hidden font-semibold tracking-wide uppercase shadow-sm">
+  <marquee behavior="scroll" direction="left" scrollamount="12">
+    Discover premium RF & Microwave components — Trusted by industry leaders. Shop now at Synergy Telecom.
   </marquee>
 </section>
-
 
       {/* 🟦 Logo + Name + Sticky Navbar */}
       <header
