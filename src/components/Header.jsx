@@ -43,7 +43,7 @@ const Header = () => {
       {/* 🔴 Red Banner */}
      <section className="bg-blue-700 text-white text-sm py-2 overflow-hidden">
   <marquee behavior="scroll" direction="left" scrollamount="15">
-   Discover premium RF components and accessories — shop now! testing text
+   Discover premium RF components and accessories — shop now! 
   </marquee>
 </section>
 
