@@ -39,7 +39,7 @@ const productLinks = {
     },
     {
       "name": "Leaky Cable - 1-1/4\" Radiating Leaky Cable",
-      "link": "https://www.rfconnector.in/catalog/RF_Cable/114_Leaky_Cable.pdf"
+      "link": "https://rfconnector.in/catalog/RF_Cable/new_cable/Leaky_Cables_1_1_4.pdf"
     },
     {
       "name": "Leaky Cable - 1-5/8\" Radiating Leaky Cable",
