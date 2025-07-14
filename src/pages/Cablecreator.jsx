@@ -3,27 +3,28 @@ import { Helmet } from "react-helmet-async";
 
 const cableOptions = {
   cables: [
-    { type: "RG142", code: "142", pricePerMeter: 4.5, compatibleConnectors: ["SMA Male", "N Male", "BNC Male"], impedance: "50", maxFrequency: "3000", maxLoss: "10.5", flexType: "Flexible", shields: "Double", color: "Silver", attenuationPerMeter: 0.910 },
-    { type: "RG141", code: "141", pricePerMeter: 4.0, compatibleConnectors: ["SMA Male", "BNC Male"], impedance: "50", maxFrequency: "2500", maxLoss: "11.2", flexType: "Flexible", shields: "Double", color: "Silver", attenuationPerMeter: 0.910 },
-    { type: "RG086", code: "086", pricePerMeter: 5.0, compatibleConnectors: ["MCX Male", "UFL Plug"], impedance: "50", maxFrequency: "6000", maxLoss: "18.0", flexType: "Ultra Thin", shields: "Single", color: "Gray", attenuationPerMeter: 0.915 },
-    { type: "RG250", code: "250", pricePerMeter: 5.5, compatibleConnectors: ["SMP Male", "MCX Female"], impedance: "50", maxFrequency: "8000", maxLoss: "7.8", flexType: "Semi-Rigid", shields: "Double", color: "Copper", attenuationPerMeter: 0.03 },
-    { type: "RG316", code: "316", pricePerMeter: 3.5, compatibleConnectors: ["SMA Male", "BNC Female", "UFL Plug"], impedance: "50", maxFrequency: "3000", maxLoss: "16.5", flexType: "Flexible", shields: "Single", color: "Beige", attenuationPerMeter: 0.2 },
+    { type: "RG142", code: "142", pricePerMeter: 375.75, compatibleConnectors: ["SMA Male", "N Male", "BNC Male"], impedance: "50", maxFrequency: "3000", maxLoss: "10.5", flexType: "Flexible", shields: "Double", color: "Silver", attenuationPerMeter: 0.910 },
+    { type: "RG141", code: "141", pricePerMeter: 334.00, compatibleConnectors: ["SMA Male", "BNC Male"], impedance: "50", maxFrequency: "2500", maxLoss: "11.2", flexType: "Flexible", shields: "Double", color: "Silver", attenuationPerMeter: 0.910 },
+    { type: "RG086", code: "086", pricePerMeter: 417.50, compatibleConnectors: ["MCX Male", "UFL Plug"], impedance: "50", maxFrequency: "6000", maxLoss: "18.0", flexType: "Ultra Thin", shields: "Single", color: "Gray", attenuationPerMeter: 0.915 },
+    { type: "RG250", code: "250", pricePerMeter: 459.25, compatibleConnectors: ["SMP Male", "MCX Female"], impedance: "50", maxFrequency: "8000", maxLoss: "7.8", flexType: "Semi-Rigid", shields: "Double", color: "Copper", attenuationPerMeter: 0.03 },
+    { type: "RG316", code: "316", pricePerMeter: 292.25, compatibleConnectors: ["SMA Male", "BNC Female", "UFL Plug"], impedance: "50", maxFrequency: "3000", maxLoss: "16.5", flexType: "Flexible", shields: "Single", color: "Beige", attenuationPerMeter: 0.2 },
   ],
   connectors: [
-    { name: "SMA Male", code: "SM", price: 3, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
-    { name: "SMA Female", code: "SF", price: 3, gender: "Female", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
-    { name: "N Male", code: "NM", price: 4, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
-    { name: "N Female", code: "NF", price: 4, gender: "Female", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
-    { name: "BNC Male", code: "BM", price: 2.5, gender: "Male", body: "Right Angle", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
-    { name: "BNC Female", code: "BF", price: 2.5, gender: "Female", body: "Right Angle", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
-    { name: "MCX Male", code: "MM", price: 2, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Solder", impedance: "50" },
-    { name: "MCX Female", code: "MF", price: 2, gender: "Female", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Solder", impedance: "50" },
-    { name: "UFL Plug", code: "UP", price: 1.5, gender: "Plug", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Snap-on", impedance: "50" },
-    { name: "UFL Jack", code: "UJ", price: 1.5, gender: "Jack", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Snap-on", impedance: "50" },
-    { name: "SMP Male", code: "SPM", price: 4, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Push-on", impedance: "50" },
-    { name: "SMP Female", code: "SPF", price: 4, gender: "Female", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Push-on", impedance: "50" },
+    { name: "SMA Male", code: "SM", price: 250.50, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
+    { name: "SMA Female", code: "SF", price: 250.50, gender: "Female", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
+    { name: "N Male", code: "NM", price: 334.00, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
+    { name: "N Female", code: "NF", price: 334.00, gender: "Female", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
+    { name: "BNC Male", code: "BM", price: 208.75, gender: "Male", body: "Right Angle", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
+    { name: "BNC Female", code: "BF", price: 208.75, gender: "Female", body: "Right Angle", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
+    { name: "MCX Male", code: "MM", price: 167.00, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Solder", impedance: "50" },
+    { name: "MCX Female", code: "MF", price: 167.00, gender: "Female", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Solder", impedance: "50" },
+    { name: "UFL Plug", code: "UP", price: 125.25, gender: "Plug", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Snap-on", impedance: "50" },
+    { name: "UFL Jack", code: "UJ", price: 125.25, gender: "Jack", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Snap-on", impedance: "50" },
+    { name: "SMP Male", code: "SPM", price: 334.00, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Push-on", impedance: "50" },
+    { name: "SMP Female", code: "SPF", price: 334.00, gender: "Female", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Push-on", impedance: "50" },
   ]
 };
+
 
 function Cablecreator() {
   const [connectorA, setConnectorA] = useState({});
@@ -187,23 +188,31 @@ function Cablecreator() {
     <div className="min-h-screen bg-gradient-to-br from-blue-400 to-black py-16 px-4 font-sans antialiased text-gray-100">
 
 <Helmet>
-  <title>Custom RF Cable Assembly Configurator | Panaceatic Telecom Synergy</title>
+  <title>
+    RF Cable Assembly Configurator | Build Custom SMA, N, BNC Cables – Panacea Synergy
+  </title>
+
   <meta
     name="description"
-    content="Use our smart cable configurator to generate part numbers and pricing for custom RF cable assemblies using real-world connector and cable data."
+    content="Instantly generate part numbers and pricing for custom RF cable assemblies. Choose SMA, N, BNC connectors, flexible or rigid cable types. Trusted by engineers across India."
   />
+
   <meta
     name="keywords"
-    content="RF cable configurator, custom RF assembly, RF connector tool, cable part number generator, SMA N BNC cable builder"
+    content="RF cable configurator, RF cable assembly builder, custom RF cable, SMA cable builder, N connector cable tool, BNC RF assembly, RF cable design tool, buy RF cables online, Panacea Telecom, Synergy connector configurator"
   />
-  <meta property="og:title" content="Custom RF Cable Assembly Configurator | Panacea Telecom Synergy" />
+
+  <meta property="og:title" content="Custom RF Cable Assembly Configurator | Panacea Synergy" />
   <meta
     property="og:description"
-    content="Instantly generate part numbers and prices for your RF cable assemblies. Choose connectors, cable type, and length with ease."
+    content="Design and order your own RF cable assembly with SMA, N, BNC connectors. Professional tool for engineers by Panacea Synergy Telecom."
   />
   <meta property="og:url" content="https://panaceaticsynergy.com/cable-creator" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://panaceaticsynergy.com/meta/cable-configurator-preview.png" />
+  <meta
+    property="og:image"
+    content="https://panaceaticsynergy.com/meta/cable-configurator-preview.png"
+  />
 </Helmet>
 
 
@@ -253,7 +262,7 @@ function Cablecreator() {
           </p>
           <p className="mb-4 text-lg">
             <strong className="text-gray-300">Estimated Price:</strong>{' '}
-            <span className="text-green-400 font-bold text-2xl">R {result.price}</span>
+            <span className="text-green-400 font-bold text-2xl">₹ {result.price}</span>
           </p>
           <hr className="my-6 border-gray-700" />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 text-gray-300 text-base">
@@ -268,7 +277,80 @@ function Cablecreator() {
             <p><strong>Attenuation per Meter:</strong> <span className="font-medium">{cable.attenuationPerMeter} dB/m</span></p>
             <p><strong>Total Attenuation:</strong> <span className="font-medium">{(cable.attenuationPerMeter * length).toFixed(2)} dB</span></p>
           </div>
+                            <form
+  action="https://formsubmit.co/a324884fcd1e9c2d90a89172c4854bbb"
+  method="POST"
+  onSubmit={() => alert("Your request has been submitted! ✅\nThank you for contacting Synergy Telecom.")}
+  className="mt-20 max-w-3xl mx-auto bg-gray-900 rounded-xl p-8 shadow-2xl border border-gray-700 text-gray-100"
+>
+
+            <h3 className="text-3xl font-extrabold mb-6 text-blue-400 border-b-2 border-blue-600 pb-3 uppercase tracking-wide">
+              Request a Quotation / Custom Requirement
+            </h3>
+          
+       
+
+             <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_subject" value="RF Cable Assembly Request" />
+            <input type="hidden" name="_template" value="table" />
+             <input type="hidden" name="Part Number" value={result.partNumber} />
+            <input type="hidden" name="_autoresponse" value="Thank you for contacting Synergy Telecom. We'll get back to you shortly." />
+            <input type="hidden" name="_next" value="https://panaceaticsynergy.com/cable-creator/" />
+
+            <label className="block mb-2 text-lg font-semibold text-blue-300" htmlFor="email">
+              Your Email
+            </label>
+            <input
+              required
+              type="email"
+              name="email"
+              id="email"
+              placeholder="you@example.com"
+              className="w-full px-5 py-3 mb-6 rounded-lg border-2 border-gray-600 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-500 shadow-inner"
+            />
+
+            <label className="block mb-2 text-lg font-semibold text-blue-300" htmlFor="message">
+              Custom Message or Requirements
+            </label>
+            <textarea
+              required
+              name="message"
+              id="message"
+              rows="5"
+              placeholder="Enter any additional details or custom requirements here..."
+              className="w-full px-5 py-3 mb-6 rounded-lg border-2 border-gray-600 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-500 shadow-inner resize-none"
+            ></textarea>
+
+                  <div className="flex justify-center mt-8">
+  <button
+    type="submit"
+    className="
+      cursor-pointer
+      border-4 border-green-700
+      bg-green-600
+      text-white
+      font-semibold
+      px-8 py-4
+      rounded-xl
+      shadow-md
+      select-none
+      transition-all duration-150 ease-in-out
+      hover:bg-green-700
+      hover:shadow-lg
+      active:translate-y-[6px]
+      active:mb-[6px]
+      active:shadow-sm
+      text-lg tracking-wide
+    "
+  >
+    Send Request
+  </button>
+</div>
+
+          </form>
+
         </div>
+        
       )}
     </div>
   );
