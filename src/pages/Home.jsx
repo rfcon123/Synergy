@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { ChevronLeft, ChevronRight, Users, TrendingUp, Calendar, MapPin } from 'lucide-react';
 import StyledButton from '../components/StyledButton.jsx';
 import hbg from '../assets/hbg.jpg';
+import { Helmet } from "react-helmet-async";
+
 
 // ✅ Product Images
 import antenna from '../assets/components/antenna.jpg';
@@ -137,6 +139,26 @@ const Home = () => {
 
   return (
     <main className="text-gray-800 bg-white">
+
+      <Helmet>
+  <title>RF Connector & Microwave Components | Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Welcome to Synergy Telecom - your trusted source for high-quality RF connectors, microwave components, antennas, cables, and custom solutions."
+  />
+  <meta
+    name="keywords"
+    content="RF connectors, microwave components, Synergy Telecom, antennas, coaxial cables, RF solutions, telecom products"
+  />
+  <meta property="og:title" content="RF Connector & Microwave Components | Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Explore premium RF and microwave products from Synergy Telecom. Browse connectors, antennas, cables, and more."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/" />
+  <meta property="og:type" content="website" />
+</Helmet>
+
 
       {/* 🌐 Platform Links */}
       <section

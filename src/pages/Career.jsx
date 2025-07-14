@@ -1,6 +1,7 @@
 import React from 'react';
 import StyledButton from '../components/StyledButton';
 import team from '../assets/team.jpg'; 
+import { Helmet } from "react-helmet-async";
 
 const Career = () => {
   const handleApplyClick = () => {
@@ -8,7 +9,28 @@ const Career = () => {
   };
 
   return (
+  
+
     <section className="min-h-screen bg-gray-50 py-12 px-4 md:px-16">
+      <Helmet>
+  <title>Careers | Work at Synergy Telecom - RF & Microwave Jobs</title>
+  <meta
+    name="description"
+    content="Explore career opportunities at Synergy Telecom Pvt. Ltd. We're hiring passionate individuals in RF, Microwave, Antenna, and Telecom fields. Apply today!"
+  />
+  <meta
+    name="keywords"
+    content="RF careers, Telecom jobs, microwave component jobs, Synergy Telecom hiring, antenna jobs, jobs in West Delhi, online marketing jobs telecom"
+  />
+  <meta property="og:title" content="Careers | Work at Synergy Telecom - RF & Microwave Jobs" />
+  <meta
+    property="og:description"
+    content="Join Synergy Telecom, a leading RF and Microwave company. We’re hiring fresh graduates passionate about telecom and online marketing."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/career" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://panaceaticsynergy.com/meta/career-preview.jpg" />
+</Helmet>
       <div className="max-w-5xl mx-auto bg-white rounded-2xl p-6 md:p-10 space-y-10">
 
         {/* Header */}

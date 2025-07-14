@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Helmet } from "react-helmet-async";
+
 
 import bncconnector from '../assets/components/bncconnector.jpg';
 import cabletie from '../assets/components/cabletie.jpg';
@@ -225,6 +227,27 @@ const Productspricelist = () => {
 
   return (
     <section className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 py-10 px-4 md:px-16">
+
+            <Helmet>
+        <title>Product Price List | RF Connector - Synergy Telecom</title>
+        <meta
+          name="description"
+          content="Download price lists for RF connectors, antennas, tools, adaptors, test & measurement equipment, and other Synergy Telecom components."
+        />
+        <meta
+          name="keywords"
+          content="RF product prices, Synergy Telecom pricelist, connectors price list, antenna price list, cable assembly pricing, test equipment"
+        />
+        <meta property="og:title" content="Synergy Telecom Product Price List" />
+        <meta
+          property="og:description"
+          content="Browse downloadable PDF price lists for RF and telecom products including connectors, cables, antennas, and more."
+        />
+        <meta property="og:url" content="https://www.panaceaticsynergy.com/product-price-list" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.panaceaticsynergy.com/product-price-list" />
+      </Helmet>
+
       <div className="max-w-7xl mx-auto space-y-10">
 
         {/* Title */}

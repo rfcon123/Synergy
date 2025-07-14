@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import StyledButton from "../components/StyledButton";
+import { Helmet } from "react-helmet-async";
+
 
 const groupProductLinks =
 [
@@ -72,6 +74,26 @@ const Groupproductdatasheet = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 py-12 px-4 sm:px-8 lg:px-20">
+
+      <Helmet>
+  <title>Group Product Datasheets | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Explore and download detailed group product datasheets including waveguide components, coaxial cables, microwave lab kits, and more."
+  />
+  <meta
+    name="keywords"
+    content="RF datasheets, microwave components, waveguide PDF, coaxial cable PDF, synergy telecom group catalogues"
+  />
+  <meta property="og:title" content="Group Product Datasheets | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Browse and download datasheets for a wide range of RF and microwave products offered by Synergy Telecom."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/group-product-data-sheet" />
+  <meta property="og:type" content="website" />
+</Helmet>
+
       {/* Heading */}
       <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10 relative">
         Group Product Datasheets

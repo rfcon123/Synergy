@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import liion from '../assets/liion.jpg';
 import StyledButton  from '../components/StyledButton'; 
+import { Helmet } from "react-helmet-async";
+
+
+
 
 const LiionBattery = () => {
   const [formData, setFormData] = useState({
@@ -60,6 +64,24 @@ const LiionBattery = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-100 py-10 px-4">
+      <Helmet>
+  <title>Li-Ion Battery Solutions | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Submit your custom Li-Ion battery requirements with Synergy Telecom. Share technical specifications and receive expert solutions for your energy storage needs."
+  />
+  <meta
+    name="keywords"
+    content="Li-Ion battery inquiry, lithium battery form, custom battery solutions, energy storage, telecom batteries, Synergy Telecom"
+  />
+  <meta property="og:title" content="Li-Ion Battery Solutions | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Need a lithium-ion battery for your telecom or solar project? Fill out the form and let Synergy Telecom deliver the right solution for you."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/li-ion-battery" />
+  <meta property="og:type" content="website" />
+</Helmet>
       {/* Top Heading */}
       <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
         Li-Ion Battery Solutions
@@ -111,7 +133,7 @@ const LiionBattery = () => {
       <input type="hidden" name="_subject" value="New Product Inquiry Submission" />
       <input type="hidden" name="_template" value="box" />
       <input type="hidden" name="_autoresponse" value="Thank you for your inquiry. Our team will reach out shortly." />
-      <input type="hidden" name="_next" value="https://refec.netlify.app/" />
+      <input type="hidden" name="_next" value="https://panaceaticsynergy.com/li-ion-battery" />
       <input type="text" name="_honey" style={{ display: 'none' }} />
 
       {/* Name Fields */}

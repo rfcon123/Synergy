@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 const upcomingProducts = [
   {
@@ -35,6 +36,29 @@ const upcomingProducts = [
 const Products = () => {
   return (
     <main className="max-w-7xl mx-auto px-4 py-12 space-y-16 text-gray-800">
+
+      <Helmet>
+  <title>Products | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Browse Synergy Telecom's full product range including coaxial cables, antennas, RF components, connectors, tools, test equipment, and upcoming microwave products."
+  />
+  <meta
+    name="keywords"
+    content="RF products, microwave components, RF connectors, antennas, RF tools, optical fiber, coaxial cables, RF catalogues, synergy telecom"
+  />
+  <meta property="og:title" content="Synergy Telecom Products" />
+  <meta
+    property="og:description"
+    content="Explore Synergy Telecom's complete product portfolio and download detailed catalogues for RF and microwave components."
+  />
+  <meta
+    property="og:url"
+    content="https://panaceaticsynergy.com/products"
+  />
+  <meta property="og:type" content="website" />
+</Helmet>
+
 
       {/* Intro Section */}
       <section>

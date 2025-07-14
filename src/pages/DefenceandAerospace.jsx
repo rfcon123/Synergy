@@ -1,31 +1,31 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Helmet } from "react-helmet-async";
+
 
 const DefenceandAerospace = () => {
   return (
     <div className="bg-gray-50 text-gray-800">
-      {/* Carousel */}
-      {/* <div className="w-full">
-        <Carousel
-          showThumbs={false}
-          infiniteLoop
-          autoPlay
-          interval={4000}
-          showStatus={false}
-          className="w-full"
-        >
-          {["Defence+Aerospace+1", "Defence+Aerospace+2", "Defence+Aerospace+3"].map((text, i) => (
-            <div key={i}>
-              <img
-                src={`https://placehold.co/1600x500?text=${text}`}
-                alt={`Defence ${i + 1}`}
-                className="object-cover w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
-              />
-            </div>
-          ))}
-        </Carousel>
-      </div> */}
+
+      <Helmet>
+  <title>Defence & Aerospace | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Explore Synergy Telecom's Defence & Aerospace division – delivering microwave components, IBS & BTS solutions, and RF components for top government and paramilitary clients in India."
+  />
+  <meta
+    name="keywords"
+    content="Defence RF solutions, Aerospace microwave components, DRDO vendor, ISRO approved supplier, RF stockist India"
+  />
+  <meta property="og:title" content="Defence & Aerospace | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Trusted by DRDO, ISRO, BEL and more – Synergy Telecom leads in defence-grade RF and microwave components."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/defence-and-aerospace" />
+  <meta property="og:type" content="website" />
+</Helmet>
 
       {/* Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 space-y-10">
@@ -123,3 +123,25 @@ const DefenceandAerospace = () => {
 };
 
 export default DefenceandAerospace;
+
+      {/* Carousel */}
+      {/* <div className="w-full">
+        <Carousel
+          showThumbs={false}
+          infiniteLoop
+          autoPlay
+          interval={4000}
+          showStatus={false}
+          className="w-full"
+        >
+          {["Defence+Aerospace+1", "Defence+Aerospace+2", "Defence+Aerospace+3"].map((text, i) => (
+            <div key={i}>
+              <img
+                src={`https://placehold.co/1600x500?text=${text}`}
+                alt={`Defence ${i + 1}`}
+                className="object-cover w-full h-[220px] sm:h-[300px] md:h-[400px] lg:h-[500px]"
+              />
+            </div>
+          ))}
+        </Carousel>
+      </div> */}

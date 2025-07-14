@@ -1,4 +1,5 @@
   import React, { useState } from 'react';
+  import { Helmet } from "react-helmet-async";
 
 
   const catalogueLinks = [
@@ -320,6 +321,25 @@ const HotProducts = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white py-20 px-4">
+      <Helmet>
+  <title>Hot Products | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Explore the most popular and high-demand RF and microwave products from Synergy Telecom, including antennas, feeder clamps, cables, analyzers, surge protectors, and more."
+  />
+  <meta
+    name="keywords"
+    content="hot RF products, RF components, antennas, cables, RF datasheets, feeder clamps, Synergy Telecom, microwave products"
+  />
+  <meta property="og:title" content="Hot Products | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Browse and download datasheets of trending RF components, antennas, and telecom accessories. Find the best RF products from Synergy Telecom."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/-hot-products" />
+  <meta property="og:type" content="website" />
+</Helmet>
+
       <div className="max-w-7xl mx-auto">
         {/* Heading + CTA Row */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-14 gap-6">

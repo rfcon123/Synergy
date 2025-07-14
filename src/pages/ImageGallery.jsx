@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import productsData from "./productsData";
+import { Helmet } from "react-helmet-async"
 
 const ImageGallery = () => {
   const [filteredImages, setFilteredImages] = useState([]);
@@ -40,6 +41,24 @@ const ImageGallery = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
+      <Helmet>
+  <title>Image Gallery | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Browse our RF and microwave product image gallery featuring antennas, cables, splitters, surge protectors, and more. Find visual references for all our products."
+  />
+  <meta
+    name="keywords"
+    content="RF product images, telecom components, microwave gallery, RF connector photos, antennas, cables, Synergy Telecom gallery"
+  />
+  <meta property="og:title" content="Image Gallery | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Explore our complete RF and microwave product image gallery including antennas, jumper cables, clamps, and test equipment."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/image-gallery" />
+  <meta property="og:type" content="website" />
+</Helmet>
       {/* 🔤 Title */}
       <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
         Our Image Gallery

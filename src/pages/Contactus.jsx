@@ -2,10 +2,31 @@ import React from 'react';
 import { Mail, Phone, MapPin, ArrowRight, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import StyledButton from '../components/StyledButton'; // ✅ Import your reusable button
+import { Helmet } from "react-helmet-async";
+
 
 const ContactUs = () => {
   return (
     <div className="bg-gray-50 min-h-screen px-4 py-10 md:px-10">
+      <Helmet>
+  <title>Contact Us | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Get in touch with Synergy Telecom Pvt. Ltd. for RF connectors, antennas, and microwave components. Reach our offices in India and Canada or use the contact form to send a message."
+  />
+  <meta
+    name="keywords"
+    content="Contact Synergy Telecom, RF connector support, RF cable enquiries, Synergy Delhi Office, Synergy Canada Office"
+  />
+  <meta property="og:title" content="Contact Us | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Contact Synergy Telecom for RF and microwave solutions. Offices in India and Canada. Quick response via form, phone or email."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/contact-us" />
+  <meta property="og:type" content="website" />
+</Helmet>
+
       <div className="max-w-6xl mx-auto">
 
         {/* 🔷 Heading */}
@@ -115,7 +136,7 @@ const ContactUs = () => {
         <input type="hidden" name="_subject" value="New Contact Form Submission" />
         <input type="hidden" name="_template" value="box" />
         <input type="hidden" name="_autoresponse" value="Thank you for contacting Synergy Telecom. We'll get back to you shortly." />
-        <input type="hidden" name="_next" value="https://refec.netlify.app/" />
+        <input type="hidden" name="_next" value="https://panaceaticsynergy.com/contact-us/" />
 
         {/* Honeypot field to prevent spam bots */}
         <input type="text" name="_honey" style={{ display: 'none' }} />

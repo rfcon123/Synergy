@@ -1,9 +1,30 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import StyledButton from "../components/StyledButton";
 
 const Aboutus = () => {
   return (
     <main className="max-w-7xl mx-auto px-4 py-12 space-y-16 bg-gray-50">
+     <Helmet>
+  <title>About Us | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Learn about Synergy Telecom Pvt. Ltd. – a leading manufacturer and exporter of RF Connectors, Antennas, and Microwave Components since 2001."
+  />
+  <meta
+    name="keywords"
+    content="About Synergy Telecom, RF connector company, Indian RF manufacturer, Antenna supplier, Microwave components exporter"
+  />
+  <meta property="og:title" content="About Us | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Synergy Telecom is a top Indian manufacturer and exporter of RF connectors, antennas, and microwave components."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/about-us" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://panaceaticsynergy.com/meta/about-preview.png" />
+</Helmet>
+
 
       {/* 🖼️ Hero Section */}
       <section className="relative">
@@ -96,7 +117,6 @@ const Aboutus = () => {
           </tbody>
         </table>
       </section>
-
     </main>
   );
 };

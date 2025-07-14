@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet-async";
+
+
 import productLinks from './Productlinks';
 import StyledButton  from '../components/StyledButton';
 import rfcable from '../assets/components/rfcable.jpg';
@@ -252,6 +255,28 @@ const ProductShowroom = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen px-4 py-10 md:px-10">
+<Helmet>
+  <title>Product Showroom | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Browse Synergy Telecom’s full product range including RF connectors, cables, antennas, adapters, and more at panaceaticsynergy.com."
+  />
+  <meta
+    name="keywords"
+    content="Synergy Telecom products, RF connectors, antennas, coaxial cables, adapters, microwave components, panaceaticsynergy.com"
+  />
+  <meta property="og:title" content="Synergy Telecom Product Showroom" />
+  <meta
+    property="og:description"
+    content="Explore our complete collection of RF and telecom products—connectors, antennas, adapters, cables, and tools."
+  />
+  <meta property="og:url" content="https://www.panaceaticsynergy.com/product-showroom" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.panaceaticsynergy.com/product-showroom" />
+</Helmet>
+
+
+
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-10">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">

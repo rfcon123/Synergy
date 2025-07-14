@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const cableOptions = {
   cables: [
@@ -184,6 +185,28 @@ function Cablecreator() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-400 to-black py-16 px-4 font-sans antialiased text-gray-100">
+
+<Helmet>
+  <title>Custom RF Cable Assembly Configurator | Panaceatic Telecom Synergy</title>
+  <meta
+    name="description"
+    content="Use our smart cable configurator to generate part numbers and pricing for custom RF cable assemblies using real-world connector and cable data."
+  />
+  <meta
+    name="keywords"
+    content="RF cable configurator, custom RF assembly, RF connector tool, cable part number generator, SMA N BNC cable builder"
+  />
+  <meta property="og:title" content="Custom RF Cable Assembly Configurator | Panacea Telecom Synergy" />
+  <meta
+    property="og:description"
+    content="Instantly generate part numbers and prices for your RF cable assemblies. Choose connectors, cable type, and length with ease."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/cable-creator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://panaceaticsynergy.com/meta/cable-configurator-preview.png" />
+</Helmet>
+
+
       <h1 className="text-5xl font-extrabold text-center mb-16 text-white drop-shadow-lg">
         Custom RF Cable Assembly <span className="text-blue-500">Configurator</span>
       </h1>

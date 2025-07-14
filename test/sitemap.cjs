@@ -34,7 +34,7 @@ const products = [
   { slug: "all-connector-catalogue" }
 ];
 
-const baseUrl = 'https://refec.netlify.app';
+const baseUrl = 'https://panaceaticsynergy.com';
 
 const staticRoutes = [
   '/', '/about-us', '/contact-us', '/certificates', '/product-showroom', '/product-catalogue',
@@ -57,5 +57,5 @@ const writeStream = createWriteStream(resolve(__dirname, '../public/sitemap.xml'
   sitemap.end();
   const data = await streamToPromise(sitemap);
   writeStream.write(data.toString());
-  console.log('✅ Sitemap with dynamic product routes generated!');
+  console.log('Sitemap with dynamic product routes generated!');
 })();

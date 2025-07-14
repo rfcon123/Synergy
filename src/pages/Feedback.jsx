@@ -1,8 +1,28 @@
 import React from 'react';
+import { Helmet } from "react-helmet-async";
 
 const Feedback = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-blue-50 py-16 px-6">
+      <Helmet>
+  <title>Feedback | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Send us your valuable feedback or contact us for any inquiries. Synergy Telecom is committed to customer satisfaction and fast response."
+  />
+  <meta
+    name="keywords"
+    content="feedback, contact Synergy Telecom, RF connector feedback, support form, customer feedback form"
+  />
+  <meta property="og:title" content="Feedback | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Submit your questions, comments, or inquiries directly through our online feedback form."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://panaceaticsynergy.com/feedback" />
+</Helmet>
+
       <div className="max-w-6xl mx-auto bg-white/90 backdrop-blur-lg p-10 rounded-3xl shadow-2xl">
         <h1 className="text-5xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-500 to-orange-500 mb-10">
           Contact & Feedback Form
@@ -18,7 +38,7 @@ const Feedback = () => {
           <input type="hidden" name="_subject" value="New Feedback Submission" />
           <input type="hidden" name="_template" value="box" />
           <input type="hidden" name="_autoresponse" value="Thank you for your feedback. We'll get back to you soon." />
-          <input type="hidden" name="_next" value="https://refec.netlify.app/" />
+          <input type="hidden" name="_next" value="https://panaceaticsynergy.com/feedback" />
           <input type="text" name="_honey" style={{ display: 'none' }} />
 
           {/* Name Section */}

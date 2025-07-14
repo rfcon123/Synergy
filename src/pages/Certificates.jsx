@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Helmet } from "react-helmet-async"
 
 // ✅ Import Certificate Images
 import cert1 from "../assets/certificate/cert1.png";
@@ -40,6 +41,25 @@ const Certificates = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-50 via-white to-blue-50 px-4 py-10">
+
+      <Helmet>
+  <title>Certificates | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="View the certifications earned by Synergy Telecom Pvt. Ltd., a trusted manufacturer of RF components, antennas, and microwave products in India."
+  />
+  <meta
+    name="keywords"
+    content="RF Certificates, ISRO Certification, DRDO Approved Vendor, ISO 9001, MSME Registration, Synergy Telecom Certifications"
+  />
+  <meta property="og:title" content="Certificates | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Official certifications from ISRO, DRDO, MSME, and other bodies earned by Synergy Telecom Pvt. Ltd."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/certificates" />
+  <meta property="og:type" content="website" />
+</Helmet>
       <div className="max-w-6xl mx-auto">
          <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
         Our Certificates

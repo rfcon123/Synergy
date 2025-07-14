@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { Helmet } from "react-helmet-async";
+
 
 const API_KEY = import.meta.env.VITE_YOUTUBE_API_KEY;
 const CHANNEL_ID = import.meta.env.VITE_YOUTUBE_CHANNEL_ID;
@@ -68,6 +70,21 @@ const VideoGallery = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 py-10 px-4">
+      <Helmet>
+  <title>Our Video Library | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Explore Panacea Telecom's video library featuring tutorials, product demos, and RF technology insights."
+  />
+  <meta
+    name="keywords"
+    content="Panacea Telecom videos, RF tutorials, product demos, YouTube video gallery"
+  />
+  <meta property="og:title" content="Our Video Library | Panacea Telecom" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://panaceaticsynergy.com/video-gallery" />
+  <meta property="og:site_name" content="Panacea Telecom" />
+</Helmet>
       <div className="max-w-7xl mx-auto">
 
         {/* Page Title */}

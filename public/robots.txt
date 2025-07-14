@@ -12,4 +12,4 @@ Disallow: /test/
 Disallow: /*.json$
 Disallow: /*.svg$
 
-Sitemap: https://refec.netlify.app/sitemap.xml 
+Sitemap: https://panaceaticsynergy.com/sitemap.xml 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import StyledButton from "../components/StyledButton";
+import { Helmet } from "react-helmet-async";
 
 const catalogueLinks = [
   { name: "Patch Panel Antenna", link: "https://www.rfconnector.in/Product/Patch_Panel_Antenna.pdf" },
@@ -76,7 +77,8 @@ const catalogueLinks = [
   { name: "Waveguide Catalogue 2024", link: "https://www.rfconnector.in/Product/Product_Cataloge/Waveguide_Catalogue_2024.pdf" },
   { name: "Electronic Switches Connector", link: "https://www.rfconnector.in/Product/Product_Cataloge/Electronic_Switches_Connector_2024.pdf" },
   { name: "Auto Electrical Connector", link: "https://www.rfconnector.in/Product/Product_Cataloge/Auto_Electrical_Connector_2024.pdf" },
-  { name: "RF Test Measurement Equipment Stock", link: "https://www.rfconnector.in/Product/Product_Cataloge/RF_Test_Measurement_Equipment_Stock.pdf" }
+  { name: "RF Test Measurement Equipment Stock", link: "https://www.rfconnector.in/Product/Product_Cataloge/RF_Test_Measurement_Equipment_Stock.pdf" },
+  { name: "Equipment Photo And Price", link: "https://rfconnector.in/Product/EQUIPMENT%20PHOTO%20AND%20PRICE.pdf" },
 ];
 
 
@@ -89,6 +91,24 @@ const ProductCatalogue = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 py-12 px-4 sm:px-8 lg:px-20">
+      <Helmet>
+  <title>Product Catalogue | RF Connector - Synergy Telecom</title>
+  <meta
+    name="description"
+    content="Browse and download a wide range of product catalogues including antennas, RF cables, connectors, waveguides, attenuators, and more from Synergy Telecom."
+  />
+  <meta
+    name="keywords"
+    content="RF product catalogue, Synergy Telecom PDF, RF antennas, RF connectors, microwave components, waveguide catalogue, telecom accessories"
+  />
+  <meta property="og:title" content="Product Catalogue | RF Connector - Synergy Telecom" />
+  <meta
+    property="og:description"
+    content="Explore our complete collection of downloadable RF and telecom product catalogues in PDF format."
+  />
+  <meta property="og:url" content="https://panaceaticsynergy.com/product-catalogue" />
+  <meta property="og:type" content="website" />
+</Helmet>
       
       {/* Heading */}
       <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
