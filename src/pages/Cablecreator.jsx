@@ -277,78 +277,94 @@ function Cablecreator() {
             <p><strong>Attenuation per Meter:</strong> <span className="font-medium">{cable.attenuationPerMeter} dB/m</span></p>
             <p><strong>Total Attenuation:</strong> <span className="font-medium">{(cable.attenuationPerMeter * length).toFixed(2)} dB</span></p>
           </div>
-                            <form
+                           <form
   action="https://formsubmit.co/a324884fcd1e9c2d90a89172c4854bbb"
   method="POST"
-  onSubmit={() => alert("Your request has been submitted! ✅\nThank you for contacting Synergy Telecom.")}
+  onSubmit={() =>
+    alert(
+      "Your request has been submitted! ✅\nThank you for contacting Synergy Telecom."
+    )
+  }
   className="mt-20 max-w-3xl mx-auto bg-gray-900 rounded-xl p-8 shadow-2xl border border-gray-700 text-gray-100"
 >
+  <h3 className="text-3xl font-extrabold mb-6 text-blue-400 border-b-2 border-blue-600 pb-3 uppercase tracking-wide">
+    Request a Quotation / Custom Requirement
+  </h3>
 
-            <h3 className="text-3xl font-extrabold mb-6 text-blue-400 border-b-2 border-blue-600 pb-3 uppercase tracking-wide">
-              Request a Quotation / Custom Requirement
-            </h3>
-          
-       
+  {/* ✅ Core metadata */}
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_subject" value="RF Cable Assembly Request" />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_autoresponse" value="Thank you for contacting Synergy Telecom. We'll get back to you shortly." />
+  <input type="hidden" name="_next" value="https://panaceaticsynergy.com/cable-creator/" />
 
-             <input type="hidden" name="_captcha" value="false" />
-            <input type="hidden" name="_subject" value="RF Cable Assembly Request" />
-            <input type="hidden" name="_template" value="table" />
-             <input type="hidden" name="Part Number" value={result.partNumber} />
-            <input type="hidden" name="_autoresponse" value="Thank you for contacting Synergy Telecom. We'll get back to you shortly." />
-            <input type="hidden" name="_next" value="https://panaceaticsynergy.com/cable-creator/" />
+  {/* ✅ Shown Summary Details */}
+  <input type="hidden" name="Part Number" value={result.partNumber} />
+  <input type="hidden" name="Estimated Price (INR)" value={`₹ ${result.price}`} />
+  <input type="hidden" name="Cable Code" value={cable.code} />
+  <input type="hidden" name="Connector A" value={`${connectorA.code} (${connectorA.name})`} />
+  <input type="hidden" name="Connector B" value={`${connectorB.code} (${connectorB.name})`} />
+  <input type="hidden" name="Impedance" value={`${cable.impedance} Ohm`} />
+  <input type="hidden" name="Shields" value={cable.shields} />
+  <input type="hidden" name="Flex Type" value={cable.flexType} />
+  <input type="hidden" name="Color" value={cable.color} />
+  <input type="hidden" name="Length (meters)" value={length} />
+  <input type="hidden" name="Attenuation per Meter (dB/m)" value={cable.attenuationPerMeter} />
+  <input type="hidden" name="Total Attenuation (dB)" value={(cable.attenuationPerMeter * length).toFixed(2)} />
 
-            <label className="block mb-2 text-lg font-semibold text-blue-300" htmlFor="email">
-              Your Email
-            </label>
-            <input
-              required
-              type="email"
-              name="email"
-              id="email"
-              placeholder="you@example.com"
-              className="w-full px-5 py-3 mb-6 rounded-lg border-2 border-gray-600 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-500 shadow-inner"
-            />
+  {/* ✅ Email field */}
+  <label className="block mb-2 text-lg font-semibold text-blue-300" htmlFor="email">
+    Your Email
+  </label>
+  <input
+    required
+    type="email"
+    name="email"
+    id="email"
+    placeholder="you@example.com"
+    className="w-full px-5 py-3 mb-6 rounded-lg border-2 border-gray-600 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-500 shadow-inner"
+  />
 
-            <label className="block mb-2 text-lg font-semibold text-blue-300" htmlFor="message">
-              Custom Message or Requirements
-            </label>
-            <textarea
-              required
-              name="message"
-              id="message"
-              rows="5"
-              placeholder="Enter any additional details or custom requirements here..."
-              className="w-full px-5 py-3 mb-6 rounded-lg border-2 border-gray-600 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-500 shadow-inner resize-none"
-            ></textarea>
+  {/* ✅ Message field */}
+  <label className="block mb-2 text-lg font-semibold text-blue-300" htmlFor="message">
+    Custom Message or Requirements
+  </label>
+  <textarea
+    required
+    name="message"
+    id="message"
+    rows="5"
+    placeholder="Enter any additional details or custom requirements here..."
+    className="w-full px-5 py-3 mb-6 rounded-lg border-2 border-gray-600 bg-gray-800 text-gray-100 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-500 shadow-inner resize-none"
+  ></textarea>
 
-                  <div className="flex justify-center mt-8">
-  <button
-    type="submit"
-    className="
-      cursor-pointer
-      border-4 border-green-700
-      bg-green-600
-      text-white
-      font-semibold
-      px-8 py-4
-      rounded-xl
-      shadow-md
-      select-none
-      transition-all duration-150 ease-in-out
-      hover:bg-green-700
-      hover:shadow-lg
-      active:translate-y-[6px]
-      active:mb-[6px]
-      active:shadow-sm
-      text-lg tracking-wide
-    "
-  >
-    Send Request
-  </button>
-</div>
-
-          </form>
-
+  {/* ✅ Submit button */}
+  <div className="flex justify-center mt-8">
+    <button
+      type="submit"
+      className="
+        cursor-pointer
+        border-4 border-green-700
+        bg-green-600
+        text-white
+        font-semibold
+        px-8 py-4
+        rounded-xl
+        shadow-md
+        select-none
+        transition-all duration-150 ease-in-out
+        hover:bg-green-700
+        hover:shadow-lg
+        active:translate-y-[6px]
+        active:mb-[6px]
+        active:shadow-sm
+        text-lg tracking-wide
+      "
+    >
+      Send Request
+    </button>
+  </div>
+</form>
         </div>
         
       )}
