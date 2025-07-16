@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
 
@@ -247,7 +247,16 @@ const productsData = [
 export const productsWithSlugs = productsData;
 
 const ProductShowroom = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const location = useLocation();
+  // Get ?search= from URL
+  const params = new URLSearchParams(location.search);
+  const initialSearch = params.get('search') || '';
+  const [searchTerm, setSearchTerm] = useState(initialSearch);
+
+  // Update searchTerm if the URL param changes
+  React.useEffect(() => {
+    setSearchTerm(params.get('search') || '');
+  }, [location.search]);
 
   const filteredProducts = productsData.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())

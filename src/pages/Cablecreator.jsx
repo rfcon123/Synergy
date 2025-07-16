@@ -7,7 +7,7 @@ const cableOptions = {
     { type: "RG141", code: "141", pricePerMeter: 334.00, compatibleConnectors: ["SMA Male", "BNC Male"], impedance: "50", maxFrequency: "2500", maxLoss: "11.2", flexType: "Flexible", shields: "Double", color: "Silver", attenuationPerMeter: 0.910 },
     { type: "RG086", code: "086", pricePerMeter: 417.50, compatibleConnectors: ["MCX Male", "UFL Plug"], impedance: "50", maxFrequency: "6000", maxLoss: "18.0", flexType: "Ultra Thin", shields: "Single", color: "Gray", attenuationPerMeter: 0.915 },
     { type: "RG250", code: "250", pricePerMeter: 459.25, compatibleConnectors: ["SMP Male", "MCX Female"], impedance: "50", maxFrequency: "8000", maxLoss: "7.8", flexType: "Semi-Rigid", shields: "Double", color: "Copper", attenuationPerMeter: 0.03 },
-    { type: "RG316", code: "316", pricePerMeter: 292.25, compatibleConnectors: ["SMA Male", "BNC Female", "UFL Plug"], impedance: "50", maxFrequency: "3000", maxLoss: "16.5", flexType: "Flexible", shields: "Single", color: "Beige", attenuationPerMeter: 0.2 },
+    { type: "RG316", code: "316", pricePerMeter: 292.25, compatibleConnectors: ["SMA Male", "BNC Female", "UFL Plug","MCX Female"], impedance: "50", maxFrequency: "3000", maxLoss: "16.5", flexType: "Flexible", shields: "Single", color: "Beige", attenuationPerMeter: 0.2 },
   ],
   connectors: [
     { name: "SMA Male", code: "SM", price: 250.50, gender: "Male", body: "Straight", polarity: "Standard", mounting: "None", attachment: "Crimp", impedance: "50" },
