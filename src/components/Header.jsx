@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Info, Phone, Zap, MessageCircle } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import hbg from '../assets/hbg.png';
 
@@ -40,11 +40,12 @@ const Header = () => {
 
   return (
     <>
-<section className="bg-gradient-to-r from-gray-800 via-blue-900 to-gray-800 text-white text-sm py-2 overflow-hidden font-semibold tracking-wide uppercase shadow-sm">
-  <marquee behavior="scroll" direction="left" scrollamount="12">
-    Discover premium RF & Microwave components — Trusted by industry leaders. Shop now at Synergy Telecom.
-  </marquee>
-</section>
+      <section className="bg-gradient-to-r from-gray-800 via-blue-900 to-gray-800 text-white text-sm py-2 overflow-hidden font-semibold tracking-wide uppercase shadow-sm">
+        <marquee behavior="scroll" direction="left" scrollamount="12">
+          Discover premium RF & Microwave components — Trusted by industry leaders. Shop
+          now at Synergy Telecom.
+        </marquee>
+      </section>
 
       {/* 🟦 Logo + Name + Sticky Navbar */}
       <header
@@ -82,7 +83,11 @@ const Header = () => {
                   <div className="relative inline-block">
                     <Link
                       to={header.title === 'Home' ? '/' : formatPath(header.title)}
-                      className="px-4 py-2 hover:text-yellow-200 rounded transition focus:outline-none focus:ring-2 focus:ring-yellow-300"
+                      className={`px-4 py-2 rounded transition focus:outline-none focus:ring-2 focus:ring-yellow-300 ${
+                        header.title === 'Cable Creator'
+                          ? 'bg-gradient-to-r from-cyan-400 via-teal-400 to-lime-400 bg-clip-text text-transparent font-bold hover:scale-105 transition-transform duration-200'
+                          : 'hover:text-yellow-200'
+                      }`}
                     >
                       {header.title}
                     </Link>
@@ -129,7 +134,11 @@ const Header = () => {
                     <div className="flex justify-between items-center">
                       <Link
                         to={header.title === 'Home' ? '/' : formatPath(header.title)}
-                        className="py-3 px-4 hover:text-yellow-200 rounded-md"
+                        className={`py-3 px-4 rounded-md ${
+                          header.title === 'Cable Creator'
+                            ? 'bg-gradient-to-r from-cyan-400 via-teal-400 to-lime-400 bg-clip-text text-transparent font-bold hover:scale-105 transition-transform duration-200'
+                            : 'hover:text-yellow-200'
+                        }`}
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {header.title}
