@@ -66,7 +66,7 @@ const Header = () => {
               <h1 className="font-bold text-blue-900 leading-snug text-lg md:text-5xl">
                 SYNERGY TELECOM PRIVATE LIMITED
               </h1>
-              <p className="hidden md:block font-bold text-red-600 max-w-xs md:max-w-3xl text-base">
+              <p className="hidden md:block font-bold text-red-600 max-w-xs md:max-w-3xl pl-8 text-base">
                 SOLAR PRODUCT | RF PRODUCT | MICROWAVE PRODUCT | ELCOM PRODUCT
               </p>
             </div>

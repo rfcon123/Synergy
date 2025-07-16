@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import StyledButton from "../components/StyledButton";
 import { Helmet } from "react-helmet-async";
+import bandantenna from "/Datasheets/8-BAND_ATENNA_PATCH-PANEL.pdf";
 
 const catalogueLinks = [
   { name: "Patch Panel Antenna", link: "https://www.rfconnector.in/Product/Patch_Panel_Antenna.pdf" },
