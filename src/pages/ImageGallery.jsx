@@ -7,7 +7,7 @@ const ImageGallery = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [visibleCount, setVisibleCount] = useState(20);
 
-  const urlEndpoint = "https://ik.imagekit.io/hzvbqwpg8/";
+  const urlEndpoint = "https://ik.imagekit.io/rfcon123/";
   const transform = "tr:w-300,q-40,f-webp";
 
   useEffect(() => {
