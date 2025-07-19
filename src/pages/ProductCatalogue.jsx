@@ -82,10 +82,12 @@ const catalogueLinks = [
   { name: "Equipment Photo And Price", link: "https://rfconnector.in/Product/EQUIPMENT%20PHOTO%20AND%20PRICE.pdf" },
   { name: "ST High Frequency Antenna", link: "https://rfconnector.in/Product/ST_HIGH%20_FREQUENCY_ANTENNA.pdf" },
   {name: "ST 140W_MODULE-SPECIFICATION", link: "/pdfs/ST 140W_MODULE-SPECIFICATION.pdf" },
-    {name: "WAVEGUIDEtoCOAXIALADAPTER", link: "/pdfs/WAVEGUIDE to COAXIAL ADAPTER.pdf" },
-    {name: "OLYMPUSSZSTV", link: "/pdfs/OLYMPUS SZ-STV.pdf" },
-       {name: "EMCSOLUTIONSPRODUCTIONS", link: "/pdfs/EMC solutions products.pdf" },
-       
+  {name: "WAVEGUIDEtoCOAXIALADAPTER", link: "/pdfs/WAVEGUIDE to COAXIAL ADAPTER.pdf" },
+  {name: "OLYMPUSSZSTV", link: "/pdfs/OLYMPUS SZ-STV.pdf" },
+  {name: "EMCSOLUTIONSPRODUCTIONS", link: "/pdfs/EMC solutions products.pdf" },
+  {name: "Power supply", link: "/pdfs/Power supply.pdf" },
+  
+     
 
 
     
