@@ -125,6 +125,9 @@ import combiner from '../assets/components/combiner.jpg';
 import highfreqadapter from '../assets/components/highfrequencyadapter.jpg';
 import bts from '../assets/components/bts.jpg';
 import catalogue from '../assets/components/catalogue.jpg';
+import analyzer1682A from '../assets/components/ANALYZER 1682A on.jpeg';
+import CNT90FREQUENCYCOUNTERTIMEANALYZER from '../assets/components/CNT-90 FREQUENCY COUNTER-TIMER-ANALYZER.jpeg';
+
 
 
 
@@ -239,6 +242,9 @@ const productsData = [
   { name: "Waveguide Flange", slug: "waveguide-flange", image: waveguideflange },
   { name: "Waveguide Component", slug: "waveguide-component", image: waveguidecomponent },
   { name: "All Connector Catalogue", slug: "all-connector-catalogue", image: catalogue },
+  { name: "Analyzer 1682A", slug: "analyzer-1682a", image: analyzer1682A },
+    { name: "CNT-90 FREQUENCY COUNTER-TIME-ANALYZER", slug: "CNT-90 FREQUENCY COUNTER-TIME-ANALYZER", image: CNT90FREQUENCYCOUNTERTIMEANALYZER },
+
 ].map(product => ({
   ...product,
   slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')
