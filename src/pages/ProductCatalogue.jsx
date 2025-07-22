@@ -88,7 +88,9 @@ const catalogueLinks = [
   {name: "Power supply", link: "/pdfs/Power supply.pdf" },
   {name: "4dbi_Omni_Celling_Antenna_698_4000Mhz", link: "/pdfs/4dbi_Omni_Celling_Antenna_698_4000Mhz.pdf" },
   {name: "2T2R Panel Antenna 698-3800MHz", link: "/pdfs/2T2R Panel Antenna 698-3800MHz.pdf" },
-  
+  {name: "2G-3G-4G WIDEBAND PCB FLEXIBLE ANTENNA", link: "/pdfs/2G-3G-4G WIDEBAND PCB FLEXIBLE ANTENNA.pdf" },
+
+
 
   
      
