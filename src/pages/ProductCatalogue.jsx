@@ -94,6 +94,7 @@ const catalogueLinks = [
   {name: "5G Parabolic Grid Antenna", link: "/pdfs/5G Parabolic Grid Antenna.pdf" },
   {name: "5DBI OMNI ANTENNA 690-6000MHz", link: "/pdfs/5DBI OMNI ANTENNA 690-6000MHz.pdf" },
   {name: "4dbi_Omni_Celling_Antenna_698_4000Mhz", link: "/pdfs/4dbi_Omni_Celling_Antenna_698_4000Mhz.pdf" },
+  {name: "3dbi Screw Mount Antenna", link: "/pdfs/3dbi Screw Mount Antenna.pdf" },
 
 
 
