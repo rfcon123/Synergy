@@ -91,6 +91,7 @@ const catalogueLinks = [
   {name: "2G-3G-4G WIDEBAND PCB FLEXIBLE ANTENNA", link: "/pdfs/2G-3G-4G WIDEBAND PCB FLEXIBLE ANTENNA.pdf" },
   {name: "17dbi High frequency antenna", link: "/pdfs/17dbi High frequency antenna.pdf" },
   {name: "12_dBi_LPDA_Antenna", link: "/pdfs/12_dBi_LPDA_Antenna.pdf" },
+  {name: "5G Parabolic Grid Antenna", link: "/pdfs/5G Parabolic Grid Antenna.pdf" },
 
 
 
