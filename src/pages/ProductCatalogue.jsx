@@ -110,6 +110,12 @@ const catalogueLinks = [
   {name: "RUBBER DUCK ANTENNA", link: "/pdfs/RUBBER DUCK ANTENNA.pdf" },
   {name: "ST 866-925MHz 12dbi RFID Patch Panel Antenna", link: "/pdfs/ST 866-925MHz 12dbi RFID Patch Panel Antenna.pdf" },
   {name: "ST 868MHz PCB", link: "/pdfs/ST 868MHz PCB.pdf" },
+  {name: "BNC F 4HOLE CLAMP LMR200", link: "/pdfs/BNC_F_4HOLE_CLAMP_LMR200.pdf" },
+  {name: "BNC F 4HOLE CRIMP LMR200", link: "/pdfs/BNC_F_4HOLE_CRIMP_LMR200.pdf" },
+  {name: "BNC F BH BT 3002 CPS", link: "/pdfs/BNC_F_BH_BT_3002_CPS.pdf" },
+  {name: "BNC F BH BT 3002 CRIMP", link: "/pdfs/BNC_F_BH_BT_3002_CRIMP.pdf" },
+  {name: "BNC F BH SOLDER", link: "/pdfs/BNC_F_BH_SOLDER.pdf" },
+
 
  
 
