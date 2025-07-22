@@ -90,6 +90,7 @@ const catalogueLinks = [
   {name: "2T2R Panel Antenna 698-3800MHz", link: "/pdfs/2T2R Panel Antenna 698-3800MHz.pdf" },
   {name: "2G-3G-4G WIDEBAND PCB FLEXIBLE ANTENNA", link: "/pdfs/2G-3G-4G WIDEBAND PCB FLEXIBLE ANTENNA.pdf" },
   {name: "17dbi High frequency antenna", link: "/pdfs/17dbi High frequency antenna.pdf" },
+  {name: "12_dBi_LPDA_Antenna", link: "/pdfs/12_dBi_LPDA_Antenna.pdf" },
 
 
 
