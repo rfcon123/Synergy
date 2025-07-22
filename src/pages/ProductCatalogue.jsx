@@ -97,6 +97,16 @@ const catalogueLinks = [
   {name: "3dbi Screw Mount Antenna", link: "/pdfs/3dbi Screw Mount Antenna.pdf" },
   {name: "117.9-137 two daipole ant STACKED FOLDED DIPOLE OMNI DIRECTIONAL ANTENNA", link: "/pdfs/117.9-137 two daipole ant STACKED FOLDED DIPOLE OMNI DIRECTIONAL ANTENNA....pdf" },
   {name: "12_dBi_LPDA_Antenna", link: "/pdfs/12_dBi_LPDA_Antenna.pdf" },
+  {name: "ad-18-d-3512rev-aang", link: "/pdfs/ad-18-d-3512rev-aang.pdf" },
+  {name: "Double_rigid_horn_antenna_0.8-18GHz", link: "/pdfs/Double_rigid_horn_antenna_0.8-18GHz.pdf" },
+  {name: "Double_rigid_horn_antenna_4-40GHz", link: "/pdfs/Double_rigid_horn_antenna_4-40GHz.pdf" },
+  {name: "Double_rigid_horn_antenna_18-40GHz", link: "/pdfs/Double_rigid_horn_antenna_18-40GHz.pdf" },
+  {name: "LORA 3DBI PCB ANTENNA", link: "/pdfs/LORA 3DBI PCB ANTENNA.pdf" },
+  {name: "LPDA_ANTENNA_Bi_Directional_6DBI_700_3500Mhz_NF", link: "/pdfs/LPDA_ANTENNA_Bi_Directional_6DBI_700_3500Mhz_NF.pdf" },
+  
+
+
+
 
 
 
