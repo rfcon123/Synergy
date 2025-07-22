@@ -115,6 +115,14 @@ const catalogueLinks = [
   {name: "BNC F BH BT 3002 CPS", link: "/pdfs/BNC_F_BH_BT_3002_CPS.pdf" },
   {name: "BNC F BH BT 3002 CRIMP", link: "/pdfs/BNC_F_BH_BT_3002_CRIMP.pdf" },
   {name: "BNC F BH SOLDER", link: "/pdfs/BNC_F_BH_SOLDER.pdf" },
+  {name: "BNC F LMR 100 CRIMP", link: "/pdfs/BNC_F_LMR_100_CRIMP.pdf" },
+  { name: "BNC F LMR 200 CRIMP", link: "/pdfs/BNC_F_LMR_200_CRIMP.pdf" },
+  { name: "BNC F LMR 240 CLAMP", link: "/pdfs/BNC_F_LMR_240_CLAMP.pdf" },
+  { name: "BNC F LMR 240 CRIMP", link: "/pdfs/BNC_F_LMR_240_CRIMP.pdf" },
+  { name: "BNC F RA PCB MOUNT", link: "/pdfs/BNC_F_RA_PCB_MOUNT.pdf" },
+  { name: "BNC F RP LMR 100 CRIMP", link: "/pdfs/BNC_F_RP_LMR_100_CRIMP.pdf" },
+
+
 
 
  
