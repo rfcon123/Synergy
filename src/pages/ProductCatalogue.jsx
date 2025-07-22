@@ -86,6 +86,8 @@ const catalogueLinks = [
   {name: "OLYMPUSSZSTV", link: "/pdfs/OLYMPUS SZ-STV.pdf" },
   {name: "EMCSOLUTIONSPRODUCTIONS", link: "/pdfs/EMC solutions products.pdf" },
   {name: "Power supply", link: "/pdfs/Power supply.pdf" },
+  {name: "4dbi_Omni_Celling_Antenna_698_4000Mhz", link: "/pdfs/4dbi_Omni_Celling_Antenna_698_4000Mhz.pdf" },
+
   
      
 
