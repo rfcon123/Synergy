@@ -92,6 +92,7 @@ const catalogueLinks = [
   {name: "17dbi High frequency antenna", link: "/pdfs/17dbi High frequency antenna.pdf" },
   {name: "12_dBi_LPDA_Antenna", link: "/pdfs/12_dBi_LPDA_Antenna.pdf" },
   {name: "5G Parabolic Grid Antenna", link: "/pdfs/5G Parabolic Grid Antenna.pdf" },
+  {name: "5DBI OMNI ANTENNA 690-6000MHz", link: "/pdfs/5DBI OMNI ANTENNA 690-6000MHz.pdf" },
 
 
 
