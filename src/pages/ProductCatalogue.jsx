@@ -121,6 +121,24 @@ const catalogueLinks = [
   { name: "BNC F LMR 240 CRIMP", link: "/pdfs/BNC_F_LMR_240_CRIMP.pdf" },
   { name: "BNC F RA PCB MOUNT", link: "/pdfs/BNC_F_RA_PCB_MOUNT.pdf" },
   { name: "BNC F RP LMR 100 CRIMP", link: "/pdfs/BNC_F_RP_LMR_100_CRIMP.pdf" },
+  { name: "BNC M 4HOLE SOLDER 17.5MM", link: "/pdfs/BNC_M_4HOLE_SOLDER_17.5MM.pdf" },
+  { name: "BNC M BH SOLDER", link: "/pdfs/BNC_M_BH_SOLDER.pdf" },
+  { name: "BNC M BT3002 CPS", link: "/pdfs/BNC_M_BT3002_CPS.pdf" },
+  { name: "BNC M BT3002 CRIMP", link: "/pdfs/BNC_M_BT3002_CRIMP.pdf" },
+  { name: "BNC M LMR 100 CRIMP", link: "/pdfs/BNC_M_LMR_100_CRIMP.pdf" },
+  { name: "BNC M LMR 200 CLAMP", link: "/pdfs/BNC_M_LMR_200_CLAMP.pdf" },
+  { name: "BNC M LMR 200 CRIMP", link: "/pdfs/BNC_M_LMR_200_CRIMP.pdf" },
+  { name: "BNC M LMR 400 CLAMP", link: "/pdfs/BNC_M_LMR_400_CLAMP.pdf" },
+  { name: "BNC M LMR 400 CRIMP", link: "/pdfs/BNC_M_LMR_400_CRIMP.pdf" },
+  { name: "BNC M PLASTIC HOOD", link: "/pdfs/BNC_M_PLASTIC_HOOD.pdf" },
+  { name: "BNC M RA LMR 200 CRIMP", link: "/pdfs/BNC_M_RA_LMR_200_CRIMP.pdf" },
+  { name: "BNC M RA LMR400 CRIMP", link: "/pdfs/BNC_M_RA_LMR400_CRIMP..pdf" },
+  { name: "BNC M RG 6 CRIMP", link: "/pdfs/BNC_M_RG_6_CRIMP.pdf" },
+  { name: "BNC M RG 11 CRIMP", link: "/pdfs/BNC_M_RG_11_CRIMP.pdf" },
+  { name: "BNC M RG 59 COMPRESSION", link: "/pdfs/BNC_M_RG_59_COMPRESSION.pdf" },
+  { name: "BNC M RG 59 CPS", link: "/pdfs/BNC_M_RG_59_CPS.pdf" },
+  { name: "BNC M RG 59 CRIMP", link: "/pdfs/BNC_M_RG_59_CRIMP.pdf" },
+  
 
 
 
