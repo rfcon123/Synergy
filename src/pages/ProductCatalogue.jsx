@@ -103,7 +103,15 @@ const catalogueLinks = [
   {name: "Double_rigid_horn_antenna_18-40GHz", link: "/pdfs/Double_rigid_horn_antenna_18-40GHz.pdf" },
   {name: "LORA 3DBI PCB ANTENNA", link: "/pdfs/LORA 3DBI PCB ANTENNA.pdf" },
   {name: "LPDA_ANTENNA_Bi_Directional_6DBI_700_3500Mhz_NF", link: "/pdfs/LPDA_ANTENNA_Bi_Directional_6DBI_700_3500Mhz_NF.pdf" },
-  
+  {name: "MAGNETIC ANTENNA MCX_M", link: "/pdfs/MAGNETIC_ANTENNA_MCX_M.pdf" },
+  {name: "OMNI ANTENNA 798-2500", link: "/pdfs/OMNI ANTENNA 798-2500.pdf" },
+  {name: "PARABOLIC ANTENNA 600-6000MHz.pdf", link: "/pdfs/PARABOLIC ANTENNA 600-6000MHz.pdf" },
+  {name: "RFID ANTENNAS DATA", link: "/pdfs/RFID ANTENNAS DATA.pdf" },
+  {name: "RUBBER DUCK ANTENNA", link: "/pdfs/RUBBER DUCK ANTENNA.pdf" },
+  {name: "ST 866-925MHz 12dbi RFID Patch Panel Antenna", link: "/pdfs/ST 866-925MHz 12dbi RFID Patch Panel Antenna.pdf" },
+  {name: "ST 868MHz PCB", link: "/pdfs/ST 868MHz PCB.pdf" },
+
+ 
 
 
 
