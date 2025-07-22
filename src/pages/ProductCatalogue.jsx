@@ -95,6 +95,7 @@ const catalogueLinks = [
   {name: "5DBI OMNI ANTENNA 690-6000MHz", link: "/pdfs/5DBI OMNI ANTENNA 690-6000MHz.pdf" },
   {name: "4dbi_Omni_Celling_Antenna_698_4000Mhz", link: "/pdfs/4dbi_Omni_Celling_Antenna_698_4000Mhz.pdf" },
   {name: "3dbi Screw Mount Antenna", link: "/pdfs/3dbi Screw Mount Antenna.pdf" },
+  {name: "117.9-137 two daipole ant STACKED FOLDED DIPOLE OMNI DIRECTIONAL ANTENNA", link: "/pdfs/117.9-137 two daipole ant STACKED FOLDED DIPOLE OMNI DIRECTIONAL ANTENNA....pdf" },
 
 
 
