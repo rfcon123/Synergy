@@ -138,6 +138,19 @@ const catalogueLinks = [
   { name: "BNC M RG 59 COMPRESSION", link: "/pdfs/BNC_M_RG_59_COMPRESSION.pdf" },
   { name: "BNC M RG 59 CPS", link: "/pdfs/BNC_M_RG_59_CPS.pdf" },
   { name: "BNC M RG 59 CRIMP", link: "/pdfs/BNC_M_RG_59_CRIMP.pdf" },
+  { name: "ST 7 16F 12 YG23 00", link: "/pdfs/ST-7-16F-12-YG23-00.pdf" },
+  { name: "ST 7 16F 22 YF23 00", link: "/pdfs/ST-7-16F-22-YF23-00.pdf" },
+  { name: "ST-7-16M-12 YI24 00", link: "/pdfs/ST-7-16M-12-YI24-00.pdf" },
+  { name: "ST-7-16M-22-YF23-00", link: "/pdfs/ST-7-16M-22-YF23-00.pdf" },
+  { name: "ST-7-16MA-12-YJ23-00", link: "/pdfs/ST-7-16MA-12-YJ23-00.pdf" },
+  { name: "ST-4310F-12-YC23-YP", link: "/pdfs/ST-4310F-12-YC23-YP.pdf" },
+  { name: "ST-4310F-22-HW-YP", link: "/pdfs/ST-4310F-22-HW-YP.pdf" },
+  { name: "ST-4310M-12-YH23-YP", link: "/pdfs/ST-4310M-12-YH23-YP.pdf" },
+  { name: "pdfs/ST-4310M-22-YG23", link: "/pdfs/ST-4310M-22-YG23.pdf" },
+  { name: "ST-NF-12-YD23-00", link: "/pdfs/ST-NF-12-YD23-00.pdf" },
+  { name: "ST-NF-22-YG23-00", link: "/pdfs/ST-NF-22-YG23-00.pdf" },
+  { name: "ST-NM-12-YH23-00", link: "/pdfs/ST-NM-12-YH23-00.pdf" },
+  { name: "ST-NM-22-YM23-00", link: "/pdfs/ST-NM-22-YM23-00.pdf" },
   
 
 
