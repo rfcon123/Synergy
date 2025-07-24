@@ -127,6 +127,9 @@ import bts from '../assets/components/bts.jpg';
 import catalogue from '../assets/components/catalogue.jpg';
 import analyzer1682A from '../assets/components/ANALYZER 1682A on.jpeg';
 import CNT90FREQUENCYCOUNTERTIMEANALYZER from '../assets/components/CNT-90 FREQUENCY COUNTER-TIMER-ANALYZER.jpeg';
+import POWERSUPPLYEX354T from '../assets/components/POWER SUPPLY EX354T.jpeg';
+
+
 
 
 
@@ -243,7 +246,9 @@ const productsData = [
   { name: "Waveguide Component", slug: "waveguide-component", image: waveguidecomponent },
   { name: "All Connector Catalogue", slug: "all-connector-catalogue", image: catalogue },
   { name: "Analyzer 1682A", slug: "analyzer-1682a", image: analyzer1682A },
-    { name: "CNT-90 FREQUENCY COUNTER-TIME-ANALYZER", slug: "CNT-90 FREQUENCY COUNTER-TIME-ANALYZER", image: CNT90FREQUENCYCOUNTERTIMEANALYZER },
+  { name: "CNT-90 FREQUENCY COUNTER-TIME-ANALYZER", slug: "CNT-90 FREQUENCY COUNTER-TIME-ANALYZER", image: CNT90FREQUENCYCOUNTERTIMEANALYZER },
+  { name: "Power Supply EX354T", slug: "power-supply-ex354t", image: POWERSUPPLYEX354T },
+
 
 ].map(product => ({
   ...product,
