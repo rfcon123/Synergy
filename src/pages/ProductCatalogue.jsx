@@ -151,7 +151,26 @@ const catalogueLinks = [
   { name: "ST-NF-22-YG23-00", link: "/pdfs/ST-NF-22-YG23-00.pdf" },
   { name: "ST-NM-12-YH23-00", link: "/pdfs/ST-NM-12-YH23-00.pdf" },
   { name: "ST-NM-22-YM23-00", link: "/pdfs/ST-NM-22-YM23-00.pdf" },
-  
+  { name: "9dBi Collinear Omni Directional Antenna", link: "/pdfs/9dBi_Collinear_Omni_Directional_Antenna.pdf" },
+  { name: "9dbi Magnetic Base Antenna with 3Mtr 698 2700Mhz", link: "/pdfs/9dbi_Magnetic_Base_Antenna_with_3Mtr_698_2700Mhz.pdf" },
+  { name: "antenna catalogue", link: "/pdfs/antenna catalogue.pdf" },
+  { name: "BNC Connector", link: "/pdfs/BNC _Connector.pdf" },
+  { name: "Coupler Combiners", link: "/pdfs/Coupler_Combiners.pdf" },
+  { name: "DIN Connector", link: "/pdfs/DIN_Connector.pdf" },
+  { name: "Dummy Load & Termination", link: "/pdfs/Dummy_Load_Termination.pdf" },
+  { name: "Feeder And Leaky Cable", link: "/pdfs/Feeder_And_Leaky_Cable.pdf" },
+  { name: "Feeder Clamp", link: "/pdfs/Feeder_Clamp.pdf" },
+  { name: "Fixed Attenuator & Variable Attenuator", link: "/pdfs/Fixed_Attenuator_Variable_Attenuator.pdf" },
+  { name: "GPS INDOOR ANTENNA 28DBI 3MTR RG174 SMAM1", link: "/pdfs/GPS_INDOOR_ANTENNA_28DBI_3MTR_RG174_SMAM1.pdf" },
+  { name: "GPS Indoor Outdoor Antenna", link: "/pdfs/GPS_Indoor_Outdoor_Antenna.pdf" },
+  { name: "HLF & LMR Series Cable", link: "/pdfs/HLF_LMR_Series_Cable.pdf" },
+  { name: "High Frequency Connector", link: "/pdfs/High_Frequency_Connector.pdf" },
+  { name: "High Frequency Test Cable Assembly", link: "/pdfs/High_Frequency_Test_Cable_Assembly.pdf" },
+  { name: "HLF LMR Series Cable", link: "/pdfs/HLF_LMR_Series_Cable.pdf" },
+  { name: "Jumper Cable", link: "/pdfs/Jumper_Cable.pdf" },
+  { name: "LPDA ANTENNA 14DBI 698 2700Mhz 1FEET RG58 NF", link: "/pdfs/LPDA_ANTENNA_14DBI_698_2700Mhz_1FEET_RG58_NF.pdf" },
+  { name: "LPDA Antenna", link: "/pdfs/LPDA_Antenna.pdf" },
+   
 
 
 
