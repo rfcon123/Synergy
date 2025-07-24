@@ -170,6 +170,20 @@ const catalogueLinks = [
   { name: "Jumper Cable", link: "/pdfs/Jumper_Cable.pdf" },
   { name: "LPDA ANTENNA 14DBI 698 2700Mhz 1FEET RG58 NF", link: "/pdfs/LPDA_ANTENNA_14DBI_698_2700Mhz_1FEET_RG58_NF.pdf" },
   { name: "LPDA Antenna", link: "/pdfs/LPDA_Antenna.pdf" },
+  { name: "N Connector", link: "/pdfs/N_Connector.pdf" },
+  { name: "N Male for 1 1 4 Feeder Cable", link: "/pdfs/N_Male_for_1_1_4_Feeder_Cable.pdf" },
+  { name: "Omni Antenna", link: "/pdfs/Omni_Antenna.pdf" },
+  { name: "Other Connector", link: "/pdfs/Other_Connector.pdf" },
+  { name: "Patch Panel Antenna", link: "/pdfs/Patch_Panel_Antenna.pdf" },
+  { name: "Power Splitter Cavity and Microstrip", link: "/pdfs/Power_Splitter_Cavity_Microstrip.pdf" },
+  { name: "RF Coaxial Adaptor", link: "/pdfs/RF_Coaxial_Adaptor.pdf" },
+  { name: "Rigid Flexible Waveguide", link: "/pdfs/Rigid_Flexible_Waveguide.pdf" },
+  { name: "SMA Connector", link: "/pdfs/SMA_Connector.pdf" },
+  { name: "SMA Female BH Rightangle PCB Mount", link: "/pdfs/SMA_Female_BH_Rightangle_PCB_Mount_.pdf" },
+  { name: "TNC Connector", link: "/pdfs/TNC_Connector.pdf" },
+  
+
+
    
 
 
