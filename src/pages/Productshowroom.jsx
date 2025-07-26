@@ -126,6 +126,8 @@ import highfreqadapter from '../assets/components/highfrequencyadapter.jpg';
 import bts from '../assets/components/bts.jpg';
 import catalogue from '../assets/components/catalogue.jpg';
 import analyzer1682A from '../assets/components/ANALYZER 1682A on.jpeg';
+import wmodules from '../assets/components/140w modules.jpg';
+
 
 
 
@@ -254,6 +256,7 @@ const productsData = [
   { name: "Waveguide Component", slug: "waveguide-component", image: waveguidecomponent },
   { name: "All Connector Catalogue", slug: "all-connector-catalogue", image: catalogue },
   { name: "Analyzer 1682A", slug: "analyzer-1682a", image: analyzer1682A },
+  { name: "140W Modules", slug: "140w-modules", image: wmodules },
   
   
   
