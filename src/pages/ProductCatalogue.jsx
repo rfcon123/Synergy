@@ -181,6 +181,8 @@ const catalogueLinks = [
   { name: "SMA Connector", link: "/pdfs/SMA_Connector.pdf" },
   { name: "SMA Female BH Rightangle PCB Mount", link: "/pdfs/SMA_Female_BH_Rightangle_PCB_Mount_.pdf" },
   { name: "TNC Connector", link: "/pdfs/TNC_Connector.pdf" },
+  { name: "8-BAND ATENNA PATCH-PANEL", link: "/pdfs/8-BAND_ATENNA_PATCH-PANEL..pdf" },
+  { name: "TELESCOPIC MAST", link: "/pdfs/TELESCOPIC MAST.pdf" },
   
 
 
