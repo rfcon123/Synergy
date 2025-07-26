@@ -133,7 +133,10 @@ import HANDHELDLCRMETER from '../assets/components/HANDHELD LCR METER.jpeg';
 import POWERBOX3303DS from '../assets/components/POWER BOX 3303DS.jpeg';
 import POWERREFELECTIONMETERNAP from '../assets/components/POWER REFELECTION METER NAP.jpeg';
 import POWERSUPPLYB703DT from '../assets/components/POWER SUPPLY B703DT.jpeg';
-import POWERWAVEINVENTERAD from '../assets/components/POWER WAVE INVENTERAD.jpeg';
+import MANTISVISIONOpticalMicroscoperemovebgpreview from '../assets/components/MANTIS_VISION_Optical_Microscope-removebg-preview.png';
+import POWERMETERNRVD from '../assets/components/POWER METER NRVD.jpeg';
+import POWERSUPPLYPW18 from '../assets/components/POWER SUPPLY PW18-2.jpeg';
+
 
 
 
@@ -272,7 +275,10 @@ const productsData = [
   { name: "Power Box 3303DS", slug: "power-box-3303ds", image: POWERBOX3303DS },
   { name: "Power Reflection Meter NAP", slug: "power-reflection-meter-nap", image: POWERREFELECTIONMETERNAP },
   { name: "Power Supply B703DT", slug: "power-supply-b703dt", image: POWERSUPPLYB703DT },
-  { name: "Power Wave InventerAD", slug: "power-wave-inventerad", image: POWERWAVEINVENTERAD },
+  { name: "Mantis Vision Optical Microscope", slug: "mantis-vision-optical-microscope", image: MANTISVISIONOpticalMicroscoperemovebgpreview },
+  { name: "Power Meter NRVD", slug: "power-meter-nrvd", image: POWERMETERNRVD },
+  { name: "Power Supply PW18-2", slug: "power-supply-pw18-2", image: POWERSUPPLYPW18 },
+  
   
   
   

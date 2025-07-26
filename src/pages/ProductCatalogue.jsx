@@ -184,6 +184,8 @@ const catalogueLinks = [
   { name: "8-BAND ATENNA PATCH-PANEL", link: "/pdfs/8-BAND_ATENNA_PATCH-PANEL..pdf" },
   { name: "TELESCOPIC MAST", link: "/pdfs/TELESCOPIC MAST.pdf" },
   { name: "L1 l2 L5 AMPLIFIER", link: "/pdfs/L1 l2 L5 AMPLIFIER.pdf" },
+  { name: "100W POWER MODULE 400-6000MHZ", link: "/pdfs/100W_POWER_MODULE_400-6000MHZ backup.pdf" },
+  
   
   
 
