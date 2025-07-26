@@ -128,6 +128,13 @@ import catalogue from '../assets/components/catalogue.jpg';
 import analyzer1682A from '../assets/components/ANALYZER 1682A on.jpeg';
 import wmodules from '../assets/components/140w modules.jpg';
 import WATTMETER from '../assets/components/WATTMETER.jpeg';
+import EX355POWERSUPPLY from '../assets/components/EX355 POWER SUPPLY.jpeg';
+import HANDHELDLCRMETER from '../assets/components/HANDHELD LCR METER.jpeg';
+import POWERBOX3303DS from '../assets/components/POWER BOX 3303DS.jpeg';
+import POWERREFELECTIONMETERNAP from '../assets/components/POWER REFELECTION METER NAP.jpeg';
+import POWERSUPPLYB703DT from '../assets/components/POWER SUPPLY B703DT.jpeg';
+import POWERWAVEINVENTERAD from '../assets/components/POWER WAVE INVENTERAD.jpeg';
+
 
 
 
@@ -260,6 +267,12 @@ const productsData = [
   { name: "Analyzer 1682A", slug: "analyzer-1682a", image: analyzer1682A },
   { name: "140W Modules", slug: "140w-modules", image: wmodules },
   { name: "Wattmeter", slug: "wattmeter", image: WATTMETER },
+  { name: "EX355 Power Supply", slug: "ex355-power-supply", image: EX355POWERSUPPLY },
+  { name: "Handheld LCR Meter", slug: "handheld-lcr-meter", image: HANDHELDLCRMETER },
+  { name: "Power Box 3303DS", slug: "power-box-3303ds", image: POWERBOX3303DS },
+  { name: "Power Reflection Meter NAP", slug: "power-reflection-meter-nap", image: POWERREFELECTIONMETERNAP },
+  { name: "Power Supply B703DT", slug: "power-supply-b703dt", image: POWERSUPPLYB703DT },
+  { name: "Power Wave InventerAD", slug: "power-wave-inventerad", image: POWERWAVEINVENTERAD },
   
   
   
