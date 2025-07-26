@@ -183,6 +183,8 @@ const catalogueLinks = [
   { name: "TNC Connector", link: "/pdfs/TNC_Connector.pdf" },
   { name: "8-BAND ATENNA PATCH-PANEL", link: "/pdfs/8-BAND_ATENNA_PATCH-PANEL..pdf" },
   { name: "TELESCOPIC MAST", link: "/pdfs/TELESCOPIC MAST.pdf" },
+  { name: "L1 l2 L5 AMPLIFIER", link: "/pdfs/L1 l2 L5 AMPLIFIER.pdf" },
+  
   
 
 
