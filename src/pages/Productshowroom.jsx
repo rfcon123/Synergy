@@ -126,11 +126,8 @@ import highfreqadapter from '../assets/components/highfrequencyadapter.jpg';
 import bts from '../assets/components/bts.jpg';
 import catalogue from '../assets/components/catalogue.jpg';
 import analyzer1682A from '../assets/components/ANALYZER 1682A on.jpeg';
-import CNT90FREQUENCYCOUNTERTIMEANALYZER from '../assets/components/CNT-90 FREQUENCY COUNTER-TIMER-ANALYZER.jpeg';
-import POWERSUPPLYEX354T from '../assets/components/POWER SUPPLY EX354T.jpeg';
-import RPHDESCHWARZSMBV100A from '../assets/components/RPHDE & SCHWARZ SMBV100A.jpeg';
-import TDS224OscilloscopeTEKTRONIX from '../assets/components/TDS 224 Oscilloscope TEKTRONIX.jpeg';
-import WATTMETER1 from '../assets/components/WATTMETER1.jpeg';
+
+
 
 
 
@@ -257,11 +254,8 @@ const productsData = [
   { name: "Waveguide Component", slug: "waveguide-component", image: waveguidecomponent },
   { name: "All Connector Catalogue", slug: "all-connector-catalogue", image: catalogue },
   { name: "Analyzer 1682A", slug: "analyzer-1682a", image: analyzer1682A },
-  { name: "CNT-90 FREQUENCY COUNTER-TIME-ANALYZER", slug: "CNT-90 FREQUENCY COUNTER-TIME-ANALYZER", image: CNT90FREQUENCYCOUNTERTIMEANALYZER },
-  { name: "Power Supply EX354T", slug: "power-supply-ex354t", image: POWERSUPPLYEX354T },
-  { name: "RPHDE & SCHWARZ SMBV100A", slug: "rphde-schwarz-smbv100a", image: RPHDESCHWARZSMBV100A },
-  { name: "TDS 224 Oscilloscope TEKTRONIX", slug: "tds-224-oscilloscope-tektronix", image: TDS224OscilloscopeTEKTRONIX },
-  { name: "Wattmeter", slug: "wattmeter", image: WATTMETER1 },
+  
+  
   
   
 
