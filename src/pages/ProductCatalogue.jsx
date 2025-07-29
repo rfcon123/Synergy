@@ -185,6 +185,7 @@ const catalogueLinks = [
   { name: "TELESCOPIC MAST", link: "/pdfs/TELESCOPIC MAST.pdf" },
   { name: "L1 l2 L5 AMPLIFIER", link: "/pdfs/L1 l2 L5 AMPLIFIER.pdf" },
   { name: "100W POWER MODULE 400-6000MHZ", link: "/pdfs/100W_POWER_MODULE_400-6000MHZ backup.pdf" },
+  { name: "ST-DISCONE ANTENNA Data Sheet 30-150mhz", link: "/pdfs/ST-DISCONE ANTENNA Data Sheet 30-150mhz.pdf" },
   
   
   

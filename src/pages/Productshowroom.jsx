@@ -136,6 +136,9 @@ import POWERSUPPLYB703DT from '../assets/components/POWER SUPPLY B703DT.jpeg';
 import MANTISVISIONOpticalMicroscoperemovebgpreview from '../assets/components/MANTIS_VISION_Optical_Microscope-removebg-preview.png';
 import POWERMETERNRVD from '../assets/components/POWER METER NRVD.jpeg';
 import POWERSUPPLYPW18 from '../assets/components/POWER SUPPLY PW18-2.jpeg';
+import TYPEN50ELECTRONICCALIBRATIONKIT85092C from '../assets/components/TYPE N -50 ELECTRONIC CALIBRATION KIT 85092C.jpeg';
+
+
 
 
 
@@ -278,6 +281,7 @@ const productsData = [
   { name: "Mantis Vision Optical Microscope", slug: "mantis-vision-optical-microscope", image: MANTISVISIONOpticalMicroscoperemovebgpreview },
   { name: "Power Meter NRVD", slug: "power-meter-nrvd", image: POWERMETERNRVD },
   { name: "Power Supply PW18-2", slug: "power-supply-pw18-2", image: POWERSUPPLYPW18 },
+  { name: "Type N -50 Electronic Calibration Kit 85092C", slug: "type-n-50-electronic-calibration-kit-85092c", image: TYPEN50ELECTRONICCALIBRATIONKIT85092C },
   
   
   
