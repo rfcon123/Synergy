@@ -186,6 +186,11 @@ const catalogueLinks = [
   { name: "L1 l2 L5 AMPLIFIER", link: "/pdfs/L1 l2 L5 AMPLIFIER.pdf" },
   { name: "100W POWER MODULE 400-6000MHZ", link: "/pdfs/100W_POWER_MODULE_400-6000MHZ backup.pdf" },
   { name: "ST-DISCONE ANTENNA Data Sheet 30-150mhz", link: "/pdfs/ST-DISCONE ANTENNA Data Sheet 30-150mhz.pdf" },
+  { name: "RG 217 Co-Axial Cable", link: "/pdfs/RG_217 co-axial cable.pdf" },
+  { name: "ST-Medical wires 5c-46awg", link: "/pdfs/ST- Medical wires 5c-46awg.pdf" },
+  { name: "ST-Medical wires 7c-44awg", link: "/pdfs/ST- Medical wires 7c-44awg.pdf" },
+  { name: "ST-AWG46 50ω data sheet", link: "/pdfs/ST-AWG46 50ω data sheet.pdf" },
+  
   
   
   
