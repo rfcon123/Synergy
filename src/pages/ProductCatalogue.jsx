@@ -190,6 +190,8 @@ const catalogueLinks = [
   { name: "ST-Medical wires 5c-46awg", link: "/pdfs/ST- Medical wires 5c-46awg.pdf" },
   { name: "ST-Medical wires 7c-44awg", link: "/pdfs/ST- Medical wires 7c-44awg.pdf" },
   { name: "ST-AWG46 50ω data sheet", link: "/pdfs/ST-AWG46 50ω data sheet.pdf" },
+  { name: "Sy25 Hf conn", link: "/pdfs/Sy25 Hf conn..pdf" },
+  
   
   
   
