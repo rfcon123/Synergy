@@ -139,6 +139,7 @@ import POWERSUPPLYB703DT from '../assets/components/POWER SUPPLY B703DT.jpeg';
 import MANTISVISIONOpticalMicroscoperemovebgpreview from '../assets/components/MANTIS_VISION_Optical_Microscope-removebg-preview.png';
 import POWERMETERNRVD from '../assets/components/POWER METER NRVD.jpeg';
 import POWERSUPPLYPW18 from '../assets/components/POWER SUPPLY PW18-2.jpeg';
+import SignalGeneratorSMBV100A from '../assets/components/Signal Generator(SMBV100A).png';
 
 
 
@@ -286,6 +287,7 @@ const productsData = [
   { name: "Power Meter NRVD", slug: "power-meter-nrvd", image: POWERMETERNRVD },
   { name: "Power Supply PW18-2", slug: "power-supply-pw18-2", image: POWERSUPPLYPW18 },
   { name: "EMC SCANNER", slug: "EMC-SCANNER", image: EMCSCANNER },
+  { name: "Signal Generator SMBV100A", slug: "signal-generator-smbv100a", image: SignalGeneratorSMBV100A }
 
 
   
