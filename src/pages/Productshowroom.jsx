@@ -140,6 +140,34 @@ import MANTISVISIONOpticalMicroscoperemovebgpreview from '../assets/components/M
 import POWERMETERNRVD from '../assets/components/POWER METER NRVD.jpeg';
 import POWERSUPPLYPW18 from '../assets/components/POWER SUPPLY PW18-2.jpeg';
 import SignalGeneratorSMBV100A from '../assets/components/Signal Generator(SMBV100A).png';
+import by2inchCableCuttingToolAndrew from '../assets/components/1by2 inch Cable Cutting Tool (Andrew).jpg';
+import by2inchCableCuttingToolTG from '../assets/components/1by2 inch Cable Cutting Tool (T.G).jpg';
+import by8inchAluminiumCableCuttingToolAndrew from '../assets/components/7by8 inch Aluminium Cable Cutting Tool (Andrew).jpg';
+import by8inchCableCuttingToolAndrew from '../assets/components/7by8 inch Cable Cutting Tool (Andrew).jpg';
+import BT3002RG316CrimpingTool from '../assets/components/BT3002 & RG316 Crimping Tool.jpg';
+import CoaxialCableCuttingTool from '../assets/components/Coaxial Cable Cutting Tool.jpg';
+import CoaxialCrimpingToolKitProskitPK330K from '../assets/components/Coaxial Crimping Tool Kit Proskit 6PK330K.jpg';
+import HLF200CrimpingTool from '../assets/components/HLF 200 Crimping Tool.jpg';
+import HLF300CrimpingTool from '../assets/components/HLF 300 Crimping Tool.jpg';
+import HLF400CrimpingTool from '../assets/components/HLF 400 Crimping Tool.jpg';
+import HLF400RACrimpingTool from '../assets/components/HLF 400 RA Crimping Tool.jpg';
+import HydraulicCrimpingTool470mm from '../assets/components/Hydraulic Crimping Tool 4-70 mm.jpg';
+import MC4CrimpingTool from '../assets/components/MC4 Crimping Tool.jpg';
+import MC4RACrimpingTool from '../assets/components/MC4 RA Crimping Tool.jpg';
+import MC4StrippingTool from '../assets/components/MC4 Stripping Tool.jpg';
+import NConnectorTourqueWrench from '../assets/components/N Connector Tourque Wrench.jpg';
+import SMAConnectorTourqueWrench from '../assets/components/SMA Connector Tourque Wrench.jpg';
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -287,7 +315,24 @@ const productsData = [
   { name: "Power Meter NRVD", slug: "power-meter-nrvd", image: POWERMETERNRVD },
   { name: "Power Supply PW18-2", slug: "power-supply-pw18-2", image: POWERSUPPLYPW18 },
   { name: "EMC SCANNER", slug: "EMC-SCANNER", image: EMCSCANNER },
-  { name: "Signal Generator SMBV100A", slug: "signal-generator-smbv100a", image: SignalGeneratorSMBV100A }
+  { name: "Signal Generator SMBV100A", slug: "signal-generator-smbv100a", image: SignalGeneratorSMBV100A },
+  { name: "1/2 inch Cable Cutting Tool (Andrew)", slug: "1-2-inch-cable-cutting-tool-andrew", image: by2inchCableCuttingToolAndrew },
+  { name: "1/2 inch Cable Cutting Tool (T.G)", slug: "1-2-inch-cable-cutting-tool-tg", image: by2inchCableCuttingToolTG },
+  { name: "7/8 inch Aluminium Cable Cutting Tool (Andrew)", slug: "7-8-inch-aluminium-cable-cutting-tool-andrew", image: by8inchAluminiumCableCuttingToolAndrew },
+  { name: "7/8 inch Cable Cutting Tool (Andrew)", slug: "7-8-inch-cable-cutting-tool-andrew", image: by8inchCableCuttingToolAndrew },
+  { name: "BT3002 & RG316 Crimping Tool", slug: "bt3002-rg316-crimping-tool", image: BT3002RG316CrimpingTool },
+  { name: "Coaxial Cable Cutting Tool", slug: "coaxial-cable-cutting-tool", image: CoaxialCableCuttingTool },
+  { name: "Coaxial Crimping Tool Kit Proskit 6PK330K", slug: "coaxial-crimping-tool-kit-proskit-6pk330k", image: CoaxialCrimpingToolKitProskitPK330K },
+  { name: "HLF 200 Crimping Tool", slug: "hlf-200-crimping-tool", image: HLF200CrimpingTool },
+  { name: "HLF 300 Crimping Tool", slug: "hlf-300-crimping-tool", image: HLF300CrimpingTool },
+  { name: "HLF 400 Crimping Tool", slug: "hlf-400-crimping-tool", image: HLF400CrimpingTool },
+  { name: "HLF 400 RA Crimping Tool", slug: "hlf-400-ra-crimping-tool", image: HLF400RACrimpingTool },
+  { name: "Hydraulic Crimping Tool 4-70 mm", slug: "hydraulic-crimping-tool-4-70-mm", image: HydraulicCrimpingTool470mm },
+  { name: "MC4 Crimping Tool", slug: "mc4-crimping-tool", image: MC4CrimpingTool },
+  { name: "MC4 RA Crimping Tool", slug: "mc4-ra-crimping-tool", image: MC4RACrimpingTool },
+  { name: "MC4 Stripping Tool", slug: "mc4-stripping-tool", image: MC4StrippingTool },
+  { name: "N Connector Tourque Wrench", slug: "n-connector-tourque-wrench", image: NConnectorTourqueWrench },
+  { name: "SMA Connector Tourque Wrench", slug: "sma-connector-tourque-wrench", image: SMAConnectorTourqueWrench },
 
 
   
