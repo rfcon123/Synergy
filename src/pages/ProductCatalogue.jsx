@@ -192,6 +192,7 @@ const catalogueLinks = [
   { name: "ST-AWG46 50ω data sheet", link: "/pdfs/ST-AWG46 50ω data sheet.pdf" },
   { name: "Sy25 Hf conn", link: "/pdfs/Sy25 Hf conn..pdf" },
   { name: "10 MTR ELECTRIC MAST", link: "/pdfs/10-MTR-ELECTRIC-MAST.pdf" },
+  { name: "EQUIPMENT list", link: "/pdfs/EQUIPMENT PHOTO AND PRICE.pdf" },
   
   
   
