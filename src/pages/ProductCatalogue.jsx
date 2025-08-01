@@ -6,6 +6,14 @@ import bandantenna from "/Datasheets/8-BAND_ATENNA_PATCH-PANEL.pdf";
 const catalogueLinks = [
   { name: "ST-Antenna Catalog", link: "/pdfs/ST- Antenna Catalog.pdf" },
   { name: "ST-Technology  product catalog6.9", link: "/pdfs/ST-Technology  product catalog6.9.pdf" },
+  { name: "LOGIC ANALAYZER", link: "/pdfs/LOGIC ANALAYZER.pdf" },
+  { name: "NETWORK ANALYZER", link: "/pdfs/NETWORK ANALYZER.pdf" },
+  { name: "OSCILLOSCOPE", link: "/pdfs/OSCILLOSCOPE.pdf" },
+  { name: "SIGNAL GENERATOR", link: "/pdfs/SIGNAL GENERATOR.pdf" },
+  { name: "SPECTRUM ANALAYZER", link: "/pdfs/SPECTRUM ANALAYZER.pdf" },
+
+
+
   
   
   { name: "Patch Panel Antenna", link: "https://www.rfconnector.in/Product/Patch_Panel_Antenna.pdf" },
@@ -198,29 +206,9 @@ const catalogueLinks = [
   { name: "10 MTR ELECTRIC MAST", link: "/pdfs/10-MTR-ELECTRIC-MAST.pdf" },
   { name: "EQUIPMENT list", link: "/pdfs/EQUIPMENT PHOTO AND PRICE.pdf" },
   { name: "ST-Technology product catalog6.9", link: "/pdfs/ST-Technology  product catalog6.9" },
-
-  
-  
-  
-  
-  
-  
-  
-
-
-   
-
-
-
+  { name: "LOGIC ANALAYZER", link: "/pdfs/LOGIC ANALAYZER.pdf" },
 
  
-
-
-
-
-
-
-  
      
 
 
