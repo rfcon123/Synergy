@@ -155,34 +155,7 @@ import MC4RACrimpingTool from '../assets/components/MC4 RA Crimping Tool.jpg';
 import MC4StrippingTool from '../assets/components/MC4 Stripping Tool.jpg';
 import NConnectorTourqueWrench from '../assets/components/N Connector Tourque Wrench.jpg';
 import SMAConnectorTourqueWrench from '../assets/components/SMA Connector Tourque Wrench.jpg';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import SIGNALGENERATORallproduct from '../assets/components/SIGNAL GENERATOR all product.jpeg';
 
 
 
@@ -192,6 +165,10 @@ import SMAConnectorTourqueWrench from '../assets/components/SMA Connector Tourqu
 
 const productsData = [
   { name: "RF Cable", slug: "rf-cable", image: rfcable },
+  { name: "Signal Generator All Product", slug: "signal-generator-all-product", image: SIGNALGENERATORallproduct },
+
+
+
   { name: "Jumper Cable", slug: "jumper-cable", image: jumpercable },
   { name: "High Freq Cable", slug: "high-freq-cable", image: highfreqcable },
   { name: "Fakra Connector", slug: "fakra-connector", image: fakraconnector },
