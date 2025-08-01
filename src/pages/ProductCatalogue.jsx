@@ -4,6 +4,8 @@ import { Helmet } from "react-helmet-async";
 import bandantenna from "/Datasheets/8-BAND_ATENNA_PATCH-PANEL.pdf";
 
 const catalogueLinks = [
+  { name: "ST-Antenna Catalog", link: "/pdfs/ST- Antenna Catalog.pdf" },
+  
   { name: "Patch Panel Antenna", link: "https://www.rfconnector.in/Product/Patch_Panel_Antenna.pdf" },
   { name: "Omni Antenna", link: "https://www.rfconnector.in/Product/Omni_Antenna.pdf" },
   { name: "LPDA Antenna", link: "https://www.rfconnector.in/Product/LPDA_Antenna.pdf" },
@@ -193,6 +195,7 @@ const catalogueLinks = [
   { name: "Sy25 Hf conn", link: "/pdfs/Sy25 Hf conn..pdf" },
   { name: "10 MTR ELECTRIC MAST", link: "/pdfs/10-MTR-ELECTRIC-MAST.pdf" },
   { name: "EQUIPMENT list", link: "/pdfs/EQUIPMENT PHOTO AND PRICE.pdf" },
+  
   
   
   
