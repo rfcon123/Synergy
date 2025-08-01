@@ -7,8 +7,6 @@ import productLinks from './Productlinks';
 import StyledButton  from '../components/StyledButton';
 import rfcable from '../assets/components/rfcable.jpg';
 import EMCSCANNER from '../assets/components/EMC SCANNER.jpg';
-
-
 import jumpercable from '../assets/components/jumpercable.jpg';
 import highfreqcable from '../assets/components/highfreqcable.jpg';
 import fakraconnector from '../assets/components/fakraconnector.jpg';
