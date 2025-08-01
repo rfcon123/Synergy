@@ -156,6 +156,8 @@ import MC4StrippingTool from '../assets/components/MC4 Stripping Tool.jpg';
 import NConnectorTourqueWrench from '../assets/components/N Connector Tourque Wrench.jpg';
 import SMAConnectorTourqueWrench from '../assets/components/SMA Connector Tourque Wrench.jpg';
 import SIGNALGENERATORallproduct from '../assets/components/SIGNAL GENERATOR all product.jpeg';
+import NIESSIPOWERMETER from '../assets/components/NIESSI POWER METER.jpg';
+
 
 
 
@@ -166,6 +168,7 @@ import SIGNALGENERATORallproduct from '../assets/components/SIGNAL GENERATOR all
 const productsData = [
   { name: "RF Cable", slug: "rf-cable", image: rfcable },
   { name: "Signal Generator All Product", slug: "signal-generator-all-product", image: SIGNALGENERATORallproduct },
+  { name: "NIESSI Power Meter", slug: "niessi-power-meter", image: NIESSIPOWERMETER },
 
 
 
