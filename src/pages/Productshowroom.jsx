@@ -157,6 +157,8 @@ import NConnectorTourqueWrench from '../assets/components/N Connector Tourque Wr
 import SMAConnectorTourqueWrench from '../assets/components/SMA Connector Tourque Wrench.jpg';
 import SIGNALGENERATORallproduct from '../assets/components/SIGNAL GENERATOR all product.jpeg';
 import NIESSIPOWERMETER from '../assets/components/NIESSI POWER METER.jpg';
+import Bird43WattMeter from '../assets/components/Bird 43 Watt Meter.jpg';
+
 
 
 
@@ -311,6 +313,7 @@ const productsData = [
   { name: "MC4 Stripping Tool", slug: "mc4-stripping-tool", image: MC4StrippingTool },
   { name: "N Connector Tourque Wrench", slug: "n-connector-tourque-wrench", image: NConnectorTourqueWrench },
   { name: "SMA Connector Tourque Wrench", slug: "sma-connector-tourque-wrench", image: SMAConnectorTourqueWrench },
+  { name: "Bird 43 Watt Meter", slug: "bird-43-watt-meter", image: Bird43WattMeter }
 
 
   
