@@ -209,6 +209,19 @@ const catalogueLinks = [
   { name: "600-4200MHz 4.3-10 Female Directional Coupler", link: "/pdfs/600-4200MHz 4.3-10 Female Directional Coupler.pdf" },
   { name: "600-4200MHz DIN Female Directional Coupler", link: "/pdfs/600-4200MHz DIN Female Directional Coupler.pdf" },
   { name: "600-4200MHz N Female Directional Coupler", link: "/pdfs/600-4200MHz N Female Directional Coupler.pdf" },
+  { name: "600-4200MHz 2in 2out 4.3-10F Hybrid Coupler", link: "/pdfs/600-4200MHz 2in 2out 4.3-10F Hybrid Coupler.pdf" },
+  { name: "600-4200MHz 2in 2out DIN Female Hybrid Coupler", link: "/pdfs/600-4200MHz 2in 2out DIN Female Hybrid Coupler.pdf" },
+  { name: "600-4200MHz 2in 2out N Female Hybrid Coupler", link: "/pdfs/600-4200MHz 2in 2out N Female Hybrid Coupler.pdf" },
+  { name: "600-4200MHz 2Way 4.3-10 Female Power Splitter", link: "/pdfs/600-4200MHz 2Way 4.3-10 Female Power Splitter.pdf" },
+  { name: "600-4200MHz 2Way DIN Female Power Splitter", link: "/pdfs/600-4200MHz 2Way DIN Female Power Splitter.pdf" },
+  { name: "600-4200MHz 2Way N Female Power Splitter", link: "/pdfs/600-4200MHz 2Way N Female Power Splitter.pdf" },
+  { name: "600-4200MHz 3Way DIN Female Power Splitter", link: "/pdfs/600-4200MHz 3Way DIN Female Power Splitter.pdf" },
+  { name: "600-4200MHz 4Way 4.3-10 Female Power Splitter", link: "/pdfs/600-4200MHz 4Way 4.3-10 Female Power Splitter.pdf" },
+  { name: "600-4200MHz 4Way DIN Female Power Splitter", link: "/pdfs/600-4200MHz 4Way DIN Female Power Splitter.pdf" },
+  { name: "600-4200MHz 4Way N Female Power Splitter", link: "/pdfs/600-4200MHz 4Way N Female Power Splitter.pdf" },
+
+
+
 
 
    
