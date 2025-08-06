@@ -219,6 +219,7 @@ const catalogueLinks = [
   { name: "600-4200MHz 4Way 4.3-10 Female Power Splitter", link: "/pdfs/600-4200MHz 4Way 4.3-10 Female Power Splitter.pdf" },
   { name: "600-4200MHz 4Way DIN Female Power Splitter", link: "/pdfs/600-4200MHz 4Way DIN Female Power Splitter.pdf" },
   { name: "600-4200MHz 4Way N Female Power Splitter", link: "/pdfs/600-4200MHz 4Way N Female Power Splitter.pdf" },
+  { name: "UHF ANTENNA", link: "/pdfs/UHF ANTENNA.pdf" },
 
 
 
