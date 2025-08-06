@@ -205,10 +205,13 @@ const catalogueLinks = [
   { name: "Sy25 Hf conn", link: "/pdfs/Sy25 Hf conn..pdf" },
   { name: "10 MTR ELECTRIC MAST", link: "/pdfs/10-MTR-ELECTRIC-MAST.pdf" },
   { name: "EQUIPMENT list", link: "/pdfs/EQUIPMENT PHOTO AND PRICE.pdf" },
-  { name: "ST-Technology product catalog6.9", link: "/pdfs/ST-Technology  product catalog6.9" },
   { name: "LOGIC ANALAYZER", link: "/pdfs/LOGIC ANALAYZER.pdf" },
+  { name: "600-4200MHz 4.3-10 Female Directional Coupler", link: "/pdfs/600-4200MHz 4.3-10 Female Directional Coupler.pdf" },
+  { name: "600-4200MHz DIN Female Directional Coupler", link: "/pdfs/600-4200MHz DIN Female Directional Coupler.pdf" },
+  { name: "600-4200MHz N Female Directional Coupler", link: "/pdfs/600-4200MHz N Female Directional Coupler.pdf" },
 
- 
+
+   
      
 
 
