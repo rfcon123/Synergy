@@ -10,7 +10,6 @@ const Career = () => {
 
   return (
   
-
     <section className="min-h-screen bg-gray-50 py-12 px-4 md:px-16">
       <Helmet>
   <title>Careers | Work at Synergy Telecom - RF & Microwave Jobs</title>
