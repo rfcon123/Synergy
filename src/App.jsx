@@ -59,7 +59,7 @@ function App() {
         <Route path="/product-stock" element={<ProductStock />} />
         
         {/* Hot Products list page */}
-        <Route path="/hot-products" element={<HotProducts />} />
+        <Route path="/-hot-products" element={<HotProducts />} />
         
         {/* New dynamic route for individual hot product pages */}
         <Route path="/hot-products/:slug" element={<HotProductDetails />} />
