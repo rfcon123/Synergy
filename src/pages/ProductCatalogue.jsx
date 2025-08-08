@@ -220,7 +220,17 @@ const catalogueLinks = [
   { name: "600-4200MHz 4Way DIN Female Power Splitter", link: "/pdfs/600-4200MHz 4Way DIN Female Power Splitter.pdf" },
   { name: "600-4200MHz 4Way N Female Power Splitter", link: "/pdfs/600-4200MHz 4Way N Female Power Splitter.pdf" },
   { name: "UHF ANTENNA", link: "/pdfs/UHF ANTENNA.pdf" },
+  { name: "5  G INDOOR DIRECTIONAL PANEL ANTENNA", link: "/pdfs/5  G INDOOR DIRECTIONAL PANEL ANTENNA.pdf" },
+  { name: "ANT and GNSS combined antenna", link: "/pdfs/ANT and GNSS combined antenna.pdf" },
+  { name: "Horn Antenna-0.6-1GHz", link: "/pdfs/Horn Antenna-0.6-1GHz.pdf" },
+  { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
+  { name: "ST-AT-18G-2W-NMF", link: "/pdfs/ST-AT-18G-2W-NMF.pdf" },
+  { name: "Waveguide WR90-100-200-300mm", link: "/pdfs/Waveguide WR90-100-200-300mm.pdf" },
 
+
+
+
+  
 
 
 
