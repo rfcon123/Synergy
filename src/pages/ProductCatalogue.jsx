@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { FiFileText } from "react-icons/fi";
 import StyledButton from "../components/StyledButton";
+import slugify from 'slugify';
+
 
 const catalogueLinks = [
   { name: "ST-Antenna Catalog", link: "/pdfs/ST- Antenna Catalog.pdf" },
