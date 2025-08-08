@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Helmet } from "react-helmet-async";
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 
+// Import the same data and slugify function to find the product
 const catalogueLinks = [
     { name: "3dbi Whip Antenna 2.4Ghz with UFL Cable 150mm", link: "https://www.rfconnector.in/catalog/IBS/WHIP_ANTENNA_RA_MOV_3DBI_2400Mhz_WITH_UFL.pdf" },
     { name: "Phoenix Contact Flashtrab (FLT N/PE CTRL -1.5)", link: "https://www.alibaba.com/product-detail/FLASHTRAB-FLT-100-N-PE-CTRL_50010804282.html" },
@@ -80,104 +81,56 @@ const catalogueLinks = [
     { name: "SFP TO SFP CABLE 1 MTR", link: "https://rfconnector.in/catalog/IBS/SFP_2020.pdf" },
 ];
 
-// Helper function to create a URL-friendly slug
 const slugify = (text) =>
     text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
 
-const HotProducts = () => {
-    const [search, setSearch] = useState('');
-    const [copiedIndex, setCopiedIndex] = useState(null);
+const HotProductDetails = () => {
+    const { slug } = useParams();
 
-    const filteredLinks = catalogueLinks.filter((item) =>
-        item.name.toLowerCase().includes(search.toLowerCase())
-    );
+    // Find the product that matches the slug
+    const product = catalogueLinks.find((item) => slugify(item.name) === slug);
 
-    const handleCopy = (link, index) => {
-        navigator.clipboard.writeText(link);
-        setCopiedIndex(index);
-        setTimeout(() => setCopiedIndex(null), 2000);
-    };
+    // Render a 404 page or a "not found" message if the product doesn't exist
+    if (!product) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-gray-100">
+                <h1 className="text-4xl font-bold text-gray-700">Product Not Found</h1>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-yellow-50 to-white py-20 px-4">
             <Helmet>
-                <title>Hot Products | RF Connector - Synergy Telecom</title>
-                <meta name="description" content="Explore popular RF and microwave products from Synergy Telecom." />
-                <meta name="keywords" content="hot RF products, RF components, antennas, cables, RF datasheets" />
-                <meta property="og:title" content="Hot Products | RF Connector - Synergy Telecom" />
-                <meta property="og:description" content="Browse and download datasheets of trending RF components." />
+                <title>{product.name} | Hot Products - Synergy Telecom</title>
+                <meta name="description" content={`View details and datasheet for the hot product: ${product.name}.`} />
+                <meta property="og:title" content={`${product.name} | Hot Products - Synergy Telecom`} />
+                <meta property="og:description" content={`View details and datasheet for the hot product: ${product.name}.`} />
             </Helmet>
 
-            <div className="max-w-7xl mx-auto">
-                <div className="flex flex-col md:flex-row items-center justify-between mb-14 gap-6">
-                    <h1 className="text-5xl font-extrabold text-center md:text-left text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-500 to-orange-500 animate-pulse">
-                        🔥 Hot Products
-                        <span className="block h-1 w-28 bg-gradient-to-r from-yellow-400 to-red-500 mt-4 rounded-full"></span>
-                    </h1>
+            <div className="max-w-4xl mx-auto p-8 bg-white rounded-2xl shadow-xl">
+                <Link to="/hot-products" className="text-red-600 font-semibold hover:underline mb-6 block">
+                    ← Back to Hot Products
+                </Link>
+                <h1 className="text-4xl font-bold text-red-600 mb-4">{product.name}</h1>
+                
+                <div className="space-y-4">
+                    <p className="text-lg text-gray-700">
+                        This is the product page for **{product.name}**. You can find more detailed specifications and information in the linked datasheet.
+                    </p>
                     <a
-                        href="https://www.rfconnector.in/catalog/IBS/antenna/products2.htm"
+                        href={product.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block px-6 py-3 bg-gradient-to-r from-red-600 to-orange-500 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300"
+                        className="inline-block px-6 py-3 bg-red-600 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 transition-colors"
                     >
-                        View Full Products Table 🔗
+                        Download Datasheet
                     </a>
-                </div>
-
-                <div className="flex justify-center mb-10">
-                    <div className="relative w-full sm:w-1/2">
-                        <input
-                            type="text"
-                            placeholder="Search hot products..."
-                            value={search}
-                            onChange={(e) => setSearch(e.target.value)}
-                            className="w-full px-5 py-3 pl-12 border border-gray-300 rounded-md shadow-xl text-gray-700 font-medium focus:outline-none focus:ring-2 focus:ring-red-500"
-                        />
-                        <span className="absolute left-4 top-3 text-xl text-red-500">🔥</span>
-                    </div>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {filteredLinks.length > 0 ? (
-                        filteredLinks.map((item, index) => (
-                            <div
-                                key={index}
-                                className="relative p-6 bg-white/80 backdrop-blur-lg rounded-2xl border border-gray-200 shadow-xl hover:scale-105 transition-all duration-300 hover:border-red-400 group"
-                            >
-                                <div className="absolute bottom-4 right-4 bg-gradient-to-r from-yellow-400 to-red-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md animate-bounce">
-                                    🔥 HOT
-                                </div>
-                                {/* Use <Link> for SEO-friendly navigation */}
-                                <Link to={`/hot-products/${slugify(item.name)}`}>
-                                    <h2 className="text-xl font-bold text-red-600 mb-3 group-hover:text-red-700 transition">
-                                        {item.name}
-                                    </h2>
-                                </Link>
-                                <div className="flex items-center gap-3">
-                                    <a
-                                        href={item.link}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block text-sm font-semibold text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded-lg transition shadow-lg"
-                                    >
-                                        View Datasheet
-                                    </a>
-                                    <button
-                                        onClick={() => handleCopy(item.link, index)}
-                                        className="text-sm text-gray-700 hover:text-red-500 transition"
-                                    >
-                                        📋 {copiedIndex === index ? 'Copied!' : 'Copy Link'}
-                                    </button>
-                                </div>
-                            </div>
-                        ))
-                    ) : (
-                        <p className="text-center text-gray-500 text-lg mt-20">No matching products found.</p>
-                    )}
                 </div>
             </div>
         </div>
     );
 };
 
-export default HotProducts;
+export default HotProductDetails;
+

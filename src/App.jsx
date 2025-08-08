@@ -22,21 +22,23 @@ import HotProducts from './pages/HotProducts';
 import Career from './pages/Career';
 import Productpricelist from './pages/Productspricelist';
 import Groupproductdatasheet from './pages/Groupproductdatasheet';
-import Feedback from './pages/Feedback' 
+import Feedback from './pages/Feedback';
 import Cablecreator from './pages/Cablecreator'; 
-
 import Notfound from './pages/Notfound'; 
+
+// Import the new details page component
+import HotProductDetails from './pages/HotProductDetails';
 
 function App() {
   return (
-
     <Router>
-       <Helmet>
+      <Helmet>
         <title>Panacea Telecom</title>
         <meta name="description" content="Welcome to Panacea Telecom's official website." />
         <meta name="keywords" content="RF components, telecom solutions, Panacea Synergy" />
         <meta name="author" content="Panacea Telecom" />
       </Helmet>
+
       <Header />
 
       <Routes>
@@ -53,11 +55,17 @@ function App() {
         <Route path="/gallery" element={<ImageGallery />} />
         <Route path="/product-showroom" element={<Productshowroom />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/product/:slug" element={<ProductDetail />} /> {/* ✅ Dynamic Product Detail Page */}
+        <Route path="/product/:slug" element={<ProductDetail />} />
         <Route path="/product-stock" element={<ProductStock />} />
-        <Route path="/-hot-products" element={<HotProducts />} />
+        
+        {/* Hot Products list page */}
+        <Route path="/hot-products" element={<HotProducts />} />
+        
+        {/* New dynamic route for individual hot product pages */}
+        <Route path="/hot-products/:slug" element={<HotProductDetails />} />
+        
         <Route path="/product-price-list" element={<Productpricelist />} />
-        <Route path="/group-product-data-sheet" element={<Groupproductdatasheet />} /> {/* ✅ Product Price List Page */}
+        <Route path="/group-product-data-sheet" element={<Groupproductdatasheet />} />
 
         {/* Categories */}
         <Route path="/defence-and-aerospace" element={<DefenceandAerospace />} />
@@ -65,18 +73,20 @@ function App() {
 
         {/* Resources */}
         <Route path="/product-catalogue" element={<ProductCatalogue />} />
+        <Route path="/product-catalogue/:slug" element={<ProductCatalogue />} />
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/image-gallery" element={<ImageGallery />} />
         <Route path="/video-gallery" element={<VideoGallery />} />
 
         {/* Careers */}
-        <Route path="/career" element={<Career />} /> 
+        <Route path="/career" element={<Career />} />
         <Route path="/feedback" element={<Feedback />} />
-        <Route path="/customer-feedback" element={<Feedback />} /> {/* ✅ Career Page */}
+        <Route path="/customer-feedback" element={<Feedback />} />
 
-        <Route path="*" element={<Notfound />} />
         <Route path="/cable-creator" element={<Cablecreator />} />
 
+        {/* Catch-all */}
+        <Route path="*" element={<Notfound />} />
       </Routes>
 
       <Footer />

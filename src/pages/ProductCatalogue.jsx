@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
-import StyledButton from "../components/StyledButton";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import bandantenna from "/Datasheets/8-BAND_ATENNA_PATCH-PANEL.pdf";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { FiFileText } from "react-icons/fi";
+import StyledButton from "../components/StyledButton";
 
 const catalogueLinks = [
+  { name: "ST-Antenna Catalog", link: "/pdfs/ST- Antenna Catalog.pdf" },
+  { name: "ST-Technology product catalog6.9", link: "/pdfs/ST-Technology product catalog6.9.pdf" },
+  { name: "LOGIC ANALAYZER", link: "/pdfs/LOGIC ANALAYZER.pdf" },
+  { name: "NETWORK ANALYZER", link: "/pdfs/NETWORK ANALYZER.pdf" },
+  { name: "OSCILLOSCOPE", link: "/pdfs/OSCILLOSCOPE.pdf" },
+  { name: "SIGNAL GENERATOR", link: "/pdfs/SIGNAL GENERATOR.pdf" },
+  { name: "SPECTRUM ANALAYZER", link: "/pdfs/SPECTRUM ANALAYZER.pdf" },
   { name: "Patch Panel Antenna", link: "https://www.rfconnector.in/Product/Patch_Panel_Antenna.pdf" },
   { name: "Omni Antenna", link: "https://www.rfconnector.in/Product/Omni_Antenna.pdf" },
   { name: "LPDA Antenna", link: "https://www.rfconnector.in/Product/LPDA_Antenna.pdf" },
@@ -81,90 +89,299 @@ const catalogueLinks = [
   { name: "RF Test Measurement Equipment Stock", link: "https://www.rfconnector.in/Product/Product_Cataloge/RF_Test_Measurement_Equipment_Stock.pdf" },
   { name: "Equipment Photo And Price", link: "https://rfconnector.in/Product/EQUIPMENT%20PHOTO%20AND%20PRICE.pdf" },
   { name: "ST High Frequency Antenna", link: "https://rfconnector.in/Product/ST_HIGH%20_FREQUENCY_ANTENNA.pdf" },
-    { name: "8 band Panel Antenna", link: "/Datasheets/8-BAND_ATENNA_PATCH-PANEL.pdf" },
-
+  { name: "ST 140W_MODULE-SPECIFICATION", link: "/pdfs/ST 140W_MODULE-SPECIFICATION.pdf" },
+  { name: "WAVEGUIDEtoCOAXIALADAPTER", link: "/pdfs/WAVEGUIDE to COAXIAL ADAPTER.pdf" },
+  { name: "OLYMPUSSZSTV", link: "/pdfs/OLYMPUS SZ-STV.pdf" },
+  { name: "EMCSOLUTIONSPRODUCTIONS", link: "/pdfs/EMC solutions products.pdf" },
+  { name: "Power supply", link: "/pdfs/Power supply.pdf" },
+  { name: "4dbi_Omni_Celling_Antenna_698_4000Mhz", link: "/pdfs/4dbi_Omni_Celling_Antenna_698_4000Mhz.pdf" },
+  { name: "2T2R Panel Antenna 698-3800MHz", link: "/pdfs/2T2R Panel Antenna 698-3800MHz.pdf" },
+  { name: "2G-3G-4G WIDEBAND PCB FLEXIBLE ANTENNA", link: "/pdfs/2G-3G-4G WIDEBAND PCB FLEXIBLE ANTENNA.pdf" },
+  { name: "17dbi High frequency antenna", link: "/pdfs/17dbi High frequency antenna.pdf" },
+  { name: "12_dBi_LPDA_Antenna", link: "/pdfs/12_dBi_LPDA_Antenna.pdf" },
+  { name: "5G Parabolic Grid Antenna", link: "/pdfs/5G Parabolic Grid Antenna.pdf" },
+  { name: "5DBI OMNI ANTENNA 690-6000MHz", link: "/pdfs/5DBI OMNI ANTENNA 690-6000MHz.pdf" },
+  { name: "4dbi_Omni_Celling_Antenna_698_4000Mhz", link: "/pdfs/4dbi_Omni_Celling_Antenna_698_4000Mhz.pdf" },
+  { name: "3dbi Screw Mount Antenna", link: "/pdfs/3dbi Screw Mount Antenna.pdf" },
+  { name: "117.9-137 two daipole ant STACKED FOLDED DIPOLE OMNI DIRECTIONAL ANTENNA", link: "/pdfs/117.9-137 two daipole ant STACKED FOLDED DIPOLE OMNI DIRECTIONAL ANTENNA....pdf" },
+  { name: "12_dBi_LPDA_Antenna", link: "/pdfs/12_dBi_LPDA_Antenna.pdf" },
+  { name: "ad-18-d-3512rev-aang", link: "/pdfs/ad-18-d-3512rev-aang.pdf" },
+  { name: "Double_rigid_horn_antenna_0.8-18GHz", link: "/pdfs/Double_rigid_horn_antenna_0.8-18GHz.pdf" },
+  { name: "Double_rigid_horn_antenna_4-40GHz", link: "/pdfs/Double_rigid_horn_antenna_4-40GHz.pdf" },
+  { name: "Double_rigid_horn_antenna_18-40GHz", link: "/pdfs/Double_rigid_horn_antenna_18-40GHz.pdf" },
+  { name: "LORA 3DBI PCB ANTENNA", link: "/pdfs/LORA 3DBI PCB ANTENNA.pdf" },
+  { name: "LPDA_ANTENNA_Bi_Directional_6DBI_700_3500Mhz_NF", link: "/pdfs/LPDA_ANTENNA_Bi_Directional_6DBI_700_3500Mhz_NF.pdf" },
+  { name: "MAGNETIC ANTENNA MCX_M", link: "/pdfs/MAGNETIC_ANTENNA_MCX_M.pdf" },
+  { name: "OMNI ANTENNA 798-2500", link: "/pdfs/OMNI ANTENNA 798-2500.pdf" },
+  { name: "PARABOLIC ANTENNA 600-6000MHz.pdf", link: "/pdfs/PARABOLIC ANTENNA 600-6000MHz.pdf" },
+  { name: "RFID ANTENNAS DATA", link: "/pdfs/RFID ANTENNAS DATA.pdf" },
+  { name: "RUBBER DUCK ANTENNA", link: "/pdfs/RUBBER DUCK ANTENNA.pdf" },
+  { name: "ST 866-925MHz 12dbi RFID Patch Panel Antenna", link: "/pdfs/ST 866-925MHz 12dbi RFID Patch Panel Antenna.pdf" },
+  { name: "ST 868MHz PCB", link: "/pdfs/ST 868MHz PCB.pdf" },
+  { name: "BNC F 4HOLE CLAMP LMR200", link: "/pdfs/BNC_F_4HOLE_CLAMP_LMR200.pdf" },
+  { name: "BNC F 4HOLE CRIMP LMR200", link: "/pdfs/BNC_F_4HOLE_CRIMP_LMR200.pdf" },
+  { name: "BNC F BH BT 3002 CPS", link: "/pdfs/BNC_F_BH_BT_3002_CPS.pdf" },
+  { name: "BNC F BH BT 3002 CRIMP", link: "/pdfs/BNC_F_BH_BT_3002_CRIMP.pdf" },
+  { name: "BNC F BH SOLDER", link: "/pdfs/BNC_F_BH_SOLDER.pdf" },
+  { name: "BNC F LMR 100 CRIMP", link: "/pdfs/BNC_F_LMR_100_CRIMP.pdf" },
+  { name: "BNC F LMR 200 CRIMP", link: "/pdfs/BNC_F_LMR_200_CRIMP.pdf" },
+  { name: "BNC F LMR 240 CLAMP", link: "/pdfs/BNC_F_LMR_240_CLAMP.pdf" },
+  { name: "BNC F LMR 240 CRIMP", link: "/pdfs/BNC_F_LMR_240_CRIMP.pdf" },
+  { name: "BNC F RA PCB MOUNT", link: "/pdfs/BNC_F_RA_PCB_MOUNT.pdf" },
+  { name: "BNC F RP LMR 100 CRIMP", link: "/pdfs/BNC_F_RP_LMR_100_CRIMP.pdf" },
+  { name: "BNC M 4HOLE SOLDER 17.5MM", link: "/pdfs/BNC_M_4HOLE_SOLDER_17.5MM.pdf" },
+  { name: "BNC M BH SOLDER", link: "/pdfs/BNC_M_BH_SOLDER.pdf" },
+  { name: "BNC M BT3002 CPS", link: "/pdfs/BNC_M_BT3002_CPS.pdf" },
+  { name: "BNC M BT3002 CRIMP", link: "/pdfs/BNC_M_BT3002_CRIMP.pdf" },
+  { name: "BNC M LMR 100 CRIMP", link: "/pdfs/BNC_M_LMR_100_CRIMP.pdf" },
+  { name: "BNC M LMR 200 CLAMP", link: "/pdfs/BNC_M_LMR_200_CLAMP.pdf" },
+  { name: "BNC M LMR 200 CRIMP", link: "/pdfs/BNC_M_LMR_200_CRIMP.pdf" },
+  { name: "BNC M LMR 400 CLAMP", link: "/pdfs/BNC_M_LMR_400_CLAMP.pdf" },
+  { name: "BNC M LMR 400 CRIMP", link: "/pdfs/BNC_M_LMR_400_CRIMP.pdf" },
+  { name: "BNC M PLASTIC HOOD", link: "/pdfs/BNC_M_PLASTIC_HOOD.pdf" },
+  { name: "BNC M RA LMR 200 CRIMP", link: "/pdfs/BNC_M_RA_LMR_200_CRIMP.pdf" },
+  { name: "BNC M RA LMR400 CRIMP", link: "/pdfs/BNC_M_RA_LMR400_CRIMP..pdf" },
+  { name: "BNC M RG 6 CRIMP", link: "/pdfs/BNC_M_RG_6_CRIMP.pdf" },
+  { name: "BNC M RG 11 CRIMP", link: "/pdfs/BNC_M_RG_11_CRIMP.pdf" },
+  { name: "BNC M RG 59 COMPRESSION", link: "/pdfs/BNC_M_RG_59_COMPRESSION.pdf" },
+  { name: "BNC M RG 59 CPS", link: "/pdfs/BNC_M_RG_59_CPS.pdf" },
+  { name: "BNC M RG 59 CRIMP", link: "/pdfs/BNC_M_RG_59_CRIMP.pdf" },
+  { name: "ST 7 16F 12 YG23 00", link: "/pdfs/ST-7-16F-12-YG23-00.pdf" },
+  { name: "ST 7 16F 22 YF23 00", link: "/pdfs/ST-7-16F-22-YF23-00.pdf" },
+  { name: "ST-7-16M-12 YI24 00", link: "/pdfs/ST-7-16M-12-YI24-00.pdf" },
+  { name: "ST-7-16M-22-YF23-00", link: "/pdfs/ST-7-16M-22-YF23-00.pdf" },
+  { name: "ST-7-16MA-12-YJ23-00", link: "/pdfs/ST-7-16MA-12-YJ23-00.pdf" },
+  { name: "ST-4310F-12-YC23-YP", link: "/pdfs/ST-4310F-12-YC23-YP.pdf" },
+  { name: "ST-4310F-22-HW-YP", link: "/pdfs/ST-4310F-22-HW-YP.pdf" },
+  { name: "ST-4310M-12-YH23-YP", link: "/pdfs/ST-4310M-12-YH23-YP.pdf" },
+  { name: "ST-4310M-22-YG23", link: "/pdfs/ST-4310M-22-YG23.pdf" },
+  { name: "ST-NF-12-YD23-00", link: "/pdfs/ST-NF-12-YD23-00.pdf" },
+  { name: "ST-NF-22-YG23-00", link: "/pdfs/ST-NF-22-YG23-00.pdf" },
+  { name: "ST-NM-12-YH23-00", link: "/pdfs/ST-NM-12-YH23-00.pdf" },
+  { name: "ST-NM-22-YM23-00", link: "/pdfs/ST-NM-22-YM23-00.pdf" },
+  { name: "9dBi Collinear Omni Directional Antenna", link: "/pdfs/9dBi_Collinear_Omni_Directional_Antenna.pdf" },
+  { name: "9dbi Magnetic Base Antenna with 3Mtr 698 2700Mhz", link: "/pdfs/9dbi_Magnetic_Base_Antenna_with_3Mtr_698_2700Mhz.pdf" },
+  { name: "antenna catalogue", link: "/pdfs/antenna catalogue.pdf" },
+  { name: "BNC Connector", link: "/pdfs/BNC _Connector.pdf" },
+  { name: "Coupler Combiners", link: "/pdfs/Coupler_Combiners.pdf" },
+  { name: "DIN Connector", link: "/pdfs/DIN_Connector.pdf" },
+  { name: "Dummy Load & Termination", link: "/pdfs/Dummy_Load_Termination.pdf" },
+  { name: "Feeder And Leaky Cable", link: "/pdfs/Feeder_And_Leaky_Cable.pdf" },
+  { name: "Feeder Clamp", link: "/pdfs/Feeder_Clamp.pdf" },
+  { name: "Fixed Attenuator & Variable Attenuator", link: "/pdfs/Fixed_Attenuator_Variable_Attenuator.pdf" },
+  { name: "GPS INDOOR ANTENNA 28DBI 3MTR RG174 SMAM1", link: "/pdfs/GPS_INDOOR_ANTENNA_28DBI_3MTR_RG174_SMAM1.pdf" },
+  { name: "GPS Indoor Outdoor Antenna", link: "/pdfs/GPS_Indoor_Outdoor_Antenna.pdf" },
+  { name: "HLF & LMR Series Cable", link: "/pdfs/HLF_LMR_Series_Cable.pdf" },
+  { name: "High Frequency Connector", link: "/pdfs/High_Frequency_Connector.pdf" },
+  { name: "High Frequency Test Cable Assembly", link: "/pdfs/High_Frequency_Test_Cable_Assembly.pdf" },
+  { name: "HLF LMR Series Cable", link: "/pdfs/HLF_LMR_Series_Cable.pdf" },
+  { name: "Jumper Cable", link: "/pdfs/Jumper_Cable.pdf" },
+  { name: "LPDA ANTENNA 14DBI 698 2700Mhz 1FEET RG58 NF", link: "/pdfs/LPDA_ANTENNA_14DBI_698_2700Mhz_1FEET_RG58_NF.pdf" },
+  { name: "LPDA Antenna", link: "/pdfs/LPDA_Antenna.pdf" },
+  { name: "N Connector", link: "/pdfs/N_Connector.pdf" },
+  { name: "N Male for 1 1 4 Feeder Cable", link: "/pdfs/N_Male_for_1_1_4_Feeder_Cable.pdf" },
+  { name: "Omni Antenna", link: "/pdfs/Omni_Antenna.pdf" },
+  { name: "Other Connector", link: "/pdfs/Other_Connector.pdf" },
+  { name: "Patch Panel Antenna", link: "/pdfs/Patch_Panel_Antenna.pdf" },
+  { name: "Power Splitter Cavity and Microstrip", link: "/pdfs/Power_Splitter_Cavity_Microstrip.pdf" },
+  { name: "RF Coaxial Adaptor", link: "/pdfs/RF_Coaxial_Adaptor.pdf" },
+  { name: "Rigid Flexible Waveguide", link: "/pdfs/Rigid_Flexible_Waveguide.pdf" },
+  { name: "SMA Connector", link: "/pdfs/SMA_Connector.pdf" },
+  { name: "SMA Female BH Rightangle PCB Mount", link: "/pdfs/SMA_Female_BH_Rightangle_PCB_Mount_.pdf" },
+  { name: "TNC Connector", link: "/pdfs/TNC_Connector.pdf" },
+  { name: "8-BAND ATENNA PATCH-PANEL", link: "/pdfs/8-BAND_ATENNA_PATCH-PANEL..pdf" },
+  { name: "TELESCOPIC MAST", link: "/pdfs/TELESCOPIC MAST.pdf" },
+  { name: "L1 l2 L5 AMPLIFIER", link: "/pdfs/L1 l2 L5 AMPLIFIER.pdf" },
+  { name: "100W POWER MODULE 400-6000MHZ", link: "/pdfs/100W_POWER_MODULE_400-6000MHZ backup.pdf" },
+  { name: "ST-DISCONE ANTENNA Data Sheet 30-150mhz", link: "/pdfs/ST-DISCONE ANTENNA Data Sheet 30-150mhz.pdf" },
+  { name: "RG 217 Co-Axial Cable", link: "/pdfs/RG_217 co-axial cable.pdf" },
+  { name: "ST-Medical wires 5c-46awg", link: "/pdfs/ST- Medical wires 5c-46awg.pdf" },
+  { name: "ST-Medical wires 7c-44awg", link: "/pdfs/ST- Medical wires 7c-44awg.pdf" },
+  { name: "ST-AWG46 50ω data sheet", link: "/pdfs/ST-AWG46 50ω data sheet.pdf" },
+  { name: "Sy25 Hf conn", link: "/pdfs/Sy25 Hf conn..pdf" },
+  { name: "10 MTR ELECTRIC MAST", link: "/pdfs/10-MTR-ELECTRIC-MAST.pdf" },
+  { name: "EQUIPMENT list", link: "/pdfs/EQUIPMENT PHOTO AND PRICE.pdf" },
+  { name: "LOGIC ANALAYZER", link: "/pdfs/LOGIC ANALAYZER.pdf" },
+  { name: "600-4200MHz 4.3-10 Female Directional Coupler", link: "/pdfs/600-4200MHz 4.3-10 Female Directional Coupler.pdf" },
+  { name: "600-4200MHz DIN Female Directional Coupler", link: "/pdfs/600-4200MHz DIN Female Directional Coupler.pdf" },
+  { name: "600-4200MHz N Female Directional Coupler", link: "/pdfs/600-4200MHz N Female Directional Coupler.pdf" },
+  { name: "600-4200MHz 2in 2out 4.3-10F Hybrid Coupler", link: "/pdfs/600-4200MHz 2in 2out 4.3-10F Hybrid Coupler.pdf" },
+  { name: "600-4200MHz 2in 2out DIN Female Hybrid Coupler", link: "/pdfs/600-4200MHz 2in 2out DIN Female Hybrid Coupler.pdf" },
+  { name: "600-4200MHz 2in 2out N Female Hybrid Coupler", link: "/pdfs/600-4200MHz 2in 2out N Female Hybrid Coupler.pdf" },
+  { name: "600-4200MHz 2Way 4.3-10 Female Power Splitter", link: "/pdfs/600-4200MHz 2Way 4.3-10 Female Power Splitter.pdf" },
+  { name: "600-4200MHz 2Way DIN Female Power Splitter", link: "/pdfs/600-4200MHz 2Way DIN Female Power Splitter.pdf" },
+  { name: "600-4200MHz 2Way N Female Power Splitter", link: "/pdfs/600-4200MHz 2Way N Female Power Splitter.pdf" },
+  { name: "600-4200MHz 3Way DIN Female Power Splitter", link: "/pdfs/600-4200MHz 3Way DIN Female Power Splitter.pdf" },
+  { name: "600-4200MHz 4Way 4.3-10 Female Power Splitter", link: "/pdfs/600-4200MHz 4Way 4.3-10 Female Power Splitter.pdf" },
+  { name: "600-4200MHz 4Way DIN Female Power Splitter", link: "/pdfs/600-4200MHz 4Way DIN Female Power Splitter.pdf" },
+  { name: "600-4200MHz 4Way N Female Power Splitter", link: "/pdfs/600-4200MHz 4Way N Female Power Splitter.pdf" },
+  { name: "UHF ANTENNA", link: "/pdfs/UHF ANTENNA.pdf" },
 ];
 
+const slugify = (text) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
 
+// Main Component
 const ProductCatalogue = () => {
+  const { slug } = useParams();
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
 
+  // This filter is for the main catalogue view
   const filteredLinks = catalogueLinks.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 py-12 px-4 sm:px-8 lg:px-20">
-      <Helmet>
-  <title>Product Catalogue | RF Connector - Synergy Telecom</title>
-  <meta
-    name="description"
-    content="Browse and download a wide range of product catalogues including antennas, RF cables, connectors, waveguides, attenuators, and more from Synergy Telecom."
-  />
-  <meta
-    name="keywords"
-    content="RF product catalogue, Synergy Telecom PDF, RF antennas, RF connectors, microwave components, waveguide catalogue, telecom accessories"
-  />
-  <meta property="og:title" content="Product Catalogue | RF Connector - Synergy Telecom" />
-  <meta
-    property="og:description"
-    content="Explore our complete collection of downloadable RF and telecom product catalogues in PDF format."
-  />
-  <meta property="og:url" content="https://panaceaticsynergy.com/product-catalogue" />
-  <meta property="og:type" content="website" />
-</Helmet>
-      
-      {/* Heading */}
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
-        Products Catalogue
-        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
-      </h1>
+  // If a slug exists, we are on a single product's page.
+  if (slug) {
+    const product = catalogueLinks.find((item) => slugify(item.name) === slug);
 
-      {/* Search Bar */}
-      <div className="mb-12 max-w-lg mx-auto">
-        <input
-          type="text"
-          placeholder="Search catalogue..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full px-5 py-3 rounded-lg border border-blue-300 shadow focus:ring-2 focus:ring-blue-300 focus:outline-none transition"
-        />
+    // If the product is not found, display a not-found message.
+    if (!product) {
+      return (
+        <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gray-50">
+          <Helmet>
+            <title>Product Not Found | Synergy Telecom</title>
+          </Helmet>
+          <h1 className="text-2xl font-bold text-gray-800">❌ Product Not Found</h1>
+          <p className="mt-2 text-gray-500">The catalogue you requested does not exist.</p>
+          <button
+            className="mt-6 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition"
+            onClick={() => navigate("/product-catalogue")}
+          >
+            Back to Catalogue
+          </button>
+        </div>
+      );
+    }
+
+    // Display the specific product's details in a centered and fuller layout.
+    return (
+     <div className="min-h-[80vh] flex items-center justify-center p-6">
+  <Helmet>
+    <title>{product.name} | Synergy Telecom</title>
+  </Helmet>
+  <div className="w-full max-w-2xl bg-white border border-gray-200 rounded-lg shadow-xl p-8 text-center">
+    <div className="mb-6 p-4 bg-blue-100 rounded-full text-blue-700 mx-auto w-20 h-20 flex items-center justify-center">
+      <FiFileText size={48} />
+    </div>
+    <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+    <p className="text-lg text-gray-600 mb-8">
+      Click the button below to view and download the product catalogue in PDF format.
+    </p>
+    <a
+      href={product.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md shadow-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
+    >
+      <FiFileText className="mr-3 h-6 w-6" />
+      View PDF
+    </a>
+    <div className="mt-6">
+      <button
+        className="text-blue-600 hover:text-blue-800 hover:underline transition"
+        onClick={() => navigate("/product-catalogue")}
+      >
+        ← Back to All Products
+      </button>
+    </div>
+  </div>
+</div>
+
+    );
+  }
+
+  // If no slug is present, render the full catalogue with search functionality.
+  return (
+    <div className="container mx-auto p-6">
+      <Helmet>
+        <title>Product Catalogue | Synergy Telecom</title>
+      </Helmet>
+      {/* Search Bar and Header */}
+      <div className="max-w-xl mx-auto text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Product Catalogue</h1>
+        <p className="text-lg text-gray-600">
+          Browse our comprehensive collection of product catalogues.
+        </p>
+        <div className="mt-8">
+          <input
+            type="text"
+            placeholder="Search for a product..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
-        {filteredLinks.map((item, index) => (
-          <a
-            key={index}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-white border border-gray-300 hover:border-blue-500 rounded-md shadow-sm hover:shadow-md p-5 flex items-center justify-center text-center h-28 sm:h-32 transition-transform transform hover:-translate-y-1 hover:bg-blue-50"
-          >
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-blue-700 leading-snug">
-              {item.name}
-            </h3>
-          </a>
-        ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        {filteredLinks.length > 0 ? (
+          filteredLinks.map((item, index) => (
+            <Link
+              key={index}
+              to={`/product-catalogue/${slugify(item.name)}`}
+              className="group bg-white border border-gray-200 hover:border-blue-500 rounded-lg shadow-md hover:shadow-xl p-6 flex flex-col justify-between text-center transition-transform transform hover:-translate-y-1"
+            >
+              {/* Icon */}
+              <div className="mb-4 p-4 bg-blue-100 rounded-full text-blue-700 group-hover:bg-blue-200 mx-auto">
+                <FiFileText size={32} />
+              </div>
+
+              {/* Name */}
+              <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-700 leading-snug">
+                {item.name}
+              </h3>
+
+              {/* Optional short description */}
+              {item.description && (
+                <p className="text-sm text-gray-500 mt-2 line-clamp-2">
+                  {item.description}
+                </p>
+              )}
+
+              {/* File info */}
+              <div className="mt-4 text-xs text-gray-400">
+                📄 PDF — {item.size || "View & Download"}
+              </div>
+            </Link>
+          ))
+        ) : (
+          <div className="sm:col-span-2 md:col-span-3 xl:col-span-4 text-center">
+            <img
+              src="/images/empty-search.svg"
+              alt="No results"
+              className="mx-auto w-40 mb-6 opacity-80"
+            />
+            <p className="text-gray-500 text-base mb-2">
+              🚫 No matching catalogue found.
+            </p>
+            <p className="text-gray-400 text-sm">
+              Try different keywords or browse all categories.
+            </p>
+          </div>
+        )}
       </div>
 
-      {/* No Results Message */}
-      {filteredLinks.length === 0 && (
-        <p className="text-center text-gray-500 mt-16 text-base animate-pulse">
-          🚫 No matching catalogue found.
-        </p>
-      )}
-
-      {/* Contact Support Button */}
-      <div className="mt-16 flex justify-center">
-        <StyledButton
-          label="Contact Support"
-          icon={true}
-          onClick={() =>
-            (window.location.href = "mailto:info@synergytpl.com")
-          }
-        />
-      </div>
+      {/* Support Section */}
+     <div className="mt-20 bg-white border border-gray-200 rounded-lg shadow-lg p-8 text-center max-w-3xl mx-auto">
+  <h2 className="text-2xl font-bold text-blue-900 mb-3">
+    Still can’t find what you’re looking for?
+  </h2>
+  <p className="text-gray-600 mb-6 max-w-xl mx-auto">
+    Our product experts are here to help you select the right solution for your
+    needs. Get in touch and we’ll send you the exact specifications you require.
+  </p>
+  <div className="flex justify-center"> {/* Add this div */}
+    <StyledButton
+      label="Contact Support"
+      icon={true}
+      className=""
+      onClick={() => (window.location.href = "mailto:info@synergytpl.com")}
+    />
+  </div> {/* Close this div */}
+</div>
     </div>
   );
 };
