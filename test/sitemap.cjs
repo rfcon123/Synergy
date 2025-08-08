@@ -147,12 +147,12 @@ const hotProducts = [
   "SFP RJ 45 1000 Base T", "SFP TO SFP CABLE 1 MTR"
 ];
 
-const hotProductsRoutes = hotProducts.map(name => `/hot-products/${slugify(name)}`);
+const hotProductsRoutes = hotProducts.map(name => `/-hot-products/${slugify(name)}`);
 
 // Existing static routes.
 const staticRoutes = [
   '/', '/about-us', '/contact-us', '/certificates', '/product-showroom', '/product-catalogue',
-  '/hot-products', '/li-ion-battery', '/product-stock', '/product-price-list',
+  '/-hot-products', '/li-ion-battery', '/product-stock', '/product-price-list',
   '/group-product-data-sheet', '/defence-and-aerospace', '/gallery',
   '/video-gallery', '/image-gallery', '/customer-feedback', '/career', '/cable-creator'
 ];
