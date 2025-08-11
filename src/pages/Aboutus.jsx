@@ -96,7 +96,7 @@ const Aboutus = () => {
               ["Export Percentage", "25%"],
               ["Import Percentage", "50%"],
               ["Primary Competitive Advantages", "Highly qualified manpower with over a decade of experience."],
-              ["Annual Sales Volume", "₹70 Crore"],
+              ["Annual Sales Volume", "₹70 Crore INR"],
             
               ["Number of Staff", "25"],
               ["Year of Establishment", "2004"],
