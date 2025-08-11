@@ -78,7 +78,11 @@ const ProductStock = () => {
     cat.toLowerCase().includes(categorySearch.toLowerCase())
   );
 
-  const products = excelData[selectedCategory] || [];
+  // ✅ Filter out products with empty or zero quantity
+  const products = (excelData[selectedCategory] || []).filter((item) => {
+    const qty = item.quantity?.toString().trim().toLowerCase();
+    return qty && qty !== "0" && qty !== "0 nos";
+  });
 
   return (
     <main className="max-w-7xl mx-auto px-6 py-12 sm:py-16 font-sans text-gray-900">

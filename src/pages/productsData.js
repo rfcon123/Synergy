@@ -11998,6 +11998,34 @@ const productsData = [
   {
     "name": "16 Port DDF Unit BNC DB37",
     "image": "/RF Products/16 Port DDF Unit/16 Port DDF Unit BNC-DB37.jpg"
+  },
+  {
+    "name": "Rohit Kumar",
+    "image": "/RF Products/Image file/Rohit Kumar.jpg"
+  },
+  {
+    "name": "Priksha",
+    "image": "/RF Products/Image file/Priksha.jpg"
+  },
+  {
+    "name": "Nikhlesh",
+    "image": "/RF Products/Image file/Nikhlesh.jpg"
+  },
+  {
+    "name": "Siddhu Ji",
+    "image": "/RF Products/Image file/Siddhu Ji.jpg"
+  },
+  {
+    "name": "Ajay Sir",
+    "image": "/RF Products/Image file/Ajay Sir.jpg"
+  },
+  {
+    "name": "Sarita",
+    "image": "/RF Products/Image file/Sarita.jpg"
+  },
+  {
+    "name": "Pradeep sir",
+    "image": "/RF Products/Image file/Pradeep sir.jpg"
   }
 ];
 
