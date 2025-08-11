@@ -12,6 +12,7 @@ const catalogueLinks = [
   { name: "OSCILLOSCOPE", link: "/pdfs/OSCILLOSCOPE.pdf" },
   { name: "SIGNAL GENERATOR", link: "/pdfs/SIGNAL GENERATOR.pdf" },
   { name: "SPECTRUM ANALAYZER", link: "/pdfs/SPECTRUM ANALAYZER.pdf" },
+  { name: "1-3.5mm Lifting lighting lamp", link: "/pdfs/1-3.5mm Lifting lighting lamp.pdf" },
   
 
   
