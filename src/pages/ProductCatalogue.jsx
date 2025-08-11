@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import StyledButton from "../components/StyledButton";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import bandantenna from "/Datasheets/8-BAND_ATENNA_PATCH-PANEL.pdf";
+import { useParams, useNavigate, Link } from "react-router-dom";
+import { FiFileText } from "react-icons/fi";
+import StyledButton from "../components/StyledButton";
 
 const catalogueLinks = [
   { name: "ST-Antenna Catalog", link: "/pdfs/ST- Antenna Catalog.pdf" },
@@ -246,86 +247,170 @@ const catalogueLinks = [
   
 ];
 
+const slugify = (text) =>
+  text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
 
+// Main Component
 const ProductCatalogue = () => {
+  const { slug } = useParams();
+  const navigate = useNavigate();
   const [search, setSearch] = useState("");
 
+  // This filter is for the main catalogue view
   const filteredLinks = catalogueLinks.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
   );
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-100 py-12 px-4 sm:px-8 lg:px-20">
-      <Helmet>
-  <title>Product Catalogue | RF Connector - Synergy Telecom</title>
-  <meta
-    name="description"
-    content="Browse and download a wide range of product catalogues including antennas, RF cables, connectors, waveguides, attenuators, and more from Synergy Telecom."
-  />
-  <meta
-    name="keywords"
-    content="RF product catalogue, Synergy Telecom PDF, RF antennas, RF connectors, microwave components, waveguide catalogue, telecom accessories"
-  />
-  <meta property="og:title" content="Product Catalogue | RF Connector - Synergy Telecom" />
-  <meta
-    property="og:description"
-    content="Explore our complete collection of downloadable RF and telecom product catalogues in PDF format."
-  />
-  <meta property="og:url" content="https://panaceaticsynergy.com/product-catalogue" />
-  <meta property="og:type" content="website" />
-</Helmet>
-      
-      {/* Heading */}
-      <h1 className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-10">
-        Products Catalogue
-        <div className="mt-3 w-20 h-1 bg-blue-500 mx-auto rounded-md"></div>
-      </h1>
+  // If a slug exists, we are on a single product's page.
+  if (slug) {
+    const product = catalogueLinks.find((item) => slugify(item.name) === slug);
 
-      {/* Search Bar */}
-      <div className="mb-12 max-w-lg mx-auto">
-        <input
-          type="text"
-          placeholder="Search catalogue..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="w-full px-5 py-3 rounded-lg border border-blue-300 shadow focus:ring-2 focus:ring-blue-300 focus:outline-none transition"
-        />
+    // If the product is not found, display a not-found message.
+    if (!product) {
+      return (
+        <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-gray-50">
+          <Helmet>
+            <title>Product Not Found | Synergy Telecom</title>
+          </Helmet>
+          <h1 className="text-2xl font-bold text-gray-800">❌ Product Not Found</h1>
+          <p className="mt-2 text-gray-500">The catalogue you requested does not exist.</p>
+          <button
+            className="mt-6 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition"
+            onClick={() => navigate("/product-catalogue")}
+          >
+            Back to Catalogue
+          </button>
+        </div>
+      );
+    }
+
+    // Display the specific product's details in a centered and fuller layout.
+    return (
+     <div className="min-h-[80vh] flex items-center justify-center p-6">
+  <Helmet>
+    <title>{product.name} | Synergy Telecom</title>
+  </Helmet>
+  <div className="w-full max-w-2xl bg-white border border-gray-200 rounded-lg shadow-xl p-8 text-center">
+    <div className="mb-6 p-4 bg-blue-100 rounded-full text-blue-700 mx-auto w-20 h-20 flex items-center justify-center">
+      <FiFileText size={48} />
+    </div>
+    <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
+    <p className="text-lg text-gray-600 mb-8">
+      Click the button below to view and download the product catalogue in PDF format.
+    </p>
+    <a
+      href={product.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center px-8 py-4 border border-transparent text-lg font-medium rounded-md shadow-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition"
+    >
+      <FiFileText className="mr-3 h-6 w-6" />
+      View PDF
+    </a>
+    <div className="mt-6">
+      <button
+        className="text-blue-600 hover:text-blue-800 hover:underline transition"
+        onClick={() => navigate("/product-catalogue")}
+      >
+        ← Back to All Products
+      </button>
+    </div>
+  </div>
+</div>
+
+    );
+  }
+
+  // If no slug is present, render the full catalogue with search functionality.
+  return (
+    <div className="container mx-auto p-6">
+      <Helmet>
+        <title>Product Catalogue | Synergy Telecom</title>
+      </Helmet>
+      {/* Search Bar and Header */}
+      <div className="max-w-xl mx-auto text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Product Catalogue</h1>
+        <p className="text-lg text-gray-600">
+          Browse our comprehensive collection of product catalogues.
+        </p>
+        <div className="mt-8">
+          <input
+            type="text"
+            placeholder="Search for a product..."
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          />
+        </div>
       </div>
 
       {/* Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-5">
-        {filteredLinks.map((item, index) => (
-          <a
-            key={index}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-white border border-gray-300 hover:border-blue-500 rounded-md shadow-sm hover:shadow-md p-5 flex items-center justify-center text-center h-28 sm:h-32 transition-transform transform hover:-translate-y-1 hover:bg-blue-50"
-          >
-            <h3 className="text-base sm:text-lg font-semibold text-gray-800 group-hover:text-blue-700 leading-snug">
-              {item.name}
-            </h3>
-          </a>
-        ))}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+        {filteredLinks.length > 0 ? (
+          filteredLinks.map((item, index) => (
+            <Link
+              key={index}
+              to={`/product-catalogue/${slugify(item.name)}`}
+              className="group bg-white border border-gray-200 hover:border-blue-500 rounded-lg shadow-md hover:shadow-xl p-6 flex flex-col justify-between text-center transition-transform transform hover:-translate-y-1"
+            >
+              {/* Icon */}
+              <div className="mb-4 p-4 bg-blue-100 rounded-full text-blue-700 group-hover:bg-blue-200 mx-auto">
+                <FiFileText size={32} />
+              </div>
+
+              {/* Name */}
+              <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-700 leading-snug">
+                {item.name}
+              </h3>
+
+              {/* Optional short description */}
+              {item.description && (
+                <p className="text-sm text-gray-500 mt-2 line-clamp-2">
+                  {item.description}
+                </p>
+              )}
+
+              {/* File info */}
+              <div className="mt-4 text-xs text-gray-400">
+                📄 PDF — {item.size || "View & Download"}
+              </div>
+            </Link>
+          ))
+        ) : (
+          <div className="sm:col-span-2 md:col-span-3 xl:col-span-4 text-center">
+            <img
+              src="/images/empty-search.svg"
+              alt="No results"
+              className="mx-auto w-40 mb-6 opacity-80"
+            />
+            <p className="text-gray-500 text-base mb-2">
+              🚫 No matching catalogue found.
+            </p>
+            <p className="text-gray-400 text-sm">
+              Try different keywords or browse all categories.
+            </p>
+          </div>
+        )}
       </div>
 
-      {/* No Results Message */}
-      {filteredLinks.length === 0 && (
-        <p className="text-center text-gray-500 mt-16 text-base animate-pulse">
-          🚫 No matching catalogue found.
-        </p>
-      )}
-
-      {/* Contact Support Button */}
-      <div className="mt-16 flex justify-center">
-        <StyledButton
-          label="Contact Support"
-          icon={true}
-          onClick={() =>
-            (window.location.href = "mailto:info@synergytpl.com")
-          }
-        />
-      </div>
+      {/* Support Section */}
+     <div className="mt-20 bg-white border border-gray-200 rounded-lg shadow-lg p-8 text-center max-w-3xl mx-auto">
+  <h2 className="text-2xl font-bold text-blue-900 mb-3">
+    Still can’t find what you’re looking for?
+  </h2>
+  <p className="text-gray-600 mb-6 max-w-xl mx-auto">
+    Our product experts are here to help you select the right solution for your
+    needs. Get in touch and we’ll send you the exact specifications you require.
+  </p>
+  <div className="flex justify-center"> {/* Add this div */}
+    <StyledButton
+      label="Contact Support"
+      icon={true}
+      className=""
+      onClick={() => (window.location.href = "mailto:info@synergytpl.com")}
+    />
+  </div> {/* Close this div */}
+</div>
     </div>
   );
 };
