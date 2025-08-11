@@ -11,10 +11,9 @@ const catalogueLinks = [
   { name: "OSCILLOSCOPE", link: "/pdfs/OSCILLOSCOPE.pdf" },
   { name: "SIGNAL GENERATOR", link: "/pdfs/SIGNAL GENERATOR.pdf" },
   { name: "SPECTRUM ANALAYZER", link: "/pdfs/SPECTRUM ANALAYZER.pdf" },
-
-
-
+  { name: "1_3.5m lifting lighting lamp", link: "/pdfs/1_3.5m lifting lighting lamp.pdf" },
   
+
   
   { name: "Patch Panel Antenna", link: "https://www.rfconnector.in/Product/Patch_Panel_Antenna.pdf" },
   { name: "Omni Antenna", link: "https://www.rfconnector.in/Product/Omni_Antenna.pdf" },
@@ -226,6 +225,7 @@ const catalogueLinks = [
   { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
   { name: "ST-AT-18G-2W-NMF", link: "/pdfs/ST-AT-18G-2W-NMF.pdf" },
   { name: "Waveguide WR90-100-200-300mm", link: "/pdfs/Waveguide WR90-100-200-300mm.pdf" },
+  
 
 
 
