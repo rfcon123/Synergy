@@ -94,19 +94,19 @@ const Aboutus = () => {
             {[
               ["Business Type", "Exporter, Importer, Manufacturer, Trader, Distributor"],
               ["Export Percentage", "25%"],
-              ["Import Percentage", "70%"],
+              ["Import Percentage", "50%"],
               ["Primary Competitive Advantages", "Highly qualified manpower with over a decade of experience."],
-              ["Annual Sales Volume", "₹25 Crore"],
-              ["Import Value", "₹9 Crore"],
+              ["Annual Sales Volume", "₹70 Crore"],
+            
               ["Number of Staff", "25"],
-              ["Year of Establishment", "1994"],
+              ["Year of Establishment", "2004"],
               ["Number of Production Lines", "2"],
-              ["Export Markets", "China, Sri Lanka, USA, Bangladesh, Myanmar, Indo Asia, Singapore, Nepal, Kuwait, France, Nigeria, South Korea, and others"],
+              ["Export Markets", "China, Dubai, Abu Dhabi, Oman,  Sri Lanka, USA, Bangladesh, Myanmar, Indonesia, Singapore, Nepal, Kuwait, France, Nigeria, South Korea, and others"],
               ["Import Markets", "China, Sri Lanka, USA, Bangladesh, Myanmar, Indo Asia, Singapore, and others"],
-              ["Investment on Manufacturing Equipment", "₹15 Lakh"],
+              ["Investment on Manufacturing Equipment", "₹300 Lakh"],
               ["QEM Service Provided", "Yes"],
               ["Production Type", "Automatic"],
-              ["Number of Engineers", "7"],
+              ["Number of Engineers", "15"],
               ["Monthly Production Capacity", "As per requirement"]
             ].map(([title, value], index) => (
               <tr key={index} className={index % 2 === 0 ? "bg-white" : "bg-gray-50"}>
