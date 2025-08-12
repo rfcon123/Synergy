@@ -174,6 +174,9 @@ import SIGNALGENERATORE4437B from '../assets/components/SIGNAL GENERATOR E4437B.
 import SIGNALGENERATORESGD3000A from '../assets/components/SIGNAL GENERATOR ESG-D3000A.jpeg';
 import sitemasterS331D from '../assets/components/site master S331D.jpeg';
 import TDS3052OscilloscopeTEKTRONIX from '../assets/components/TDS 3052 Oscilloscope TEKTRONIX.jpeg';
+import AFM1100TUFVASSONSTRANSFORMER from '../assets/components/AFM 1100 TUFVASSONS TRANSFORMER 1.jpeg';
+import ATTENUATORSPINNER from '../assets/components/ATTENUATOR SPINNER.jpeg';
+import GFW from '../assets/components/GFW.jpeg';
 
 
 
@@ -203,6 +206,9 @@ const productsData = [
   { name: "Signal Generator ESG-D3000A", slug: "signal-generator-esg-d3000a", image: SIGNALGENERATORESGD3000A },
   { name: "Site Master S331D", slug: "site-master-s331d", image: sitemasterS331D },
   { name: "TDS 3052 Oscilloscope TEKTRONIX", slug: "tds-3052-oscilloscope-tektronix", image: TDS3052OscilloscopeTEKTRONIX },
+  { name: "AFM 1100 TUFVASSONS Transformer", slug: "afm-1100-tufvassons-transformer", image: AFM1100TUFVASSONSTRANSFORMER },
+  { name: "Attenuator Spinner", slug: "attenuator-spinner", image: ATTENUATORSPINNER },
+  { name: "GFW", slug: "gfw", image: GFW },
 
 
 
