@@ -177,6 +177,11 @@ import TDS3052OscilloscopeTEKTRONIX from '../assets/components/TDS 3052 Oscillos
 import AFM1100TUFVASSONSTRANSFORMER from '../assets/components/AFM 1100 TUFVASSONS TRANSFORMER 1.jpeg';
 import ATTENUATORSPINNER from '../assets/components/ATTENUATOR SPINNER.jpeg';
 import GFW from '../assets/components/GFW.jpeg';
+import AGILENTE4418BPOWERMETER from '../assets/components/AGILENT E4418B POWER METER.jpeg';
+import AgilentE4432B from '../assets/components/Agilent E4432B.png';
+import AgilentE4436BBB from '../assets/components/Agilent E4436B  BB.png';
+import AgilentE44208B from '../assets/components/Agilent E44208B.png';
+import ANALLOGDIGITALSCOPEHM407 from '../assets/components/ANALLOG DIGITAL SCOPE HM407-2.jpeg';
 
 
 
@@ -209,6 +214,11 @@ const productsData = [
   { name: "AFM 1100 TUFVASSONS Transformer", slug: "afm-1100-tufvassons-transformer", image: AFM1100TUFVASSONSTRANSFORMER },
   { name: "Attenuator Spinner", slug: "attenuator-spinner", image: ATTENUATORSPINNER },
   { name: "GFW", slug: "gfw", image: GFW },
+  { name: "Agilent E4418B Power Meter", slug: "agilent-e4418b-power-meter", image: AGILENTE4418BPOWERMETER },
+  { name: "Agilent E4432B", slug: "agilent-e4432b", image: AgilentE4432B },
+  { name: "Agilent E4436B BB", slug: "agilent-e4436b-bb", image: AgilentE4436BBB },
+  { name: "Agilent E44208B", slug: "agilent-e44208b", image: AgilentE44208B },
+  { name: "Analog Digital Scope HM407-2", slug: "analog-digital-scope-hm407-2", image: ANALLOGDIGITALSCOPEHM407 },
 
 
 
