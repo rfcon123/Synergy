@@ -195,6 +195,7 @@ import AGILENTN8973A from '../assets/components/AGILENT N8973A.jpeg';
 import AGILENTE3640A from '../assets/components/AGILENT-E3640A.jpeg';
 import LISTENTALK from '../assets/components/LISTEN & TALK.jpeg';
 import POWERSUPPLYSM3540 from '../assets/components/POWER SUPPLY SM-3540.jpeg';
+import GENERATOR33210A from '../assets/components/GENERATOR 33210A.jpeg';
 
 
 
@@ -245,6 +246,7 @@ const productsData = [
   { name: "Agilent E3640A", slug: "agilent-e3640a", image: AGILENTE3640A },
   { name: "Listen & Talk", slug: "listen-talk", image: LISTENTALK },
   { name: "Power Supply SM-3540", slug: "power-supply-sm-3540", image: POWERSUPPLYSM3540 },
+  { name: "Generator 33210A", slug: "generator-33210a", image: GENERATOR33210A },
   
 
 
