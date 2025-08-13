@@ -187,6 +187,14 @@ import ROHDESCHWARZSMBV100A from '../assets/components/ROHDE&SCHWARZ SMBV100A.jp
 import rohdeschwarzvectornetworkanalyzerzvre from '../assets/components/rohde-schwarz-vector-network-analyzer-zvre.png';
 import AGILENTE4420B from '../assets/components/AGILENT E4420B.jpeg';
 import POWERMETERML2438A from '../assets/components/POWER METER ML2438A.jpeg';
+import AGILENT3631A from '../assets/components/AGILENT 3631A.jpeg';
+import AGILENT8753ES from '../assets/components/AGILENT 8753ES.jpeg';
+import AGILENTE3616A from '../assets/components/AGILENT E3616A.jpeg';
+import AGILENTE4420BESG from '../assets/components/AGILENT E4420B ESG.jpeg';
+import AGILENTN8973A from '../assets/components/AGILENT N8973A.jpeg';
+import AGILENTE3640A from '../assets/components/AGILENT-E3640A.jpeg';
+import LISTENTALK from '../assets/components/LISTEN & TALK.jpeg';
+import POWERSUPPLYSM3540 from '../assets/components/POWER SUPPLY SM-3540.jpeg';
 
 
 
@@ -229,6 +237,15 @@ const productsData = [
   { name: "Rohde & Schwarz Vector Network Analyzer ZVRE", slug: "rohde-schwarz-vector-network-analyzer-zvre", image: rohdeschwarzvectornetworkanalyzerzvre },
   { name: "Agilent E4420B", slug: "agilent-e4420b", image: AGILENTE4420B },
   { name: "Power Meter ML2438A", slug: "power-meter-ml2438a", image: POWERMETERML2438A },
+  { name: "Agilent 3631A", slug: "agilent-3631a", image: AGILENT3631A },
+  { name: "Agilent 8753ES", slug: "agilent-8753es", image: AGILENT8753ES },
+  { name: "Agilent E3616A", slug: "agilent-e3616a", image: AGILENTE3616A },
+  { name: "Agilent E4420B ESG", slug: "agilent-e4420b-esg", image: AGILENTE4420BESG },
+  { name: "Agilent N8973A", slug: "agilent-n8973a", image: AGILENTN8973A },
+  { name: "Agilent E3640A", slug: "agilent-e3640a", image: AGILENTE3640A },
+  { name: "Listen & Talk", slug: "listen-talk", image: LISTENTALK },
+  { name: "Power Supply SM-3540", slug: "power-supply-sm-3540", image: POWERSUPPLYSM3540 },
+  
 
 
 
