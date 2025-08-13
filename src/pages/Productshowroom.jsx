@@ -198,6 +198,7 @@ import POWERSUPPLYSM3540 from '../assets/components/POWER SUPPLY SM-3540.jpeg';
 import GENERATOR33210A from '../assets/components/GENERATOR 33210A.jpeg';
 import PowerboxLVM210290 from '../assets/components/Powerbox LVM 210.290.jpg';
 import NRVZ53POWERMETERSENSOR from '../assets/components/NRV Z53 POWER METER SENSOR.png';
+import NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR from '../assets/components/Altusen PNS108 Power Over Net.jpg';
 
 
 
@@ -251,6 +252,7 @@ const productsData = [
   { name: "Generator 33210A", slug: "generator-33210a", image: GENERATOR33210A },
   { name: "Powerbox LVM 210.290", slug: "powerbox-lvm-210-290", image: PowerboxLVM210290 },
   { name: "NRV Z53 Power Meter Sensor", slug: "nrv-z53-power-meter-sensor", image: NRVZ53POWERMETERSENSOR },
+  { name: "Altusen PNS108 Power Over Net", slug: "altusen-pns108-power-over-net", image: NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR },
   
 
 
