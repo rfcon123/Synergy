@@ -183,6 +183,7 @@ import AgilentE4436BBB from '../assets/components/Agilent E4436B  BB.png';
 import AgilentE44208B from '../assets/components/Agilent E44208B.png';
 import ANALLOGDIGITALSCOPEHM407 from '../assets/components/ANALLOG DIGITAL SCOPE HM407-2.jpeg';
 import ESisSParameterNetworkAnalyser from '../assets/components/8753ES is S-Parameter Network Analyser.jpeg';
+import ROHDESCHWARZSMBV100A from '../assets/components/ROHDE&SCHWARZ SMBV100A.jpeg';
 
 
 
@@ -221,6 +222,7 @@ const productsData = [
   { name: "Agilent E44208B", slug: "agilent-e44208b", image: AgilentE44208B },
   { name: "Analog Digital Scope HM407-2", slug: "analog-digital-scope-hm407-2", image: ANALLOGDIGITALSCOPEHM407 },
   { name: "8753ES is S-Parameter Network Analyser", slug: "8753es-is-s-parameter-network-analyser", image: ESisSParameterNetworkAnalyser },
+  { name: "Rohde & Schwarz SMBV100A", slug: "rohde-schwarz-smbv100a", image: ROHDESCHWARZSMBV100A },
 
 
 
