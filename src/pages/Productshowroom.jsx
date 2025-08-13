@@ -185,6 +185,8 @@ import ANALLOGDIGITALSCOPEHM407 from '../assets/components/ANALLOG DIGITAL SCOPE
 import ESisSParameterNetworkAnalyser from '../assets/components/8753ES is S-Parameter Network Analyser.jpeg';
 import ROHDESCHWARZSMBV100A from '../assets/components/ROHDE&SCHWARZ SMBV100A.jpeg';
 import rohdeschwarzvectornetworkanalyzerzvre from '../assets/components/rohde-schwarz-vector-network-analyzer-zvre.png';
+import AGILENTE4420B from '../assets/components/AGILENT E4420B.jpeg';
+import POWERMETERML2438A from '../assets/components/POWER METER ML2438A.jpeg';
 
 
 
@@ -225,6 +227,8 @@ const productsData = [
   { name: "8753ES is S-Parameter Network Analyser", slug: "8753es-is-s-parameter-network-analyser", image: ESisSParameterNetworkAnalyser },
   { name: "Rohde & Schwarz SMBV100A", slug: "rohde-schwarz-smbv100a", image: ROHDESCHWARZSMBV100A },
   { name: "Rohde & Schwarz Vector Network Analyzer ZVRE", slug: "rohde-schwarz-vector-network-analyzer-zvre", image: rohdeschwarzvectornetworkanalyzerzvre },
+  { name: "Agilent E4420B", slug: "agilent-e4420b", image: AGILENTE4420B },
+  { name: "Power Meter ML2438A", slug: "power-meter-ml2438a", image: POWERMETERML2438A },
 
 
 
