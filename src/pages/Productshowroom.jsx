@@ -199,6 +199,9 @@ import GENERATOR33210A from '../assets/components/GENERATOR 33210A.jpeg';
 import PowerboxLVM210290 from '../assets/components/Powerbox LVM 210.290.jpg';
 import NRVZ53POWERMETERSENSOR from '../assets/components/NRV Z53 POWER METER SENSOR.png';
 import NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR from '../assets/components/Altusen PNS108 Power Over Net.jpg';
+import gpibcontrolopticaltorfswitch from '../assets/components/gpib control optical to rf switch group.jpg';
+import HEWLETTPACKARD8753D from '../assets/components/HEWLETT PACKARD 8753D.jpeg';
+import HEWLETTPACKARD75000SeriesBRepeater from '../assets/components/HEWLETT PACKARD75000 Series B Repeater.png';
 
 
 
@@ -253,6 +256,9 @@ const productsData = [
   { name: "Powerbox LVM 210.290", slug: "powerbox-lvm-210-290", image: PowerboxLVM210290 },
   { name: "NRV Z53 Power Meter Sensor", slug: "nrv-z53-power-meter-sensor", image: NRVZ53POWERMETERSENSOR },
   { name: "Altusen PNS108 Power Over Net", slug: "altusen-pns108-power-over-net", image: NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR },
+  { name: "GPIB Control Optical to RF Switch Group", slug: "gpib-control-optical-to-rf-switch-group", image: gpibcontrolopticaltorfswitch },
+  { name: "Hewlett Packard 8753D", slug: "hewlett-packard-8753d", image: HEWLETTPACKARD8753D },
+  { name: "Hewlett Packard 75000 Series B Repeater", slug: "hewlett-packard-75000-series-b-repeater", image: HEWLETTPACKARD75000SeriesBRepeater },
   
 
 
