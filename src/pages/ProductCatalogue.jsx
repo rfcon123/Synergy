@@ -13,6 +13,10 @@ const catalogueLinks = [
   { name: "SIGNAL GENERATOR", link: "/pdfs/SIGNAL GENERATOR.pdf" },
   { name: "SPECTRUM ANALAYZER", link: "/pdfs/SPECTRUM ANALAYZER.pdf" },
   { name: "1-3.5mm Lifting lighting lamp", link: "/pdfs/1-3.5mm Lifting lighting lamp.pdf" },
+  { name: "HIGH PERFORMANCE DISH ANTENNA", link: "/pdfs/HIGH PERFORMANCE DISH ANTENNA.pdf" },
+  { name: "LONG ELEMENT CLOSED", link: "/pdfs/LONG ELEMENT CLOSED.pdf" },
+  { name: "LONG ELEMENT OPEN", link: "/pdfs/LONG ELEMENT OPEN.pdf" },
+  { name: "RF COAXIAL", link: "/pdfs/RF COAXIAL.pdf" },
   
 
   
@@ -226,6 +230,7 @@ const catalogueLinks = [
   { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
   { name: "ST-AT-18G-2W-NMF", link: "/pdfs/ST-AT-18G-2W-NMF.pdf" },
   { name: "Waveguide WR90-100-200-300mm", link: "/pdfs/Waveguide WR90-100-200-300mm.pdf" },
+  
   
 
 
