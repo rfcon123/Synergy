@@ -25,6 +25,7 @@ const catalogueLinks = [
   { name: "ST120WEL1000PPC", link: "/pdfs/ST120WEL1000PPC.pdf" },
   { name: "5G INDOOR DIRECTIONAL PANEL ANTENNA", link: "/pdfs/5G INDOOR DIRECTIONAL PANEL ANTENNA.pdf" },
   { name: "Wideband Dual-ridged Horn Antenna", link: "/pdfs/Wideband Dual-ridged Horn Antenna.pdf" },
+  { name: "2W Dummy Load  Termination Load", link: "/pdfs/2W Dummy Load  Termination Load.pdf" },
 
   
 
