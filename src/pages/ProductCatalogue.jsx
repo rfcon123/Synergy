@@ -17,6 +17,11 @@ const catalogueLinks = [
   { name: "LONG ELEMENT CLOSED", link: "/pdfs/LONG ELEMENT CLOSED.pdf" },
   { name: "LONG ELEMENT OPEN", link: "/pdfs/LONG ELEMENT OPEN.pdf" },
   { name: "RF COAXIAL", link: "/pdfs/RF COAXIAL.pdf" },
+  { name: "29 DBI (5.8 GHZ)- WGMSD WITH CLOSEUP", link: "/pdfs/29 DBI (5.8 GHZ)- WGMSD WITH CLOSEUP.pdf" },
+  { name: "Fully Anechoic chamber", link: "/pdfs/Fully Anechoic chamber.pdf" },
+  { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
+  { name: "ST-K-ZLB780G", link: "/pdfs/ST-K-ZLB780G.pdf" },
+
   
 
   
@@ -230,6 +235,7 @@ const catalogueLinks = [
   { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
   { name: "ST-AT-18G-2W-NMF", link: "/pdfs/ST-AT-18G-2W-NMF.pdf" },
   { name: "Waveguide WR90-100-200-300mm", link: "/pdfs/Waveguide WR90-100-200-300mm.pdf" },
+
   
   
 
