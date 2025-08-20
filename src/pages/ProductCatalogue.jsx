@@ -21,6 +21,8 @@ const catalogueLinks = [
   { name: "Fully Anechoic chamber", link: "/pdfs/Fully Anechoic chamber.pdf" },
   { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
   { name: "ST-K-ZLB780G", link: "/pdfs/ST-K-ZLB780G.pdf" },
+  { name: "ST120 WEL1000PMC", link: "/pdfs/ST120 WEL1000PMC.pdf" },
+  { name: "ST120WEL1000PPC", link: "/pdfs/ST120WEL1000PPC.pdf" },
 
   
 
