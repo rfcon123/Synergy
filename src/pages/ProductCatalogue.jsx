@@ -26,6 +26,10 @@ const catalogueLinks = [
   { name: "5G INDOOR DIRECTIONAL PANEL ANTENNA", link: "/pdfs/5G INDOOR DIRECTIONAL PANEL ANTENNA.pdf" },
   { name: "Wideband Dual-ridged Horn Antenna", link: "/pdfs/Wideband Dual-ridged Horn Antenna.pdf" },
   { name: "2W Dummy Load  Termination Load", link: "/pdfs/2W Dummy Load  Termination Load.pdf" },
+  { name: "SMA-18-2WG-1", link: "/pdfs/SMA-18-2WG-1.pdf" },
+  { name: "ST-10-6G-SMAF", link: "/pdfs/ST-10-6G-SMAF.pdf" },
+  { name: "TNC-18-2WG-1", link: "/pdfs/TNC-18-2WG-1.pdf" },
+
 
   
 
