@@ -38,6 +38,22 @@ const catalogueLinks = [
   { name: "29~31GHz, 20W, Solid State Power Amplifier", link: "/pdfs/29~31GHz, 20W, Solid State Power Amplifier.pdf" },
   { name: "40~43GHz, 10W, Solid State Power Amplifier", link: "/pdfs/40~43GHz, 10W, Solid State Power Amplifier.pdf" },
   { name: "47~52GHz, 10W, Solid State Power Amplifier", link: "/pdfs/47~52GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "0.5~2.7GHz, 50W, Solid State Power Amplifier", link: "/pdfs/0.5~2.7GHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "0.5~6GHz, 20W, Solid State Power Amplifier", link: "/pdfs/0.5~6GHz, 20W, Solid State Power Amplifier.pdf" },
+  { name: "0.5~6GHz, 40W, Solid State Power Amplifier", link: "/pdfs/0.5~6GHz, 40W, Solid State Power Amplifier.pdf" },
+  { name: "0.6~2GHz, 20W, Solid State Power Amplifier", link: "/pdfs/0.6~2GHz, 20W, Solid State Power Amplifier.pdf" },
+  { name: "0.7~2.5GHz, 50W, Solid State Power Amplifier", link: "/pdfs/0.7~2.5GHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "0.8~3.0GHz, 10W, Solid State Power Amplifier", link: "/pdfs/0.8~3.0GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "0.8~3.0GHz, 50W, Solid State Power Amplifier", link: "/pdfs/0.8~3.0GHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "2.5~6GHz, 100W, Solid State Power Amplifier", link: "/pdfs/2.5~6GHz, 100W, Solid State Power Amplifier.pdf" },
+  { name: "2~6GHz, 30W, Solid State Power Amplifier", link: "/pdfs/2~6GHz, 30W, Solid State Power Amplifier.pdf" },
+  { name: "2~6GHz, 50W, Solid State Power Amplifier", link: "/pdfs/2~6GHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "2~6GHz, 100W, Solid State Power Amplifier", link: "/pdfs/2~6GHz, 100W, Solid State Power Amplifier.pdf" },
+  { name: "10~1000MHz, 50W, Solid State Power Amplifier", link: "/pdfs/10~1000MHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "20~1000MHz, 80W, Solid State Power Amplifier", link: "/pdfs/20~1000MHz, 80W, Solid State Power Amplifier.pdf" },
+  { name: "20~1000MHz, 100W, Solid State Power Amplifier", link: "/pdfs/20~1000MHz, 100W, Solid State Power Amplifier.pdf" },
+
+  
   
 
 
