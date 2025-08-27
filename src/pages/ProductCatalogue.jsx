@@ -29,6 +29,17 @@ const catalogueLinks = [
   { name: "SMA-18-2WG-1", link: "/pdfs/SMA-18-2WG-1.pdf" },
   { name: "ST-10-6G-SMAF", link: "/pdfs/ST-10-6G-SMAF.pdf" },
   { name: "TNC-18-2WG-1", link: "/pdfs/TNC-18-2WG-1.pdf" },
+  { name: "18~26.5GHz, 5W, Solid State Power Amplifier", link: "/pdfs/18~26.5GHz, 5W, Solid State Power Amplifier.pdf" },
+  { name: "18~26.5GHz, 10W, Solid State Power Amplifier.pdf", link: "/pdfs/18~26.5GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "25~32GHz, 8W, Solid State Power Amplifier", link: "/pdfs/25~32GHz, 8W, Solid State Power Amplifier.pdf" },
+  { name: "26.5~40GHz, 5W, Solid State Power Amplifier", link: "/pdfs/26.5~40GHz, 5W, Solid State Power Amplifier.pdf" },
+  { name: "26.5~40GHz, 10W, Solid State Power Amplifier", link: "/pdfs/26.5~40GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "26.5~40GHz, 20W, Solid State Power Amplifier", link: "/pdfs/26.5~40GHz, 20W, Solid State Power Amplifier.pdf" },
+  { name: "29~31GHz, 20W, Solid State Power Amplifier", link: "/pdfs/29~31GHz, 20W, Solid State Power Amplifier.pdf" },
+  { name: "40~43GHz, 10W, Solid State Power Amplifier", link: "/pdfs/40~43GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "47~52GHz, 10W, Solid State Power Amplifier", link: "/pdfs/47~52GHz, 10W, Solid State Power Amplifier.pdf" },
+  
+
 
 
   
