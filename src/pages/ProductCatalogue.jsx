@@ -52,6 +52,10 @@ const catalogueLinks = [
   { name: "10~1000MHz, 50W, Solid State Power Amplifier", link: "/pdfs/10~1000MHz, 50W, Solid State Power Amplifier.pdf" },
   { name: "20~1000MHz, 80W, Solid State Power Amplifier", link: "/pdfs/20~1000MHz, 80W, Solid State Power Amplifier.pdf" },
   { name: "20~1000MHz, 100W, Solid State Power Amplifier", link: "/pdfs/20~1000MHz, 100W, Solid State Power Amplifier.pdf" },
+  { name: "ST-Flat Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Flat Antenna Vertical Polarization 425～430MHz.pdf" },
+  { name: "ST-Indoor Omni Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Indoor Omni Antenna Vertical Polarization 425～430MHz.pdf" },
+  { name: "ST-Vehicle Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Vehicle Antenna Vertical Polarization 425～430MHz.pdf" },
+
 
   
   
