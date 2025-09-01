@@ -55,6 +55,9 @@ const catalogueLinks = [
   { name: "ST-Flat Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Flat Antenna Vertical Polarization 425～430MHz.pdf" },
   { name: "ST-Indoor Omni Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Indoor Omni Antenna Vertical Polarization 425～430MHz.pdf" },
   { name: "ST-Vehicle Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Vehicle Antenna Vertical Polarization 425～430MHz.pdf" },
+  { name: "UHF RFID  5400", link: "/pdfs/UHF RFID  5400.pdf" },
+  { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
+  { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
 
 
   
@@ -275,6 +278,9 @@ const catalogueLinks = [
   { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
   { name: "ST-AT-18G-2W-NMF", link: "/pdfs/ST-AT-18G-2W-NMF.pdf" },
   { name: "Waveguide WR90-100-200-300mm", link: "/pdfs/Waveguide WR90-100-200-300mm.pdf" },
+  { name: "UHF RFID  5400", link: "/pdfs/UHF RFID  5400.pdf" },
+  { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
+  { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
 
   
   
