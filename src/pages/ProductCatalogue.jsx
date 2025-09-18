@@ -281,6 +281,13 @@ const catalogueLinks = [
   { name: "UHF RFID  5400", link: "/pdfs/UHF RFID  5400.pdf" },
   { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
   { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
+  { name: "6-8GHz 200W SSPA Specifications 0918", link: "/pdfs/6-8GHz 200W SSPA Specifications 0918.pdf" },
+  { name: "6-18GHz 200W SSPA Specifications 0918", link: "/pdfs/6-18GHz 200W SSPA Specifications 0918.pdf" },
+  { name: "Broadband High Power Amplifier Module (SSPA)", link: "/pdfs/Broadband High Power Amplifier Module (SSPA).pdf" },
+  { name: "RF_Amplifier_KB60180M40", link: "/pdfs/RF_Amplifier_KB60180M40.pdf" },
+  { name: "RF_Amplifier_KB60180M43C", link: "/pdfs/RF_Amplifier_KB60180M43C.pdf" },
+  { name: "RF_Amplifier_KB60180M51A", link: "/pdfs/RF_Amplifier_KB60180M51A.pdf" },
+  { name: "RF_Amplifier_Module_KB60", link: "/pdfs/RF_Amplifier_Module_KB60.pdf" },
 
   
   
