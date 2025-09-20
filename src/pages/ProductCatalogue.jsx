@@ -12,10 +12,61 @@ const catalogueLinks = [
   { name: "OSCILLOSCOPE", link: "/pdfs/OSCILLOSCOPE.pdf" },
   { name: "SIGNAL GENERATOR", link: "/pdfs/SIGNAL GENERATOR.pdf" },
   { name: "SPECTRUM ANALAYZER", link: "/pdfs/SPECTRUM ANALAYZER.pdf" },
+  { name: "1-3.5mm Lifting lighting lamp", link: "/pdfs/1-3.5mm Lifting lighting lamp.pdf" },
+  { name: "HIGH PERFORMANCE DISH ANTENNA", link: "/pdfs/HIGH PERFORMANCE DISH ANTENNA.pdf" },
+  { name: "LONG ELEMENT CLOSED", link: "/pdfs/LONG ELEMENT CLOSED.pdf" },
+  { name: "LONG ELEMENT OPEN", link: "/pdfs/LONG ELEMENT OPEN.pdf" },
+  { name: "RF COAXIAL", link: "/pdfs/RF COAXIAL.pdf" },
+  { name: "29 DBI (5.8 GHZ)- WGMSD WITH CLOSEUP", link: "/pdfs/29 DBI (5.8 GHZ)- WGMSD WITH CLOSEUP.pdf" },
+  { name: "Fully Anechoic chamber", link: "/pdfs/Fully Anechoic chamber.pdf" },
+  { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
+  { name: "ST-K-ZLB780G", link: "/pdfs/ST-K-ZLB780G.pdf" },
+  { name: "ST120 WEL1000PMC", link: "/pdfs/ST120 WEL1000PMC.pdf" },
+  { name: "ST120WEL1000PPC", link: "/pdfs/ST120WEL1000PPC.pdf" },
+  { name: "5G INDOOR DIRECTIONAL PANEL ANTENNA", link: "/pdfs/5G INDOOR DIRECTIONAL PANEL ANTENNA.pdf" },
+  { name: "Wideband Dual-ridged Horn Antenna", link: "/pdfs/Wideband Dual-ridged Horn Antenna.pdf" },
+  { name: "2W Dummy Load  Termination Load", link: "/pdfs/2W Dummy Load  Termination Load.pdf" },
+  { name: "SMA-18-2WG-1", link: "/pdfs/SMA-18-2WG-1.pdf" },
+  { name: "ST-10-6G-SMAF", link: "/pdfs/ST-10-6G-SMAF.pdf" },
+  { name: "TNC-18-2WG-1", link: "/pdfs/TNC-18-2WG-1.pdf" },
+  { name: "18~26.5GHz, 5W, Solid State Power Amplifier", link: "/pdfs/18~26.5GHz, 5W, Solid State Power Amplifier.pdf" },
+  { name: "18~26.5GHz, 10W, Solid State Power Amplifier.pdf", link: "/pdfs/18~26.5GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "25~32GHz, 8W, Solid State Power Amplifier", link: "/pdfs/25~32GHz, 8W, Solid State Power Amplifier.pdf" },
+  { name: "26.5~40GHz, 5W, Solid State Power Amplifier", link: "/pdfs/26.5~40GHz, 5W, Solid State Power Amplifier.pdf" },
+  { name: "26.5~40GHz, 10W, Solid State Power Amplifier", link: "/pdfs/26.5~40GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "26.5~40GHz, 20W, Solid State Power Amplifier", link: "/pdfs/26.5~40GHz, 20W, Solid State Power Amplifier.pdf" },
+  { name: "29~31GHz, 20W, Solid State Power Amplifier", link: "/pdfs/29~31GHz, 20W, Solid State Power Amplifier.pdf" },
+  { name: "40~43GHz, 10W, Solid State Power Amplifier", link: "/pdfs/40~43GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "47~52GHz, 10W, Solid State Power Amplifier", link: "/pdfs/47~52GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "0.5~2.7GHz, 50W, Solid State Power Amplifier", link: "/pdfs/0.5~2.7GHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "0.5~6GHz, 20W, Solid State Power Amplifier", link: "/pdfs/0.5~6GHz, 20W, Solid State Power Amplifier.pdf" },
+  { name: "0.5~6GHz, 40W, Solid State Power Amplifier", link: "/pdfs/0.5~6GHz, 40W, Solid State Power Amplifier.pdf" },
+  { name: "0.6~2GHz, 20W, Solid State Power Amplifier", link: "/pdfs/0.6~2GHz, 20W, Solid State Power Amplifier.pdf" },
+  { name: "0.7~2.5GHz, 50W, Solid State Power Amplifier", link: "/pdfs/0.7~2.5GHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "0.8~3.0GHz, 10W, Solid State Power Amplifier", link: "/pdfs/0.8~3.0GHz, 10W, Solid State Power Amplifier.pdf" },
+  { name: "0.8~3.0GHz, 50W, Solid State Power Amplifier", link: "/pdfs/0.8~3.0GHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "2.5~6GHz, 100W, Solid State Power Amplifier", link: "/pdfs/2.5~6GHz, 100W, Solid State Power Amplifier.pdf" },
+  { name: "2~6GHz, 30W, Solid State Power Amplifier", link: "/pdfs/2~6GHz, 30W, Solid State Power Amplifier.pdf" },
+  { name: "2~6GHz, 50W, Solid State Power Amplifier", link: "/pdfs/2~6GHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "2~6GHz, 100W, Solid State Power Amplifier", link: "/pdfs/2~6GHz, 100W, Solid State Power Amplifier.pdf" },
+  { name: "10~1000MHz, 50W, Solid State Power Amplifier", link: "/pdfs/10~1000MHz, 50W, Solid State Power Amplifier.pdf" },
+  { name: "20~1000MHz, 80W, Solid State Power Amplifier", link: "/pdfs/20~1000MHz, 80W, Solid State Power Amplifier.pdf" },
+  { name: "20~1000MHz, 100W, Solid State Power Amplifier", link: "/pdfs/20~1000MHz, 100W, Solid State Power Amplifier.pdf" },
+  { name: "ST-Flat Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Flat Antenna Vertical Polarization 425～430MHz.pdf" },
+  { name: "ST-Indoor Omni Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Indoor Omni Antenna Vertical Polarization 425～430MHz.pdf" },
+  { name: "ST-Vehicle Antenna Vertical Polarization 425～430MHz", link: "/pdfs/ST-Vehicle Antenna Vertical Polarization 425～430MHz.pdf" },
+  { name: "UHF RFID  5400", link: "/pdfs/UHF RFID  5400.pdf" },
+  { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
+  { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
+
+
+  
+  
 
 
 
   
+
   
   { name: "Patch Panel Antenna", link: "https://www.rfconnector.in/Product/Patch_Panel_Antenna.pdf" },
   { name: "Omni Antenna", link: "https://www.rfconnector.in/Product/Omni_Antenna.pdf" },
@@ -227,6 +278,19 @@ const catalogueLinks = [
   { name: "SMA-4.3-10-KJ(ST3.640.334)", link: "/pdfs/SMA-4.3-10-KJ(ST3.640.334).pdf" },
   { name: "ST-AT-18G-2W-NMF", link: "/pdfs/ST-AT-18G-2W-NMF.pdf" },
   { name: "Waveguide WR90-100-200-300mm", link: "/pdfs/Waveguide WR90-100-200-300mm.pdf" },
+  { name: "UHF RFID  5400", link: "/pdfs/UHF RFID  5400.pdf" },
+  { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
+  { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
+  { name: "6-8GHz 200W SSPA Specifications 0918", link: "/pdfs/6-8GHz 200W SSPA Specifications 0918.pdf" },
+  { name: "6-18GHz 200W SSPA Specifications 0918", link: "/pdfs/6-18GHz 200W SSPA Specifications 0918.pdf" },
+  { name: "Broadband High Power Amplifier Module (SSPA)", link: "/pdfs/Broadband High Power Amplifier Module (SSPA).pdf" },
+  { name: "RF_Amplifier_KB60180M40", link: "/pdfs/RF_Amplifier_KB60180M40.pdf" },
+  { name: "RF_Amplifier_KB60180M43C", link: "/pdfs/RF_Amplifier_KB60180M43C.pdf" },
+  { name: "RF_Amplifier_KB60180M51A", link: "/pdfs/RF_Amplifier_KB60180M51A.pdf" },
+  { name: "RF_Amplifier_Module_KB60", link: "/pdfs/RF_Amplifier_Module_KB60.pdf" },
+
+  
+  
 
 
 

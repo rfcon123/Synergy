@@ -158,6 +158,50 @@ import SMAConnectorTourqueWrench from '../assets/components/SMA Connector Tourqu
 import SIGNALGENERATORallproduct from '../assets/components/SIGNAL GENERATOR all product.jpeg';
 import NIESSIPOWERMETER from '../assets/components/NIESSI POWER METER.jpg';
 import Bird43WattMeter from '../assets/components/Bird 43 Watt Meter.jpg';
+import POWERSUPPLYE3616A from '../assets/components/POWER SUPPLY E3616A.jpeg';
+import POWERSUPPLYE3620A from '../assets/components/POWER SUPPLY E3620A.jpeg';
+import POWERSUPPLYE3632A from '../assets/components/POWER SUPPLY E3632A.jpeg';
+import POWERSUPPLYE3634A from '../assets/components/POWER SUPPLY E3634A.jpeg';
+import POWERSUPPLYEX354D from '../assets/components/POWER SUPPLY EX354D.jpeg';
+import POWERSUPPLY from '../assets/components/POWER SUPPLY.jpeg';
+import POWERWAVEINVENTERAD from '../assets/components/POWER WAVE INVENTERAD1.png';
+import QL355TPPOWERSUPPLY from '../assets/components/QL355TP POWER SUPPLY.jpeg';
+import ROHDESCHWARZ1085709902 from '../assets/components/ROHDE&SCHWARZ 1085.7099.02 INSIDE.jpeg';
+import ROSENBERGER05CK10R150 from '../assets/components/ROSENBERGER 05CK10R-150 INSIDE.jpeg';
+import ROSENBERGER06CK100150 from '../assets/components/ROSENBERGER 06 CK100-150 INSIDE.jpeg';
+import RPHDESCHWARZSIGNALGENERATORSMY from '../assets/components/RPHDE & SCHWARZ SIGNAL GENERATOR SMY.jpeg';
+import SIGNALGENERATORE4437B from '../assets/components/SIGNAL GENERATOR E4437B.jpg';
+import SIGNALGENERATORESGD3000A from '../assets/components/SIGNAL GENERATOR ESG-D3000A.jpeg';
+import sitemasterS331D from '../assets/components/site master S331D.jpeg';
+import TDS3052OscilloscopeTEKTRONIX from '../assets/components/TDS 3052 Oscilloscope TEKTRONIX.jpeg';
+import AFM1100TUFVASSONSTRANSFORMER from '../assets/components/AFM 1100 TUFVASSONS TRANSFORMER 1.jpeg';
+import ATTENUATORSPINNER from '../assets/components/ATTENUATOR SPINNER.jpeg';
+import GFW from '../assets/components/GFW.jpeg';
+import AGILENTE4418BPOWERMETER from '../assets/components/AGILENT E4418B POWER METER.jpeg';
+import AgilentE4432B from '../assets/components/Agilent E4432B.png';
+import AgilentE4436BBB from '../assets/components/Agilent E4436B  BB.png';
+import AgilentE44208B from '../assets/components/Agilent E44208B.png';
+import ANALLOGDIGITALSCOPEHM407 from '../assets/components/ANALLOG DIGITAL SCOPE HM407-2.jpeg';
+import ESisSParameterNetworkAnalyser from '../assets/components/8753ES is S-Parameter Network Analyser.jpeg';
+import ROHDESCHWARZSMBV100A from '../assets/components/ROHDE&SCHWARZ SMBV100A.jpeg';
+import rohdeschwarzvectornetworkanalyzerzvre from '../assets/components/rohde-schwarz-vector-network-analyzer-zvre.png';
+import AGILENTE4420B from '../assets/components/AGILENT E4420B.jpeg';
+import POWERMETERML2438A from '../assets/components/POWER METER ML2438A.jpeg';
+import AGILENT3631A from '../assets/components/AGILENT 3631A.jpeg';
+import AGILENT8753ES from '../assets/components/AGILENT 8753ES.jpeg';
+import AGILENTE3616A from '../assets/components/AGILENT E3616A.jpeg';
+import AGILENTE4420BESG from '../assets/components/AGILENT E4420B ESG.jpeg';
+import AGILENTN8973A from '../assets/components/AGILENT N8973A.jpeg';
+import AGILENTE3640A from '../assets/components/AGILENT-E3640A.jpeg';
+import LISTENTALK from '../assets/components/LISTEN & TALK.jpeg';
+import POWERSUPPLYSM3540 from '../assets/components/POWER SUPPLY SM-3540.jpeg';
+import GENERATOR33210A from '../assets/components/GENERATOR 33210A.jpeg';
+import PowerboxLVM210290 from '../assets/components/Powerbox LVM 210.290.jpg';
+import NRVZ53POWERMETERSENSOR from '../assets/components/NRV Z53 POWER METER SENSOR.png';
+import NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR from '../assets/components/Altusen PNS108 Power Over Net.jpg';
+import gpibcontrolopticaltorfswitch from '../assets/components/gpib control optical to rf switch group.jpg';
+import HEWLETTPACKARD8753D from '../assets/components/HEWLETT PACKARD 8753D.jpeg';
+import HEWLETTPACKARD75000SeriesBRepeater from '../assets/components/HEWLETT PACKARD75000 Series B Repeater.png';
 
 
 
@@ -171,6 +215,56 @@ const productsData = [
   { name: "RF Cable", slug: "rf-cable", image: rfcable },
   { name: "Signal Generator All Product", slug: "signal-generator-all-product", image: SIGNALGENERATORallproduct },
   { name: "NIESSI Power Meter", slug: "niessi-power-meter", image: NIESSIPOWERMETER },
+  { name: "Power Supply E3616A", slug: "power-supply-e3616a", image: POWERSUPPLYE3616A },
+  { name: "Power Supply E3620A", slug: "power-supply-e3620a", image: POWERSUPPLYE3620A },
+  { name: "Power Supply E3632A", slug: "power-supply-e3632a", image: POWERSUPPLYE3632A },
+  { name: "Power Supply E3634A", slug: "power-supply-e3634a", image: POWERSUPPLYE3634A },
+  { name: "Power Supply EX354D", slug: "power-supply-ex354d", image: POWERSUPPLYEX354D },
+  { name: "Power Supply", slug: "power-supply", image: POWERSUPPLY },
+  { name: "Power Wave Inverter AD1", slug: "power-wave-inverter-ad1", image: POWERWAVEINVENTERAD },
+  { name: "QL355TP Power Supply", slug: "ql355tp-power-supply", image: QL355TPPOWERSUPPLY },
+  { name: "Rohde & Schwarz 1085.7099.02", slug: "rohde-schwarz-1085-7099-02", image: ROHDESCHWARZ1085709902 },
+  { name: "Rosenberger 05CK10R-150", slug: "rosenberger-05ck10r-150", image: ROSENBERGER05CK10R150 },
+  { name: "Rosenberger 06 CK100-150", slug: "rosenberger-06-ck100-150", image: ROSENBERGER06CK100150 },
+  { name: "RPHDE & Schwarz Signal Generator SMY", slug: "rphde-schwarz-signal-generator-smy", image: RPHDESCHWARZSIGNALGENERATORSMY },
+  { name: "Signal Generator E4437B", slug: "signal-generator-e4437b", image: SIGNALGENERATORE4437B },
+  { name: "Signal Generator ESG-D3000A", slug: "signal-generator-esg-d3000a", image: SIGNALGENERATORESGD3000A },
+  { name: "Site Master S331D", slug: "site-master-s331d", image: sitemasterS331D },
+  { name: "TDS 3052 Oscilloscope TEKTRONIX", slug: "tds-3052-oscilloscope-tektronix", image: TDS3052OscilloscopeTEKTRONIX },
+  { name: "AFM 1100 TUFVASSONS Transformer", slug: "afm-1100-tufvassons-transformer", image: AFM1100TUFVASSONSTRANSFORMER },
+  { name: "Attenuator Spinner", slug: "attenuator-spinner", image: ATTENUATORSPINNER },
+  { name: "GFW", slug: "gfw", image: GFW },
+  { name: "Agilent E4418B Power Meter", slug: "agilent-e4418b-power-meter", image: AGILENTE4418BPOWERMETER },
+  { name: "Agilent E4432B", slug: "agilent-e4432b", image: AgilentE4432B },
+  { name: "Agilent E4436B BB", slug: "agilent-e4436b-bb", image: AgilentE4436BBB },
+  { name: "Agilent E44208B", slug: "agilent-e44208b", image: AgilentE44208B },
+  { name: "Analog Digital Scope HM407-2", slug: "analog-digital-scope-hm407-2", image: ANALLOGDIGITALSCOPEHM407 },
+  { name: "8753ES is S-Parameter Network Analyser", slug: "8753es-is-s-parameter-network-analyser", image: ESisSParameterNetworkAnalyser },
+  { name: "Rohde & Schwarz SMBV100A", slug: "rohde-schwarz-smbv100a", image: ROHDESCHWARZSMBV100A },
+  { name: "Rohde & Schwarz Vector Network Analyzer ZVRE", slug: "rohde-schwarz-vector-network-analyzer-zvre", image: rohdeschwarzvectornetworkanalyzerzvre },
+  { name: "Agilent E4420B", slug: "agilent-e4420b", image: AGILENTE4420B },
+  { name: "Power Meter ML2438A", slug: "power-meter-ml2438a", image: POWERMETERML2438A },
+  { name: "Agilent 3631A", slug: "agilent-3631a", image: AGILENT3631A },
+  { name: "Agilent 8753ES", slug: "agilent-8753es", image: AGILENT8753ES },
+  { name: "Agilent E3616A", slug: "agilent-e3616a", image: AGILENTE3616A },
+  { name: "Agilent E4420B ESG", slug: "agilent-e4420b-esg", image: AGILENTE4420BESG },
+  { name: "Agilent N8973A", slug: "agilent-n8973a", image: AGILENTN8973A },
+  { name: "Agilent E3640A", slug: "agilent-e3640a", image: AGILENTE3640A },
+  { name: "Listen & Talk", slug: "listen-talk", image: LISTENTALK },
+  { name: "Power Supply SM-3540", slug: "power-supply-sm-3540", image: POWERSUPPLYSM3540 },
+  { name: "Generator 33210A", slug: "generator-33210a", image: GENERATOR33210A },
+  { name: "Powerbox LVM 210.290", slug: "powerbox-lvm-210-290", image: PowerboxLVM210290 },
+  { name: "NRV Z53 Power Meter Sensor", slug: "nrv-z53-power-meter-sensor", image: NRVZ53POWERMETERSENSOR },
+  { name: "Altusen PNS108 Power Over Net", slug: "altusen-pns108-power-over-net", image: NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR },
+  { name: "GPIB Control Optical to RF Switch Group", slug: "gpib-control-optical-to-rf-switch-group", image: gpibcontrolopticaltorfswitch },
+  { name: "Hewlett Packard 8753D", slug: "hewlett-packard-8753d", image: HEWLETTPACKARD8753D },
+  { name: "Hewlett Packard 75000 Series B Repeater", slug: "hewlett-packard-75000-series-b-repeater", image: HEWLETTPACKARD75000SeriesBRepeater },
+  
+
+
+
+
+
 
 
 
