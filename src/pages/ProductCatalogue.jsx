@@ -59,6 +59,8 @@ const catalogueLinks = [
   { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
   { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
 
+  
+
 
   
   
@@ -288,6 +290,8 @@ const catalogueLinks = [
   { name: "RF_Amplifier_KB60180M43C", link: "/pdfs/RF_Amplifier_KB60180M43C.pdf" },
   { name: "RF_Amplifier_KB60180M51A", link: "/pdfs/RF_Amplifier_KB60180M51A.pdf" },
   { name: "RF_Amplifier_Module_KB60", link: "/pdfs/RF_Amplifier_Module_KB60.pdf" },
+  { name: "ST FILTER", link: "/pdfs/ST FILTER.pdf" },
+
 
   
   
