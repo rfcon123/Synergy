@@ -293,6 +293,7 @@ const catalogueLinks = [
   { name: "ST FILTER", link: "/pdfs/ST FILTER.pdf" },
   { name: "SMA-N-KKSY", link: "/pdfs/SMA-N-KKSY.pdf" },
   { name: "TEST AND MEASUREMENT EQUIPMENT", link: "/pdfs/TEST AND MEASUREMENT EQUIPMENT.pdf" },
+  { name: "EQUIPMENT", link: "/pdfs/EQUIPMENT.pdf" },
 
 
 
