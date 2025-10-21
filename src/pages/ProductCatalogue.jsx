@@ -294,6 +294,9 @@ const catalogueLinks = [
   { name: "SMA-N-KKSY", link: "/pdfs/SMA-N-KKSY.pdf" },
   { name: "TEST AND MEASUREMENT EQUIPMENT", link: "/pdfs/TEST AND MEASUREMENT EQUIPMENT.pdf" },
   { name: "EQUIPMENT", link: "/pdfs/EQUIPMENT.pdf" },
+  { name: "MAST PRICE LIST 2025 NEW", link: "/pdfs/MAST PRICE LIST 2025 NEW.pdf" },
+  { name: "TEST & MEASUREMENT EQUIPMENT 2025", link: "/pdfs/TEST & MEASUREMENT EQUIPMENT 2025.pdf" },
+
 
 
 
