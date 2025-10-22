@@ -296,6 +296,12 @@ const catalogueLinks = [
   { name: "EQUIPMENT", link: "/pdfs/EQUIPMENT.pdf" },
   { name: "MAST PRICE LIST 2025 NEW", link: "/pdfs/MAST PRICE LIST 2025 NEW.pdf" },
   { name: "TEST & MEASUREMENT EQUIPMENT 2025", link: "/pdfs/TEST & MEASUREMENT EQUIPMENT 2025.pdf" },
+  { name: "DR100-A13", link: "/pdfs/DR100-A13.pdf" },
+  { name: "Panel antenna 136MHz-174 MHz", link: "/pdfs/Panel antenna 136MHz-174 MHz.pdf" },
+  { name: "ST Coaxial Cable stripping machine 6806", link: "/pdfs/ST Coaxial Cable stripping machine 6806.pdf" },
+  { name: "ST RG-6 Coaxial cable Cu finished", link: "/pdfs/ST RG-6 Coaxial cable Cu finished.pdf" },
+  { name: "WR137 Waveguide Flexible 1000mm and 2000mm", link: "/pdfs/WR137 Waveguide Flexible 1000mm and 2000mm.pdf" },
+
 
 
 
