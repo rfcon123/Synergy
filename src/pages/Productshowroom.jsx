@@ -213,7 +213,7 @@ import HUBERSUHNER74Z0071 from '../assets/components/HUBER-SUHNER 74Z-0-0-71.jpe
 import ROHDESCHWARZ1085724702INS from '../assets/components/ROHDE & SCHWARZ 1085. 7247.02 INS.jpeg';
 import ROSENBERGER716CALIBRATIONKIT60CK100150IN from '../assets/components/ROSENBERGER 7-16 CALIBRATION KIT 60CK100-150 IN.jpeg';
 import AGILENT85092CCOVER from '../assets/components/AGILENT 85092C COVER.jpeg';
-import HUBERSUHNER 74Z-0-0-70 INS from '../assets/components/HUBER-SUHNER 74Z-0-0-70 INS.png';
+import HUBERSUHNER74Z0070INS from '../assets/components/HUBER-SUHNER 74Z-0-0-70 INS.png';
 
 
 
