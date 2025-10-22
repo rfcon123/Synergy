@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
 
-import productLinks from './Productlinks';
 import StyledButton  from '../components/StyledButton';
 import rfcable from '../assets/components/rfcable.jpg';
 import EMCSCANNER from '../assets/components/EMC SCANNER.jpg';
@@ -202,6 +201,21 @@ import NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR from '../assets/component
 import gpibcontrolopticaltorfswitch from '../assets/components/gpib control optical to rf switch group.jpg';
 import HEWLETTPACKARD8753D from '../assets/components/HEWLETT PACKARD 8753D.jpeg';
 import HEWLETTPACKARD75000SeriesBRepeater from '../assets/components/HEWLETT PACKARD75000 Series B Repeater.png';
+import AGILENT8502A from '../assets/components/AGILENT 8502A.jpg';
+import AGILENT34401A from '../assets/components/AGILENT 34401A.jpeg';
+import AGILENT344AGILENT85092CCOVERINSIDE01A from '../assets/components/AGILENT 85092C COVER INSIDE.jpeg';
+import AGILENT85092CCOVERINSIDE from '../assets/components/AGILENT 85092C COVER INSIDE.jpeg';
+import HEWLETTPACKARD11582A from '../assets/components/HEWLETT PACKARD 11582A.jpeg';
+import THEROELECTRA80110 from '../assets/components/THERO ELECTRA 80110.jpeg';
+import SUHNERHUBERSUHNERAG74Z0070 from '../assets/components/SUHNER HUBER SUHNER AG 74Z-0-0-70.jpeg';
+import ROSENBERGER716CALIBRATIONKIT60CK100150 from '../assets/components/ROSENBERGER 7-16 CALIBRATION KIT 60CK100-150.jpeg';
+import ROHDESSCHWARZZNB8 from '../assets/components/ROHDES & SCHWARZ ZNB8.jpeg';
+import ROHDESCHWARZ1085724702 from '../assets/components/ROHDE & SCHWARZ 1085. 7247.02.jpeg';
+import PROTEKU3000AUNIVERSALCOUNTER from '../assets/components/PROTEK U3000A UNIVERSAL COUNTER.jpeg';
+import HUBERSUHNER74Z0071 from '../assets/components/HUBER-SUHNER 74Z-0-0-71.jpeg';
+import HEWLETTPACKARD11582AINSIDE from '../assets/components/HEWLETT PACKARD 11582A INSIDE.jpeg';
+
+
 
 
 
@@ -259,7 +273,27 @@ const productsData = [
   { name: "GPIB Control Optical to RF Switch Group", slug: "gpib-control-optical-to-rf-switch-group", image: gpibcontrolopticaltorfswitch },
   { name: "Hewlett Packard 8753D", slug: "hewlett-packard-8753d", image: HEWLETTPACKARD8753D },
   { name: "Hewlett Packard 75000 Series B Repeater", slug: "hewlett-packard-75000-series-b-repeater", image: HEWLETTPACKARD75000SeriesBRepeater },
+  { name: "Agilent 8502A", slug: "agilent-8502a", image: AGILENT8502A },
+  { name: "Agilent 85092C Cover Inside", slug: "agilent-85092c-cover-inside", image: AGILENT344AGILENT85092CCOVERINSIDE01A },
+  { name: "Agilent 34401A", slug: "agilent-34401a", image: AGILENT34401A },
+  { name: "Agilent 85092C Cover Inside", slug: "agilent-85092c-cover-inside", image: AGILENT85092CCOVERINSIDE },
+  { name: "Hewlett Packard 11582A", slug: "hewlett-packard-11582a", image: HEWLETTPACKARD11582A },
+  { name: "Thero Electra 80110", slug: "thero-electra-80110", image: THEROELECTRA80110 },
+  { name: "SUHNER HUBER SUHNER AG 74Z-0-0-70", slug: "suhner-huber-suhner-ag-74z-0-0-70", image: SUHNERHUBERSUHNERAG74Z0070 },
+  { name: "Rosenberger 7-16 Calibration Kit 60CK100-150", slug: "rosenberger-7-16-calibration-kit-60ck100-150", image: ROSENBERGER716CALIBRATIONKIT60CK100150 },
+  { name: "Rohde & Schwarz ZNB8", slug: "rohde-schwarz-znb8", image: ROHDESSCHWARZZNB8 },
+  { name: "Rohde & Schwarz 1085. 7247.02", slug: "rohde-schwarz-1085-7247-02", image: ROHDESCHWARZ1085724702 },
+  { name: "Protek U3000A Universal Counter", slug: "protek-u3000a-universal-counter", image: PROTEKU3000AUNIVERSALCOUNTER },
+  { name: "HUBER-SUHNER 74Z-0-0-71", slug: "huber-suhner-74z-0-0-71", image: HUBERSUHNER74Z0071 },
+  { name: "Hewlett Packard 11582A", slug: "hewlett-packard-11582a", image: HEWLETTPACKARD11582A },
   
+
+
+  
+  
+
+
+
 
 
 
