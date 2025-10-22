@@ -286,6 +286,10 @@ const productsData = [
   { name: "Protek U3000A Universal Counter", slug: "protek-u3000a-universal-counter", image: PROTEKU3000AUNIVERSALCOUNTER },
   { name: "HUBER-SUHNER 74Z-0-0-71", slug: "huber-suhner-74z-0-0-71", image: HUBERSUHNER74Z0071 },
   { name: "Hewlett Packard 11582A", slug: "hewlett-packard-11582a", image: HEWLETTPACKARD11582A },
+
+
+
+
   
 
 
