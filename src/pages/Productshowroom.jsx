@@ -219,6 +219,10 @@ import RohdeSchwarz10798500FSEM from '../assets/components/Rohde & Schwarz 1079-
 import HEWLETTPACKARD8560A from '../assets/components/HEWLETT PACKARD 8560A.jpeg';
 import HEWLETTPACKARD8648B from '../assets/components/HEWLETT PACKARD 8648B.jpeg';
 import HEWLETTPACKARD8648C from '../assets/components/HEWLETT PACKARD 8648C.jpeg';
+import AGILENTE4421B from '../assets/components/AGILENT E4421B.jpeg';
+import AGILENTE4438C from '../assets/components/AGILENT E4438C.jpg';
+import HEWLETTPACKARDE4432B from '../assets/components/HEWLETT PACKARD E4432B.jpeg';
+import HEWLETTPACKARDE4433B from '../assets/components/HEWLETT PACKARD E4433B.jpg';
 
 
 
@@ -294,6 +298,11 @@ const productsLocalData = [
   { name: "Hewlett Packard 8560A", slug: "hewlett-packard-8560a", image: HEWLETTPACKARD8560A },
   { name: "Hewlett Packard 8648B", slug: "hewlett-packard-8648b", image: HEWLETTPACKARD8648B },
   { name: "Hewlett Packard 8648C", slug: "hewlett-packard-8648c", image: HEWLETTPACKARD8648C },
+  { name: "Agilent E4421B", slug: "agilent-e4421b", image: AGILENTE4421B },
+  { name: "Agilent E4438C", slug: "agilent-e4438c", image: AGILENTE4438C },
+  { name: "Hewlett Packard E4432B", slug: "hewlett-packard-e4432b", image: HEWLETTPACKARDE4432B },
+  { name: "Hewlett Packard E4433B", slug: "hewlett-packard-e4433b", image: HEWLETTPACKARDE4433B },
+  
 
   
   
