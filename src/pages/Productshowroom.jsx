@@ -225,6 +225,7 @@ import HEWLETTPACKARDE4432B from '../assets/components/HEWLETT PACKARD E4432B.jp
 import HEWLETTPACKARDE4433B from '../assets/components/HEWLETT PACKARD E4433B.jpg';
 import OlympusSZSTV1StereoMicroscope from '../assets/components/Olympus SZ-STV1 Stereo Microscope.jpg';
 import DESABELEKTRONIASYSTEM from '../assets/components/DESAB ELEKTRONIA SYSTEM.jpeg';
+import BELTEMA15124ART from '../assets/components/BELTEMA 15-124 ART.jpg';
 
 
 
@@ -306,6 +307,7 @@ const productsLocalData = [
   { name: "Hewlett Packard E4433B", slug: "hewlett-packard-e4433b", image: HEWLETTPACKARDE4433B },
   { name: "Olympus SZ-STV1 Stereo Microscope", slug: "olympus-sz-stv1-stereo-microscope", image: OlympusSZSTV1StereoMicroscope },
   { name: "DESAB ELEKTRONIA SYSTEM", slug: "desab-elektronia-system", image: DESABELEKTRONIASYSTEM },
+  { name: "BELTEMA 15-124 ART", slug: "beltema-15-124-art", image: BELTEMA15124ART },
   
 
   
