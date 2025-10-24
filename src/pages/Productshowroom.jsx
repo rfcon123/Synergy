@@ -217,6 +217,8 @@ import AGILENT85092CCOVER from '../assets/components/AGILENT 85092C COVER.jpeg';
 import HUBERSUHNER74Z0070INS from '../assets/components/HUBER-SUHNER 74Z-0-0-70 INS.png';
 import RohdeSchwarz10798500FSEM from '../assets/components/Rohde & Schwarz 1079-8500 FSEM.webp';
 import HEWLETTPACKARD8560A from '../assets/components/HEWLETT PACKARD 8560A.jpeg';
+import HEWLETTPACKARD8648B from '../assets/components/HEWLETT PACKARD 8648B.jpeg';
+import HEWLETTPACKARD8648C from '../assets/components/HEWLETT PACKARD 8648C.jpeg';
 
 
 
@@ -290,6 +292,8 @@ const productsLocalData = [
   { name: "HUBER-SUHNER 74Z-0-0-70", slug: "huber-suhner-74z-0-0-70", image: HUBERSUHNER74Z0070INS },
   { name: "Rohde & Schwarz 1079-8500 FSEM", slug: "rohde-schwarz-1079-8500-fsem", image: RohdeSchwarz10798500FSEM },
   { name: "Hewlett Packard 8560A", slug: "hewlett-packard-8560a", image: HEWLETTPACKARD8560A },
+  { name: "Hewlett Packard 8648B", slug: "hewlett-packard-8648b", image: HEWLETTPACKARD8648B },
+  { name: "Hewlett Packard 8648C", slug: "hewlett-packard-8648c", image: HEWLETTPACKARD8648C },
 
   
   
