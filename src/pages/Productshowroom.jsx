@@ -223,6 +223,7 @@ import AGILENTE4421B from '../assets/components/AGILENT E4421B.jpeg';
 import AGILENTE4438C from '../assets/components/AGILENT E4438C.jpg';
 import HEWLETTPACKARDE4432B from '../assets/components/HEWLETT PACKARD E4432B.jpeg';
 import HEWLETTPACKARDE4433B from '../assets/components/HEWLETT PACKARD E4433B.jpg';
+import OlympusSZSTV1StereoMicroscope from '../assets/components/Olympus SZ-STV1 Stereo Microscope.jpg';
 
 
 
@@ -302,6 +303,7 @@ const productsLocalData = [
   { name: "Agilent E4438C", slug: "agilent-e4438c", image: AGILENTE4438C },
   { name: "Hewlett Packard E4432B", slug: "hewlett-packard-e4432b", image: HEWLETTPACKARDE4432B },
   { name: "Hewlett Packard E4433B", slug: "hewlett-packard-e4433b", image: HEWLETTPACKARDE4433B },
+  { name: "Olympus SZ-STV1 Stereo Microscope", slug: "olympus-sz-stv1-stereo-microscope", image: OlympusSZSTV1StereoMicroscope },
   
 
   
