@@ -293,8 +293,9 @@ const productsLocalData = [
   { name: "HUBER-SUHNER 74Z-0-0-70", slug: "huber-suhner-74z-0-0-70", image: HUBERSUHNER74Z0070INS },
   { name: "Rohde & Schwarz 1079-8500 FSEM", slug: "rohde-schwarz-1079-8500-fsem", image: RohdeSchwarz10798500FSEM },
   { name: "Hewlett Packard 8560A", slug: "hewlett-packard-8560a", image: HEWLETTPACKARD8560A },
-  
 
+  
+  
 
 
   { name: "Jumper Cable", slug: "jumper-cable", image: jumpercable },
