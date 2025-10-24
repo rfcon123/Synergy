@@ -230,7 +230,7 @@ import HEWLETTPACKARD8560A from '../assets/components/HEWLETT PACKARD 8560A.jpeg
 
 
 
-const productsData = [
+const productsLocalData = [
   { name: "RF Cable", slug: "rf-cable", image: rfcable },
   { name: "Signal Generator All Product", slug: "signal-generator-all-product", image: SIGNALGENERATORallproduct },
   { name: "NIESSI Power Meter", slug: "niessi-power-meter", image: NIESSIPOWERMETER },
@@ -294,25 +294,6 @@ const productsData = [
   { name: "Rohde & Schwarz 1079-8500 FSEM", slug: "rohde-schwarz-1079-8500-fsem", image: RohdeSchwarz10798500FSEM },
   { name: "Hewlett Packard 8560A", slug: "hewlett-packard-8560a", image: HEWLETTPACKARD8560A },
   
-
-
-
-
-
-
-  
-
-
-  
-  
-
-
-
-
-
-
-
-
 
 
 
@@ -469,8 +450,8 @@ const productsData = [
   ...product,
   slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
 }));
-
-export const productsWithSlugs = productsData;
+ 
+export const productsWithSlugs = productsLocalData;
 
 const ProductShowroom = () => {
   const location = useLocation();
@@ -484,7 +465,7 @@ const ProductShowroom = () => {
     setSearchTerm(params.get('search') || '');
   }, [location.search, params]);
 
-  const filteredProducts = productsData.filter(product =>
+  const filteredProducts = productsLocalData.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
