@@ -1,7 +1,7 @@
 /* eslint-disable react-refresh/only-export-components */
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
 
@@ -455,15 +455,16 @@ export const productsWithSlugs = productsLocalData;
 
 const ProductShowroom = () => {
   const location = useLocation();
-  // Get ?search= from URL
-  const params = new URLSearchParams(location.search);
-  const initialSearch = params.get('search') || '';
-  const [searchTerm, setSearchTerm] = useState(initialSearch);
-
-  // Update searchTerm if the URL param changes
-  React.useEffect(() => {
-    setSearchTerm(params.get('search') || '');
-  }, [location.search, params]);
+  const navigate = useNavigate();
+  // controlled input: start empty, optionally prefill from URL once
+  const [searchTerm, setSearchTerm] = useState('');
+  useEffect(() => {
+    // Prefill from URL on mount only (won't reset while typing)
+    const p = new URLSearchParams(location.search);
+    const s = p.get('search');
+    if (s) setSearchTerm(s);
+     
+  }, []);
 
   const filteredProducts = productsLocalData.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -506,20 +507,21 @@ const ProductShowroom = () => {
 
         <div className="mb-10 max-w-lg mx-auto">
           <input
-            type="text"
-            placeholder="Search products..."
-            className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+  type="text"
+  placeholder="Search products..."
+  className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
+  value={searchTerm}
+  onChange={(e) => setSearchTerm(e.target.value)}
+  aria-label="Search products"
+/>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {filteredProducts.length > 0 ? (
-            filteredProducts.map((product, index) => (
+            filteredProducts.map((product) => (
               <Link
                 to={`/product/${product.slug}`}
-                key={index}
+                key={product.slug}
                 className="bg-white shadow-md p-4 rounded-xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col items-center text-center border border-gray-200 hover:border-blue-400 group"
               >
                 <img
@@ -541,7 +543,7 @@ const ProductShowroom = () => {
                     label="Explore"
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href = `/product/${product.slug}`;
+                      navigate(`/product/${product.slug}`);
                     }}
                   />
                 </div>
@@ -557,11 +559,12 @@ const ProductShowroom = () => {
             Need help finding the right product? Reach out to our team for personalized assistance.
           </p>
           <div className="flex justify-center">
-            <StyledButton
-              label="Contact Support"
-              icon={true}
-              onClick={() => window.location.href = 'mailto:info@synergytpl.com'}
-            />
+            <a href="mailto:info@synergytpl.com" aria-label="Email support">
+              <StyledButton
+                label="Contact Support"
+                icon={true}
+              />
+            </a>
           </div>
         </div>
       </div>
