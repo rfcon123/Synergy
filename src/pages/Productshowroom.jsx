@@ -178,7 +178,7 @@ import sitemasterS331D from '../assets/components/site master S331D.jpeg';
 import TDS3052OscilloscopeTEKTRONIX from '../assets/components/TDS 3052 Oscilloscope TEKTRONIX.jpeg';
 import AFM1100TUFVASSONSTRANSFORMER from '../assets/components/AFM 1100 TUFVASSONS TRANSFORMER 1.jpeg';
 import ATTENUATORSPINNER from '../assets/components/ATTENUATOR SPINNER.jpeg';
-import JFW from '../assets/components/GFW.jpeg';
+import GFW from '../assets/components/GFW.jpeg';
 import AGILENTE4418BPOWERMETER from '../assets/components/AGILENT E4418B POWER METER.jpeg';
 import AgilentE4432B from '../assets/components/Agilent E4432B.png';
 import AgilentE4436BBB from '../assets/components/Agilent E4436B  BB.png';
