@@ -213,7 +213,6 @@ import ROHDESSCHWARZZNB8 from '../assets/components/ROHDES & SCHWARZ ZNB8.jpeg';
 import PROTEKU3000AUNIVERSALCOUNTER from '../assets/components/PROTEK U3000A UNIVERSAL COUNTER.jpeg';
 import HUBERSUHNER74Z0071 from '../assets/components/HUBER-SUHNER 74Z-0-0-71.jpeg';
 import ROHDESCHWARZ1085724702INS from '../assets/components/ROHDE & SCHWARZ 1085. 7247.02 INS.jpeg';
-import ROSENBERGER716CALIBRATIONKIT60CK100150IN from '../assets/components/ROSENBERGER 7-16 CALIBRATION KIT 60CK100-150 IN.jpeg';
 import AGILENT85092CCOVER from '../assets/components/AGILENT 85092C COVER.jpeg';
 import HUBERSUHNER74Z0070INS from '../assets/components/HUBER-SUHNER 74Z-0-0-70 INS.png';
 import RohdeSchwarz10798500FSEM from '../assets/components/Rohde & Schwarz 1079-8500 FSEM.webp';
@@ -287,7 +286,6 @@ const productsLocalData = [
   { name: "Rohde & Schwarz 1085. 7247.02", slug: "rohde-schwarz-1085-7247-02", image: ROHDESCHWARZ1085724702INS },
   { name: "Protek U3000A Universal Counter", slug: "protek-u3000a-universal-counter", image: PROTEKU3000AUNIVERSALCOUNTER },
   { name: "HUBER-SUHNER 74Z-0-0-71", slug: "huber-suhner-74z-0-0-71", image: HUBERSUHNER74Z0071 },
-  { name: "Rosenberger 7-16 Calibration Kit 60CK100-150", slug: "rosenberger-7-16-calibration-kit-60ck100-150", image: ROSENBERGER716CALIBRATIONKIT60CK100150IN },
   { name: "Agilent 85092C Cover", slug: "agilent-85092c-cover", image: AGILENT85092CCOVER },
   { name: "HUBER-SUHNER 74Z-0-0-70", slug: "huber-suhner-74z-0-0-70", image: HUBERSUHNER74Z0070INS },
   { name: "Rohde & Schwarz 1079-8500 FSEM", slug: "rohde-schwarz-1079-8500-fsem", image: RohdeSchwarz10798500FSEM },
