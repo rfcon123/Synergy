@@ -1,3 +1,6 @@
+/* eslint-disable react-refresh/only-export-components */
+/* eslint-disable no-undef */
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
@@ -175,7 +178,7 @@ import sitemasterS331D from '../assets/components/site master S331D.jpeg';
 import TDS3052OscilloscopeTEKTRONIX from '../assets/components/TDS 3052 Oscilloscope TEKTRONIX.jpeg';
 import AFM1100TUFVASSONSTRANSFORMER from '../assets/components/AFM 1100 TUFVASSONS TRANSFORMER 1.jpeg';
 import ATTENUATORSPINNER from '../assets/components/ATTENUATOR SPINNER.jpeg';
-import GFW from '../assets/components/GFW.jpeg';
+import JFW from '../assets/components/GFW.jpeg';
 import AGILENTE4418BPOWERMETER from '../assets/components/AGILENT E4418B POWER METER.jpeg';
 import AgilentE4432B from '../assets/components/Agilent E4432B.png';
 import AgilentE4436BBB from '../assets/components/Agilent E4436B  BB.png';
@@ -215,6 +218,7 @@ import ROSENBERGER716CALIBRATIONKIT60CK100150IN from '../assets/components/ROSEN
 import AGILENT85092CCOVER from '../assets/components/AGILENT 85092C COVER.jpeg';
 import HUBERSUHNER74Z0070INS from '../assets/components/HUBER-SUHNER 74Z-0-0-70 INS.png';
 import RohdeSchwarz10798500FSEM from '../assets/components/Rohde & Schwarz 1079-8500 FSEM.webp';
+import HEWLETTPACKARD8560A from '../assets/components/HEWLETT PACKARD 8560A.jpeg';
 
 
 
@@ -288,6 +292,7 @@ const productsData = [
   { name: "Agilent 85092C Cover", slug: "agilent-85092c-cover", image: AGILENT85092CCOVER },
   { name: "HUBER-SUHNER 74Z-0-0-70", slug: "huber-suhner-74z-0-0-70", image: HUBERSUHNER74Z0070INS },
   { name: "Rohde & Schwarz 1079-8500 FSEM", slug: "rohde-schwarz-1079-8500-fsem", image: RohdeSchwarz10798500FSEM },
+  { name: "Hewlett Packard 8560A", slug: "hewlett-packard-8560a", image: HEWLETTPACKARD8560A },
   
 
 
@@ -462,7 +467,7 @@ const productsData = [
 
 ].map(product => ({
   ...product,
-  slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')
+  slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
 }));
 
 export const productsWithSlugs = productsData;
@@ -477,7 +482,7 @@ const ProductShowroom = () => {
   // Update searchTerm if the URL param changes
   React.useEffect(() => {
     setSearchTerm(params.get('search') || '');
-  }, [location.search]);
+  }, [location.search, params]);
 
   const filteredProducts = productsData.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
