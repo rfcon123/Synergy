@@ -58,6 +58,7 @@ const catalogueLinks = [
   { name: "UHF RFID  5400", link: "/pdfs/UHF RFID  5400.pdf" },
   { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
   { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
+  { name: "BEL PDF", link: "/pdfs/BEL PDF.pdf" },
 
   
 
