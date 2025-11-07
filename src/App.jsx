@@ -25,6 +25,7 @@ import Groupproductdatasheet from './pages/Groupproductdatasheet';
 import Feedback from './pages/Feedback';
 import Cablecreator from './pages/Cablecreator'; 
 import Notfound from './pages/Notfound'; 
+import BelDocuments from './components/BelDocuments';
 
 // Import the new details page component
 import HotProductDetails from './pages/HotProductDetails';
@@ -84,6 +85,9 @@ function App() {
         <Route path="/customer-feedback" element={<Feedback />} />
 
         <Route path="/cable-creator" element={<Cablecreator />} />
+        
+        {/* BEL Documents */}
+        <Route path="/bel-documents" element={<BelDocuments />} />
 
         {/* Catch-all */}
         <Route path="*" element={<Notfound />} />

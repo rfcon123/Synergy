@@ -21,6 +21,7 @@ const Header = () => {
         'Product Price list',
         'Group Product Data Sheet',
         'Defence and Aerospace',
+        'BEL Documents',
       ],
     },
     { title: 'Cable Creator' },
