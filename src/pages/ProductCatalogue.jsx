@@ -303,6 +303,7 @@ const catalogueLinks = [
   { name: "ST Coaxial Cable stripping machine 6806", link: "/pdfs/ST Coaxial Cable stripping machine 6806.pdf" },
   { name: "ST RG-6 Coaxial cable Cu finished", link: "/pdfs/ST RG-6 Coaxial cable Cu finished.pdf" },
   { name: "WR137 Waveguide Flexible 1000mm and 2000mm", link: "/pdfs/WR137 Waveguide Flexible 1000mm and 2000mm.pdf" },
+  { name: "BEL REPORT", link: "/pdfs/BEL REPORT.pdf" },
 
 
 
