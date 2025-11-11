@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { FiSearch, FiFile, FiDownload, FiGrid, FiList, FiEye, FiX } from 'react-icons/fi';
 
 const BelDocuments = () => {
@@ -10,12 +9,23 @@ const BelDocuments = () => {
   const [viewMode, setViewMode] = useState('grid'); // 'grid' or 'list'
   const [showPreview, setShowPreview] = useState(false);
   const [previewUrl, setPreviewUrl] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [sortBy, setSortBy] = useState('name');
 
+  // Example categories
+  const categories = [
+    { id: 'all', name: 'All Categories' },
+    { id: 'manual', name: 'Manuals' },
+    { id: 'spec', name: 'Specifications' },
+    { id: 'drawing', name: 'Drawings' },
+  ];
+
+  // Fetch BEL documents
   useEffect(() => {
     const fetchDocuments = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/BEL DOCUMENT/index.json');
+        const response = await fetch('/STK_DOCUMENT/index.json');
         const data = await response.json();
         setDocuments(data.documents || []);
         setError(null);
@@ -30,163 +40,159 @@ const BelDocuments = () => {
     fetchDocuments();
   }, []);
 
-  const filteredDocuments = documents.filter(doc => 
-    doc.name.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  // Filtering + sorting
+  const filteredDocuments = documents
+    .filter((doc) =>
+      doc.name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .filter((doc) =>
+      selectedCategory === 'all' ? true : doc.category === selectedCategory
+    )
+    .sort((a, b) => {
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+      if (sortBy === 'date') return new Date(b.date) - new Date(a.date);
+      return 0;
+    });
+
+  // Preview handler
+  const handlePreview = (url) => {
+    setPreviewUrl(url);
+    setShowPreview(true);
+  };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-gray-800 mb-6">BEL Documents</h1>
-        
-        {/* Search, Filter, and View Controls */}
-        <div className="flex flex-wrap gap-4 mb-8">
-          {/* View Toggle */}
-          <div className="flex items-center space-x-2 bg-gray-100 rounded-lg p-1">
-            <button
-              onClick={() => setViewMode('grid')}
-              className={`p-2 rounded ${
-                viewMode === 'grid' 
-                  ? 'bg-white shadow text-blue-600' 
-                  : 'text-gray-600 hover:text-blue-600'
-              }`}
-              title="Grid View"
-            >
-              <FiGrid size={20} />
-            </button>
-            <button
-              onClick={() => setViewMode('list')}
-              className={`p-2 rounded ${
-                viewMode === 'list' 
-                  ? 'bg-white shadow text-blue-600' 
-                  : 'text-gray-600 hover:text-blue-600'
-              }`}
-              title="List View"
-            >
-              <FiList size={20} />
-            </button>
-          </div>
+    <div className="mb-8">
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">BEL Documents</h1>
 
-          {/* Search Bar */}
-          <div className="relative flex-1 min-w-[300px]">
-            <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search documents..."
+      {/* Search, Filter, and View Controls */}
+      <div className="flex flex-wrap gap-4 mb-8">
+        {/* View Toggle */}
+        <div className="flex items-center space-x-2 bg-gray-100 rounded-lg p-1">
+          <button
+            onClick={() => setViewMode('grid')}
+            className={`p-2 rounded ${
+              viewMode === 'grid'
+                ? 'bg-white shadow text-blue-600'
+                : 'text-gray-600 hover:text-blue-600'
+            }`}
+            title="Grid View"
+          >
+            <FiGrid size={20} />
+          </button>
+          <button
+            onClick={() => setViewMode('list')}
+            className={`p-2 rounded ${
+              viewMode === 'list'
+                ? 'bg-white shadow text-blue-600'
+                : 'text-gray-600 hover:text-blue-600'
+            }`}
+            title="List View"
+          >
+            <FiList size={20} />
+          </button>
+        </div>
+
+        {/* Search Bar */}
+        <div className="relative flex-1 min-w-[300px]">
+          <FiSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search documents..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
           />
-          </div>
+        </div>
 
-          {/* Category Filter */}
-          <div className="flex-1 min-w-[200px]">
-            <select
-              value={selectedCategory}
-              onChange={(e) => setSelectedCategory(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            >
-              {categories.map(category => (
-                <option key={category.id} value={category.id}>
-                  {category.name}
-                </option>
-              ))}
-            </select>
-          </div>
+        {/* Category Filter */}
+        <div className="flex-1 min-w-[200px]">
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          >
+            {categories.map((category) => (
+              <option key={category.id} value={category.id}>
+                {category.name}
+              </option>
+            ))}
+          </select>
+        </div>
 
-          {/* Sort Options */}
-          <div className="flex-1 min-w-[200px]">
-            <select
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-            >
-              <option value="name">Sort by Name</option>
-              <option value="date">Sort by Date</option>
-            </select>
-          </div>
+        {/* Sort Options */}
+        <div className="flex-1 min-w-[200px]">
+          <select
+            value={sortBy}
+            onChange={(e) => setSortBy(e.target.value)}
+            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="name">Sort by Name</option>
+            <option value="date">Sort by Date</option>
+          </select>
         </div>
       </div>
 
-      {loading ? (
+      {/* Loading */}
+      {loading && (
         <div className="flex justify-center items-center min-h-[200px]">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
         </div>
-      ) : error ? (
+      )}
+
+      {/* Error */}
+      {error && (
         <div className="text-center text-red-600 p-4 bg-red-50 rounded-lg">
           {error}
         </div>
-      ) : (
-        <div className={viewMode === 'grid' 
-          ? "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-          : "flex flex-col space-y-4"
-        }>
-          {filteredDocuments.map((doc, index) => (
-            <div 
-              key={index}
-              className={`bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 ${
-                viewMode === 'list' ? 'flex items-center justify-between' : ''
-              }`}
+      )}
+
+      {/* Documents */}
+      {!loading && !error && filteredDocuments.length > 0 && (
+        <div
+          className={`${
+            viewMode === 'grid'
+              ? 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6'
+              : 'flex flex-col divide-y'
+          }`}
+        >
+          {filteredDocuments.map((doc) => (
+            <div
+              key={doc.name}
+              className="bg-white border rounded-lg shadow-sm p-4 hover:shadow-md transition"
             >
-              {viewMode === 'grid' ? (
-                // Grid View Layout
-                <>
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center">
-                      <FiFile className="text-blue-500 mr-2" size={24} />
-                      <h2 className="text-xl font-semibold text-gray-700">{doc.name}</h2>
-                    </div>
-                    <span className="text-sm text-gray-500 px-3 py-1 bg-gray-100 rounded-full">
-                      {doc.type}
-                    </span>
-                  </div>
-                  
-                  <p className="text-gray-600 text-sm mb-4">
-                    {doc.description || 'No description available'}
-                  </p>
-                  
-                  <div className="flex space-x-3">
-                </>
-              ) : (
-                // List View Layout
-                <>
-                  <div className="flex items-center flex-1 min-w-0">
-                    <FiFile className="text-blue-500 mr-3 flex-shrink-0" size={24} />
-                    <div className="truncate">
-                      <h2 className="text-lg font-semibold text-gray-700 truncate">{doc.name}</h2>
-                      <p className="text-sm text-gray-500 truncate">
-                        {doc.description || 'No description available'}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex items-center space-x-4 ml-4">
-                    <span className="text-sm text-gray-500 px-3 py-1 bg-gray-100 rounded-full whitespace-nowrap">
-                      {doc.type}
-                    </span>
-                    <div className="flex space-x-2">
-              </>
+              <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center">
+                  <FiFile className="text-blue-500 mr-2" size={24} />
+                  <h2 className="text-lg font-semibold text-gray-700">
+                    {doc.name}
+                  </h2>
+                </div>
+                <span className="text-sm text-gray-500 px-3 py-1 bg-gray-100 rounded-full">
+                  {doc.type || 'Document'}
+                </span>
+              </div>
+
+              {viewMode === 'grid' && (
+                <p className="text-gray-600 text-sm mb-4">
+                  {doc.description || 'No description available'}
+                </p>
               )}
-              
-              {/* Common buttons for both views */}
-              <div className={`flex ${viewMode === 'grid' ? 'space-x-3' : 'space-x-2'}`}>
+
+              <div className="flex space-x-3">
                 <button
-                  onClick={() => {
-                    setPreviewUrl(`/BEL DOCUMENT/${doc.filename}`);
-                    setShowPreview(true);
-                  }}
+                  onClick={() => handlePreview(doc.url)}
                   className="flex-1 inline-flex items-center justify-center bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors"
                 >
-                  <FiEye className="mr-2" />
-                  Preview
+                  <FiEye className="mr-2" /> Preview
                 </button>
                 <a
-                  href={`/BEL DOCUMENT/${doc.filename}`}
+                  href={doc.url}
+                  download
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 inline-flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                 >
-                  <FiDownload className="mr-2" />
-                  Download
+                  <FiDownload className="mr-2" /> Download
                 </a>
               </div>
             </div>
@@ -194,6 +200,7 @@ const BelDocuments = () => {
         </div>
       )}
 
+      {/* No Results */}
       {!loading && !error && filteredDocuments.length === 0 && (
         <p className="text-gray-600 text-center bg-gray-50 p-8 rounded-lg">
           No documents found matching your search.

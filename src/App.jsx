@@ -34,10 +34,9 @@ function App() {
   return (
     <Router>
       <Helmet>
-        <title>Panacea Telecom</title>
-        <meta name="description" content="Welcome to Panacea Telecom's official website." />
-        <meta name="keywords" content="RF components, telecom solutions, Panacea Synergy" />
-        <meta name="author" content="Panacea Telecom" />
+        <meta name="description" content="Welcome to Synergy Telecom's official website." />
+        <meta name="keywords" content="RF components, telecom solutions,  Synergy" />
+        <meta name="author" content="Synergy Telecom" />
       </Helmet>
 
       <Header />
