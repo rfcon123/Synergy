@@ -58,7 +58,7 @@ const catalogueLinks = [
   { name: "UHF RFID  5400", link: "/pdfs/UHF RFID  5400.pdf" },
   { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
   { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
-  { name: "BEL PDF", link: "/pdfs/BEL PDF.pdf" },
+  { name: "STK PDF", link: "/pdfs/STK PDF.pdf" },
   { name: "SDR PRICE LIST PDF", link: "/pdfs/SDR PRICE LIST PDF.pdf" },
   { name: "50W Module", link: "/pdfs/50W Module.pdf" },
   { name: "AMP1006000-100W-28V-FUNC", link: "/pdfs/AMP1006000-100W-28V-FUNC.pdf" },
@@ -309,7 +309,7 @@ const catalogueLinks = [
   { name: "ST Coaxial Cable stripping machine 6806", link: "/pdfs/ST Coaxial Cable stripping machine 6806.pdf" },
   { name: "ST RG-6 Coaxial cable Cu finished", link: "/pdfs/ST RG-6 Coaxial cable Cu finished.pdf" },
   { name: "WR137 Waveguide Flexible 1000mm and 2000mm", link: "/pdfs/WR137 Waveguide Flexible 1000mm and 2000mm.pdf" },
-  { name: "BEL REPORT", link: "/pdfs/BEL REPORT.pdf" },
+  { name: "STK REPORT", link: "/pdfs/STK_REPORT.pdf" },
 
 
 

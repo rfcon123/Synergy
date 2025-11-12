@@ -62,7 +62,7 @@ const BelDocuments = () => {
 
   return (
     <div className="mb-8">
-      <h1 className="text-3xl font-bold text-gray-800 mb-6">BEL Documents</h1>
+      <h1 className="text-3xl font-bold text-gray-800 mb-6">STK Documents</h1>
 
       {/* Search, Filter, and View Controls */}
       <div className="flex flex-wrap gap-4 mb-8">

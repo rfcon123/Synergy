@@ -85,8 +85,8 @@ function App() {
 
         <Route path="/cable-creator" element={<Cablecreator />} />
         
-        {/* BEL Documents */}
-        <Route path="/bel-documents" element={<BelDocuments />} />
+        {/* STK Documents */}
+        <Route path="bel-documents" element={<BelDocuments />} />
 
         {/* Catch-all */}
         <Route path="*" element={<Notfound />} />
