@@ -60,6 +60,12 @@ const catalogueLinks = [
   { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
   { name: "BEL PDF", link: "/pdfs/BEL PDF.pdf" },
   { name: "SDR PRICE LIST PDF", link: "/pdfs/SDR PRICE LIST PDF.pdf" },
+  { name: "50W Module", link: "/pdfs/50W Module.pdf" },
+  { name: "AMP1006000-100W-28V-FUNC", link: "/pdfs/AMP1006000-100W-28V-FUNC.pdf" },
+  { name: "COAXIAL FIXED TERMINATION-TF5000", link: "/pdfs/COAXIAL FIXED TERMINATION-TF5000.pdf" },
+  { name: "Right-Hand Circularly Polarized Antenna, 17.7-21.2 GHz", link: "/pdfs/Right-Hand Circularly Polarized Antenna, 17.7-21.2 GHz.pdf" },
+  { name: "ST-1006000-30W-28V", link: "/pdfs/ST-1006000-30W-28V.pdf" },
+  { name: "SY1L5-ST-3P", link: "/pdfs/SY1L5-ST-3P.pdf" },
 
   
 
