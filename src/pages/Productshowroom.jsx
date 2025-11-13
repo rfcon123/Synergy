@@ -226,6 +226,18 @@ import HEWLETTPACKARDE4433B from '../assets/components/HEWLETT PACKARD E4433B.jp
 import OlympusSZSTV1StereoMicroscope from '../assets/components/Olympus SZ-STV1 Stereo Microscope.jpg';
 import DESABELEKTRONIASYSTEM from '../assets/components/DESAB ELEKTRONIA SYSTEM.jpeg';
 import BELTEMA15124ART from '../assets/components/BELTEMA 15-124 ART.jpg';
+import SDRHFSPLITTER from '../assets/components/SDR HF SPLITTER.jpg';
+import RTLSDRNooelec5 from '../assets/components/RTL SDR Nooelec5.jpg';
+import RTLSDRNooelec from '../assets/components/RTL SDR Nooelec.jpg';
+import QSRHFSPLITTER11500 from '../assets/components/QSR HF SPLITTER 1-1500.jpg';
+import QSRHFSPLITTER11500MHZ from '../assets/components/QSR HF SPLITTER 1 1500 MHZ.jpg';
+import HackRFOneSDR from '../assets/components/HackRF One SDR.jpg';
+import BladeRFmicroA5 from '../assets/components/BladeRFmicro -A5.jpg';
+import BladeRF115 from '../assets/components/BladeRF115.jpg';
+import BladeRF20microA9 from '../assets/components/BladeRF2.0 micro -A9.jpg';
+import BladeRF from '../assets/components/BladeRF.jpg';
+import BladeRF40 from '../assets/components/BladeRF-40.jpg';
+
 
 
 
@@ -308,6 +320,19 @@ const productsLocalData = [
   { name: "Olympus SZ-STV1 Stereo Microscope", slug: "olympus-sz-stv1-stereo-microscope", image: OlympusSZSTV1StereoMicroscope },
   { name: "DESAB ELEKTRONIA SYSTEM", slug: "desab-elektronia-system", image: DESABELEKTRONIASYSTEM },
   { name: "BELTEMA 15-124 ART", slug: "beltema-15-124-art", image: BELTEMA15124ART },
+  { name: "SDR HF SPLITTER", slug: "sdr-hf-splitter", image: SDRHFSPLITTER },
+  { name: "RTL SDR Nooelec5", slug: "rtl-sdr-nooelec5", image: RTLSDRNooelec5 },
+  { name: "RTL SDR Nooelec", slug: "rtl-sdr-nooelec", image: RTLSDRNooelec },
+  { name: "QSR HF SPLITTER 1-1500", slug: "qsr-hf-splitter-1-1500", image: QSRHFSPLITTER11500 },
+  { name: "QSR HF SPLITTER 1 1500 MHZ", slug: "qsr-hf-splitter-1-1500-mhz", image: QSRHFSPLITTER11500MHZ },
+  { name: "HackRF One SDR", slug: "hackrf-one-sdr", image: HackRFOneSDR },
+  { name: "BladeRFmicro -A5", slug: "bladerfmicro-a5", image: BladeRFmicroA5 },
+  { name: "BladeRF115", slug: "bladerf115", image: BladeRF115 },
+  { name: "BladeRF2.0 micro -A9", slug: "bladerf20-micro-a9", image: BladeRF20microA9 },
+  { name: "BladeRF", slug: "bladerf", image: BladeRF },
+  { name: "BladeRF-40", slug: "bladerf-40", image: BladeRF40 },
+  
+
   
 
   
