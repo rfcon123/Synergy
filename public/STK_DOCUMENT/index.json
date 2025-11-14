@@ -602,12 +602,30 @@
       "filename": "STK-571124071258.pdf",
       "url": "/STK_DOCUMENT/STK-571124071258.pdf",
       "type": "PDF"
-             },
+    },
     {
       "name": "STK-571130601298 Series",
       "filename": "STK-571130601298.pdf",
       "url": "/STK_DOCUMENT/STK-571130601298.pdf",
       "type": "PDF"
+    },
+    {
+      "name": "STK-571126931594 Series",
+      "filename": "STK-571126931594.pdf",
+      "url": "/STK_DOCUMENT/STK-571126931594.pdf",
+      "type": "PDF"  
+     },
+    {
+      "name": "STK-571126931788 Series",
+      "filename": "STK-571126931788.pdf",
+      "url": "/STK_DOCUMENT/STK-571126931788.pdf",
+      "type": "PDF" 
+    },
+    {
+      "name": "STK-571131601271 Series",
+      "filename": "STK-571131601271.pdf",
+      "url": "/STK_DOCUMENT/STK-571131601271.pdf",
+      "type": "PDF" 
     }
     
   ]
