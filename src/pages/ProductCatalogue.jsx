@@ -66,6 +66,15 @@ const catalogueLinks = [
   { name: "Right-Hand Circularly Polarized Antenna, 17.7-21.2 GHz", link: "/pdfs/Right-Hand Circularly Polarized Antenna, 17.7-21.2 GHz.pdf" },
   { name: "ST-1006000-30W-28V", link: "/pdfs/ST-1006000-30W-28V.pdf" },
   { name: "SY1L5-ST-3P", link: "/pdfs/SY1L5-ST-3P.pdf" },
+  { name: "Solar Catalogue", link: "/pdfs/Solar Catalogue.pdf" },
+  { name: "STPL_Horn_Antennas", link: "/pdfs/STPL_Horn_Antennas.pdf" },
+  { name: "STPL_IBS_DAS_Products_Catalouge1", link: "/pdfs/STPL_IBS_DAS_Products_Catalouge1.pdf" },
+  { name: "STPL_RF_Components_Catalouge", link: "/pdfs/STPL_RF_Components_Catalouge.pdf" },
+ 
+
+
+
+
 
   
 
@@ -310,16 +319,11 @@ const catalogueLinks = [
   { name: "ST RG-6 Coaxial cable Cu finished", link: "/pdfs/ST RG-6 Coaxial cable Cu finished.pdf" },
   { name: "WR137 Waveguide Flexible 1000mm and 2000mm", link: "/pdfs/WR137 Waveguide Flexible 1000mm and 2000mm.pdf" },
   { name: "STK REPORT", link: "/pdfs/STK_REPORT.pdf" },
-
-
-
-
-
+  { name: "Solar Catalogue", link: "/pdfs/Solar Catalogue.pdf" },
+  { name: "STPL_Horn_Antennas", link: "/pdfs/STPL_Horn_Antennas.pdf" },
+  { name: "STPL_IBS_DAS_Products_Catalouge1", link: "/pdfs/STPL_IBS_DAS_Products_Catalouge1.pdf" },
+  { name: "STPL_RF_Components_Catalouge", link: "/pdfs/STPL_RF_Components_Catalouge.pdf" },
   
-  
-
-
-
 
   
 
