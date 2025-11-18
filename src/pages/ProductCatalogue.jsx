@@ -70,6 +70,12 @@ const catalogueLinks = [
   { name: "STPL_Horn_Antennas", link: "/pdfs/STPL_Horn_Antennas.pdf" },
   { name: "STPL_IBS_DAS_Products_Catalouge1", link: "/pdfs/STPL_IBS_DAS_Products_Catalouge1.pdf" },
   { name: "STPL_RF_Components_Catalouge", link: "/pdfs/STPL_RF_Components_Catalouge.pdf" },
+  { name: "Module Data Sheet-30W-28V", link: "/pdfs/Module Data Sheet-30W-28V.pdf" },
+  { name: "Module Data Sheet-50W Module", link: "/pdfs/Module Data Sheet-50W Module.pdf" },
+  { name: "Module Data Sheet-100W-28V-FUNC", link: "/pdfs/Module Data Sheet-100W-28V-FUNC.pdf" },
+  { name: "ST-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/ST-Ultra Wide Band Low Noise Amplifier.pdf" },
+  { name: "SY-10W Wideband Power Amplifier", link: "/pdfs/SY-10W Wideband Power Amplifier.pdf" },
+  { name: "SY-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/SY-Ultra Wide Band Low Noise Amplifier.pdf" },
  
 
 
@@ -323,6 +329,13 @@ const catalogueLinks = [
   { name: "STPL_Horn_Antennas", link: "/pdfs/STPL_Horn_Antennas.pdf" },
   { name: "STPL_IBS_DAS_Products_Catalouge1", link: "/pdfs/STPL_IBS_DAS_Products_Catalouge1.pdf" },
   { name: "STPL_RF_Components_Catalouge", link: "/pdfs/STPL_RF_Components_Catalouge.pdf" },
+  { name: "Module Data Sheet-30W-28V", link: "/pdfs/Module Data Sheet-30W-28V.pdf" },
+  { name: "Module Data Sheet-50W Module", link: "/pdfs/Module Data Sheet-50W Module.pdf" },
+  { name: "Module Data Sheet-100W-28V-FUNC", link: "/pdfs/Module Data Sheet-100W-28V-FUNC.pdf" },
+  { name: "ST-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/ST-Ultra Wide Band Low Noise Amplifier.pdf" },
+  { name: "SY-10W Wideband Power Amplifier", link: "/pdfs/SY-10W Wideband Power Amplifier.pdf" },
+  { name: "SY-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/SY-Ultra Wide Band Low Noise Amplifier.pdf" },
+  
   
 
   
