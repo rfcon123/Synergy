@@ -76,6 +76,9 @@ const catalogueLinks = [
   { name: "ST-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/ST-Ultra Wide Band Low Noise Amplifier.pdf" },
   { name: "SY-10W Wideband Power Amplifier", link: "/pdfs/SY-10W Wideband Power Amplifier.pdf" },
   { name: "SY-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/SY-Ultra Wide Band Low Noise Amplifier.pdf" },
+  { name: "GTF3000 Coaxial Fixed", link: "/pdfs/GTF3000 Coaxial Fixed.pdf" },
+  { name: "SHX Quotation", link: "/pdfs/SHX Quotation.pdf" },
+  { name: "TF3000 Coaxial Fixed", link: "/pdfs/TF3000 Coaxial Fixed.pdf" },
  
 
 
@@ -335,6 +338,10 @@ const catalogueLinks = [
   { name: "ST-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/ST-Ultra Wide Band Low Noise Amplifier.pdf" },
   { name: "SY-10W Wideband Power Amplifier", link: "/pdfs/SY-10W Wideband Power Amplifier.pdf" },
   { name: "SY-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/SY-Ultra Wide Band Low Noise Amplifier.pdf" },
+  { name: "GTF3000 Coaxial Fixed", link: "/pdfs/GTF3000 Coaxial Fixed.pdf" },
+  { name: "SHX Quotation", link: "/pdfs/SHX Quotation.pdf" },
+  { name: "TF3000 Coaxial Fixed", link: "/pdfs/TF3000 Coaxial Fixed.pdf" },
+
   
   
 
