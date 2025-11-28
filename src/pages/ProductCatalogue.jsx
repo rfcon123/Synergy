@@ -344,6 +344,13 @@ const catalogueLinks = [
   { name: "GTF3000 Coaxial Fixed", link: "/pdfs/GTF3000 Coaxial Fixed.pdf" },
   { name: "SHX Quotation", link: "/pdfs/SHX Quotation.pdf" },
   { name: "TF3000 Coaxial Fixed", link: "/pdfs/TF3000 Coaxial Fixed.pdf" },
+  { name: "1C X 1.5 Sqmm", link: "/pdfs/1C X 1.5 Sqmm.pdf" },
+  { name: "1C X 2.0 Sqmm", link: "/pdfs/1C X 2.0 Sqmm.pdf" },
+  { name: "1C X0.35 Sqmm", link: "/pdfs/1C X0.35 Sqmm.pdf" },
+  { name: "1C X10 Sqmm", link: "/pdfs/1C X10 Sqmm.pdf" },
+  { name: "RG58 AWG22 Solid copper", link: "/pdfs/RG58 AWG22 Solid copper.pdf" },
+  { name: "TF5000 Coaxial Fixed Termination", link: "/pdfs/TF5000 Coaxial Fixed Termination.pdf" },
+  { name: "WA770 RF Cable", link: "/pdfs/WA770 RF Cable.pdf" },
 
   
   
