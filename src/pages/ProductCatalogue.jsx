@@ -79,6 +79,9 @@ const catalogueLinks = [
   { name: "GTF3000 Coaxial Fixed", link: "/pdfs/GTF3000 Coaxial Fixed.pdf" },
   { name: "SHX Quotation", link: "/pdfs/SHX Quotation.pdf" },
   { name: "TF3000 Coaxial Fixed", link: "/pdfs/TF3000 Coaxial Fixed.pdf" },
+  { name: "2400_2500M_150W_Jammer", link: "/pdfs/2400_2500M_150W_Jammer.pdf" },
+  { name: "5725_5850M_150W_Jammer", link: "/pdfs/5725_5850M_150W_Jammer.pdf" },
+  { name: "AMP1006000-100W-28V", link: "/pdfs/AMP1006000-100W-28V.pdf" },
  
 
 
