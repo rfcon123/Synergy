@@ -83,6 +83,7 @@ const catalogueLinks = [
   { name: "5725_5850M_150W_Jammer", link: "/pdfs/5725_5850M_150W_Jammer.pdf" },
   { name: "AMP1006000-100W-28V", link: "/pdfs/AMP1006000-100W-28V.pdf" },
   { name: "TRIAX RG-58A-U 50Ω", link: "/pdfs/TRIAX RG-58A-U 50Ω.pdf" },
+  { name: "Automotive_Cable_COMBIND", link: "/pdfs/Automotive_Cable_COMBIND.pdf" },
  
 
 
