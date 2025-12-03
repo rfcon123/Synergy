@@ -89,6 +89,7 @@ const catalogueLinks = [
   { name: "HARDSHELL PLASTIC CARRY CASE WITH HANDLE", link: "/pdfs/HARDSHELL PLASTIC CARRY CASE WITH HANDLE.pdf" },
   { name: "RIFLE CASE WITHOUT WHEELS", link: "/pdfs/RIFLE CASE WITHOUT WHEELS.pdf" },
   { name: "ROLLING CASE FOR RIFLES", link: "/pdfs/ROLLING CASE FOR RIFLES.pdf" },
+  { name: "SYNERGY_PRODUCT_LINK", link: "/pdfs/SYNERGY_PRODUCT_LINK.pdf" },
  
 
 
