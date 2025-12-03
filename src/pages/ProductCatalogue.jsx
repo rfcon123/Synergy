@@ -90,6 +90,7 @@ const catalogueLinks = [
   { name: "RIFLE CASE WITHOUT WHEELS", link: "/pdfs/RIFLE CASE WITHOUT WHEELS.pdf" },
   { name: "ROLLING CASE FOR RIFLES", link: "/pdfs/ROLLING CASE FOR RIFLES.pdf" },
   { name: "SYNERGY_PRODUCT_LINK", link: "/pdfs/SYNERGY_PRODUCT_LINK.pdf" },
+  { name: "ALL BANNER COM", link: "/pdfs/ALL_BANNER_COM.pdf" },
  
 
 
