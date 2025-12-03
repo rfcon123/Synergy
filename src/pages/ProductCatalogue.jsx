@@ -84,6 +84,11 @@ const catalogueLinks = [
   { name: "AMP1006000-100W-28V", link: "/pdfs/AMP1006000-100W-28V.pdf" },
   { name: "TRIAX RG-58A-U 50Ω", link: "/pdfs/TRIAX RG-58A-U 50Ω.pdf" },
   { name: "Automotive_Cable_COMBIND", link: "/pdfs/Automotive_Cable_COMBIND.pdf" },
+  { name: "Hard Rolling Bow Case and Rifle case", link: "/pdfs/Hard Rolling Bow Case and Rifle case.pdf" },
+  { name: "HARDSHELL MEDIUM DUTY CARRYING CASE", link: "/pdfs/HARDSHELL MEDIUM DUTY CARRYING CASE.pdf" },
+  { name: "HARDSHELL PLASTIC CARRY CASE WITH HANDLE", link: "/pdfs/HARDSHELL PLASTIC CARRY CASE WITH HANDLE.pdf" },
+  { name: "RIFLE CASE WITHOUT WHEELS", link: "/pdfs/RIFLE CASE WITHOUT WHEELS.pdf" },
+  { name: "ROLLING CASE FOR RIFLES", link: "/pdfs/ROLLING CASE FOR RIFLES.pdf" },
  
 
 
