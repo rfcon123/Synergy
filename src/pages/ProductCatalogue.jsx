@@ -91,6 +91,7 @@ const catalogueLinks = [
   { name: "ROLLING CASE FOR RIFLES", link: "/pdfs/ROLLING CASE FOR RIFLES.pdf" },
   { name: "SYNERGY_PRODUCT_LINK", link: "/pdfs/SYNERGY_PRODUCT_LINK.pdf" },
   { name: "ALL BANNER COM", link: "/pdfs/ALL_BANNER_COM.pdf" },
+  { name: "RF Accessories Carry Case Box", link: "/pdfs/RF_Accessories_Carry_Case_Box.pdf" },
  
 
 
