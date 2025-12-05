@@ -92,6 +92,7 @@ const catalogueLinks = [
   { name: "SYNERGY PRODUCT LINK", link: "/pdfs/SYNERGY_PRODUCT_LINK.pdf" },
   { name: "ALL BANNER COM", link: "/pdfs/ALL_BANNER_COM.pdf" },
   { name: "RF Accessories Carry Case Box", link: "/pdfs/RF_Accessories_Carry_Case_Box.pdf" },
+  { name: "Dual Polarization Horn Antenna 1-18 to 18-40 Ghz", link: "/pdfs/Dual Polarization Horn Antenna 1-18 to 18-40 Ghz.pdf" },
  
 
 
