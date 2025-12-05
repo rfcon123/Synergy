@@ -89,10 +89,10 @@ const catalogueLinks = [
   { name: "HARDSHELL PLASTIC CARRY CASE WITH HANDLE", link: "/pdfs/HARDSHELL PLASTIC CARRY CASE WITH HANDLE.pdf" },
   { name: "RIFLE CASE WITHOUT WHEELS", link: "/pdfs/RIFLE CASE WITHOUT WHEELS.pdf" },
   { name: "ROLLING CASE FOR RIFLES", link: "/pdfs/ROLLING CASE FOR RIFLES.pdf" },
-  { name: "SYNERGY PRODUCT LINK", link: "/pdfs/SYNERGY_PRODUCT_LINK.pdf" },
   { name: "ALL BANNER COM", link: "/pdfs/ALL_BANNER_COM.pdf" },
   { name: "RF Accessories Carry Case Box", link: "/pdfs/RF_Accessories_Carry_Case_Box.pdf" },
   { name: "Dual Polarization Horn Antenna 1-18 to 18-40 Ghz", link: "/pdfs/Dual Polarization Horn Antenna 1-18 to 18-40 Ghz.pdf" },
+  { name: "SYNERGY PRODUCT LINK 25", link: "/pdfs/SYNERGY PRODUCT LINK 25.pdf" },
  
 
 
