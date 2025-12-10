@@ -17,6 +17,7 @@ import cert12 from "../assets/certificate/cert12.png";
 import cert13 from "../assets/certificate/cert13.png";
 import cert14 from "../assets/certificate/cert14.png";
 import cert15 from "../assets/certificate/cert15.png";
+import rci25certificate from "../assets/certificate/rci_25_certificate.png";
 
 const Certificates = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -37,6 +38,7 @@ const Certificates = () => {
     { src: cert13, title: "UDYAM Registration" },
     { src: cert14, title: "Trade Mark Registration" },
     { src: cert15, title: "MSME Sustainable ZED Certification" },
+    { src: rci25certificate, title: "RCI 25 Years Certificate" },
   ];
 
   return (
