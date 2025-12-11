@@ -93,7 +93,7 @@ const catalogueLinks = [
   { name: "RF Accessories Carry Case Box", link: "/pdfs/RF_Accessories_Carry_Case_Box.pdf" },
   { name: "Dual Polarization Horn Antenna 1-18 to 18-40 Ghz", link: "/pdfs/Dual Polarization Horn Antenna 1-18 to 18-40 Ghz.pdf" },
   { name: "SYNERGY PRODUCT LINK", link: "/pdfs/SYNERGY PRODUCT LINK.pdf" },
-  { name: "Wholesales ST product quotation", link: "/pdfs/Wholesales ST product quotation.pdf" },
+  { name: "SURECOM product quotation", link: "/pdfs/SURECOM_product_quotation.pdf" },
   { name: "SY TNMS LATEST", link: "/pdfs/SY TNMS LATEST.pdf" },
   { name: "COMBIND PRODUCT", link: "/pdfs/COMBIND PRODUCT.pdf" },
   { name: "SY PRODUCT LIST 25", link: "/pdfs/SY_PRODUCT_LIST_25.pdf" },
