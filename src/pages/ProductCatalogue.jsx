@@ -94,6 +94,7 @@ const catalogueLinks = [
   { name: "Dual Polarization Horn Antenna 1-18 to 18-40 Ghz", link: "/pdfs/Dual Polarization Horn Antenna 1-18 to 18-40 Ghz.pdf" },
   { name: "SYNERGY PRODUCT LINK", link: "/pdfs/SYNERGY PRODUCT LINK.pdf" },
   { name: "Wholesales ST product quotation", link: "/pdfs/Wholesales ST product quotation.pdf" },
+  { name: "SY TNMS LATEST", link: "/pdfs/SY TNMS LATEST.pdf" },
 
  
 
