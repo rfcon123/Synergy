@@ -96,6 +96,7 @@ const catalogueLinks = [
   { name: "Wholesales ST product quotation", link: "/pdfs/Wholesales ST product quotation.pdf" },
   { name: "SY TNMS LATEST", link: "/pdfs/SY TNMS LATEST.pdf" },
   { name: "COMBIND PRODUCT", link: "/pdfs/COMBIND PRODUCT.pdf" },
+  { name: "SY PRODUCT LINK 2025", link: "/pdfs/SY_PRODUCT_LINK_2025.pdf" },
 
  
 
