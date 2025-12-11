@@ -95,6 +95,7 @@ const catalogueLinks = [
   { name: "SYNERGY PRODUCT LINK", link: "/pdfs/SYNERGY PRODUCT LINK.pdf" },
   { name: "Wholesales ST product quotation", link: "/pdfs/Wholesales ST product quotation.pdf" },
   { name: "SY TNMS LATEST", link: "/pdfs/SY TNMS LATEST.pdf" },
+  { name: "COMBIND PRODUCT", link: "/pdfs/COMBIND PRODUCT.pdf" },
 
  
 
