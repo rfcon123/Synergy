@@ -75,7 +75,7 @@ const ContactUs = () => {
 
           {/* Visit */}
           <a
-            href="https://www.google.com/maps?q=Synergy+Telecom+Pvt+Ltd,+New+Delhi"
+            href="https://maps.app.goo.gl/uFQeeQ6xQqd8R67d9"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition hover:scale-[1.03]"
