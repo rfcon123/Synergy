@@ -99,6 +99,10 @@ const catalogueLinks = [
   { name: "SY PRODUCT LIST 25", link: "/pdfs/SY_PRODUCT_LIST_25.pdf" },
   { name: "SY PRODUCT NEW LINK", link: "/pdfs/SY_PRODUCT_NEW_LINK.pdf" },
   { name: "SYNERGY PRODUCT LATEST 2025", link: "/pdfs/SYNERGY_PRODUCT_LATEST_2025.pdf" },
+  { name: "DISCONE ANTENNA", link: "/pdfs/DISCONE_ANTENNA.pdf" },
+  { name: "Standard Gain Horn Antenna", link: "/pdfs/Standard Gain Horn Antenna.pdf" },
+  { name: "Trihedral Corner Reflector Antenna", link: "/pdfs/Trihedral Corner Reflector Antenna.pdf" },
+
 
  
 
