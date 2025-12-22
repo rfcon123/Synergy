@@ -1202,14 +1202,17 @@
       "filename": "STK-571151411290.pdf",
       "url": "/STK_DOCUMENT/STK-571151411290.pdf",
       "type": "PDF"   
-                   },
+     },
     {
       "name": "STK-571151981262.pdf",
       "filename": "STK-571151981262.pdf",
       "url": "/STK_DOCUMENT/STK-571151981262.pdf",
       "type": "PDF"       
-    }
+    },
+    {
+  "name": "STK-5711-UD-240-UN-Y.pdf",
+  "filename": "external",
+  "url": "https://rfconnector.in/catalog/ST_DATA_SHEET/STK-5711-UD-240-UN-Y.pdf",
+  "type": "LINK"
+    },
     
-    
-  ]
-}
