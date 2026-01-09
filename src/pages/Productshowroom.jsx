@@ -500,17 +500,54 @@ const ProductShowroom = () => {
   const navigate = useNavigate();
   // controlled input: start empty, optionally prefill from URL once
   const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [perPage, setPerPage] = useState(20);
+
+  // Sync URL -> state (handles direct links and browser navigation)
   useEffect(() => {
-    // Prefill from URL on mount only (won't reset while typing)
     const p = new URLSearchParams(location.search);
     const s = p.get('search');
-    if (s) setSearchTerm(s);
-     
-  }, []);
+    const pageParam = parseInt(p.get('page'), 10);
+    const perParam = parseInt(p.get('perPage'), 10);
+    if (s !== null) setSearchTerm(s);
+    if (!isNaN(pageParam) && pageParam > 0) setCurrentPage(pageParam);
+    if (!isNaN(perParam) && perParam > 0) setPerPage(perParam);
+  }, [location.search]);
+
+  // Sync state -> URL (replace to avoid history spam)
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (searchTerm) params.set('search', searchTerm); else params.delete('search');
+    if (currentPage && currentPage !== 1) params.set('page', String(currentPage)); else params.delete('page');
+    if (perPage && perPage !== 20) params.set('perPage', String(perPage)); else params.delete('perPage');
+
+    const newSearch = params.toString();
+    const curSearch = location.search.replace(/^\?/, '');
+    if (newSearch !== curSearch) {
+      navigate(`${location.pathname}${newSearch ? `?${newSearch}` : ''}`, { replace: true });
+    }
+  }, [searchTerm, currentPage, perPage, location.pathname, location.search, navigate]);
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+    setCurrentPage(1);
+  };
 
   const filteredProducts = productsLocalData.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  // Pagination helpers
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / perPage));
+  const startIndex = (currentPage - 1) * perPage;
+  const visibleProducts = filteredProducts.slice(startIndex, startIndex + perPage);
+
+  const goToPage = (page) => {
+    const p = Math.min(Math.max(1, page), totalPages);
+    setCurrentPage(p);
+  };
+  const prevPage = () => goToPage(currentPage - 1);
+  const nextPage = () => goToPage(currentPage + 1);
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen px-4 py-10 md:px-10">
@@ -553,14 +590,14 @@ const ProductShowroom = () => {
   placeholder="Search products..."
   className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
   value={searchTerm}
-  onChange={(e) => setSearchTerm(e.target.value)}
+  onChange={handleSearch}
   aria-label="Search products"
 />
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {filteredProducts.length > 0 ? (
-            filteredProducts.map((product) => (
+            visibleProducts.map((product) => (
               <Link
                 to={`/product/${product.slug}`}
                 key={product.slug}
@@ -595,6 +632,39 @@ const ProductShowroom = () => {
             <p className="text-center text-gray-600 col-span-full">No products found.</p>
           )}
         </div>
+
+      {/* 🔘 Compact Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between mt-6 space-x-4 max-w-7xl mx-auto">
+          <div className="flex items-center space-x-2">
+            <select value={perPage} onChange={(e) => { setPerPage(Number(e.target.value)); setCurrentPage(1); }} className="text-sm px-2 py-1 border rounded" aria-label="Per page">
+              <option value={12}>12</option>
+              <option value={20}>20</option>
+              <option value={50}>50</option>
+            </select>
+            <span className="text-xs text-gray-500">/ {filteredProducts.length} items</span>
+          </div>
+
+          <nav className="flex items-center space-x-1" aria-label="Compact pagination">
+            <button onClick={() => goToPage(1)} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="First page">«</button>
+            <button onClick={prevPage} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="Previous page">‹</button>
+
+            {Array.from({ length: Math.min(5, totalPages) }).map((_, idx) => {
+              const start = Math.max(1, Math.min(currentPage - 2, totalPages - 4));
+              const page = start + idx;
+              if (page < 1 || page > totalPages) return null;
+              return (
+                <button key={page} onClick={() => goToPage(page)} className={`px-2 py-1 text-sm rounded border ${page === currentPage ? 'bg-blue-600 text-white' : 'bg-white'}`}>{page}</button>
+              );
+            })}
+
+            <button onClick={nextPage} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Next page">›</button>
+            <button onClick={() => goToPage(totalPages)} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Last page">»</button>
+          </nav>
+
+          <div className="text-sm text-gray-600">Page {currentPage} of {totalPages}</div>
+        </div>
+      )}
 
         <div className="mt-16 text-center space-y-4">
           <p className="text-sm text-gray-600">
