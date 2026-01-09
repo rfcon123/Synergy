@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { FiFileText } from "react-icons/fi";
@@ -414,11 +414,57 @@ const ProductCatalogue = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(12);
 
   // This filter is for the main catalogue view
   const filteredLinks = catalogueLinks.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  // Reset to first page when search or page-size changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, itemsPerPage]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredLinks.length / itemsPerPage));
+
+  // Helper to create page list with ellipses
+  const getPageButtons = (totalPages, currentPage) => {
+    const delta = 2; // pages to show around current
+    const range = [];
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+        range.push(i);
+      }
+    }
+
+    const rangeWithDots = [];
+    let prev;
+    for (const i of range) {
+      if (prev) {
+        if (i - prev === 2) {
+          rangeWithDots.push(prev + 1);
+        } else if (i - prev > 2) {
+          rangeWithDots.push("...");
+        }
+      }
+      rangeWithDots.push(i);
+      prev = i;
+    }
+
+    return rangeWithDots;
+  };
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = filteredLinks.slice(startIndex, startIndex + itemsPerPage);
+
+  // Ensure current page stays within bounds when results change
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [totalPages, currentPage]);
 
   // If a slug exists, we are on a single product's page.
   if (slug) {
@@ -506,9 +552,9 @@ const ProductCatalogue = () => {
       {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredLinks.length > 0 ? (
-          filteredLinks.map((item, index) => (
+          currentItems.map((item, index) => (
             <Link
-              key={index}
+              key={startIndex + index}
               to={`/product-catalogue/${slugify(item.name)}`}
               className="group bg-white border border-gray-200 hover:border-blue-500 rounded-lg shadow-md hover:shadow-xl p-6 flex flex-col justify-between text-center transition-transform transform hover:-translate-y-1"
             >
@@ -551,6 +597,86 @@ const ProductCatalogue = () => {
           </div>
         )}
       </div>
+
+      {/* Pagination */}
+      {filteredLinks.length > itemsPerPage && (
+        <div className="mt-6 flex flex-col items-center space-y-3 w-full">
+          <div className="w-full max-w-3xl flex items-center justify-between px-2">
+            <div className="text-sm text-gray-600">
+              Showing {startIndex + 1} - {Math.min(filteredLinks.length, startIndex + currentItems.length)} of {filteredLinks.length}
+            </div>
+            <div className="flex items-center space-x-2">
+              <label className="text-sm text-gray-600">Show</label>
+              <select
+                value={itemsPerPage}
+                onChange={(e) => { setItemsPerPage(Number(e.target.value)); setCurrentPage(1); }}
+                className="px-2 py-1 border rounded-md bg-white"
+                aria-label="Items per page"
+              >
+                <option value={8}>8</option>
+                <option value={12}>12</option>
+                <option value={24}>24</option>
+                <option value={48}>48</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+              className={`px-3 py-1 rounded-md border ${currentPage === 1 ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white hover:bg-gray-50"}`}
+              aria-label="First page"
+            >
+              First
+            </button>
+
+            <button
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className={`px-3 py-1 rounded-md border ${currentPage === 1 ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white hover:bg-gray-50"}`}
+              aria-label="Previous page"
+            >
+              Prev
+            </button>
+
+            <div className="flex items-center space-x-1">
+              {getPageButtons(totalPages, currentPage).map((p, idx) =>
+                p === "..." ? (
+                  <span key={`dots-${idx}`} className="px-3 py-1 text-gray-500">…</span>
+                ) : (
+                  <button
+                    key={p}
+                    onClick={() => setCurrentPage(p)}
+                    className={`px-3 py-1 rounded-md border ${currentPage === p ? "bg-blue-600 text-white border-blue-600" : "bg-white text-gray-700"}`}
+                    aria-current={currentPage === p ? "page" : undefined}
+                  >
+                    {p}
+                  </button>
+                )
+              )}
+            </div>
+
+            <button
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className={`px-3 py-1 rounded-md border ${currentPage === totalPages ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white hover:bg-gray-50"}`}
+              aria-label="Next page"
+            >
+              Next
+            </button>
+
+            <button
+              onClick={() => setCurrentPage(totalPages)}
+              disabled={currentPage === totalPages}
+              className={`px-3 py-1 rounded-md border ${currentPage === totalPages ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white hover:bg-gray-50"}`}
+              aria-label="Last page"
+            >
+              Last
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Support Section */}
      <div className="mt-20 bg-white border border-gray-200 rounded-lg shadow-lg p-8 text-center max-w-3xl mx-auto">
