@@ -63,12 +63,39 @@ const Career = () => {
         </div>
 
         {/* Current Opening */}
-        <div className="border border-blue-300 rounded-xl p-5 space-y-2 bg-blue-50">
-          <h2 className="text-xl font-bold text-blue-800">Current Opening: Online Marketing / Sales Executive</h2>
-          <p><span className="font-semibold">Location:</span> West Delhi preferred.</p>
-          <p><span className="font-semibold">Eligibility:</span> Fresh graduates passionate about telecom and online marketing.</p>
-          <p><span className="font-semibold">Role:</span> Engage with clients, handle online inquiries, manage digital promotions.</p>
-        </div>
+<div className="border border-blue-300 rounded-xl p-6 space-y-3 bg-blue-50 shadow-sm">
+  <h2 className="text-2xl font-bold text-blue-900">
+    Current Opening: Online Marketing Executive (Telecom)
+  </h2>
+
+  <p className="text-base text-blue-900">
+    <span className="font-semibold">Preferred Location:</span> West Delhi
+  </p>
+
+  <p className="text-base text-blue-900">
+    <span className="font-semibold">Eligibility:</span> Fresh Telecom Engineering Graduates
+  </p>
+
+  <p className="text-base text-blue-900">
+    <span className="font-semibold">Role Overview:</span> Online marketing and promotion of telecom and RF products
+  </p>
+
+  <p className="text-base text-blue-900 font-semibold">Products Involved:</p>
+  <ul className="list-disc list-inside text-blue-900 space-y-1">
+    <li>Antennas</li>
+    <li>RF Cable Assemblies</li>
+    <li>RF Connectors</li>
+    <li>RF & Microwave Components</li>
+    <li>Telescope Masts</li>
+    <li>Telecom Tools & Testing Equipment</li>
+    <li>IoT, RFID & 5G Antenna Solutions for Smart Cities & High-Speed Networks</li>
+  </ul>
+
+  <p className="text-base text-blue-900">
+    <span className="font-semibold">Contact:</span> Call <span className="font-bold">9810138894</span>
+  </p>
+</div>
+
 
         {/* Perks */}
         <div className="grid md:grid-cols-3 gap-4 text-center">

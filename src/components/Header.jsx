@@ -6,7 +6,7 @@ import hbg from '../assets/hbg.png';
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [, setIsScrolled] = useState(false);
 
   const headers = [
     { title: 'Home', subHeaders: ['About Us', 'Contact Us', 'Certificates'] },
@@ -21,6 +21,7 @@ const Header = () => {
         'Product Price list',
         'Group Product Data Sheet',
         'Defence and Aerospace',
+        'STK Documents',
       ],
     },
     { title: 'Cable Creator' },

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useParams, useNavigate, Link } from "react-router-dom";
 import { FiFileText } from "react-icons/fi";
@@ -58,6 +58,59 @@ const catalogueLinks = [
   { name: "UHF RFID  5400", link: "/pdfs/UHF RFID  5400.pdf" },
   { name: "UHF RFID 904", link: "/pdfs/UHF RFID 904.pdf" },
   { name: "UHF RFID 915", link: "/pdfs/UHF RFID 915.pdf" },
+  { name: "STK PDF", link: "/pdfs/STK PDF.pdf" },
+  { name: "SDR PRICE LIST PDF", link: "/pdfs/SDR PRICE LIST PDF.pdf" },
+  { name: "50W Module", link: "/pdfs/50W Module.pdf" },
+  { name: "AMP1006000-100W-28V-FUNC", link: "/pdfs/AMP1006000-100W-28V-FUNC.pdf" },
+  { name: "COAXIAL FIXED TERMINATION-TF5000", link: "/pdfs/COAXIAL FIXED TERMINATION-TF5000.pdf" },
+  { name: "Right-Hand Circularly Polarized Antenna, 17.7-21.2 GHz", link: "/pdfs/Right-Hand Circularly Polarized Antenna, 17.7-21.2 GHz.pdf" },
+  { name: "ST-1006000-30W-28V", link: "/pdfs/ST-1006000-30W-28V.pdf" },
+  { name: "SY1L5-ST-3P", link: "/pdfs/SY1L5-ST-3P.pdf" },
+  { name: "Solar Catalogue", link: "/pdfs/Solar Catalogue.pdf" },
+  { name: "STPL Horn Antennas", link: "/pdfs/STPL_Horn_Antennas.pdf" },
+  { name: "STPL IBS DAS Products Catalouge1", link: "/pdfs/STPL_IBS_DAS_Products_Catalouge1.pdf" },
+  { name: "STPL RF Components Catalouge", link: "/pdfs/STPL_RF_Components_Catalouge.pdf" },
+  { name: "Module Data Sheet-30W-28V", link: "/pdfs/Module Data Sheet-30W-28V.pdf" },
+  { name: "Module Data Sheet-50W Module", link: "/pdfs/Module Data Sheet-50W Module.pdf" },
+  { name: "Module Data Sheet-100W-28V-FUNC", link: "/pdfs/Module Data Sheet-100W-28V-FUNC.pdf" },
+  { name: "ST-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/ST-Ultra Wide Band Low Noise Amplifier.pdf" },
+  { name: "SY-10W Wideband Power Amplifier", link: "/pdfs/SY-10W Wideband Power Amplifier.pdf" },
+  { name: "SY-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/SY-Ultra Wide Band Low Noise Amplifier.pdf" },
+  { name: "GTF3000 Coaxial Fixed", link: "/pdfs/GTF3000 Coaxial Fixed.pdf" },
+  { name: "SHX Quotation", link: "/pdfs/SHX Quotation.pdf" },
+  { name: "TF3000 Coaxial Fixed", link: "/pdfs/TF3000 Coaxial Fixed.pdf" },
+  { name: "2400_2500M_150W_Jammer", link: "/pdfs/2400_2500M_150W_Jammer.pdf" },
+  { name: "5725_5850M_150W_Jammer", link: "/pdfs/5725_5850M_150W_Jammer.pdf" },
+  { name: "AMP1006000-100W-28V", link: "/pdfs/AMP1006000-100W-28V.pdf" },
+  { name: "TRIAX RG-58A-U 50Ω", link: "/pdfs/TRIAX RG-58A-U 50Ω.pdf" },
+  { name: "Automotive_Cable_COMBIND", link: "/pdfs/Automotive_Cable_COMBIND.pdf" },
+  { name: "Hard Rolling Bow Case and Rifle case", link: "/pdfs/Hard Rolling Bow Case and Rifle case.pdf" },
+  { name: "HARDSHELL MEDIUM DUTY CARRYING CASE", link: "/pdfs/HARDSHELL MEDIUM DUTY CARRYING CASE.pdf" },
+  { name: "HARDSHELL PLASTIC CARRY CASE WITH HANDLE", link: "/pdfs/HARDSHELL PLASTIC CARRY CASE WITH HANDLE.pdf" },
+  { name: "RIFLE CASE WITHOUT WHEELS", link: "/pdfs/RIFLE CASE WITHOUT WHEELS.pdf" },
+  { name: "ROLLING CASE FOR RIFLES", link: "/pdfs/ROLLING CASE FOR RIFLES.pdf" },
+  { name: "ALL BANNER COM", link: "/pdfs/ALL_BANNER_COM.pdf" },
+  { name: "RF Accessories Carry Case Box", link: "/pdfs/RF_Accessories_Carry_Case_Box.pdf" },
+  { name: "Dual Polarization Horn Antenna 1-18 to 18-40 Ghz", link: "/pdfs/Dual Polarization Horn Antenna 1-18 to 18-40 Ghz.pdf" },
+  { name: "SYNERGY PRODUCT LINK", link: "/pdfs/SYNERGY PRODUCT LINK.pdf" },
+  { name: "SURECOM product quotation", link: "/pdfs/SURECOM_product_quotation.pdf" },
+  { name: "SY TNMS LATEST", link: "/pdfs/SY TNMS LATEST.pdf" },
+  { name: "COMBIND PRODUCT", link: "/pdfs/COMBIND PRODUCT.pdf" },
+  { name: "SY PRODUCT LIST 25", link: "/pdfs/SY_PRODUCT_LIST_25.pdf" },
+  { name: "SY PRODUCT NEW LINK", link: "/pdfs/SY_PRODUCT_NEW_LINK.pdf" },
+  { name: "SYNERGY PRODUCT LATEST 2025", link: "/pdfs/SYNERGY_PRODUCT_LATEST_2025.pdf" },
+  { name: "DISCONE ANTENNA", link: "/pdfs/DISCONE_ANTENNA.pdf" },
+  { name: "Standard Gain Horn Antenna", link: "/pdfs/Standard Gain Horn Antenna.pdf" },
+  { name: "Trihedral Corner Reflector Antenna", link: "/pdfs/Trihedral Corner Reflector Antenna.pdf" },
+
+
+ 
+
+
+
+
+
+  
 
 
   
@@ -131,7 +184,6 @@ const catalogueLinks = [
   { name: "RF Products Catalouge 2nd", link: "https://www.rfconnector.in/Product/RF_Products_Catalouge_2nd.pdf" },
   { name: "RF Products Catalouge 2021", link: "https://www.rfconnector.in/Product/RF_Products_Catalouge_2021.pdf" },
   { name: "RF Products Catalouge 2021 2nd", link: "https://www.rfconnector.in/Product/RF_Products_Catalouge_2021_2nd.pdf" },
-  { name: "SYNERGY TELECOM PVT LTD NEW CATALOUGE (Bl Version)", link: "https://www.rfconnector.in/Synergy_Telecom_New_Version.pdf" },
   { name: "SFP Stock List 2022", link: "https://www.rfconnector.in/catalog/Optical_Test_Equipment/SFP_Stock_List.pdf" },
   { name: "Electronic Electrical Instruments Connectors", link: "https://www.rfconnector.in/Product/ELECTRONIC_ELECTRICAL_INSTRUMENTS_CONNECTORS.pdf" },
   { name: "Cable Terminal Brass Lugs Brass Sheet Terminal Jumper Cables Catalogue", link: "https://www.rfconnector.in/Product/Cable_Termincal_Brass_Lugs_Brass_Sheet_Terminal_Jumper_Cables_Catalogue.pdf" },
@@ -145,6 +197,20 @@ const catalogueLinks = [
   { name: "RF Test Measurement Equipment Stock", link: "https://www.rfconnector.in/Product/Product_Cataloge/RF_Test_Measurement_Equipment_Stock.pdf" },
   { name: "Equipment Photo And Price", link: "https://rfconnector.in/Product/EQUIPMENT%20PHOTO%20AND%20PRICE.pdf" },
   { name: "ST High Frequency Antenna", link: "https://rfconnector.in/Product/ST_HIGH%20_FREQUENCY_ANTENNA.pdf" },
+  { name: "MAIN PRODUCT LINK", link: "https://rfconnector.in/Product/MAIN_PRODUCT_LINK/" },
+  { name: "CUSTOMER LIST OF GOVT FOR SYNERGY", link: "https://rfconnector.in/Contact/CUSTOMER_LIST_OF_GOVT_of_SYNERGY_TELECOM_PVT_LTD.pdf" },
+  
+
+
+
+
+
+
+
+
+
+
+
   {name: "ST 140W_MODULE-SPECIFICATION", link: "/pdfs/ST 140W_MODULE-SPECIFICATION.pdf" },
   {name: "WAVEGUIDEtoCOAXIALADAPTER", link: "/pdfs/WAVEGUIDE to COAXIAL ADAPTER.pdf" },
   {name: "OLYMPUSSZSTV", link: "/pdfs/OLYMPUS SZ-STV.pdf" },
@@ -288,12 +354,41 @@ const catalogueLinks = [
   { name: "RF_Amplifier_KB60180M43C", link: "/pdfs/RF_Amplifier_KB60180M43C.pdf" },
   { name: "RF_Amplifier_KB60180M51A", link: "/pdfs/RF_Amplifier_KB60180M51A.pdf" },
   { name: "RF_Amplifier_Module_KB60", link: "/pdfs/RF_Amplifier_Module_KB60.pdf" },
+  { name: "ST FILTER", link: "/pdfs/ST FILTER.pdf" },
+  { name: "SMA-N-KKSY", link: "/pdfs/SMA-N-KKSY.pdf" },
+  { name: "TEST AND MEASUREMENT EQUIPMENT", link: "/pdfs/TEST AND MEASUREMENT EQUIPMENT.pdf" },
+  { name: "EQUIPMENT", link: "/pdfs/EQUIPMENT.pdf" },
+  { name: "MAST PRICE LIST 2025 NEW", link: "/pdfs/MAST PRICE LIST 2025 NEW.pdf" },
+  { name: "TEST & MEASUREMENT EQUIPMENT 2025", link: "/pdfs/TEST & MEASUREMENT EQUIPMENT 2025.pdf" },
+  { name: "DR100-A13", link: "/pdfs/DR100-A13.pdf" },
+  { name: "Panel antenna 136MHz-174 MHz", link: "/pdfs/Panel antenna 136MHz-174 MHz.pdf" },
+  { name: "ST Coaxial Cable stripping machine 6806", link: "/pdfs/ST Coaxial Cable stripping machine 6806.pdf" },
+  { name: "ST RG-6 Coaxial cable Cu finished", link: "/pdfs/ST RG-6 Coaxial cable Cu finished.pdf" },
+  { name: "WR137 Waveguide Flexible 1000mm and 2000mm", link: "/pdfs/WR137 Waveguide Flexible 1000mm and 2000mm.pdf" },
+  { name: "STK REPORT", link: "/pdfs/STK_REPORT.pdf" },
+  { name: "Solar Catalogue", link: "/pdfs/Solar Catalogue.pdf" },
+  { name: "STPL_Horn_Antennas", link: "/pdfs/STPL_Horn_Antennas.pdf" },
+  { name: "STPL_IBS_DAS_Products_Catalouge1", link: "/pdfs/STPL_IBS_DAS_Products_Catalouge1.pdf" },
+  { name: "STPL_RF_Components_Catalouge", link: "/pdfs/STPL_RF_Components_Catalouge.pdf" },
+  { name: "Module Data Sheet-30W-28V", link: "/pdfs/Module Data Sheet-30W-28V.pdf" },
+  { name: "Module Data Sheet-50W Module", link: "/pdfs/Module Data Sheet-50W Module.pdf" },
+  { name: "Module Data Sheet-100W-28V-FUNC", link: "/pdfs/Module Data Sheet-100W-28V-FUNC.pdf" },
+  { name: "ST-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/ST-Ultra Wide Band Low Noise Amplifier.pdf" },
+  { name: "SY-10W Wideband Power Amplifier", link: "/pdfs/SY-10W Wideband Power Amplifier.pdf" },
+  { name: "SY-Ultra Wide Band Low Noise Amplifier", link: "/pdfs/SY-Ultra Wide Band Low Noise Amplifier.pdf" },
+  { name: "GTF3000 Coaxial Fixed", link: "/pdfs/GTF3000 Coaxial Fixed.pdf" },
+  { name: "SHX Quotation", link: "/pdfs/SHX Quotation.pdf" },
+  { name: "TF3000 Coaxial Fixed", link: "/pdfs/TF3000 Coaxial Fixed.pdf" },
+  { name: "1C X 1.5 Sqmm", link: "/pdfs/1C X 1.5 Sqmm.pdf" },
+  { name: "1C X 2.0 Sqmm", link: "/pdfs/1C X 2.0 Sqmm.pdf" },
+  { name: "1C X0.35 Sqmm", link: "/pdfs/1C X0.35 Sqmm.pdf" },
+  { name: "1C X10 Sqmm", link: "/pdfs/1C X10 Sqmm.pdf" },
+  { name: "RG58 AWG22 Solid copper", link: "/pdfs/RG58 AWG22 Solid copper.pdf" },
+  { name: "TF5000 Coaxial Fixed Termination", link: "/pdfs/TF5000 Coaxial Fixed Termination.pdf" },
+  { name: "WA770 RF Cable", link: "/pdfs/WA770 RF Cable.pdf" },
 
   
   
-
-
-
 
   
 
@@ -319,11 +414,57 @@ const ProductCatalogue = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(12);
 
   // This filter is for the main catalogue view
   const filteredLinks = catalogueLinks.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
   );
+
+  // Reset to first page when search or page-size changes
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, itemsPerPage]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredLinks.length / itemsPerPage));
+
+  // Helper to create page list with ellipses
+  const getPageButtons = (totalPages, currentPage) => {
+    const delta = 2; // pages to show around current
+    const range = [];
+    for (let i = 1; i <= totalPages; i++) {
+      if (i === 1 || i === totalPages || (i >= currentPage - delta && i <= currentPage + delta)) {
+        range.push(i);
+      }
+    }
+
+    const rangeWithDots = [];
+    let prev;
+    for (const i of range) {
+      if (prev) {
+        if (i - prev === 2) {
+          rangeWithDots.push(prev + 1);
+        } else if (i - prev > 2) {
+          rangeWithDots.push("...");
+        }
+      }
+      rangeWithDots.push(i);
+      prev = i;
+    }
+
+    return rangeWithDots;
+  };
+
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentItems = filteredLinks.slice(startIndex, startIndex + itemsPerPage);
+
+  // Ensure current page stays within bounds when results change
+  useEffect(() => {
+    if (currentPage > totalPages) {
+      setCurrentPage(totalPages);
+    }
+  }, [totalPages, currentPage]);
 
   // If a slug exists, we are on a single product's page.
   if (slug) {
@@ -411,9 +552,9 @@ const ProductCatalogue = () => {
       {/* Cards Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
         {filteredLinks.length > 0 ? (
-          filteredLinks.map((item, index) => (
+          currentItems.map((item, index) => (
             <Link
-              key={index}
+              key={startIndex + index}
               to={`/product-catalogue/${slugify(item.name)}`}
               className="group bg-white border border-gray-200 hover:border-blue-500 rounded-lg shadow-md hover:shadow-xl p-6 flex flex-col justify-between text-center transition-transform transform hover:-translate-y-1"
             >
@@ -456,6 +597,86 @@ const ProductCatalogue = () => {
           </div>
         )}
       </div>
+
+      {/* Pagination */}
+      {filteredLinks.length > itemsPerPage && (
+        <div className="mt-6 flex flex-col items-center space-y-3 w-full">
+          <div className="w-full max-w-3xl flex items-center justify-between px-2">
+            <div className="text-sm text-gray-600">
+              Showing {startIndex + 1} - {Math.min(filteredLinks.length, startIndex + currentItems.length)} of {filteredLinks.length}
+            </div>
+            <div className="flex items-center space-x-2">
+              <label className="text-sm text-gray-600">Show</label>
+              <select
+                value={itemsPerPage}
+                onChange={(e) => { setItemsPerPage(Number(e.target.value)); setCurrentPage(1); }}
+                className="px-2 py-1 border rounded-md bg-white"
+                aria-label="Items per page"
+              >
+                <option value={8}>8</option>
+                <option value={12}>12</option>
+                <option value={24}>24</option>
+                <option value={48}>48</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <button
+              onClick={() => setCurrentPage(1)}
+              disabled={currentPage === 1}
+              className={`px-3 py-1 rounded-md border ${currentPage === 1 ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white hover:bg-gray-50"}`}
+              aria-label="First page"
+            >
+              First
+            </button>
+
+            <button
+              onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+              disabled={currentPage === 1}
+              className={`px-3 py-1 rounded-md border ${currentPage === 1 ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white hover:bg-gray-50"}`}
+              aria-label="Previous page"
+            >
+              Prev
+            </button>
+
+            <div className="flex items-center space-x-1">
+              {getPageButtons(totalPages, currentPage).map((p, idx) =>
+                p === "..." ? (
+                  <span key={`dots-${idx}`} className="px-3 py-1 text-gray-500">…</span>
+                ) : (
+                  <button
+                    key={p}
+                    onClick={() => setCurrentPage(p)}
+                    className={`px-3 py-1 rounded-md border ${currentPage === p ? "bg-blue-600 text-white border-blue-600" : "bg-white text-gray-700"}`}
+                    aria-current={currentPage === p ? "page" : undefined}
+                  >
+                    {p}
+                  </button>
+                )
+              )}
+            </div>
+
+            <button
+              onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+              disabled={currentPage === totalPages}
+              className={`px-3 py-1 rounded-md border ${currentPage === totalPages ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white hover:bg-gray-50"}`}
+              aria-label="Next page"
+            >
+              Next
+            </button>
+
+            <button
+              onClick={() => setCurrentPage(totalPages)}
+              disabled={currentPage === totalPages}
+              className={`px-3 py-1 rounded-md border ${currentPage === totalPages ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white hover:bg-gray-50"}`}
+              aria-label="Last page"
+            >
+              Last
+            </button>
+          </div>
+        </div>
+      )}
 
       {/* Support Section */}
      <div className="mt-20 bg-white border border-gray-200 rounded-lg shadow-lg p-8 text-center max-w-3xl mx-auto">

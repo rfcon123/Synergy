@@ -1,43 +1,72 @@
 import React, { useEffect, useState } from "react";
 import productsData from "./productsData";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async"
 
 const ImageGallery = () => {
-  const [filteredImages, setFilteredImages] = useState([]);
+
   const [searchTerm, setSearchTerm] = useState("");
-  const [visibleCount, setVisibleCount] = useState(20);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [perPage, setPerPage] = useState(20);
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // derive list of valid images once per render
+  const allImages = productsData.filter((item) =>
+    item.image.match(/\.(jpg|jpeg|png|webp)$/i)
+  );
+
+  // Sync URL -> state (supports direct links / back-forward)
+  useEffect(() => {
+    const p = new URLSearchParams(location.search);
+    const s = p.get('search');
+    const pageParam = parseInt(p.get('page'), 10);
+    const perParam = parseInt(p.get('perPage'), 10);
+    if (s !== null) setSearchTerm(s);
+    if (!isNaN(pageParam) && pageParam > 0) setCurrentPage(pageParam);
+    if (!isNaN(perParam) && perParam > 0) setPerPage(perParam);
+  }, [location.search]);
+
+  // Sync state -> URL (replace avoids history spam)
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (searchTerm) params.set('search', searchTerm); else params.delete('search');
+    if (currentPage && currentPage !== 1) params.set('page', String(currentPage)); else params.delete('page');
+    if (perPage && perPage !== 20) params.set('perPage', String(perPage)); else params.delete('perPage');
+
+    const newSearch = params.toString();
+    const curSearch = location.search.replace(/^\?/, '');
+    if (newSearch !== curSearch) {
+      navigate(`${location.pathname}${newSearch ? `?${newSearch}` : ''}`, { replace: true });
+    }
+  }, [searchTerm, currentPage, perPage, location.pathname, location.search, navigate]);
 
   const urlEndpoint = "https://ik.imagekit.io/rfcon123/";
   const transform = "tr:w-300,q-40,f-webp";
 
-  useEffect(() => {
-    const validImages = productsData.filter((item) =>
-      item.image.match(/\.(jpg|jpeg|png|webp)$/i)
-    );
-    setFilteredImages(validImages);
-  }, []);
 
   const handleSearch = (e) => {
-    const term = e.target.value.toLowerCase();
-    setSearchTerm(term);
-
-    const filtered = productsData
-      .filter((image) =>
-        image.image.match(/\.(jpg|jpeg|png|webp)$/i)
-      )
-      .filter((image) =>
-        image.name.toLowerCase().includes(term)
-      );
-
-    setFilteredImages(filtered);
-    setVisibleCount(20);
+    setSearchTerm(e.target.value);
+    setCurrentPage(1);
   };
 
-  const handleLoadMore = () => {
-    setVisibleCount((prev) => prev + 20);
+  const filteredImages = allImages.filter((image) =>
+    image.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Pagination helpers
+  const totalPages = Math.max(1, Math.ceil(filteredImages.length / perPage));
+  const startIndex = (currentPage - 1) * perPage;
+  const visibleImages = filteredImages.slice(startIndex, startIndex + perPage);
+
+  const goToPage = (page) => {
+    const p = Math.min(Math.max(1, page), totalPages);
+    setCurrentPage(p);
   };
 
-  const visibleImages = filteredImages.slice(0, visibleCount);
+  const prevPage = () => goToPage(currentPage - 1);
+  const nextPage = () => goToPage(currentPage + 1);
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
@@ -116,15 +145,41 @@ const ImageGallery = () => {
         )}
       </div>
 
-      {/* 🔘 Load More */}
-      {visibleCount < filteredImages.length && (
-        <div className="flex justify-center mt-10">
-          <button
-            onClick={handleLoadMore}
-            className="bg-blue-600 text-white px-6 py-3 rounded-md shadow hover:bg-blue-700 transition"
-          >
-            Load More
-          </button>
+      {/* 🔘 Pagination (compact) */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between mt-6 space-x-4">
+          <div className="flex items-center space-x-2">
+            <select
+              value={perPage}
+              onChange={(e) => { setPerPage(Number(e.target.value)); setCurrentPage(1); }}
+              className="text-sm px-2 py-1 border rounded"
+              aria-label="Per page"
+            >
+              <option value={12}>12</option>
+              <option value={20}>20</option>
+              <option value={50}>50</option>
+            </select>
+            <span className="text-xs text-gray-500">/ {filteredImages.length} items</span>
+          </div>
+
+          <nav className="flex items-center space-x-1" aria-label="Compact pagination">
+            <button onClick={() => goToPage(1)} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="First page">«</button>
+            <button onClick={prevPage} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="Previous page">‹</button>
+
+            {Array.from({ length: Math.min(5, totalPages) }).map((_, idx) => {
+              const start = Math.max(1, Math.min(currentPage - 2, totalPages - 4));
+              const page = start + idx;
+              if (page < 1 || page > totalPages) return null;
+              return (
+                <button key={page} onClick={() => goToPage(page)} className={`px-2 py-1 text-sm rounded border ${page === currentPage ? 'bg-blue-600 text-white' : 'bg-white'}`}>{page}</button>
+              );
+            })}
+
+            <button onClick={nextPage} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Next page">›</button>
+            <button onClick={() => goToPage(totalPages)} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Last page">»</button>
+          </nav>
+
+          <div className="text-sm text-gray-600">Page {currentPage} of {totalPages}</div>
         </div>
       )}
     </div>

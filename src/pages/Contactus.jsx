@@ -75,7 +75,7 @@ const ContactUs = () => {
 
           {/* Visit */}
           <a
-            href="https://www.google.com/maps?q=Synergy+Telecom+Pvt+Ltd,+New+Delhi"
+            href="https://maps.app.goo.gl/uFQeeQ6xQqd8R67d9"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-white shadow-md rounded-lg p-6 text-center hover:shadow-xl transition hover:scale-[1.03]"
@@ -95,7 +95,7 @@ const ContactUs = () => {
             <p className="text-gray-800 font-medium mb-1">Pradeep Kumar Agrawal</p>
             <p className="text-sm text-gray-600 mb-4">Director</p>
             <p className="text-gray-700 mb-1">SYNERGY TELECOM PVT LTD</p>
-            <p className="text-gray-700 mb-1">WZ 47 Budella, Saini Chowk, Vikas Puri, New Delhi-110018</p>
+            <p className="text-gray-700 mb-1">KHASRA NO. 33/23, Mundka Industrial Area, Mundka, New Delhi, Delhi, 110041</p>
             <p className="mb-1">
               📧 <a href="mailto:pradeep@rfconnector.in" className="text-blue-600 hover:underline">pradeep@rfconnector.in</a>
             </p>
