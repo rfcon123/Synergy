@@ -1233,7 +1233,14 @@
       "url": "/STK_DOCUMENT/STK-571151981262.pdf",
       "type": "PDF"       
     },
-        {
+    {
+      "name": "STK-571_236273111",
+      "filename": "STK-571_236273111.pdf",
+      "url": "https://rfconnector.in/CFM_DATASHEET/STK-571_236273111.pdf",
+      "type": "LINK",
+      "description": "External datasheet link"
+ },
+    {
   "name": "STK-587826131397",
   "filename": "STK-587826131397.pdf",
   "url": "https://rfconnector.in/CFM_DATASHEET/STK-587826131397.pdf",
