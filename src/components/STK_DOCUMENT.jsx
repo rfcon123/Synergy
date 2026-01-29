@@ -27,6 +27,7 @@ const STKDocuments = () => {
       try {
         const res = await fetch(url, { method: 'HEAD' });
         return res.ok;
+      // eslint-disable-next-line no-unused-vars
       } catch (e) {
         return false;
       }
