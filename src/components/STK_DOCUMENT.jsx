@@ -12,6 +12,43 @@ const STKDocuments = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [sortBy, setSortBy] = useState('name');
 
+  // Track availability of document URLs (true = available, false = missing, undefined = unknown)
+  const [availability, setAvailability] = useState({});
+
+  // After documents load, probe URLs to mark unavailable PDFs and avoid showing 404 in iframe
+  useEffect(() => {
+    if (!documents || documents.length === 0) return;
+
+    let mounted = true;
+
+    const checkUrl = async (url) => {
+      // For external links (absolute http(s)), assume available (or skip due to CORS)
+      if (/^https?:\/\//i.test(url)) return true;
+      try {
+        const res = await fetch(url, { method: 'HEAD' });
+        return res.ok;
+      } catch (e) {
+        return false;
+      }
+    };
+
+    (async () => {
+      const map = {};
+      await Promise.all(
+        documents.map(async (doc) => {
+          const ok = await checkUrl(doc.url);
+          if (!mounted) return;
+          map[doc.url] = ok;
+        })
+      );
+      if (mounted) setAvailability(map);
+    })();
+
+    return () => {
+      mounted = false;
+    };
+  }, [documents]);
+
   // Example categories
   const categories = [
     { id: 'all', name: 'All Categories' },
@@ -56,6 +93,12 @@ const STKDocuments = () => {
 
   // Preview handler
   const handlePreview = (url) => {
+    if (availability[url] === false) {
+      // Small UX guard: don't open iframe when file is missing
+      // You could replace this with a nicer toast/notification
+      alert('Document not available');
+      return;
+    }
     setPreviewUrl(url);
     setShowPreview(true);
   };
@@ -181,19 +224,26 @@ const STKDocuments = () => {
               <div className="flex space-x-3">
                 <button
                   onClick={() => handlePreview(doc.url)}
-                  className="flex-1 inline-flex items-center justify-center bg-gray-100 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-200 transition-colors"
+                  disabled={availability[doc.url] === false}
+                  className={`flex-1 inline-flex items-center justify-center bg-gray-100 text-gray-700 px-4 py-2 rounded-lg transition-colors ${availability[doc.url] === false ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-200'}`}
                 >
                   <FiEye className="mr-2" /> Preview
                 </button>
-                <a
-                  href={doc.url}
-                  download
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 inline-flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
-                >
-                  <FiDownload className="mr-2" /> Download
-                </a>
+                {availability[doc.url] === false ? (
+                  <span className="flex-1 inline-flex items-center justify-center bg-gray-200 text-gray-500 px-4 py-2 rounded-lg">
+                    Not available
+                  </span>
+                ) : (
+                  <a
+                    href={doc.url}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                  >
+                    <FiDownload className="mr-2" /> Download
+                  </a>
+                )}
               </div>
             </div>
           ))}
