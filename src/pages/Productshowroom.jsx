@@ -236,6 +236,7 @@ import BladeRF115 from '../assets/components/BladeRF115.jpg';
 import BladeRF20microA9 from '../assets/components/BladeRF2.0 micro -A9.jpg';
 import BladeRF from '../assets/components/BladeRF.jpg';
 import BladeRF40 from '../assets/components/BladeRF-40.jpg';
+import ANTENNASWITCH401 from '../assets/components/ANTENNA SWITCH-401.jpg';
 
 
 
