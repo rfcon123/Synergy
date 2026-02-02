@@ -103,7 +103,8 @@ const catalogueLinks = [
   { name: "Standard Gain Horn Antenna", link: "/pdfs/Standard Gain Horn Antenna.pdf" },
   { name: "Trihedral Corner Reflector Antenna", link: "/pdfs/Trihedral Corner Reflector Antenna.pdf" },
   { name: "HF ANTENNA SWITCH-401", link: "/pdfs/HF_ANTENNA_SWITCH-401.pdf" },
-  { name: "THROUGH-LINE POWER METER & VSWR AND SWR METER-150W", link: "/pdfs/THROUGH-LINE_POWER_METER_&_VSWR_AND_SWR_METER-150W.pdf" },
+  { name: "THROUGH-LINE POWER METER & VSWR-150W", link: "/pdfs/THROUGH-LINE_POWER_METER_&_VSWR-150W.pdf" },
+  { name: "THROUGH-LINE POWER METER SWR-150W", link: "/pdfs/THROUGH-LINE_POWER_METER_SWR-150W.pdf" },
 
 
  
