@@ -105,6 +105,11 @@ const catalogueLinks = [
   { name: "HF ANTENNA SWITCH-401", link: "/pdfs/HF_ANTENNA_SWITCH-401.pdf" },
   { name: "THROUGH-LINE POWER METER & VSWR-150W", link: "/pdfs/THROUGH-LINE_POWER_METER_&_VSWR-150W.pdf" },
   { name: "THROUGH-LINE POWER METER SWR-150W", link: "/pdfs/THROUGH-LINE_POWER_METER_SWR-150W.pdf" },
+  { name: "Monopol-Antenne", link: "/pdfs/Monopol-Antenne.pdf" },
+  { name: "Omni Antenna 2400~2500MHz  5150~5850MHz", link: "/pdfs/Omni Antenna 2400~2500MHz  5150~5850MHz.pdf" },
+  { name: "Specs 2W 8G Attenuator", link: "/pdfs/specs 2w 8G attenuator.pdf" },
+  { name: "Specs 25W 8G Attenuator", link: "/pdfs/specs 25w 8G attenuator.pdf" },
+  { name: "SST-AT-6G-100W-NF-NM", link: "/pdfs/ST-AT-6G-100W-NF-NM.pdf" },
 
 
  
