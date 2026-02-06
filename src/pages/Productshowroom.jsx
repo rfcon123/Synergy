@@ -237,6 +237,67 @@ import BladeRF20microA9 from '../assets/components/BladeRF2.0 micro -A9.jpg';
 import BladeRF from '../assets/components/BladeRF.jpg';
 import BladeRF40 from '../assets/components/BladeRF-40.jpg';
 import ANTENNASWITCH401 from '../assets/components/ANTENNA SWITCH-401.jpg';
+import STOREMACHINE1 from '../assets/components/store machine 1.jpeg';
+import STOREMACHINE2 from '../assets/components/store machine 2.jpeg';
+import STOREMACHINE3 from '../assets/components/store machine 3.jpeg';
+import STOREMACHINE4 from '../assets/components/store machine 4.jpeg';
+import STOREMACHINE5 from '../assets/components/store machine 5.jpeg';
+import STOREMACHINE6 from '../assets/components/store machine 6.jpeg';
+import STOREMACHINE7 from '../assets/components/store machine 7.jpeg';
+import STOREMACHINE8 from '../assets/components/store machine 8.jpeg';
+import STOREMACHINE9 from '../assets/components/store machine 9.jpeg';
+import STOREMACHINE10 from '../assets/components/store machine 10.jpeg';
+import STOREMACHINE11 from '../assets/components/store machine 11.jpeg';
+import STOREMACHINE12 from '../assets/components/store machine 12.jpeg';
+import STOREMACHINE13 from '../assets/components/store machine 13.jpeg';
+import STOREMACHINE14 from '../assets/components/store machine 14.jpeg';
+import STOREMACHINE15 from '../assets/components/store machine 15.jpeg';
+import STOREMACHINE16 from '../assets/components/store machine 16.jpeg';
+import STOREMACHINE17 from '../assets/components/store machine 17.jpeg';
+import STOREMACHINE18 from '../assets/components/store machine 18.jpeg';
+import STOREMACHINE19 from '../assets/components/store machine 19.jpeg';
+import STOREMACHINE20 from '../assets/components/store machine 20.jpeg';
+import STOREMACHINE21 from '../assets/components/store machine 21.jpeg';
+import STOREMACHINE22 from '../assets/components/store machine 22.jpeg';
+import STOREMACHINE23 from '../assets/components/store machine 23.jpeg';
+import STOREMACHINE24 from '../assets/components/store machine 24.jpeg';
+import STOREMACHINE25 from '../assets/components/store machine 25.jpeg';
+import STOREMACHINE26 from '../assets/components/store machine 26.jpeg';
+import STOREMACHINE27 from '../assets/components/store machine 27.jpeg';
+import STOREMACHINE28 from '../assets/components/store machine 28.jpeg';
+import STOREMACHINE29 from '../assets/components/store machine 29.jpeg';
+import STOREMACHINE30 from '../assets/components/store machine 30.jpeg';
+import STOREMACHINE31 from '../assets/components/store machine 31.jpeg';
+import STOREMACHINE32 from '../assets/components/store machine 33.jpeg';
+import STOREMACHINE33 from '../assets/components/store machine 33.jpeg';
+import STOREMACHINE34 from '../assets/components/store machine 34.jpeg';
+import STOREMACHINE35 from '../assets/components/store machine 35.jpeg';
+import STOREMACHINE36 from '../assets/components/store machine 36.jpeg';
+import STOREMACHINE37 from '../assets/components/store machine 37.jpeg';
+import STOREMACHINE38 from '../assets/components/store machine 38.jpeg';
+import STOREMACHINE39 from '../assets/components/store machine 39.jpeg';
+import STOREMACHINE40 from '../assets/components/store machine 40.jpeg';
+import STOREMACHINE41 from '../assets/components/store machine 41.jpeg';
+import STOREMACHINE42 from '../assets/components/store machine 42.jpeg';
+import STOREMACHINE43 from '../assets/components/store machine 43.jpeg';
+import STOREMACHINE44 from '../assets/components/store machine 44.jpeg';
+import STOREMACHINE45 from '../assets/components/store machine 45.jpeg';
+import STOREMACHINE46 from '../assets/components/store machine 46.jpeg';
+import STOREMACHINE47 from '../assets/components/store machine 47.jpeg';
+import STOREMACHINE48 from '../assets/components/store machine 48.jpeg';
+import STOREMACHINE49 from '../assets/components/store machine 49.jpeg';
+import STOREMACHINE50 from '../assets/components/store machine 50.jpeg';
+import STOREMACHINE51 from '../assets/components/store machine 51.jpeg';
+import STOREMACHINE52 from '../assets/components/store machine 52.jpeg';
+import STOREMACHINE53 from '../assets/components/store machine 53.jpeg';
+import STOREMACHINE54 from '../assets/components/store machine 54.jpeg';
+import STOREMACHINE55 from '../assets/components/store machine 55.jpeg';
+import STOREMACHINE56 from '../assets/components/store machine 56.jpeg';
+import STOREMACHINE57 from '../assets/components/store machine 57.jpeg';
+import STOREMACHINE58 from '../assets/components/store machine 58.jpeg';
+import STOREMACHINE59 from '../assets/components/store machine 59.jpeg';
+import STOREMACHINE60 from '../assets/components/store machine 60.jpeg';
+
 
 
 
@@ -331,14 +392,6 @@ const productsLocalData = [
   { name: "BladeRF2.0 micro -A9", slug: "bladerf20-micro-a9", image: BladeRF20microA9 },
   { name: "BladeRF", slug: "bladerf", image: BladeRF },
   { name: "BladeRF-40", slug: "bladerf-40", image: BladeRF40 },
-  
-
-  
-
-  
-  
-
-
   { name: "Jumper Cable", slug: "jumper-cable", image: jumpercable },
   { name: "High Freq Cable", slug: "high-freq-cable", image: highfreqcable },
   { name: "Fakra Connector", slug: "fakra-connector", image: fakraconnector },
@@ -478,7 +531,68 @@ const productsLocalData = [
   { name: "MC4 Stripping Tool", slug: "mc4-stripping-tool", image: MC4StrippingTool },
   { name: "N Connector Tourque Wrench", slug: "n-connector-tourque-wrench", image: NConnectorTourqueWrench },
   { name: "SMA Connector Tourque Wrench", slug: "sma-connector-tourque-wrench", image: SMAConnectorTourqueWrench },
-  { name: "Bird 43 Watt Meter", slug: "bird-43-watt-meter", image: Bird43WattMeter }
+  { name: "STOREMACHINE1", slug: "storemachine1", image: STOREMACHINE1 },
+  { name: "STOREMACHINE2", slug: "storemachine2", image: STOREMACHINE2 },
+  { name: "STOREMACHINE3", slug: "storemachine3", image: STOREMACHINE3 },
+  { name: "STOREMACHINE4", slug: "storemachine4", image: STOREMACHINE4 },
+  { name: "STOREMACHINE5", slug: "storemachine5", image: STOREMACHINE5 },
+  { name: "STOREMACHINE6", slug: "storemachine6", image: STOREMACHINE6 },
+  { name: "STOREMACHINE7", slug: "storemachine7", image: STOREMACHINE7 },
+  { name: "STOREMACHINE8", slug: "storemachine8", image: STOREMACHINE8 },
+  { name: "STOREMACHINE9", slug: "storemachine9", image: STOREMACHINE9 },
+  { name: "STOREMACHINE10", slug: "storemachine10", image: STOREMACHINE10 },
+  { name: "STOREMACHINE11", slug: "storemachine11", image: STOREMACHINE11 },
+  { name: "STOREMACHINE12", slug: "storemachine12", image: STOREMACHINE12 },
+  { name: "STOREMACHINE13", slug: "storemachine13", image: STOREMACHINE13 },
+  { name: "STOREMACHINE14", slug: "storemachine14", image: STOREMACHINE14 },
+  { name: "STOREMACHINE15", slug:" storemachine15 ",image : STOREMACHINE15},
+  { name:"Store Machine 16" ,slug:" store-machine-16 ",image : STOREMACHINE16},  
+  { name:"Store Machine 17" ,slug:" store-machine-17 ",image : STOREMACHINE17},
+  { name:"Store Machine 18" ,slug:" store-machine-18 ",image : STOREMACHINE18},
+  { name:"Store Machine 19" ,slug:" store-machine-19 ",image : STOREMACHINE19},
+  { name:"Store Machine 20" ,slug:" store-machine-20 ",image : STOREMACHINE20},
+  { name:"Store Machine 21" ,slug:" store-machine-21 ",image : STOREMACHINE21},
+  { name:"Store Machine 22" ,slug:" store-machine-22 ",image : STOREMACHINE22},
+  { name:"Store Machine 23" ,slug:" store-machine-23 ",image : STOREMACHINE23},
+  { name:"Store Machine 24" ,slug:" store-machine-24 ",image : STOREMACHINE24},
+  { name:"Store Machine 25" ,slug:" store-machine-25 ",image : STOREMACHINE25},
+  { name:"Store Machine 26" ,slug:" store-machine-26 ",image : STOREMACHINE26},
+  { name:"Store Machine 27" ,slug:" store-machine-27 ",image : STOREMACHINE27},
+  { name:"Store Machine 28" ,slug:" store-machine-28 ",image : STOREMACHINE28},
+  { name:"Store Machine 29" ,slug:" store-machine-29 ",image : STOREMACHINE29},
+  { name:"Store Machine 30" ,slug:" store-machine-30 ",image : STOREMACHINE30},
+  { name:"Store Machine 31" ,slug:" store-machine-31 ",image : STOREMACHINE31},
+  { name:"Store Machine 32" ,slug:" store-machine-32 ",image : STOREMACHINE32},
+  { name:"Store Machine 33" ,slug:" store-machine-33 ",image : STOREMACHINE33},
+  { name:"Store Machine 34" ,slug:" store-machine-34 ",image : STOREMACHINE34},
+  { name:"Store Machine 35" ,slug:" store-machine-35 ",image : STOREMACHINE35},
+  { name:"Store Machine 36" ,slug:" store-machine-36 ",image : STOREMACHINE36},
+  { name:"Store Machine 37" ,slug:" store-machine-37 ",image : STOREMACHINE37},
+  { name:"Store Machine 38" ,slug:" store-machine-38 ",image : STOREMACHINE38},
+  { name:"Store Machine 39" ,slug:" store-machine-39 ",image : STOREMACHINE39},
+  { name:"Store Machine 40" ,slug:" store-machine-40 ",image : STOREMACHINE40},
+  { name:"Store Machine 41" ,slug:" store-machine-41 ",image : STOREMACHINE41},
+  { name:"Store Machine 42" ,slug:" store-machine-42 ",image : STOREMACHINE42},
+  { name:"Store Machine 43" ,slug:" store-machine-43 ",image : STOREMACHINE43},
+  { name:"Store Machine 44" ,slug:" store-machine-44 ",image : STOREMACHINE44},
+  { name:"Store Machine 45" ,slug:" store-machine-45 ",image : STOREMACHINE45},
+  { name:"Store Machine 46" ,slug:" store-machine-46 ",image : STOREMACHINE46},
+  { name:"Store Machine 47" ,slug:" store-machine-47 ",image : STOREMACHINE47},
+  { name:"Store Machine 48" ,slug:" store-machine-48 ",image : STOREMACHINE48},
+  { name:"Store Machine 49" ,slug:" store-machine-49 ",image : STOREMACHINE49},
+  { name:"Store Machine 50" ,slug:" store-machine-50 ",image : STOREMACHINE50},
+  { name:"Store Machine 51" ,slug:" store-machine-51 ",image : STOREMACHINE51},
+  { name:"Store Machine 52" ,slug:" store-machine-52 ",image : STOREMACHINE52},
+  { name:"Store Machine 53" ,slug:" store-machine-53 ",image : STOREMACHINE53},
+  { name:"Store Machine 54" ,slug:" store-machine-54 ",image : STOREMACHINE54},
+  { name:"Store Machine 55" ,slug:" store-machine-55 ",image : STOREMACHINE55},
+  { name:"Store Machine 56" ,slug:" store-machine-56 ",image : STOREMACHINE56},
+  { name:"Store Machine 57" ,slug:" store-machine-57 ",image : STOREMACHINE57},
+  { name:"Store Machine 58" ,slug:" store-machine-58 ",image : STOREMACHINE58},
+  { name:"Store Machine 59" ,slug:" store-machine-59 ",image : STOREMACHINE59},
+  { name:"Store Machine 60" ,slug:" store-machine-60 ",image : STOREMACHINE60},
+
+
 
 
   
