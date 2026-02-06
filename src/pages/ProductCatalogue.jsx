@@ -110,6 +110,7 @@ const catalogueLinks = [
   { name: "Specs 2W 8G Attenuator", link: "/pdfs/specs 2w 8G attenuator.pdf" },
   { name: "Specs 25W 8G Attenuator", link: "/pdfs/specs 25w 8G attenuator.pdf" },
   { name: "SST-AT-6G-100W-NF-NM", link: "/pdfs/ST-AT-6G-100W-NF-NM.pdf" },
+  { name: "0.5-30GHz Broadband Horn Antenna", link: "/pdfs/0.5-30GHz Broadband Horn Antenna.pdf" },
 
 
  
