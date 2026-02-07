@@ -1119,275 +1119,437 @@
       "filename": "STK-5711-F26-240-ONI-SB-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-ONI-SB-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "RIGHT ANGLE"
     },
     {
       "name": "STK-5711-F26-240-ONI-Y.pdf",
       "filename": "STK-5711-F26-240-ONI-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-ONI-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-F26-240-RN-SB-Y.pdf",
       "filename": "STK-5711-F26-240-RN-SB-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-RN-SB-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "RIGHT ANGLE"
     },
     {
       "name": "STK-5711-F26-240-RN-Y.pdf",
       "filename": "STK-5711-F26-240-RN-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-RN-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-F26-240-TN-SB-Y.pdf",
       "filename": "STK-5711-F26-240-TN-SB-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-TN-SB-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "RIGHT ANGLE"
     },
     {
       "name": "STK-5711-F26-240-TN-Y.pdf",
       "filename": "STK-5711-F26-240-TN-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-TN-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-F26-240-UG-SQ-Y.pdf",
       "filename": "STK-5711-F26-240-UG-SQ-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-UG-SQ-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-F26-240-UG-Y.pdf",
       "filename": "STK-5711-F26-240-UG-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-UG-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "STRAIGHT JACK"
     },
     {
       "name": "STK-5711-F26-240-UN-SQ-Y.pdf",
       "filename": "STK-5711-F26-240-UN-SQ-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-UN-SQ-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "REVERSE POLARITY"
     },
     {
       "name": "STK-5711-F26-240-UN-Y.pdf",
       "filename": "STK-5711-F26-240-UN-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-F26-240-UN-Y.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-UD-240-827N-SB-E.pdf",
       "filename": "STK-5711-UD-240-827N-SB-E.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-827N-SB-E.pdf",
       "type": "PDF",
-      "description": "External datasheet link"
+      "description": "RIGHT ANGLE"
     },
     {
       "name": "STK-5711-UD-240-827N.pdf",
       "filename": "STK-5711-UD-240-827N.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-827N.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-UD-240-CN-SB-E.pdf",
       "filename": "STK-5711-UD-240-CN-SB-E.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-CN-SB-E.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-UD-240-CN-Y.pdf",
       "filename": "STK-5711-UD-240-CN-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-CN-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-UD-240-CND.pdf",
       "filename": "STK-5711-UD-240-CND.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-CND.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-UD-240-GN-Y.pdf",
       "filename": "STK-5711-UD-240-GN-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-GN-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "STRAIGHT PLUG"  
     },
     {
       "name": "STK-5711-UD-240-OG-CI-Y.pdf",
       "filename": "STK-5711-UD-240-OG-CI-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-OG-CI-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "BULKHEAD JACK"
     },
     {
       "name": "STK-5711-UD-240-OG-QN-Y.pdf",
       "filename": "STK-5711-UD-240-OG-QN-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-OG-QN-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "BULKHEAD JACK"
     },
     {
       "name": "STK-5711-UD-240-OND.pdf",
       "filename": "STK-5711-UD-240-OND.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-OND.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "BULKHEAD JACK"
     },
     {
       "name": "STK-5711-UD-240-ONI-SB-E.pdf",
       "filename": "STK-5711-UD-240-ONI-SB-E.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-ONI-SB-E.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "RIGHT ANGLE"
     },
     {
       "name": "STK-5711-UD-240-ONI-Y.pdf",
       "filename": "STK-5711-UD-240-ONI-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-ONI-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "RIGHT ANGLE"
     },
     {
       "name": "STK-5711-UD-240-TG-TT-CI-Y.pdf",
       "filename": "STK-5711-UD-240-TG-TT-CI-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-TG-TT-CI-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "BULKHEAD JACK"
     },
     {
       "name": "STK-5711-UD-240-TN-SB-TT-Y.pdf",
       "filename": "STK-5711-UD-240-TN-SB-TT-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-TN-SB-TT-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "STRAIGHT ANGLE"
     },
     {
       "name": "STK-5711-UD-240-TN-SQ.pdf",
       "filename": "STK-5711-UD-240-TN-SQ.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-TN-SQ.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "REVERSE POLARITY"
     },
     {
       "name": "STK-5711-UD-240-TN-TT-Y.pdf",
       "filename": "STK-5711-UD-240-TN-TT-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-TN-TT-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-5711-UD-240-UN-SB-E.pdf",
       "filename": "STK-5711-UD-240-UN-SB-E.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-UN-SB-E.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "RIGHT ANGLE"
     },
     {
       "name": "STK-5711-UD-240-UN-Y.pdf",
       "filename": "STK-5711-UD-240-UN-Y.pdf",
       "url": "/STK_DOCUMENT/STK-5711-UD-240-UN-Y.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "STRAIGHT PLUG"
     },
     {
       "name": "STK-57112828XXX.pdf",
       "filename": "STK-57112828XXX.pdf",
       "url": "/STK_DOCUMENT/STK-57112828XXX.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF50 SMP-M THRD-IN RP DC-40G"
     },
     {
       "name": "STK-571624251XXX.pdf",
       "filename": "STK-571624251XXX.pdf",
       "url": "/STK_DOCUMENT/STK-571624251XXX.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "RF 50 ADAPTOR SMP FEMALE – FEMALE"
     },
     {
       "name": "STK-571624251467.pdf",
       "filename": "STK-571624251467.pdf",
       "url": "/STK_DOCUMENT/STK-571624251467.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "RF 50 ADAPTOR SMP FEMALE – FEMALE"
     },
     {
       "name": "STK-571188671221.pdf",
       "filename": "STK-571188671221.pdf",
       "url": "/STK_DOCUMENT/STK-571188671221.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CON RF50 PL CO AX"
     },
     {
       "name": "STK-587826131397.pdf",
       "filename": "STK-587826131397.pdf",
       "url": "/STK_DOCUMENT/STK-587826131397.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "ANTENNA GRID PARABOLIC 300-1600MHz 50W"
     },
     {
       "name": "STK-57112700XXX.pdf",
       "filename": "STK-57112700XXX.pdf",
       "url": "/STK_DOCUMENT/STK-57112700XXX.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CON RF50 TNC FL MOUNT.18G,0.015 DIA"
     },
     {
       "name": "STK-571123931287.pdf",
       "filename": "STK-571123931287.pdf",
       "url": "/STK_DOCUMENT/STK-571123931287.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF PLUG"
     },
     {
       "name": "STK-571127431241.pdf",
       "filename": "STK-571127431241.pdf",
       "url": "/STK_DOCUMENT/STK-571127431241.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONNECTOR RF50 SMA RP ST ADJ SQ FL JACK"
     },
     {
       "name": "STK-571127431338.pdf",
       "filename": "STK-571127431338.pdf",
       "url": "/STK_DOCUMENT/STK-571127431338.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF 50 SMA RP ST CYLINDER CONTACT"
     },
     {
       "name": "STK-571127431435.pdf",
       "filename": "STK-571127431435.pdf",
       "url": "/STK_DOCUMENT/STK-571127431435.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF50 SMA RP SQ FL CYL CONT OF ø1.28"
     },
     {
       "name": "STK-571127431532.pdf",
       "filename": "STK-571127431532.pdf",
       "url": "/STK_DOCUMENT/STK-571127431532.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF50 SMA RP ST EXT L=5"
     },
     {
       "name": "STK-571127431629.pdf",
       "filename": "STK-571127431629.pdf",
       "url": "/STK_DOCUMENT/STK-571127431629.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF50 SMA RP SQ FL CONT Փ-1.28 L-18"
     },
     {
       "name": "STK-571127431726.pdf",
       "filename": "STK-571127431726.pdf",
       "url": "/STK_DOCUMENT/STK-571127431726.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN SMA RF50 SQ-FL-JK RP"
     },
     {
       "name": "STK-571131521246.pdf",
       "filename": "STK-571131521246.pdf",
       "url": "/STK_DOCUMENT/STK-571131521246.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF50 SMA RA W/CABLE"
     },
     {
       "name": "STK-571151411290.pdf",
       "filename": "STK-571151411290.pdf",
       "url": "/STK_DOCUMENT/STK-571151411290.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF50 N PL M CAB3.58"
     },
     {
       "name": "STK-571151981262.pdf",
       "filename": "STK-571151981262.pdf",
       "url": "/STK_DOCUMENT/STK-571151981262.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "CONN RF50 N PL M CAB7/8 HELIAX"
+    },
+    {
+      "name": "STK-571123311263.pdf",
+      "filename": "STK-571123311263.pdf",
+      "url": "/STK_DOCUMENT/STK-571123311263.pdf",
+      "type": "PDF",
+      "description": "STRAIGHT PLUGS CRIMP TYPE, FOR FLEXIBLE CABLES"
+    
+    },
+    {
+      "name": "STK-571123331245.pdf",
+      "filename": "STK-571123331245.pdf",
+      "url": "/STK_DOCUMENT/STK-571123331245.pdf",
+      "type": "PDF",
+      "description": "CONN  COAXIAL RF 50 RCPT MM PCB"
+    },
+    {
+      "name": "STK-571123451234.pdf",
+      "filename": "STK-571123451234.pdf",
+      "url": "/STK_DOCUMENT/STK-571123451234.pdf",
+      "type": "PDF",
+      "description": "CONNECTOR CO-AXIAL"
+
+      },
+    {
+      "name": "STK-571123941278.pdf",
+      "filename": "STK-571123941278.pdf",
+      "url": "/STK_DOCUMENT/STK-571123941278.pdf",
+      "type": "PDF",
+      "description": "CONN NANO HEX."
+      },
+    {
+      "name": "STK-571124141292.pdf",
+      "filename": "STK-571124141292.pdf",
+      "url": "/STK_DOCUMENT/STK-571124141292.pdf",
+      "type": "PDF",
+      "description": "CONN RF ST BLK HD"
+       },
+    {
+      "name": "STK-571126341252.pdf",
+      "filename": "STK-571126341252.pdf",
+      "url": "/STK_DOCUMENT/STK-571126341252.pdf",
+      "type": "PDF",
+      "description": "MMCX R/A CRIMP PLUG."
+       },
+    {
+      "name": "STK-571127361498.pdf",
+      "filename": "STK-571127361498.pdf",
+      "url": "/STK_DOCUMENT/STK-571127361498.pdf",
+      "type": "PDF",
+      "description": "SCREW-ON MALE RECEPTACLE SMOOTH BORE"
+  },
+    {
+      "name": "STK-571127691589.pdf",
+      "filename": "STK-571127691589.pdf",
+      "url": "/STK_DOCUMENT/STK-571127691589.pdf",
+      "type": "PDF",
+      "description": "MALE STRAIGHT RECEPTACLE FOR PCB SMT TYPE - FULL DETENT - REEL 500"
+},
+    {
+      "name": "STK-571129881267.pdf",
+      "filename": "STK-571129881267.pdf",
+      "url": "/STK_DOCUMENT/STK-571129881267.pdf",
+      "type": "PDF",
+      "description": "MALE STRAIGHT RECEPTACLE SMT TYPE - CATCHER'S MITT "
+      },
+    {
+      "name": "STK-571129981274.pdf",
+      "filename": "STK-571129981274.pdf",
+      "url": "/STK_DOCUMENT/STK-571129981274.pdf",
+      "type": "PDF",
+      "description": "STRAIGHT PLUG SOLDER TYPE CABLE .085"
+    },
+    {
+      "name": "STK-571128321507.pdf",
+      "filename": "STK-571128321507.pdf",
+      "url": "/STK_DOCUMENT/STK-571128321507.pdf",
+      "type": "PDF",
+      "description": "STRAIGHT PLUG SOLDER TYPE CABLE .085"
+},
+    {
+      "name": "STK-571156741246.pdf",
+      "filename": "STK-571156741246.pdf",
+      "url": "/STK_DOCUMENT/STK-571156741246.pdf",
+      "type": "PDF",
+      "description": "SCREW-ON MALE RECEPTACLE HERMETIC STRAIGHT MALE RECEPTACLE SOLDER TYPE"
+},
+    {
+      "name": "STK-571182811257.pdf",
+      "filename": "STK-571182811257.pdf",
+      "url": "/STK_DOCUMENT/STK-571182811257.pdf",
+      "type": "PDF",
+      "description": "CONN RF SMP SQ FLANGE EXT. DIELECTRIC"
+},
+    {
+      "name": "STK-571182921255.pdf",
+      "filename": "STK-571182921255.pdf",
+      "url": "/STK_DOCUMENT/STK-571182921255.pdf",
+      "type": "PDF",
+      "description": "RIGHT ANGLE RECEPTACLE FOR PCB SMOOTH BORE"
+},
+    {
+      "name": "STK-571182931246.pdf",
+      "filename": "STK-571182931246.pdf",
+      "url": "/STK_DOCUMENT/STK-571182931246.pdf",
+      "type": "PDF",
+      "description": "STRAIGHT PLUG FULL CRIMP TYPE CABLE"
+    },
+    {
+      "name": "STK-571183061226.pdf",
+      "filename": "STK-571183061226.pdf",
+      "url": "/STK_DOCUMENT/STK-571183061226.pdf",
+      "type": "PDF",
+      "description": "BULKHEAD STRAIGHT MALE JACK LIMITED DETENT SOLDER TYPE CABLE .085"
+    },
+    {
+      "name": "STK-571622501296.pdf",
+      "filename": "STK-571622501296.pdf",
+      "url": "/STK_DOCUMENT/STK-571622501296.pdf",
+      "type": "PDF",
+      "description": "N(M) TO BNC(F)"
+      },
+    {
+      "name": "STK-571652011218.pdf",
+      "filename": "STK-571652011218.pdf",
+      "url": "/STK_DOCUMENT/STK-571652011218.pdf",
+      "type": "PDF",
+      "description": "CONN RFADPT50 BNC/M-SMA/F"
+     
     },
     {
       "name": "STK-571654121259.pdf",
       "filename": "STK-571654121259.pdf",
       "url": "/STK_DOCUMENT/STK-571654121259.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "SMT PLUG RECEPTACLE SMOOTH BORE"
     
     
     },
@@ -1395,14 +1557,16 @@
       "url": "/STK_DOCUMENT/STK-571654121356.pdf",
       "name": "STK-571654121356.pdf",
       "filename": "STK-571654121356.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "SMT PLUG RECEPTACLE SMOOTH"
     
     },
     {
       "url": "/STK_DOCUMENT/STK-571654121453.pdf",
       "name": "STK-571654121453.pdf",
       "filename": "STK-571654121453.pdf",
-      "type": "PDF"
+      "type": "PDF",
+      "description": "FEMALE-FEMALE ADAPTER"
     
     },
     {
@@ -3014,8 +3178,8 @@
           "type":  "PDF",
           "description":  "CON RF ACCE CAP WITH CH"
       
+      
       }
-
 
 
 
