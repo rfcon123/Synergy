@@ -112,6 +112,7 @@ const catalogueLinks = [
   { name: "SST-AT-6G-100W-NF-NM", link: "/pdfs/ST-AT-6G-100W-NF-NM.pdf" },
   { name: "0.5-30GHz Broadband Horn Antenna", link: "/pdfs/0.5-30GHz Broadband Horn Antenna.pdf" },
   { name: "JAMMER MODULAR", link: "/pdfs/JAMMER_MODULAR.pdf" },
+  { name: "RTP 2RTP 40GHz", link: "/pdfs/RTP 40GHz.pdf" },
 
 
 
