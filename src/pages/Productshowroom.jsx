@@ -298,7 +298,7 @@ import STOREMACHINE58 from '../assets/components/store machine 58.jpeg';
 import STOREMACHINE59 from '../assets/components/store machine 59.jpeg';
 import STOREMACHINE60 from '../assets/components/store machine 60.jpeg';
 import SWRMETER from '../assets/components/SWR METER.jpg';
-
+import HFANTENNASWITCH from '../assets/components/HF ANTENNA SWITCH.jpg';
 
 
 
@@ -594,10 +594,11 @@ const productsLocalData = [
   { name: "STOREMACHINE59", slug:"storemachine59",image : STOREMACHINE59 },
   { name: "STOREMACHINE60", slug:"storemachine60",image : STOREMACHINE60 },
   { name: "SWRMETER", slug:"SWRMETER",image : SWRMETER },
+  { name: "HF ANTENNA SWITCH", slug:"HF-ANTENNA-SWITCH",image : HFANTENNASWITCH},
   
 
 
-
+  
 
 
 
