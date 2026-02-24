@@ -112,7 +112,7 @@ const catalogueLinks = [
   { name: "SST-AT-6G-100W-NF-NM", link: "/pdfs/ST-AT-6G-100W-NF-NM.pdf" },
   { name: "0.5-30GHz Broadband Horn Antenna", link: "/pdfs/0.5-30GHz Broadband Horn Antenna.pdf" },
   { name: "Corrugated", link: "/pdfs/Corrugated.pdf" },
-  { name: "Remote Controlled HF Antenna Switch", link: "/pdfs/Remote Controlled HF Antenna Switch.pdf" },
+
   
 
 
