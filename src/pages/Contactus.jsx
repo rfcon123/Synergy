@@ -95,11 +95,11 @@ const ContactUs = () => {
             <p className="text-gray-800 font-medium mb-1">Pradeep Kumar Agrawal</p>
             <p className="text-sm text-gray-600 mb-4">Director</p>
             <p className="text-gray-700 mb-1">SYNERGY TELECOM PVT LTD</p>
-            <p className="text-gray-700 mb-1">WZ 47 Budella, Saini Chowk, Vikas Puri, New Delhi-110018</p>
+            <p className="text-gray-700 mb-1">Plot No. 845, DSIIDC Industrial Area, Street No. 6, North Mundka Industrial, Mundka North, New Delhi-110041</p>
             <p className="mb-1">
               📧 <a href="mailto:pradeep@rfconnector.in" className="text-blue-600 hover:underline">pradeep@rfconnector.in</a>
             </p>
-            <p className="mb-1">📞 +91-11-28533349</p>
+            <p className="mb-1">📞 +91-11-41316993</p>
             <p className="mb-1">📱 +91-7217885948</p>
             <p className="mb-1">
               🌐 <a href="https://www.synergyantenna.com/online-store.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">synergyantenna.com/online-store</a>
