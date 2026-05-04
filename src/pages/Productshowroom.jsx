@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+/* eslint-disable react-refresh/only-export-components */
+import React, { useState, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
 
-import productLinks from './Productlinks';
 import StyledButton  from '../components/StyledButton';
 import rfcable from '../assets/components/rfcable.jpg';
 import EMCSCANNER from '../assets/components/EMC SCANNER.jpg';
@@ -158,6 +158,147 @@ import SMAConnectorTourqueWrench from '../assets/components/SMA Connector Tourqu
 import SIGNALGENERATORallproduct from '../assets/components/SIGNAL GENERATOR all product.jpeg';
 import NIESSIPOWERMETER from '../assets/components/NIESSI POWER METER.jpg';
 import Bird43WattMeter from '../assets/components/Bird 43 Watt Meter.jpg';
+import POWERSUPPLYE3616A from '../assets/components/POWER SUPPLY E3616A.jpeg';
+import POWERSUPPLYE3620A from '../assets/components/POWER SUPPLY E3620A.jpeg';
+import POWERSUPPLYE3632A from '../assets/components/POWER SUPPLY E3632A.jpeg';
+import POWERSUPPLYE3634A from '../assets/components/POWER SUPPLY E3634A.jpeg';
+import POWERSUPPLYEX354D from '../assets/components/POWER SUPPLY EX354D.jpeg';
+import POWERSUPPLY from '../assets/components/POWER SUPPLY.jpeg';
+import POWERWAVEINVENTERAD from '../assets/components/POWER WAVE INVENTERAD1.png';
+import QL355TPPOWERSUPPLY from '../assets/components/QL355TP POWER SUPPLY.jpeg';
+import ROHDESCHWARZ1085709902 from '../assets/components/ROHDE&SCHWARZ 1085.7099.02 INSIDE.jpeg';
+import ROSENBERGER05CK10R150 from '../assets/components/ROSENBERGER 05CK10R-150 INSIDE.jpeg';
+import ROSENBERGER06CK100150 from '../assets/components/ROSENBERGER 06 CK100-150 INSIDE.jpeg';
+import RPHDESCHWARZSIGNALGENERATORSMY from '../assets/components/RPHDE & SCHWARZ SIGNAL GENERATOR SMY.jpeg';
+import SIGNALGENERATORE4437B from '../assets/components/SIGNAL GENERATOR E4437B.jpg';
+import SIGNALGENERATORESGD3000A from '../assets/components/SIGNAL GENERATOR ESG-D3000A.jpeg';
+import sitemasterS331D from '../assets/components/site master S331D.jpeg';
+import TDS3052OscilloscopeTEKTRONIX from '../assets/components/TDS 3052 Oscilloscope TEKTRONIX.jpeg';
+import AFM1100TUFVASSONSTRANSFORMER from '../assets/components/AFM 1100 TUFVASSONS TRANSFORMER 1.jpeg';
+import ATTENUATORSPINNER from '../assets/components/ATTENUATOR SPINNER.jpeg';
+import GFW from '../assets/components/GFW.jpeg';
+import AGILENTE4418BPOWERMETER from '../assets/components/AGILENT E4418B POWER METER.jpeg';
+import AgilentE4432B from '../assets/components/Agilent E4432B.png';
+import AgilentE4436BBB from '../assets/components/Agilent E4436B  BB.png';
+import AgilentE44208B from '../assets/components/Agilent E44208B.png';
+import ANALLOGDIGITALSCOPEHM407 from '../assets/components/ANALLOG DIGITAL SCOPE HM407-2.jpeg';
+import ESisSParameterNetworkAnalyser from '../assets/components/8753ES is S-Parameter Network Analyser.jpeg';
+import ROHDESCHWARZSMBV100A from '../assets/components/ROHDE&SCHWARZ SMBV100A.jpeg';
+import rohdeschwarzvectornetworkanalyzerzvre from '../assets/components/rohde-schwarz-vector-network-analyzer-zvre.png';
+import AGILENTE4420B from '../assets/components/AGILENT E4420B.jpeg';
+import POWERMETERML2438A from '../assets/components/POWER METER ML2438A.jpeg';
+import AGILENT3631A from '../assets/components/AGILENT 3631A.jpeg';
+import AGILENT8753ES from '../assets/components/AGILENT 8753ES.jpeg';
+import AGILENTE3616A from '../assets/components/AGILENT E3616A.jpeg';
+import AGILENTE4420BESG from '../assets/components/AGILENT E4420B ESG.jpeg';
+import AGILENTN8973A from '../assets/components/AGILENT N8973A.jpeg';
+import AGILENTE3640A from '../assets/components/AGILENT-E3640A.jpeg';
+import LISTENTALK from '../assets/components/LISTEN & TALK.jpeg';
+import POWERSUPPLYSM3540 from '../assets/components/POWER SUPPLY SM-3540.jpeg';
+import GENERATOR33210A from '../assets/components/GENERATOR 33210A.jpeg';
+import PowerboxLVM210290 from '../assets/components/Powerbox LVM 210.290.jpg';
+import NRVZ53POWERMETERSENSOR from '../assets/components/NRV Z53 POWER METER SENSOR.png';
+import NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR from '../assets/components/Altusen PNS108 Power Over Net.jpg';
+import gpibcontrolopticaltorfswitch from '../assets/components/gpib control optical to rf switch group.jpg';
+import HEWLETTPACKARD8753D from '../assets/components/HEWLETT PACKARD 8753D.jpeg';
+import HEWLETTPACKARD75000SeriesBRepeater from '../assets/components/HEWLETT PACKARD75000 Series B Repeater.png';
+import AGILENT8502A from '../assets/components/AGILENT 8502A.jpg';
+import AGILENT34401A from '../assets/components/AGILENT 34401A.jpeg';
+import HEWLETTPACKARD11582A from '../assets/components/HEWLETT PACKARD 11582A.jpeg';
+import THEROELECTRA80110 from '../assets/components/THERO ELECTRA 80110.jpeg';
+import SUHNERHUBERSUHNERAG74Z0070 from '../assets/components/SUHNER HUBER SUHNER AG 74Z-0-0-70.jpeg';
+import ROSENBERGER716CALIBRATIONKIT60CK100150 from '../assets/components/ROSENBERGER 7-16 CALIBRATION KIT 60CK100-150.jpeg';
+import ROHDESSCHWARZZNB8 from '../assets/components/ROHDES & SCHWARZ ZNB8.jpeg';
+import PROTEKU3000AUNIVERSALCOUNTER from '../assets/components/PROTEK U3000A UNIVERSAL COUNTER.jpeg';
+import HUBERSUHNER74Z0071 from '../assets/components/HUBER-SUHNER 74Z-0-0-71.jpeg';
+import ROHDESCHWARZ1085724702INS from '../assets/components/ROHDE & SCHWARZ 1085. 7247.02 INS.jpeg';
+import AGILENT85092CCOVER from '../assets/components/AGILENT 85092C COVER.jpeg';
+import HUBERSUHNER74Z0070INS from '../assets/components/HUBER-SUHNER 74Z-0-0-70 INS.png';
+import RohdeSchwarz10798500FSEM from '../assets/components/Rohde & Schwarz 1079-8500 FSEM.webp';
+import HEWLETTPACKARD8560A from '../assets/components/HEWLETT PACKARD 8560A.jpeg';
+import HEWLETTPACKARD8648B from '../assets/components/HEWLETT PACKARD 8648B.jpeg';
+import HEWLETTPACKARD8648C from '../assets/components/HEWLETT PACKARD 8648C.jpeg';
+import AGILENTE4421B from '../assets/components/AGILENT E4421B.jpeg';
+import AGILENTE4438C from '../assets/components/AGILENT E4438C.jpg';
+import HEWLETTPACKARDE4432B from '../assets/components/HEWLETT PACKARD E4432B.jpeg';
+import HEWLETTPACKARDE4433B from '../assets/components/HEWLETT PACKARD E4433B.jpg';
+import OlympusSZSTV1StereoMicroscope from '../assets/components/Olympus SZ-STV1 Stereo Microscope.jpg';
+import DESABELEKTRONIASYSTEM from '../assets/components/DESAB ELEKTRONIA SYSTEM.jpeg';
+import BELTEMA15124ART from '../assets/components/BELTEMA 15-124 ART.jpg';
+import SDRHFSPLITTER from '../assets/components/SDR HF SPLITTER.jpg';
+import RTLSDRNooelec5 from '../assets/components/RTL SDR Nooelec5.jpg';
+import RTLSDRNooelec from '../assets/components/RTL SDR Nooelec.jpg';
+import QSRHFSPLITTER11500 from '../assets/components/QSR HF SPLITTER 1-1500.jpg';
+import QSRHFSPLITTER11500MHZ from '../assets/components/QSR HF SPLITTER 1 1500 MHZ.jpg';
+import HackRFOneSDR from '../assets/components/HackRF One SDR.jpg';
+import BladeRFmicroA5 from '../assets/components/BladeRFmicro -A5.jpg';
+import BladeRF115 from '../assets/components/BladeRF115.jpg';
+import BladeRF20microA9 from '../assets/components/BladeRF2.0 micro -A9.jpg';
+import BladeRF from '../assets/components/BladeRF.jpg';
+import BladeRF40 from '../assets/components/BladeRF-40.jpg';
+import ANTENNASWITCH401 from '../assets/components/ANTENNA SWITCH-401.jpg';
+import STOREMACHINE1 from '../assets/components/store machine 1.jpeg';
+import STOREMACHINE2 from '../assets/components/store machine 2.jpeg';
+import STOREMACHINE3 from '../assets/components/store machine 3.jpeg';
+import STOREMACHINE4 from '../assets/components/store machine 4.jpeg';
+import STOREMACHINE5 from '../assets/components/store machine 5.jpeg';
+import STOREMACHINE6 from '../assets/components/store machine 6.jpeg';
+import STOREMACHINE7 from '../assets/components/store machine 7.jpeg';
+import STOREMACHINE8 from '../assets/components/store machine 8.jpeg';
+import STOREMACHINE9 from '../assets/components/store machine 9.jpeg';
+import STOREMACHINE10 from '../assets/components/store machine 10.jpeg';
+import STOREMACHINE11 from '../assets/components/store machine 11.jpeg';
+import STOREMACHINE12 from '../assets/components/store machine 12.jpeg';
+import STOREMACHINE13 from '../assets/components/store machine 13.jpeg';
+import STOREMACHINE14 from '../assets/components/store machine 14.jpeg';
+import STOREMACHINE15 from '../assets/components/store machine 15.jpeg';
+import STOREMACHINE16 from '../assets/components/store machine 16.jpeg';
+import STOREMACHINE17 from '../assets/components/store machine 17.jpeg';
+import STOREMACHINE18 from '../assets/components/store machine 18.jpeg';
+import STOREMACHINE19 from '../assets/components/store machine 19.jpeg';
+import STOREMACHINE20 from '../assets/components/store machine 20.jpeg';
+import STOREMACHINE21 from '../assets/components/store machine 21.jpeg';
+import STOREMACHINE22 from '../assets/components/store machine 22.jpeg';
+import STOREMACHINE23 from '../assets/components/store machine 23.jpeg';
+import STOREMACHINE24 from '../assets/components/store machine 24.jpeg';
+import STOREMACHINE25 from '../assets/components/store machine 25.jpeg';
+import STOREMACHINE26 from '../assets/components/store machine 26.jpeg';
+import STOREMACHINE27 from '../assets/components/store machine 27.jpeg';
+import STOREMACHINE28 from '../assets/components/store machine 28.jpeg';
+import STOREMACHINE29 from '../assets/components/store machine 29.jpeg';
+import STOREMACHINE30 from '../assets/components/store machine 30.jpeg';
+import STOREMACHINE31 from '../assets/components/store machine 31.jpeg';
+import STOREMACHINE32 from '../assets/components/store machine 33.jpeg';
+import STOREMACHINE33 from '../assets/components/store machine 33.jpeg';
+import STOREMACHINE34 from '../assets/components/store machine 34.jpeg';
+import STOREMACHINE35 from '../assets/components/store machine 35.jpeg';
+import STOREMACHINE36 from '../assets/components/store machine 36.jpeg';
+import STOREMACHINE37 from '../assets/components/store machine 37.jpeg';
+import STOREMACHINE38 from '../assets/components/store machine 38.jpeg';
+import STOREMACHINE39 from '../assets/components/store machine 39.jpeg';
+import STOREMACHINE40 from '../assets/components/store machine 40.jpeg';
+import STOREMACHINE41 from '../assets/components/store machine 41.jpeg';
+import STOREMACHINE42 from '../assets/components/store machine 42.jpeg';
+import STOREMACHINE43 from '../assets/components/store machine 43.jpeg';
+import STOREMACHINE44 from '../assets/components/store machine 44.jpeg';
+import STOREMACHINE45 from '../assets/components/store machine 45.jpeg';
+import STOREMACHINE46 from '../assets/components/store machine 46.jpeg';
+import STOREMACHINE47 from '../assets/components/store machine 47.jpeg';
+import STOREMACHINE48 from '../assets/components/store machine 48.jpeg';
+import STOREMACHINE49 from '../assets/components/store machine 49.jpeg';
+import STOREMACHINE50 from '../assets/components/store machine 50.jpeg';
+import STOREMACHINE51 from '../assets/components/store machine 51.jpeg';
+import STOREMACHINE52 from '../assets/components/store machine 52.jpeg';
+import STOREMACHINE53 from '../assets/components/store machine 53.jpeg';
+import STOREMACHINE54 from '../assets/components/store machine 54.jpeg';
+import STOREMACHINE55 from '../assets/components/store machine 55.jpeg';
+import STOREMACHINE56 from '../assets/components/store machine 56.jpeg';
+import STOREMACHINE57 from '../assets/components/store machine 57.jpeg';
+import STOREMACHINE58 from '../assets/components/store machine 58.jpeg';
+import STOREMACHINE59 from '../assets/components/store machine 59.jpeg';
+import STOREMACHINE60 from '../assets/components/store machine 60.jpeg';
+import SWRMETER from '../assets/components/SWR METER.jpg';
+import HFANTENNASWITCH from '../assets/components/HF ANTENNA SWITCH.jpg';
 
 
 
@@ -167,13 +308,92 @@ import Bird43WattMeter from '../assets/components/Bird 43 Watt Meter.jpg';
 
 
 
-const productsData = [
+
+
+
+
+const productsLocalData = [
   { name: "RF Cable", slug: "rf-cable", image: rfcable },
   { name: "Signal Generator All Product", slug: "signal-generator-all-product", image: SIGNALGENERATORallproduct },
   { name: "NIESSI Power Meter", slug: "niessi-power-meter", image: NIESSIPOWERMETER },
-
-
-
+  { name: "Power Supply E3616A", slug: "power-supply-e3616a", image: POWERSUPPLYE3616A },
+  { name: "Power Supply E3620A", slug: "power-supply-e3620a", image: POWERSUPPLYE3620A },
+  { name: "Power Supply E3632A", slug: "power-supply-e3632a", image: POWERSUPPLYE3632A },
+  { name: "Power Supply E3634A", slug: "power-supply-e3634a", image: POWERSUPPLYE3634A },
+  { name: "Power Supply EX354D", slug: "power-supply-ex354d", image: POWERSUPPLYEX354D },
+  { name: "Power Supply", slug: "power-supply", image: POWERSUPPLY },
+  { name: "Power Wave Inverter AD1", slug: "power-wave-inverter-ad1", image: POWERWAVEINVENTERAD },
+  { name: "QL355TP Power Supply", slug: "ql355tp-power-supply", image: QL355TPPOWERSUPPLY },
+  { name: "Rohde & Schwarz 1085.7099.02", slug: "rohde-schwarz-1085-7099-02", image: ROHDESCHWARZ1085709902 },
+  { name: "Rosenberger 05CK10R-150", slug: "rosenberger-05ck10r-150", image: ROSENBERGER05CK10R150 },
+  { name: "Rosenberger 06 CK100-150", slug: "rosenberger-06-ck100-150", image: ROSENBERGER06CK100150 },
+  { name: "RPHDE & Schwarz Signal Generator SMY", slug: "rphde-schwarz-signal-generator-smy", image: RPHDESCHWARZSIGNALGENERATORSMY },
+  { name: "Signal Generator E4437B", slug: "signal-generator-e4437b", image: SIGNALGENERATORE4437B },
+  { name: "Signal Generator ESG-D3000A", slug: "signal-generator-esg-d3000a", image: SIGNALGENERATORESGD3000A },
+  { name: "Site Master S331D", slug: "site-master-s331d", image: sitemasterS331D },
+  { name: "TDS 3052 Oscilloscope TEKTRONIX", slug: "tds-3052-oscilloscope-tektronix", image: TDS3052OscilloscopeTEKTRONIX },
+  { name: "AFM 1100 TUFVASSONS Transformer", slug: "afm-1100-tufvassons-transformer", image: AFM1100TUFVASSONSTRANSFORMER },
+  { name: "Attenuator Spinner", slug: "attenuator-spinner", image: ATTENUATORSPINNER },
+  { name: "GFW", slug: "gfw", image: GFW },
+  { name: "Agilent E4418B Power Meter", slug: "agilent-e4418b-power-meter", image: AGILENTE4418BPOWERMETER },
+  { name: "Agilent E4432B", slug: "agilent-e4432b", image: AgilentE4432B },
+  { name: "Agilent E4436B BB", slug: "agilent-e4436b-bb", image: AgilentE4436BBB },
+  { name: "Agilent E44208B", slug: "agilent-e44208b", image: AgilentE44208B },
+  { name: "Analog Digital Scope HM407-2", slug: "analog-digital-scope-hm407-2", image: ANALLOGDIGITALSCOPEHM407 },
+  { name: "8753ES is S-Parameter Network Analyser", slug: "8753es-is-s-parameter-network-analyser", image: ESisSParameterNetworkAnalyser },
+  { name: "Rohde & Schwarz SMBV100A", slug: "rohde-schwarz-smbv100a", image: ROHDESCHWARZSMBV100A },
+  { name: "Rohde & Schwarz Vector Network Analyzer ZVRE", slug: "rohde-schwarz-vector-network-analyzer-zvre", image: rohdeschwarzvectornetworkanalyzerzvre },
+  { name: "Agilent E4420B", slug: "agilent-e4420b", image: AGILENTE4420B },
+  { name: "Power Meter ML2438A", slug: "power-meter-ml2438a", image: POWERMETERML2438A },
+  { name: "Agilent 3631A", slug: "agilent-3631a", image: AGILENT3631A },
+  { name: "Agilent 8753ES", slug: "agilent-8753es", image: AGILENT8753ES },
+  { name: "Agilent E3616A", slug: "agilent-e3616a", image: AGILENTE3616A },
+  { name: "Agilent E4420B ESG", slug: "agilent-e4420b-esg", image: AGILENTE4420BESG },
+  { name: "Agilent N8973A", slug: "agilent-n8973a", image: AGILENTN8973A },
+  { name: "Agilent E3640A", slug: "agilent-e3640a", image: AGILENTE3640A },
+  { name: "Listen & Talk", slug: "listen-talk", image: LISTENTALK },
+  { name: "Power Supply SM-3540", slug: "power-supply-sm-3540", image: POWERSUPPLYSM3540 },
+  { name: "Generator 33210A", slug: "generator-33210a", image: GENERATOR33210A },
+  { name: "Powerbox LVM 210.290", slug: "powerbox-lvm-210-290", image: PowerboxLVM210290 },
+  { name: "NRV Z53 Power Meter Sensor", slug: "nrv-z53-power-meter-sensor", image: NRVZ53POWERMETERSENSOR },
+  { name: "Altusen PNS108 Power Over Net", slug: "altusen-pns108-power-over-net", image: NRVZ53POWERMEAltusenPNS108PowerOverNetTERSENSOR },
+  { name: "GPIB Control Optical to RF Switch Group", slug: "gpib-control-optical-to-rf-switch-group", image: gpibcontrolopticaltorfswitch },
+  { name: "Hewlett Packard 8753D", slug: "hewlett-packard-8753d", image: HEWLETTPACKARD8753D },
+  { name: "Hewlett Packard 75000 Series B Repeater", slug: "hewlett-packard-75000-series-b-repeater", image: HEWLETTPACKARD75000SeriesBRepeater },
+  { name: "Agilent 8502A", slug: "agilent-8502a", image: AGILENT8502A },
+  { name: "Agilent 34401A", slug: "agilent-34401a", image: AGILENT34401A },
+  { name: "Hewlett Packard 11582A", slug: "hewlett-packard-11582a", image: HEWLETTPACKARD11582A },
+  { name: "Thero Electra 80110", slug: "thero-electra-80110", image: THEROELECTRA80110 },
+  { name: "SUHNER HUBER SUHNER AG 74Z-0-0-70", slug: "suhner-huber-suhner-ag-74z-0-0-70", image: SUHNERHUBERSUHNERAG74Z0070 },
+  { name: "Rosenberger 7-16 Calibration Kit 60CK100-150", slug: "rosenberger-7-16-calibration-kit-60ck100-150", image: ROSENBERGER716CALIBRATIONKIT60CK100150 },
+  { name: "Rohde & Schwarz ZNB8", slug: "rohde-schwarz-znb8", image: ROHDESSCHWARZZNB8 },
+  { name: "Rohde & Schwarz 1085. 7247.02", slug: "rohde-schwarz-1085-7247-02", image: ROHDESCHWARZ1085724702INS },
+  { name: "Protek U3000A Universal Counter", slug: "protek-u3000a-universal-counter", image: PROTEKU3000AUNIVERSALCOUNTER },
+  { name: "HUBER-SUHNER 74Z-0-0-71", slug: "huber-suhner-74z-0-0-71", image: HUBERSUHNER74Z0071 },
+  { name: "Agilent 85092C Cover", slug: "agilent-85092c-cover", image: AGILENT85092CCOVER },
+  { name: "HUBER-SUHNER 74Z-0-0-70", slug: "huber-suhner-74z-0-0-70", image: HUBERSUHNER74Z0070INS },
+  { name: "Rohde & Schwarz 1079-8500 FSEM", slug: "rohde-schwarz-1079-8500-fsem", image: RohdeSchwarz10798500FSEM },
+  { name: "Hewlett Packard 8560A", slug: "hewlett-packard-8560a", image: HEWLETTPACKARD8560A },
+  { name: "Hewlett Packard 8648B", slug: "hewlett-packard-8648b", image: HEWLETTPACKARD8648B },
+  { name: "Hewlett Packard 8648C", slug: "hewlett-packard-8648c", image: HEWLETTPACKARD8648C },
+  { name: "Agilent E4421B", slug: "agilent-e4421b", image: AGILENTE4421B },
+  { name: "Agilent E4438C", slug: "agilent-e4438c", image: AGILENTE4438C },
+  { name: "Hewlett Packard E4432B", slug: "hewlett-packard-e4432b", image: HEWLETTPACKARDE4432B },
+  { name: "Hewlett Packard E4433B", slug: "hewlett-packard-e4433b", image: HEWLETTPACKARDE4433B },
+  { name: "Olympus SZ-STV1 Stereo Microscope", slug: "olympus-sz-stv1-stereo-microscope", image: OlympusSZSTV1StereoMicroscope },
+  { name: "DESAB ELEKTRONIA SYSTEM", slug: "desab-elektronia-system", image: DESABELEKTRONIASYSTEM },
+  { name: "BELTEMA 15-124 ART", slug: "beltema-15-124-art", image: BELTEMA15124ART },
+  { name: "SDR HF SPLITTER", slug: "sdr-hf-splitter", image: SDRHFSPLITTER },
+  { name: "RTL SDR Nooelec5", slug: "rtl-sdr-nooelec5", image: RTLSDRNooelec5 },
+  { name: "RTL SDR Nooelec", slug: "rtl-sdr-nooelec", image: RTLSDRNooelec },
+  { name: "QSR HF SPLITTER 1-1500", slug: "qsr-hf-splitter-1-1500", image: QSRHFSPLITTER11500 },
+  { name: "QSR HF SPLITTER 1 1500 MHZ", slug: "qsr-hf-splitter-1-1500-mhz", image: QSRHFSPLITTER11500MHZ },
+  { name: "HackRF One SDR", slug: "hackrf-one-sdr", image: HackRFOneSDR },
+  { name: "BladeRFmicro -A5", slug: "bladerfmicro-a5", image: BladeRFmicroA5 },
+  { name: "BladeRF115", slug: "bladerf115", image: BladeRF115 },
+  { name: "BladeRF2.0 micro -A9", slug: "bladerf20-micro-a9", image: BladeRF20microA9 },
+  { name: "BladeRF", slug: "bladerf", image: BladeRF },
+  { name: "BladeRF-40", slug: "bladerf-40", image: BladeRF40 },
   { name: "Jumper Cable", slug: "jumper-cable", image: jumpercable },
   { name: "High Freq Cable", slug: "high-freq-cable", image: highfreqcable },
   { name: "Fakra Connector", slug: "fakra-connector", image: fakraconnector },
@@ -313,7 +533,83 @@ const productsData = [
   { name: "MC4 Stripping Tool", slug: "mc4-stripping-tool", image: MC4StrippingTool },
   { name: "N Connector Tourque Wrench", slug: "n-connector-tourque-wrench", image: NConnectorTourqueWrench },
   { name: "SMA Connector Tourque Wrench", slug: "sma-connector-tourque-wrench", image: SMAConnectorTourqueWrench },
-  { name: "Bird 43 Watt Meter", slug: "bird-43-watt-meter", image: Bird43WattMeter }
+  { name: "STOREMACHINE1", slug: "storemachine1", image: STOREMACHINE1 },
+  { name: "STOREMACHINE2", slug: "storemachine2", image: STOREMACHINE2 },
+  { name: "STOREMACHINE3", slug: "storemachine3", image: STOREMACHINE3 },
+  { name: "STOREMACHINE4", slug: "storemachine4", image: STOREMACHINE4 },
+  { name: "STOREMACHINE5", slug: "storemachine5", image: STOREMACHINE5 },
+  { name: "STOREMACHINE6", slug: "storemachine6", image: STOREMACHINE6 },
+  { name: "STOREMACHINE7", slug: "storemachine7", image: STOREMACHINE7 },
+  { name: "STOREMACHINE8", slug: "storemachine8", image: STOREMACHINE8 },
+  { name: "STOREMACHINE9", slug: "storemachine9", image: STOREMACHINE9 },
+  { name: "STOREMACHINE10", slug: "storemachine10", image: STOREMACHINE10 },
+  { name: "STOREMACHINE11", slug: "storemachine11", image: STOREMACHINE11 },
+  { name: "STOREMACHINE12", slug: "storemachine12", image: STOREMACHINE12 },
+  { name: "STOREMACHINE13", slug: "storemachine13", image: STOREMACHINE13 },
+  { name: "STOREMACHINE14", slug: "storemachine14", image: STOREMACHINE14 },
+  { name: "STOREMACHINE15", slug:"storemachine15",image : STOREMACHINE15},
+  { name: "STOREMACHINE16", slug:"storemachine16",image : STOREMACHINE16},
+  { name: "STOREMACHINE17", slug:"storemachine17",image : STOREMACHINE17 },
+  { name: "STOREMACHINE18", slug:"storemachine18",image : STOREMACHINE18 },
+  { name: "STOREMACHINE19", slug:"storemachine19",image : STOREMACHINE19 },
+  { name: "STOREMACHINE20", slug:"storemachine20",image : STOREMACHINE20 },
+  { name: "STOREMACHINE21", slug:"storemachine21",image : STOREMACHINE21 },
+  { name: "STOREMACHINE22", slug:"storemachine22",image : STOREMACHINE22 },
+  { name: "STOREMACHINE23", slug:"storemachine23",image : STOREMACHINE23 },
+  { name: "STOREMACHINE24", slug:"storemachine24",image : STOREMACHINE24 },
+  { name: "STOREMACHINE25", slug:"storemachine25",image : STOREMACHINE25 },
+  { name: "STOREMACHINE26", slug:"storemachine26",image : STOREMACHINE26 },
+  { name: "STOREMACHINE27", slug:"storemachine27",image : STOREMACHINE27 },
+  { name: "STOREMACHINE28", slug:"storemachine28",image : STOREMACHINE28 },
+  { name: "STOREMACHINE29", slug:"storemachine29",image : STOREMACHINE29 },
+  { name: "STOREMACHINE30", slug:"storemachine30",image : STOREMACHINE30 },
+  { name: "STOREMACHINE31", slug:"storemachine31",image : STOREMACHINE31 },
+  { name: "STOREMACHINE32", slug:"storemachine32",image : STOREMACHINE32 },
+  { name: "STOREMACHINE33", slug:"storemachine33",image : STOREMACHINE33 },
+  { name: "STOREMACHINE34", slug:"storemachine34",image : STOREMACHINE34 },
+  { name: "STOREMACHINE35", slug:"storemachine35",image : STOREMACHINE35 },
+  { name: "STOREMACHINE36", slug:"storemachine36",image : STOREMACHINE36 },
+  { name: "STOREMACHINE37", slug:"storemachine37",image : STOREMACHINE37 },
+  { name: "STOREMACHINE38", slug:"storemachine38",image : STOREMACHINE38 },
+  { name: "STOREMACHINE39", slug:"storemachine39",image : STOREMACHINE39 },
+  { name: "STOREMACHINE40", slug:"storemachine40",image : STOREMACHINE40 },
+  { name: "STOREMACHINE41", slug:"storemachine41",image : STOREMACHINE41 },
+  { name: "STOREMACHINE42", slug:"storemachine42",image : STOREMACHINE42 },
+  { name: "STOREMACHINE43", slug:"storemachine43",image : STOREMACHINE43 },
+  { name: "STOREMACHINE44", slug:"storemachine44",image : STOREMACHINE44 },
+  { name: "STOREMACHINE45", slug:"storemachine45",image : STOREMACHINE45 },
+  { name: "STOREMACHINE46", slug:"storemachine46",image : STOREMACHINE46 },
+  { name: "STOREMACHINE47", slug:"storemachine47",image : STOREMACHINE47 },
+  { name: "STOREMACHINE48", slug:"storemachine48",image : STOREMACHINE48 },
+  { name: "STOREMACHINE49", slug:"storemachine49",image : STOREMACHINE49 },
+  { name: "STOREMACHINE50", slug:"storemachine50",image : STOREMACHINE50 },
+  { name: "STOREMACHINE51", slug:"storemachine51",image : STOREMACHINE51 },
+  { name: "STOREMACHINE52", slug:"storemachine52",image : STOREMACHINE52 },
+  { name: "STOREMACHINE53", slug:"storemachine53",image : STOREMACHINE53 },
+  { name: "STOREMACHINE54", slug:"storemachine54",image : STOREMACHINE54 },
+  { name: "STOREMACHINE55", slug:"storemachine55",image : STOREMACHINE55 },
+  { name: "STOREMACHINE56", slug:"storemachine56",image : STOREMACHINE56 },
+  { name: "STOREMACHINE57", slug:"storemachine57",image : STOREMACHINE57 },
+  { name: "STOREMACHINE58", slug:"storemachine58",image : STOREMACHINE58 },
+  { name: "STOREMACHINE59", slug:"storemachine59",image : STOREMACHINE59 },
+  { name: "STOREMACHINE60", slug:"storemachine60",image : STOREMACHINE60 },
+  { name: "SWRMETER", slug:"SWRMETER",image : SWRMETER },
+  { name: "HF ANTENNA SWITCH", slug:"HF-ANTENNA-SWITCH",image : HFANTENNASWITCH},
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
 
 
   
@@ -325,26 +621,64 @@ const productsData = [
 
 ].map(product => ({
   ...product,
-  slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w\-]+/g, '')
+  slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
 }));
-
-export const productsWithSlugs = productsData;
+ 
+export const productsWithSlugs = productsLocalData;
 
 const ProductShowroom = () => {
   const location = useLocation();
-  // Get ?search= from URL
-  const params = new URLSearchParams(location.search);
-  const initialSearch = params.get('search') || '';
-  const [searchTerm, setSearchTerm] = useState(initialSearch);
+  const navigate = useNavigate();
+  // controlled input: start empty, optionally prefill from URL once
+  const [searchTerm, setSearchTerm] = useState('');
+  const [currentPage, setCurrentPage] = useState(1);
+  const [perPage, setPerPage] = useState(20);
 
-  // Update searchTerm if the URL param changes
-  React.useEffect(() => {
-    setSearchTerm(params.get('search') || '');
+  // Sync URL -> state (handles direct links and browser navigation)
+  useEffect(() => {
+    const p = new URLSearchParams(location.search);
+    const s = p.get('search');
+    const pageParam = parseInt(p.get('page'), 10);
+    const perParam = parseInt(p.get('perPage'), 10);
+    if (s !== null) setSearchTerm(s);
+    if (!isNaN(pageParam) && pageParam > 0) setCurrentPage(pageParam);
+    if (!isNaN(perParam) && perParam > 0) setPerPage(perParam);
   }, [location.search]);
 
-  const filteredProducts = productsData.filter(product =>
+  // Sync state -> URL (replace to avoid history spam)
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    if (searchTerm) params.set('search', searchTerm); else params.delete('search');
+    if (currentPage && currentPage !== 1) params.set('page', String(currentPage)); else params.delete('page');
+    if (perPage && perPage !== 20) params.set('perPage', String(perPage)); else params.delete('perPage');
+
+    const newSearch = params.toString();
+    const curSearch = location.search.replace(/^\?/, '');
+    if (newSearch !== curSearch) {
+      navigate(`${location.pathname}${newSearch ? `?${newSearch}` : ''}`, { replace: true });
+    }
+  }, [searchTerm, currentPage, perPage, location.pathname, location.search, navigate]);
+
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+    setCurrentPage(1);
+  };
+
+  const filteredProducts = productsLocalData.filter(product =>
     product.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  // Pagination helpers
+  const totalPages = Math.max(1, Math.ceil(filteredProducts.length / perPage));
+  const startIndex = (currentPage - 1) * perPage;
+  const visibleProducts = filteredProducts.slice(startIndex, startIndex + perPage);
+
+  const goToPage = (page) => {
+    const p = Math.min(Math.max(1, page), totalPages);
+    setCurrentPage(p);
+  };
+  const prevPage = () => goToPage(currentPage - 1);
+  const nextPage = () => goToPage(currentPage + 1);
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen px-4 py-10 md:px-10">
@@ -383,20 +717,21 @@ const ProductShowroom = () => {
 
         <div className="mb-10 max-w-lg mx-auto">
           <input
-            type="text"
-            placeholder="Search products..."
-            className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+  type="text"
+  placeholder="Search products..."
+  className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
+  value={searchTerm}
+  onChange={handleSearch}
+  aria-label="Search products"
+/>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {filteredProducts.length > 0 ? (
-            filteredProducts.map((product, index) => (
+            visibleProducts.map((product) => (
               <Link
                 to={`/product/${product.slug}`}
-                key={index}
+                key={product.slug}
                 className="bg-white shadow-md p-4 rounded-xl overflow-hidden hover:shadow-xl transition duration-300 flex flex-col items-center text-center border border-gray-200 hover:border-blue-400 group"
               >
                 <img
@@ -418,7 +753,7 @@ const ProductShowroom = () => {
                     label="Explore"
                     onClick={(e) => {
                       e.preventDefault();
-                      window.location.href = `/product/${product.slug}`;
+                      navigate(`/product/${product.slug}`);
                     }}
                   />
                 </div>
@@ -429,16 +764,50 @@ const ProductShowroom = () => {
           )}
         </div>
 
+      {/* 🔘 Compact Pagination */}
+      {totalPages > 1 && (
+        <div className="flex items-center justify-between mt-6 space-x-4 max-w-7xl mx-auto">
+          <div className="flex items-center space-x-2">
+            <select value={perPage} onChange={(e) => { setPerPage(Number(e.target.value)); setCurrentPage(1); }} className="text-sm px-2 py-1 border rounded" aria-label="Per page">
+              <option value={12}>12</option>
+              <option value={20}>20</option>
+              <option value={50}>50</option>
+            </select>
+            <span className="text-xs text-gray-500">/ {filteredProducts.length} items</span>
+          </div>
+
+          <nav className="flex items-center space-x-1" aria-label="Compact pagination">
+            <button onClick={() => goToPage(1)} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="First page">«</button>
+            <button onClick={prevPage} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="Previous page">‹</button>
+
+            {Array.from({ length: Math.min(5, totalPages) }).map((_, idx) => {
+              const start = Math.max(1, Math.min(currentPage - 2, totalPages - 4));
+              const page = start + idx;
+              if (page < 1 || page > totalPages) return null;
+              return (
+                <button key={page} onClick={() => goToPage(page)} className={`px-2 py-1 text-sm rounded border ${page === currentPage ? 'bg-blue-600 text-white' : 'bg-white'}`}>{page}</button>
+              );
+            })}
+
+            <button onClick={nextPage} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Next page">›</button>
+            <button onClick={() => goToPage(totalPages)} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Last page">»</button>
+          </nav>
+
+          <div className="text-sm text-gray-600">Page {currentPage} of {totalPages}</div>
+        </div>
+      )}
+
         <div className="mt-16 text-center space-y-4">
           <p className="text-sm text-gray-600">
             Need help finding the right product? Reach out to our team for personalized assistance.
           </p>
           <div className="flex justify-center">
-            <StyledButton
-              label="Contact Support"
-              icon={true}
-              onClick={() => window.location.href = 'mailto:info@synergytpl.com'}
-            />
+            <a href="mailto:info@synergytpl.com" aria-label="Email support">
+              <StyledButton
+                label="Contact Support"
+                icon={true}
+              />
+            </a>
           </div>
         </div>
       </div>

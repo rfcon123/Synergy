@@ -44,7 +44,7 @@ const Footer = () => {
             <li className="flex items-center gap-2">
               <FaMapMarkerAlt />
               <a
-                href="https://www.google.com/maps?q=WZ-47, SAINI CHOWK, budella village, dhani ram ji ka ghar, basment, Budella, Vikaspuri, New Delhi, Delhi 110018"
+                href="https://maps.app.goo.gl/uFQeeQ6xQqd8R67d9, KHASRA NO. 33/23, Mundka Industrial Area, Mundka, New Delhi, Delhi, 110041"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:underline hover:text-blue-400 transition"

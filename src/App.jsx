@@ -25,6 +25,7 @@ import Groupproductdatasheet from './pages/Groupproductdatasheet';
 import Feedback from './pages/Feedback';
 import Cablecreator from './pages/Cablecreator'; 
 import Notfound from './pages/Notfound'; 
+import BelDocuments from './components/BelDocuments';
 
 // Import the new details page component
 import HotProductDetails from './pages/HotProductDetails';
@@ -33,10 +34,9 @@ function App() {
   return (
     <Router>
       <Helmet>
-        <title>Panacea Telecom</title>
-        <meta name="description" content="Welcome to Panacea Telecom's official website." />
-        <meta name="keywords" content="RF components, telecom solutions, Panacea Synergy" />
-        <meta name="author" content="Panacea Telecom" />
+        <meta name="description" content="Welcome to Synergy Telecom's official website." />
+        <meta name="keywords" content="RF components, telecom solutions,  Synergy" />
+        <meta name="author" content="Synergy Telecom" />
       </Helmet>
 
       <Header />
@@ -84,6 +84,9 @@ function App() {
         <Route path="/customer-feedback" element={<Feedback />} />
 
         <Route path="/cable-creator" element={<Cablecreator />} />
+        
+        {/* STK Documents */}
+        <Route path="/stk-documents" element={<BelDocuments />} />
 
         {/* Catch-all */}
         <Route path="*" element={<Notfound />} />

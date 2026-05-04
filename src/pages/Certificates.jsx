@@ -17,6 +17,14 @@ import cert12 from "../assets/certificate/cert12.png";
 import cert13 from "../assets/certificate/cert13.png";
 import cert14 from "../assets/certificate/cert14.png";
 import cert15 from "../assets/certificate/cert15.png";
+import rci25certificate from "../assets/certificate/rci_25_certificate.png";
+import EPRProposalPLASTICpage_1 from "../assets/certificate/EPR_Proposal-PLASTIC_page_1.jpg";
+import EPRProposalPLASTICpage2 from "../assets/certificate/EPR_Proposal-PLASTIC_page-2.jpg";
+import EPRProposalPLASTIC_page3 from "../assets/certificate/EPR_Proposal-PLASTIC_page-3.jpg";
+import EPR_ProposalPLASTICpage4 from "../assets/certificate/EPR_Proposal-PLASTIC_page-4.jpg";
+
+
+
 
 const Certificates = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -37,6 +45,11 @@ const Certificates = () => {
     { src: cert13, title: "UDYAM Registration" },
     { src: cert14, title: "Trade Mark Registration" },
     { src: cert15, title: "MSME Sustainable ZED Certification" },
+    { src: rci25certificate, title: "RCI 25 Years Certificate" },
+    { src: EPRProposalPLASTICpage_1, title: "EPR Proposal for Plastic Waste Management" },
+    { src: EPRProposalPLASTICpage2, title: "EPR Proposal for Plastic Waste Management - Page 2" },
+    { src: EPRProposalPLASTIC_page3, title: "EPR Proposal for Plastic Waste Management - Page 3" },
+    { src: EPR_ProposalPLASTICpage4, title: "EPR Proposal for Plastic Waste Management - Page 4" },
   ];
 
   return (
