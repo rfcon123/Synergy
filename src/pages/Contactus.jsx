@@ -113,7 +113,7 @@ const ContactUs = () => {
             <p className="text-sm text-gray-600 mb-4">Country Head</p>
             <p className="text-gray-700 mb-1">SYNERGY TELECOM PVT LTD</p>
             <p className="text-gray-700 mb-1">1 Reidmount Avenue, Scarborough, Ontario</p>
-            <p className="text-gray-700 mb-1">Postal Code M1S 4V3, Canada</p>
+            <p className="text-gray-700 mb-1">Postal Code M1S 4V3,test text Canada</p>
             <p className="mb-1">
               📧 <a href="mailto:pulkit@rfconnector.in" className="text-blue-600 hover:underline">pulkit@rfconnector.in</a>
             </p>
