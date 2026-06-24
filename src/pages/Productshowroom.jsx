@@ -4,7 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Helmet } from "react-helmet-async";
 
 
-import StyledButton  from '../components/StyledButton';
+import StyledButton from '../components/StyledButton';
 import rfcable from '../assets/components/rfcable.jpg';
 import EMCSCANNER from '../assets/components/EMC SCANNER.jpg';
 import jumpercable from '../assets/components/jumpercable.jpg';
@@ -547,58 +547,55 @@ const productsLocalData = [
   { name: "STOREMACHINE12", slug: "storemachine12", image: STOREMACHINE12 },
   { name: "STOREMACHINE13", slug: "storemachine13", image: STOREMACHINE13 },
   { name: "STOREMACHINE14", slug: "storemachine14", image: STOREMACHINE14 },
-  { name: "STOREMACHINE15", slug:"storemachine15",image : STOREMACHINE15},
-  { name: "STOREMACHINE16", slug:"storemachine16",image : STOREMACHINE16},
-  { name: "STOREMACHINE17", slug:"storemachine17",image : STOREMACHINE17 },
-  { name: "STOREMACHINE18", slug:"storemachine18",image : STOREMACHINE18 },
-  { name: "STOREMACHINE19", slug:"storemachine19",image : STOREMACHINE19 },
-  { name: "STOREMACHINE20", slug:"storemachine20",image : STOREMACHINE20 },
-  { name: "STOREMACHINE21", slug:"storemachine21",image : STOREMACHINE21 },
-  { name: "STOREMACHINE22", slug:"storemachine22",image : STOREMACHINE22 },
-  { name: "STOREMACHINE23", slug:"storemachine23",image : STOREMACHINE23 },
-  { name: "STOREMACHINE24", slug:"storemachine24",image : STOREMACHINE24 },
-  { name: "STOREMACHINE25", slug:"storemachine25",image : STOREMACHINE25 },
-  { name: "STOREMACHINE26", slug:"storemachine26",image : STOREMACHINE26 },
-  { name: "STOREMACHINE27", slug:"storemachine27",image : STOREMACHINE27 },
-  { name: "STOREMACHINE28", slug:"storemachine28",image : STOREMACHINE28 },
-  { name: "STOREMACHINE29", slug:"storemachine29",image : STOREMACHINE29 },
-  { name: "STOREMACHINE30", slug:"storemachine30",image : STOREMACHINE30 },
-  { name: "STOREMACHINE31", slug:"storemachine31",image : STOREMACHINE31 },
-  { name: "STOREMACHINE32", slug:"storemachine32",image : STOREMACHINE32 },
-  { name: "STOREMACHINE33", slug:"storemachine33",image : STOREMACHINE33 },
-  { name: "STOREMACHINE34", slug:"storemachine34",image : STOREMACHINE34 },
-  { name: "STOREMACHINE35", slug:"storemachine35",image : STOREMACHINE35 },
-  { name: "STOREMACHINE36", slug:"storemachine36",image : STOREMACHINE36 },
-  { name: "STOREMACHINE37", slug:"storemachine37",image : STOREMACHINE37 },
-  { name: "STOREMACHINE38", slug:"storemachine38",image : STOREMACHINE38 },
-  { name: "STOREMACHINE39", slug:"storemachine39",image : STOREMACHINE39 },
-  { name: "STOREMACHINE40", slug:"storemachine40",image : STOREMACHINE40 },
-  { name: "STOREMACHINE41", slug:"storemachine41",image : STOREMACHINE41 },
-  { name: "STOREMACHINE42", slug:"storemachine42",image : STOREMACHINE42 },
-  { name: "STOREMACHINE43", slug:"storemachine43",image : STOREMACHINE43 },
-  { name: "STOREMACHINE44", slug:"storemachine44",image : STOREMACHINE44 },
-  { name: "STOREMACHINE45", slug:"storemachine45",image : STOREMACHINE45 },
-  { name: "STOREMACHINE46", slug:"storemachine46",image : STOREMACHINE46 },
-  { name: "STOREMACHINE47", slug:"storemachine47",image : STOREMACHINE47 },
-  { name: "STOREMACHINE48", slug:"storemachine48",image : STOREMACHINE48 },
-  { name: "STOREMACHINE49", slug:"storemachine49",image : STOREMACHINE49 },
-  { name: "STOREMACHINE50", slug:"storemachine50",image : STOREMACHINE50 },
-  { name: "STOREMACHINE51", slug:"storemachine51",image : STOREMACHINE51 },
-  { name: "STOREMACHINE52", slug:"storemachine52",image : STOREMACHINE52 },
-  { name: "STOREMACHINE53", slug:"storemachine53",image : STOREMACHINE53 },
-  { name: "STOREMACHINE54", slug:"storemachine54",image : STOREMACHINE54 },
-  { name: "STOREMACHINE55", slug:"storemachine55",image : STOREMACHINE55 },
-  { name: "STOREMACHINE56", slug:"storemachine56",image : STOREMACHINE56 },
-  { name: "STOREMACHINE57", slug:"storemachine57",image : STOREMACHINE57 },
-  { name: "STOREMACHINE58", slug:"storemachine58",image : STOREMACHINE58 },
-  { name: "STOREMACHINE59", slug:"storemachine59",image : STOREMACHINE59 },
-  { name: "STOREMACHINE60", slug:"storemachine60",image : STOREMACHINE60 },
-  { name: "SWRMETER", slug:"SWRMETER",image : SWRMETER },
-  { name: "HF ANTENNA SWITCH", slug:"HF-ANTENNA-SWITCH",image : HFANTENNASWITCH},
-  
-
-
-  
+  { name: "STOREMACHINE15", slug: "storemachine15", image: STOREMACHINE15 },
+  { name: "STOREMACHINE16", slug: "storemachine16", image: STOREMACHINE16 },
+  { name: "STOREMACHINE17", slug: "storemachine17", image: STOREMACHINE17 },
+  { name: "STOREMACHINE18", slug: "storemachine18", image: STOREMACHINE18 },
+  { name: "STOREMACHINE19", slug: "storemachine19", image: STOREMACHINE19 },
+  { name: "STOREMACHINE20", slug: "storemachine20", image: STOREMACHINE20 },
+  { name: "STOREMACHINE21", slug: "storemachine21", image: STOREMACHINE21 },
+  { name: "STOREMACHINE22", slug: "storemachine22", image: STOREMACHINE22 },
+  { name: "STOREMACHINE23", slug: "storemachine23", image: STOREMACHINE23 },
+  { name: "STOREMACHINE24", slug: "storemachine24", image: STOREMACHINE24 },
+  { name: "STOREMACHINE25", slug: "storemachine25", image: STOREMACHINE25 },
+  { name: "STOREMACHINE26", slug: "storemachine26", image: STOREMACHINE26 },
+  { name: "STOREMACHINE27", slug: "storemachine27", image: STOREMACHINE27 },
+  { name: "STOREMACHINE28", slug: "storemachine28", image: STOREMACHINE28 },
+  { name: "STOREMACHINE29", slug: "storemachine29", image: STOREMACHINE29 },
+  { name: "STOREMACHINE30", slug: "storemachine30", image: STOREMACHINE30 },
+  { name: "STOREMACHINE31", slug: "storemachine31", image: STOREMACHINE31 },
+  { name: "STOREMACHINE32", slug: "storemachine32", image: STOREMACHINE32 },
+  { name: "STOREMACHINE33", slug: "storemachine33", image: STOREMACHINE33 },
+  { name: "STOREMACHINE34", slug: "storemachine34", image: STOREMACHINE34 },
+  { name: "STOREMACHINE35", slug: "storemachine35", image: STOREMACHINE35 },
+  { name: "STOREMACHINE36", slug: "storemachine36", image: STOREMACHINE36 },
+  { name: "STOREMACHINE37", slug: "storemachine37", image: STOREMACHINE37 },
+  { name: "STOREMACHINE38", slug: "storemachine38", image: STOREMACHINE38 },
+  { name: "STOREMACHINE39", slug: "storemachine39", image: STOREMACHINE39 },
+  { name: "STOREMACHINE40", slug: "storemachine40", image: STOREMACHINE40 },
+  { name: "STOREMACHINE41", slug: "storemachine41", image: STOREMACHINE41 },
+  { name: "STOREMACHINE42", slug: "storemachine42", image: STOREMACHINE42 },
+  { name: "STOREMACHINE43", slug: "storemachine43", image: STOREMACHINE43 },
+  { name: "STOREMACHINE44", slug: "storemachine44", image: STOREMACHINE44 },
+  { name: "STOREMACHINE45", slug: "storemachine45", image: STOREMACHINE45 },
+  { name: "STOREMACHINE46", slug: "storemachine46", image: STOREMACHINE46 },
+  { name: "STOREMACHINE47", slug: "storemachine47", image: STOREMACHINE47 },
+  { name: "STOREMACHINE48", slug: "storemachine48", image: STOREMACHINE48 },
+  { name: "STOREMACHINE49", slug: "storemachine49", image: STOREMACHINE49 },
+  { name: "STOREMACHINE50", slug: "storemachine50", image: STOREMACHINE50 },
+  { name: "STOREMACHINE51", slug: "storemachine51", image: STOREMACHINE51 },
+  { name: "STOREMACHINE52", slug: "storemachine52", image: STOREMACHINE52 },
+  { name: "STOREMACHINE53", slug: "storemachine53", image: STOREMACHINE53 },
+  { name: "STOREMACHINE54", slug: "storemachine54", image: STOREMACHINE54 },
+  { name: "STOREMACHINE55", slug: "storemachine55", image: STOREMACHINE55 },
+  { name: "STOREMACHINE56", slug: "storemachine56", image: STOREMACHINE56 },
+  { name: "STOREMACHINE57", slug: "storemachine57", image: STOREMACHINE57 },
+  { name: "STOREMACHINE58", slug: "storemachine58", image: STOREMACHINE58 },
+  { name: "STOREMACHINE59", slug: "storemachine59", image: STOREMACHINE59 },
+  { name: "STOREMACHINE60", slug: "storemachine60", image: STOREMACHINE60 },
+  { name: "SWRMETER", slug: "SWRMETER", image: SWRMETER },
+  { name: "HF ANTENNA SWITCH", slug: "HF-ANTENNA-SWITCH", image: HFANTENNASWITCH },
+  { name: "ADitya", slug: "aditya", image: "https://ik.imagekit.io/rfcon123/Showroom/OIP.jpeg" },
 
 
 
@@ -612,18 +609,22 @@ const productsLocalData = [
 
 
 
-  
-  
-  
-  
-  
+
+
+
+
+
+
+
+
+
 
 
 ].map(product => ({
   ...product,
   slug: product.slug || product.name.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '')
 }));
- 
+
 export const productsWithSlugs = productsLocalData;
 
 const ProductShowroom = () => {
@@ -682,25 +683,25 @@ const ProductShowroom = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen px-4 py-10 md:px-10">
-<Helmet>
-  <title>Product Showroom | RF Connector - Synergy Telecom</title>
-  <meta
-    name="description"
-    content="Browse Synergy Telecom’s full product range including RF connectors, cables, antennas, adapters, and more at panaceaticsynergy.com."
-  />
-  <meta
-    name="keywords"
-    content="Synergy Telecom products, RF connectors, antennas, coaxial cables, adapters, microwave components, panaceaticsynergy.com"
-  />
-  <meta property="og:title" content="Synergy Telecom Product Showroom" />
-  <meta
-    property="og:description"
-    content="Explore our complete collection of RF and telecom products—connectors, antennas, adapters, cables, and tools."
-  />
-  <meta property="og:url" content="https://www.panaceaticsynergy.com/product-showroom" />
-  <meta property="og:type" content="website" />
-  <link rel="canonical" href="https://www.panaceaticsynergy.com/product-showroom" />
-</Helmet>
+      <Helmet>
+        <title>Product Showroom | RF Connector - Synergy Telecom</title>
+        <meta
+          name="description"
+          content="Browse Synergy Telecom’s full product range including RF connectors, cables, antennas, adapters, and more at panaceaticsynergy.com."
+        />
+        <meta
+          name="keywords"
+          content="Synergy Telecom products, RF connectors, antennas, coaxial cables, adapters, microwave components, panaceaticsynergy.com"
+        />
+        <meta property="og:title" content="Synergy Telecom Product Showroom" />
+        <meta
+          property="og:description"
+          content="Explore our complete collection of RF and telecom products—connectors, antennas, adapters, cables, and tools."
+        />
+        <meta property="og:url" content="https://www.panaceaticsynergy.com/product-showroom" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://www.panaceaticsynergy.com/product-showroom" />
+      </Helmet>
 
 
 
@@ -717,13 +718,13 @@ const ProductShowroom = () => {
 
         <div className="mb-10 max-w-lg mx-auto">
           <input
-  type="text"
-  placeholder="Search products..."
-  className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
-  value={searchTerm}
-  onChange={handleSearch}
-  aria-label="Search products"
-/>
+            type="text"
+            placeholder="Search products..."
+            className="w-full px-5 py-3 rounded-xl border border-blue-300 shadow-lg text-base transition focus:ring-4 focus:ring-blue-300 focus:border-blue-500 focus:outline-none focus:shadow-xl"
+            value={searchTerm}
+            onChange={handleSearch}
+            aria-label="Search products"
+          />
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
@@ -764,38 +765,38 @@ const ProductShowroom = () => {
           )}
         </div>
 
-      {/* 🔘 Compact Pagination */}
-      {totalPages > 1 && (
-        <div className="flex items-center justify-between mt-6 space-x-4 max-w-7xl mx-auto">
-          <div className="flex items-center space-x-2">
-            <select value={perPage} onChange={(e) => { setPerPage(Number(e.target.value)); setCurrentPage(1); }} className="text-sm px-2 py-1 border rounded" aria-label="Per page">
-              <option value={12}>12</option>
-              <option value={20}>20</option>
-              <option value={50}>50</option>
-            </select>
-            <span className="text-xs text-gray-500">/ {filteredProducts.length} items</span>
+        {/* 🔘 Compact Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-between mt-6 space-x-4 max-w-7xl mx-auto">
+            <div className="flex items-center space-x-2">
+              <select value={perPage} onChange={(e) => { setPerPage(Number(e.target.value)); setCurrentPage(1); }} className="text-sm px-2 py-1 border rounded" aria-label="Per page">
+                <option value={12}>12</option>
+                <option value={20}>20</option>
+                <option value={50}>50</option>
+              </select>
+              <span className="text-xs text-gray-500">/ {filteredProducts.length} items</span>
+            </div>
+
+            <nav className="flex items-center space-x-1" aria-label="Compact pagination">
+              <button onClick={() => goToPage(1)} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="First page">«</button>
+              <button onClick={prevPage} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="Previous page">‹</button>
+
+              {Array.from({ length: Math.min(5, totalPages) }).map((_, idx) => {
+                const start = Math.max(1, Math.min(currentPage - 2, totalPages - 4));
+                const page = start + idx;
+                if (page < 1 || page > totalPages) return null;
+                return (
+                  <button key={page} onClick={() => goToPage(page)} className={`px-2 py-1 text-sm rounded border ${page === currentPage ? 'bg-blue-600 text-white' : 'bg-white'}`}>{page}</button>
+                );
+              })}
+
+              <button onClick={nextPage} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Next page">›</button>
+              <button onClick={() => goToPage(totalPages)} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Last page">»</button>
+            </nav>
+
+            <div className="text-sm text-gray-600">Page {currentPage} of {totalPages}</div>
           </div>
-
-          <nav className="flex items-center space-x-1" aria-label="Compact pagination">
-            <button onClick={() => goToPage(1)} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="First page">«</button>
-            <button onClick={prevPage} disabled={currentPage === 1} className="px-2 py-1 text-sm rounded border" aria-label="Previous page">‹</button>
-
-            {Array.from({ length: Math.min(5, totalPages) }).map((_, idx) => {
-              const start = Math.max(1, Math.min(currentPage - 2, totalPages - 4));
-              const page = start + idx;
-              if (page < 1 || page > totalPages) return null;
-              return (
-                <button key={page} onClick={() => goToPage(page)} className={`px-2 py-1 text-sm rounded border ${page === currentPage ? 'bg-blue-600 text-white' : 'bg-white'}`}>{page}</button>
-              );
-            })}
-
-            <button onClick={nextPage} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Next page">›</button>
-            <button onClick={() => goToPage(totalPages)} disabled={currentPage === totalPages} className="px-2 py-1 text-sm rounded border" aria-label="Last page">»</button>
-          </nav>
-
-          <div className="text-sm text-gray-600">Page {currentPage} of {totalPages}</div>
-        </div>
-      )}
+        )}
 
         <div className="mt-16 text-center space-y-4">
           <p className="text-sm text-gray-600">

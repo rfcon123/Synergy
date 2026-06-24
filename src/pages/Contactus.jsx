@@ -95,11 +95,8 @@ const ContactUs = () => {
             <p className="text-gray-800 font-medium mb-1">Pradeep Kumar Agrawal</p>
             <p className="text-sm text-gray-600 mb-4">Director</p>
             <p className="text-gray-700 mb-1">SYNERGY TELECOM PVT LTD</p>
-<<<<<<< HEAD
             <p className="text-gray-700 mb-1">Plot No. 845, DSIIDC Industrial Area, Street No. 6, North Mundka Industrial, Mundka North, New Delhi-110041</p>
-=======
             <p className="text-gray-700 mb-1">KHASRA NO. 33/23, Mundka Industrial Area, Mundka, New Delhi, Delhi, 110041</p>
->>>>>>> 7380787f18f06fbc46e9dbf1783a5be2aa171a75
             <p className="mb-1">
               📧 <a href="mailto:pradeep@rfconnector.in" className="text-blue-600 hover:underline">pradeep@rfconnector.in</a>
             </p>
