@@ -595,7 +595,7 @@ const productsLocalData = [
   { name: "STOREMACHINE60", slug: "storemachine60", image: STOREMACHINE60 },
   { name: "SWRMETER", slug: "SWRMETER", image: SWRMETER },
   { name: "HF ANTENNA SWITCH", slug: "HF-ANTENNA-SWITCH", image: HFANTENNASWITCH },
-  { name: "ADitya", slug: "aditya", image: "https://ik.imagekit.io/rfcon123/Showroom/OIP.jpeg" },
+
 
 
 
