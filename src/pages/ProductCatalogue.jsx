@@ -404,6 +404,8 @@ const catalogueLinks = [
   { name: "RG58 AWG22 Solid copper", link: "/pdfs/RG58 AWG22 Solid copper.pdf" },
   { name: "TF5000 Coaxial Fixed Termination", link: "/pdfs/TF5000 Coaxial Fixed Termination.pdf" },
   { name: "WA770 RF Cable", link: "/pdfs/WA770 RF Cable.pdf" },
+  { name: "DDS_TO_RF_6G_Board_Specification_V01_EN", link: "/pdfs/DDS_TO_RF_6G_Board_Specification_V01_EN.pdf" },
+
 
   
   
