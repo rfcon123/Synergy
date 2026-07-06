@@ -22,6 +22,7 @@ const Header = () => {
         'Group Product Data Sheet',
         'Defence and Aerospace',
         'STK Documents',
+        'BEL Approved Products',
       ],
     },
     { title: 'Cable Creator' },
