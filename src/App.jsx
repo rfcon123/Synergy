@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetail';
 import DefenceandAerospace from './pages/DefenceandAerospace';
 import VideoGallery from './pages/VideoGallery';
 import ProductCatalogue from './pages/ProductCatalogue';
+import BelApprovedProducts from './pages/BelApprovedProducts';
 import LiionBattery from './pages/LiionBattery';
 import Certificates from './pages/Certificates';
 import ImageGallery from './pages/ImageGallery';
@@ -74,6 +75,8 @@ function App() {
         {/* Resources */}
         <Route path="/product-catalogue" element={<ProductCatalogue />} />
         <Route path="/product-catalogue/:slug" element={<ProductCatalogue />} />
+        <Route path="/bel-approved-products" element={<BelApprovedProducts />} />
+        <Route path="/bel-approved-products/:slug" element={<BelApprovedProducts />} />
         <Route path="/certificates" element={<Certificates />} />
         <Route path="/image-gallery" element={<ImageGallery />} />
         <Route path="/video-gallery" element={<VideoGallery />} />

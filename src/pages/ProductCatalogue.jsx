@@ -493,7 +493,14 @@ const slugify = (text) =>
   text.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)+/g, "");
 
 // Main Component
-const ProductCatalogue = () => {
+const ProductCatalogue = ({
+  pageTitle = "Product Catalogue",
+  pageDescription = "Browse our comprehensive collection of product catalogues.",
+  metaTitle = "Product Catalogue | Synergy Telecom",
+  routeBase = "/product-catalogue",
+  links = catalogueLinks,
+  backLabel = "Back to All Products",
+}) => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
@@ -501,7 +508,7 @@ const ProductCatalogue = () => {
   const [itemsPerPage, setItemsPerPage] = useState(12);
 
   // This filter is for the main catalogue view
-  const filteredLinks = catalogueLinks.filter((item) =>
+  const filteredLinks = links.filter((item) =>
     item.name.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -551,7 +558,7 @@ const ProductCatalogue = () => {
 
   // If a slug exists, we are on a single product's page.
   if (slug) {
-    const product = catalogueLinks.find((item) => slugify(item.name) === slug);
+    const product = links.find((item) => slugify(item.name) === slug);
 
     // If the product is not found, display a not-found message.
     if (!product) {
@@ -564,7 +571,7 @@ const ProductCatalogue = () => {
           <p className="mt-2 text-gray-500">The catalogue you requested does not exist.</p>
           <button
             className="mt-6 px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition"
-            onClick={() => navigate("/product-catalogue")}
+            onClick={() => navigate(routeBase)}
           >
             Back to Catalogue
           </button>
@@ -598,9 +605,9 @@ const ProductCatalogue = () => {
     <div className="mt-6">
       <button
         className="text-blue-600 hover:text-blue-800 hover:underline transition"
-        onClick={() => navigate("/product-catalogue")}
+        onClick={() => navigate(routeBase)}
       >
-        ← Back to All Products
+        ← {backLabel}
       </button>
     </div>
   </div>
@@ -613,13 +620,13 @@ const ProductCatalogue = () => {
   return (
     <div className="container mx-auto p-6">
       <Helmet>
-        <title>Product Catalogue | Synergy Telecom</title>
+        <title>{metaTitle}</title>
       </Helmet>
       {/* Search Bar and Header */}
       <div className="max-w-xl mx-auto text-center mb-12">
-        <h1 className="text-4xl font-bold text-gray-900 mb-4">Product Catalogue</h1>
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">{pageTitle}</h1>
         <p className="text-lg text-gray-600">
-          Browse our comprehensive collection of product catalogues.
+          {pageDescription}
         </p>
         <div className="mt-8">
           <input
@@ -638,7 +645,7 @@ const ProductCatalogue = () => {
           currentItems.map((item, index) => (
             <Link
               key={startIndex + index}
-              to={`/product-catalogue/${slugify(item.name)}`}
+              to={`${routeBase}/${slugify(item.name)}`}
               className="group bg-white border border-gray-200 hover:border-blue-500 rounded-lg shadow-md hover:shadow-xl p-6 flex flex-col justify-between text-center transition-transform transform hover:-translate-y-1"
             >
               {/* Icon */}
