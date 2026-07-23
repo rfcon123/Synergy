@@ -36,8 +36,8 @@ const catalogueLinks = [
   { name: "Waveguide Pressure Inlet ST-120CQBD-SY", link: "/pdfs/Waveguide Pressure Inlet ST-120CQBD-SY.pdf" },
   { name: "Waveguide Pressure Window ST-40MFC-SY-1", link: "/pdfs/Waveguide Pressure Window ST-40MFC-SY-1.pdf" },
   { name: "Waveguide Pressure- ST-70MFC-SY-1", link: "/pdfs/Waveguide Pressure- ST-70MFC-SY-1.pdf" },
-
-
+  { name: "2C_X_16sqmm_XCMK_Screened_Cable", link: "/pdfs/2C_X_16sqmm_XCMK_Screened_Cable.pdf" },
+  { name: "2C_X_25sqmm_XCMK_Screened_Cable", link: "/pdfs/2C_X_25sqmm_XCMK_Screened_Cable.pdf" },
 
 
 
