@@ -38,6 +38,8 @@ const catalogueLinks = [
   { name: "Waveguide Pressure- ST-70MFC-SY-1", link: "/pdfs/Waveguide Pressure- ST-70MFC-SY-1.pdf" },
   { name: "2C_X_16sqmm_XCMK_Screened_Cable", link: "/pdfs/2C_X_16sqmm_XCMK_Screened_Cable.pdf" },
   { name: "2C_X_25sqmm_XCMK_Screened_Cable", link: "/pdfs/2C_X_25sqmm_XCMK_Screened_Cable.pdf" },
+  { name: "ST-0460-SMA3", link: "/pdfs/ST-0460-SMA3.pdf" },
+  { name: "ST-0460-SMA4", link: "/pdfs/ST-0460-SMA4.pdf" },
 
 
 
