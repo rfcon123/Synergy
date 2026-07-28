@@ -3,6 +3,7 @@ import ProductCatalogue from './ProductCatalogue';
 
 const belApprovedProducts = [
   { name: 'series approved as on 08 JAN 2026', link: '/BEL Approved Products/STK- series approved as on 08 JAN 2026.pdf' },
+  { name: 'Synergy_approved_parts_in_BEL_as_onI_27_JUL_2026', link: '/BEL Approved Products/Synergy_approved_parts_in_BEL_as_onI_27_JUL_2026.pdf' }
 
 
 
