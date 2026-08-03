@@ -40,6 +40,16 @@ const catalogueLinks = [
   { name: "2C_X_25sqmm_XCMK_Screened_Cable", link: "/pdfs/2C_X_25sqmm_XCMK_Screened_Cable.pdf" },
   { name: "ST-0460-SMA3", link: "/pdfs/ST-0460-SMA3.pdf" },
   { name: "ST-0460-SMA4", link: "/pdfs/ST-0460-SMA4.pdf" },
+  { name: "16sqmm_ST_Screened_Cable", link: "/pdfs/16sqmm_ST_Screened_Cable.pdf" },
+  { name: "25sqmm_ST_Screened_Cable", link: "/pdfs/25sqmm_ST_Screened_Cable.pdf" },
+  { name: "ST-6GHz High Power", link: "/pdfs/ST-6GHz High Power.pdf" },
+  { name: "ST-8000-12000-100", link: "/pdfs/ST-8000-12000-100.pdf" },
+  { name: "ST-N-6GHz High Power-6GHz High Power", link: "/pdfs/ST-N-6GHz High Power-6GHz High Power.pdf" },
+  { name: "Waveguide to Coaxial Adapter-ST0008326", link: "/pdfs/Waveguide to Coaxial Adapter-ST0008326.pdf" },
+  { name: "Waveguide to Coaxial Adapter-ST00260308", link: "/pdfs/Waveguide to Coaxial Adapter-ST00260308.pdf" },
+  { name: "Wideband EMC Benchtop Power Amplifier 0.6GHz-6GHz", link: "/pdfs/Wideband EMC Benchtop Power Amplifier 0.6GHz-6GHz.pdf" },
+
+
 
 
 
