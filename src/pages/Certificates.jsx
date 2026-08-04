@@ -22,6 +22,10 @@ import EPRProposalPLASTICpage_1 from "../assets/certificate/EPR_Proposal-PLASTIC
 import EPRProposalPLASTICpage2 from "../assets/certificate/EPR_Proposal-PLASTIC_page-2.jpg";
 import EPRProposalPLASTIC_page3 from "../assets/certificate/EPR_Proposal-PLASTIC_page-3.jpg";
 import EPR_ProposalPLASTICpage4 from "../assets/certificate/EPR_Proposal-PLASTIC_page-4.jpg";
+import synergytelecomprivatelimited2026 from "../assets/certificate/synergy-telecom-private-limited-2026.jpg";
+import SYNERGYTELECOMPRIVATELIMITEDGPSRUQ from "../assets/certificate/SYNERGY-TELECOM-PRIVATE-LIMITED-GPSR-UQ.jpg";
+
+
 
 
 
@@ -50,6 +54,10 @@ const Certificates = () => {
     { src: EPRProposalPLASTICpage2, title: "EPR Proposal for Plastic Waste Management - Page 2" },
     { src: EPRProposalPLASTIC_page3, title: "EPR Proposal for Plastic Waste Management - Page 3" },
     { src: EPR_ProposalPLASTICpage4, title: "EPR Proposal for Plastic Waste Management - Page 4" },
+    { src: synergytelecomprivatelimited2026, title: "Synergy Telecom Private Limited - 2026" },
+    { src: SYNERGYTELECOMPRIVATELIMITEDGPSRUQ, title: "SYNERGY-TELECOM-PRIVATE-LIMITED-GPSR-UQ" }
+    
+
   ];
 
   return (
