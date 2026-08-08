@@ -560,6 +560,7 @@ const ProductCatalogue = ({
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(12);
+  const [diagramPage, setDiagramPage] = useState(1);
   const [selectedImage, setSelectedImage] = useState(null);
 
   // This filter is for the main catalogue view
@@ -572,7 +573,15 @@ const ProductCatalogue = ({
     setCurrentPage(1);
   }, [search, itemsPerPage]);
 
+  useEffect(() => {
+    setDiagramPage(1);
+  }, [diagramImages]);
+
   const totalPages = Math.max(1, Math.ceil(filteredLinks.length / itemsPerPage));
+  const diagramItemsPerPage = 9;
+  const diagramTotalPages = Math.max(1, Math.ceil(diagramImages.length / diagramItemsPerPage));
+  const diagramStartIndex = (diagramPage - 1) * diagramItemsPerPage;
+  const currentDiagramImages = diagramImages.slice(diagramStartIndex, diagramStartIndex + diagramItemsPerPage);
 
   // Helper to create page list with ellipses
   const getPageButtons = (totalPages, currentPage) => {
@@ -691,6 +700,18 @@ const ProductCatalogue = ({
             onChange={(e) => setSearch(e.target.value)}
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
+          {routeBase === "/bel-approved-products" && (
+            <div className="mt-4">
+              <a
+                href="https://www.google.com/search?q=site:panaceaticsynergy.com+BEL+Approved+Products"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+              >
+                Search BEL Approved Products on Google
+              </a>
+            </div>
+          )}
         </div>
       </div>
 
@@ -785,6 +806,10 @@ const ProductCatalogue = ({
               Prev
             </button>
 
+            <div className="hidden sm:flex items-center rounded-full bg-gray-100 px-3 py-1 text-sm text-gray-700">
+              Page {currentPage} of {totalPages}
+            </div>
+
             <div className="flex items-center space-x-1">
               {getPageButtons(totalPages, currentPage).map((p, idx) =>
                 p === "..." ? (
@@ -832,29 +857,55 @@ const ProductCatalogue = ({
           </div>
 
           {diagramImages.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {diagramImages.map((image, index) => (
-                <div
-                  key={index}
-                  onClick={() => setSelectedImage(image.src)}
-                  className="cursor-pointer group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-                >
-                  <div className="relative h-64 overflow-hidden">
-                    <img
-                      src={image.src}
-                      alt={image.title}
-                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-sm font-semibold">
-                      View Image
+            <>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {currentDiagramImages.map((image, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setSelectedImage(image.src)}
+                    className="cursor-pointer group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                  >
+                    <div className="relative h-64 overflow-hidden">
+                      <img
+                        src={image.src}
+                        alt={image.title}
+                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-sm font-semibold">
+                        View Image
+                      </div>
+                    </div>
+                    <div className="p-4 text-center">
+                      <h3 className="text-base font-semibold text-gray-800">{image.title}</h3>
                     </div>
                   </div>
-                  <div className="p-4 text-center">
-                    <h3 className="text-base font-semibold text-gray-800">{image.title}</h3>
+                ))}
+              </div>
+
+              {diagramTotalPages > 1 && (
+                <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
+                  <div className="rounded-full bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700">
+                    Page {diagramPage} of {diagramTotalPages}
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => setDiagramPage((page) => Math.max(1, page - 1))}
+                      disabled={diagramPage === 1}
+                      className={`px-4 py-2 rounded-md border ${diagramPage === 1 ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"}`}
+                    >
+                      Prev
+                    </button>
+                    <button
+                      onClick={() => setDiagramPage((page) => Math.min(diagramTotalPages, page + 1))}
+                      disabled={diagramPage === diagramTotalPages}
+                      className={`px-4 py-2 rounded-md border ${diagramPage === diagramTotalPages ? "text-gray-400 border-gray-200 bg-gray-100" : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50"}`}
+                    >
+                      Next
+                    </button>
                   </div>
                 </div>
-              ))}
-            </div>
+              )}
+            </>
           ) : (
             <div className="rounded-3xl border border-dashed border-gray-300 bg-white p-10 text-center shadow-sm">
               <p className="text-lg font-semibold text-gray-900">No BEL diagram images available yet.</p>
