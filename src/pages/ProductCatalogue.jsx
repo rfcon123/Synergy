@@ -551,12 +551,16 @@ const ProductCatalogue = ({
   routeBase = "/product-catalogue",
   links = catalogueLinks,
   backLabel = "Back to All Products",
+  diagramImages = [],
+  diagramTitle = "Diagram Images",
+  diagramDescription = "Browse approved diagram images for BEL documents.",
 }) => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(12);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   // This filter is for the main catalogue view
   const filteredLinks = links.filter((item) =>
@@ -816,6 +820,63 @@ const ProductCatalogue = ({
               Last
             </button>
           </div>
+        </div>
+      )}
+
+      {/* Diagram Image Section */}
+      {routeBase === "/bel-approved-products" && (
+        <div className="mt-16 max-w-6xl mx-auto">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900">{diagramTitle}</h2>
+            <p className="mt-2 text-gray-600">{diagramDescription}</p>
+          </div>
+
+          {diagramImages.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {diagramImages.map((image, index) => (
+                <div
+                  key={index}
+                  onClick={() => setSelectedImage(image.src)}
+                  className="cursor-pointer group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <div className="relative h-64 overflow-hidden">
+                    <img
+                      src={image.src}
+                      alt={image.title}
+                      className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-sm font-semibold">
+                      View Image
+                    </div>
+                  </div>
+                  <div className="p-4 text-center">
+                    <h3 className="text-base font-semibold text-gray-800">{image.title}</h3>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-3xl border border-dashed border-gray-300 bg-white p-10 text-center shadow-sm">
+              <p className="text-lg font-semibold text-gray-900">No BEL diagram images available yet.</p>
+              <p className="mt-3 text-gray-600">
+                Add image files under <code className="rounded bg-gray-100 px-1 py-0.5">public/BEL Approved Products/DIAGRAM IMAGE</code> and refresh the page.
+              </p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Modal View for Zoom */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black/80 flex items-center justify-center z-50"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img
+            src={selectedImage}
+            alt="Zoomed Diagram"
+            className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl"
+          />
         </div>
       )}
 

@@ -13,6 +13,26 @@ const belApprovedProducts = [
 
 ];
 
+const belDiagramImages = [
+  { title: 'CON CO-AXIAL 50 OHMS-1', src: '/BEL Approved Products/DIAGRAM IMAGE/CON CO-AXIAL 50 OHMS-1.webp' },
+  { title: '290-02G', src: '/BEL Approved Products/DIAGRAM IMAGE/290-02G.jpg' },
+  { title: '290-06G', src: '/BEL Approved Products/DIAGRAM IMAGE/290-06G.jpg' },
+  { title: '290-07G', src: '/BEL Approved Products/DIAGRAM IMAGE/290-07G.jpg' },
+  { title: '490-00G', src: '/BEL Approved Products/DIAGRAM IMAGE/490-00G.jpg' },
+  { title: '2HOLESFLANGEJACKRECEPTACLE WITHSHOULDERCONTACT', src: '/BEL Approved Products/DIAGRAM IMAGE/2HOLESFLANGEJACKRECEPTACLE WITHSHOULDERCONTACT.jpg' }
+
+
+
+
+
+
+
+
+
+
+
+];
+
 const BelApprovedProducts = () => (
   <ProductCatalogue
     pageTitle="BEL Approved Products"
@@ -21,6 +41,9 @@ const BelApprovedProducts = () => (
     routeBase="/bel-approved-products"
     links={belApprovedProducts}
     backLabel="Back to BEL Products"
+    diagramImages={belDiagramImages}
+    diagramTitle="BEL Diagram Images"
+    diagramDescription="View the BEL-approved diagram images available for these documents."
   />
 );
 
