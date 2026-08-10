@@ -561,6 +561,8 @@ const ProductCatalogue = ({
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(12);
   const [diagramPage, setDiagramPage] = useState(1);
+  const [diagramView, setDiagramView] = useState("grid");
+  const [diagramSearch, setDiagramSearch] = useState("");
   const [selectedImage, setSelectedImage] = useState(null);
 
   // This filter is for the main catalogue view
@@ -575,13 +577,16 @@ const ProductCatalogue = ({
 
   useEffect(() => {
     setDiagramPage(1);
-  }, [diagramImages]);
+  }, [diagramImages, diagramView, diagramSearch]);
 
   const totalPages = Math.max(1, Math.ceil(filteredLinks.length / itemsPerPage));
-  const diagramItemsPerPage = 9;
-  const diagramTotalPages = Math.max(1, Math.ceil(diagramImages.length / diagramItemsPerPage));
+  const diagramItemsPerPage = diagramView === "list" ? 6 : 9;
+  const filteredDiagramImages = diagramImages.filter((image) =>
+    image.title.toLowerCase().includes(diagramSearch.toLowerCase())
+  );
+  const diagramTotalPages = Math.max(1, Math.ceil(filteredDiagramImages.length / diagramItemsPerPage));
   const diagramStartIndex = (diagramPage - 1) * diagramItemsPerPage;
-  const currentDiagramImages = diagramImages.slice(diagramStartIndex, diagramStartIndex + diagramItemsPerPage);
+  const currentDiagramImages = filteredDiagramImages.slice(diagramStartIndex, diagramStartIndex + diagramItemsPerPage);
 
   // Helper to create page list with ellipses
   const getPageButtons = (totalPages, currentPage) => {
@@ -858,29 +863,79 @@ const ProductCatalogue = ({
 
           {diagramImages.length > 0 ? (
             <>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {currentDiagramImages.map((image, index) => (
-                  <div
-                    key={index}
-                    onClick={() => setSelectedImage(image.src)}
-                    className="cursor-pointer group overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <input
+                  type="text"
+                  value={diagramSearch}
+                  onChange={(e) => setDiagramSearch(e.target.value)}
+                  placeholder="Search image name..."
+                  className="w-full rounded-lg border border-gray-300 px-4 py-3 text-base focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-200 sm:max-w-md"
+                />
+                <div className="flex gap-2">
+                  <button
+                    onClick={() => setDiagramView("grid")}
+                    className={`rounded-full px-3 py-1.5 text-sm font-medium transition ${diagramView === "grid" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
                   >
-                    <div className="relative h-64 overflow-hidden">
+                    Grid
+                  </button>
+                  <button
+                    onClick={() => setDiagramView("list")}
+                    className={`rounded-full px-3 py-1.5 text-sm font-medium transition ${diagramView === "list" ? "bg-blue-600 text-white" : "bg-gray-100 text-gray-700 hover:bg-gray-200"}`}
+                  >
+                    List
+                  </button>
+                </div>
+              </div>
+
+              {filteredDiagramImages.length === 0 ? (
+                <div className="rounded-2xl border border-dashed border-gray-300 bg-white p-8 text-center text-sm text-gray-600">
+                  No images found for that name.
+                </div>
+              ) : diagramView === "grid" ? (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+                  {currentDiagramImages.map((image, index) => (
+                    <div
+                      key={index}
+                      onClick={() => setSelectedImage(image.src)}
+                      className="cursor-pointer group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+                    >
+                      <div className="relative h-36 overflow-hidden p-2">
+                        <img
+                          src={image.src}
+                          alt={image.title}
+                          className="object-cover w-full h-full rounded-xl border border-gray-100 transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-xs font-semibold">
+                          View
+                        </div>
+                      </div>
+                      <div className="px-3 pb-3 text-center">
+                        <h3 className="text-sm font-semibold text-gray-800 line-clamp-2">{image.title}</h3>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="space-y-3">
+                  {currentDiagramImages.map((image, index) => (
+                    <div
+                      key={index}
+                      onClick={() => setSelectedImage(image.src)}
+                      className="flex cursor-pointer items-center gap-3 rounded-xl border border-gray-100 bg-white p-3 shadow-sm transition hover:border-blue-500 hover:shadow-md"
+                    >
                       <img
                         src={image.src}
                         alt={image.title}
-                        className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
+                        className="h-14 w-14 flex-shrink-0 rounded-lg object-cover"
                       />
-                      <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center text-white text-sm font-semibold">
-                        View Image
+                      <div className="min-w-0 flex-1">
+                        <h3 className="text-sm font-semibold text-gray-800">{image.title}</h3>
+                        <p className="text-xs text-gray-500">Tap to view full image</p>
                       </div>
                     </div>
-                    <div className="p-4 text-center">
-                      <h3 className="text-base font-semibold text-gray-800">{image.title}</h3>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                  ))}
+                </div>
+              )}
 
               {diagramTotalPages > 1 && (
                 <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
