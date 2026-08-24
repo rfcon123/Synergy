@@ -6,6 +6,22 @@ import StyledButton from "../components/StyledButton";
 
 const catalogueLinks = [
   { name: "ST-Antenna Catalog", link: "/pdfs/ST- Antenna Catalog.pdf" },
+  { name: "50W UHF 8 cavity duplexer N female", link: "/pdfs/50W UHF 8 cavity duplexer N female.pdf" },
+  { name: "BROAD BAND POWER AMPLIFIER", link: "/pdfs/BROAD BAND POWER AMPLIFIER.pdf" },
+  { name: "Double-Ridged Horn Antenna ST-08180DRHA10Ng", link: "/pdfs/Double-Ridged Horn Antenna ST-08180DRHA10N.pdf" },
+  { name: "Double-Ridged Horn Antenna ST-10180DRHA10NK", link: "/pdfs/Double-Ridged Horn Antenna ST-10180DRHA10NK.pdf" },
+  { name: "Double-Ridged Horn Antenna ST-10180DRHA10SK", link: "/pdfs/Double-Ridged Horn Antenna ST-10180DRHA10SK.pdf" },
+  { name: "Double-Ridged Horn Antenna ST-40400DRHA15KZJ", link: "/pdfs/Double-Ridged Horn Antenna ST-40400DRHA15KZJ.pdf" },
+  { name: "Double-Ridged Horn Antenna ST-180400DRHA16K", link: "/pdfs/Double-Ridged Horn Antenna ST-180400DRHA16K.pdf" },
+  { name: "Low Loss Phase Stable Cable", link: "/pdfs/Low Loss Phase Stable Cable.pdf" },
+  { name: "SMA-BMA-1", link: "/pdfs/SMA-BMA-1.pdf" },
+  { name: "ST-Series Semi-Flexible Cable", link: "/pdfs/ST-Series Semi-Flexible Cable.pdf" },
+  { name: "Ultra Low Loss Phase Stable Cable", link: "/pdfs/Ultra Low Loss Phase Stable Cable.pdf" },
+
+
+
+
+
   { name: "Coaxial fixed attenuator ST1000-60", link: "/pdfs/Coaxial fixed attenuator ST1000-60.pdf" },
   { name: "16-1 ST-BT-X-N Bias Tee", link: "/pdfs/16-1 ST-BT-X-N Bias Tee.pdf" },
   { name: "CALIBRATION KIT-OPENS Model ST-3.5-18 50Ω", link: "/pdfs/CALIBRATION KIT-OPENS Model ST-3.5-18 50Ω.pdf" },
