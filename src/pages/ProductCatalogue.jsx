@@ -5,7 +5,29 @@ import { FiFileText } from "react-icons/fi";
 import StyledButton from "../components/StyledButton";
 
 const catalogueLinks = [
-  { name: "ST-Antenna Catalog", link: "/pdfs/ST- Antenna Catalog.pdf" },
+  { name: "6-8GHz Digital Noise Source Product Specifications", link: "/pdfs/6-8GHz Digital Noise Source Product Specifications.pdf" },
+  { name: "12-18GHz Digital Noise Source Product Specifications", link: "/pdfs/12-18GHz Digital Noise Source Product Specifications.pdf" },
+  { name: "10–13 GHz Digital Noise Source Product Specifications", link: "/pdfs/10–13 GHz Digital Noise Source Product Specifications.pdf" },
+  { name: "BROADBAND LOW NOISE AMPLIFIER SPECIFICATION", link: "/pdfs/BROADBAND LOW NOISE AMPLIFIER SPECIFICATION.pdf" },
+  { name: "BROADBAND LOW NOISE AMPLIFIER", link: "/pdfs/BROADBAND LOW NOISE AMPLIFIER.pdf" },
+  { name: "Digital Noise Source Product Specifications", link: "/pdfs/Digital Noise Source Product Specifications.pdf" },
+  { name: "End-Launch Waveguide to Coaxial Adapter-ST-07269SY", link: "/pdfs/End-Launch Waveguide to Coaxial Adapter-ST-07269SY.pdf" },
+  { name: "End-launch Waveguide to Coaxial Adapter-ST-092607SY", link: "/pdfs/End-launch Waveguide to Coaxial Adapter-ST-092607SY.pdf" },
+  { name: "Low Noise Amplifier", link: "/pdfs/Low Noise Amplifier.pdf" },
+  { name: "SMA-SMP", link: "/pdfs/SMA-SMP.pdf" },
+  { name: "SMP-ST", link: "/pdfs/SMP-ST.pdf" },
+  { name: "Specification for 6-12GHz Broadband High Power Amplifier", link: "/pdfs/Specification for 6-12GHz Broadband High Power Amplifier.pdf" },
+  { name: "ST PRODUCTS", link: "/pdfs/ST PRODUCTS.pdf" },
+  { name: "ST-200-1800-100_V1.0", link: "/pdfs/ST-200-1800-100_V1.0.pdf" },
+  { name: "ST-300-3000-100_V1.0", link: "/pdfs/ST-300-3000-100_V1.0.pdf" },
+  { name: "ST-900 Radio Modem Data Sheet", link: "/pdfs/ST-900 Radio Modem Data Sheet.pdf" },
+  { name: "ST-1000-6000-50_V1.0", link: "/pdfs/ST-1000-6000-50_V1.0.pdf" },
+  { name: "ST-2000-6000-120_V1.0", link: "/pdfs/ST-2000-6000-120_V1.0.pdf" },
+  { name: "ST-6000-18000-100_V1.0 Data sheet", link: "/pdfs/ST-6000-18000-100_V1.0 Data sheet.pdf" },
+  { name: "Waveguide High Power Fixed Attenuator ST-26789SY", link: "/pdfs/Waveguide High Power Fixed Attenuator ST-26789SY.pdf" },
+  { name: "Waveguide High Power Fixed Attenuator ST-072725SY", link: "/pdfs/Waveguide High Power Fixed Attenuator ST-072725SY.pdf" },
+  
+
   { name: "50W UHF 8 cavity duplexer N female", link: "/pdfs/50W UHF 8 cavity duplexer N female.pdf" },
   { name: "BROAD BAND POWER AMPLIFIER", link: "/pdfs/BROAD BAND POWER AMPLIFIER.pdf" },
   { name: "Double-Ridged Horn Antenna ST-08180DRHA10Ng", link: "/pdfs/Double-Ridged Horn Antenna ST-08180DRHA10N.pdf" },
