@@ -6,6 +6,14 @@ import StyledButton from "../components/StyledButton";
 
 const catalogueLinks = [
   { name: "6-8GHz Digital Noise Source Product Specifications", link: "/pdfs/6-8GHz Digital Noise Source Product Specifications.pdf" },
+  { name: "Coaxial Switches ST-10926", link: "/pdfs/Coaxial Switches ST-10926.pdf" },
+  { name: "Dual-polarized horn antenna-2-4GHz", link: "/pdfs/Dual-polarized horn antenna-2-4GHz.pdf" },
+  { name: "N(M)–N(F) DC-11G18G ADAPTER", link: "/pdfs/N(M)–N(F) DC-11G18G ADAPTER.pdf" },
+  { name: "SMA(M) –SMA(F) DC-1118GHz ADAPTERS", link: "/pdfs/SMA(M) –SMA(F) DC-1118GHz ADAPTERS.pdf" },
+  { name: "ST-SY-26L cable", link: "/pdfs/ST-SY-26L cable.pdf" },
+
+
+
   { name: "12-18GHz Digital Noise Source Product Specifications", link: "/pdfs/12-18GHz Digital Noise Source Product Specifications.pdf" },
   { name: "10–13 GHz Digital Noise Source Product Specifications", link: "/pdfs/10–13 GHz Digital Noise Source Product Specifications.pdf" },
   { name: "BROADBAND LOW NOISE AMPLIFIER SPECIFICATION", link: "/pdfs/BROADBAND LOW NOISE AMPLIFIER SPECIFICATION.pdf" },
