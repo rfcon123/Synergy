@@ -11,6 +11,15 @@ const catalogueLinks = [
   { name: "N(M)–N(F) DC-11G18G ADAPTER", link: "/pdfs/N(M)–N(F) DC-11G18G ADAPTER.pdf" },
   { name: "SMA(M) –SMA(F) DC-1118GHz ADAPTERS", link: "/pdfs/SMA(M) –SMA(F) DC-1118GHz ADAPTERS.pdf" },
   { name: "ST-SY-26L cable", link: "/pdfs/ST-SY-26L cable.pdf" },
+  { name: "50 W CW Broadband Power Amplifier Module", link: "/pdfs/50 W CW Broadband Power Amplifier Module.pdf" },
+  { name: "50W_PA_2.4GHz-5GHz_Specification", link: "/pdfs/50W_PA_2.4GHz-5GHz_Specification.pdf" },
+  { name: "50W_PA_5GHz-8GHz_Specification", link: "/pdfs/50W_PA_5GHz-8GHz_Specification.pdf" },
+  { name: "Antenna Product Microwave Antenna Specifications", link: "/pdfs/Antenna Product Microwave Antenna Specifications.pdf" },
+  { name: "Coaxial Mechanical Switch DC-18GHz", link: "/pdfs/Coaxial Mechanical Switch DC-18GHz.pdf" },
+  { name: "SMA-SMP-ST", link: "/pdfs/SMA-SMP-ST.pdf" },
+  { name: "ST-MIMO6", link: "/pdfs/ST-MIMO6.pdf" },
+  { name: "ST1000-60-6-B-N(F,F)", link: "/pdfs/ST1000-60-6-B-N(F,F).pdf" },
+
 
 
 
