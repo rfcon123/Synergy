@@ -300,7 +300,29 @@ import STOREMACHINE60 from '../assets/components/store machine 60.jpeg';
 import SWRMETER from '../assets/components/SWR METER.jpg';
 import HFANTENNASWITCH from '../assets/components/HF ANTENNA SWITCH.jpg';
 
-
+import SpectrumAnalyzerHP8560A50Hz29GHzII from '../assets/components/Spectrum Analyzer HP 8560A 50Hz-2.9GHz-II.jpeg';
+import SpectrumAnalyzerHP8560A50Hz29GHzIII from '../assets/components/Spectrum Analyzer HP 8560A 50Hz-2.9GHz-III.jpeg';
+import SpectrumAnalyzerHP8560A50Hz29GHzIV from '../assets/components/Spectrum Analyzer HP 8560A 50Hz-2.9GHz-IV.jpeg';
+import SpectrumAnalyzerHP8560A50Hz29GHzV from '../assets/components/Spectrum Analyzer HP 8560A 50Hz-2.9GHz-V.jpeg';
+import SpectrumAnalyzerHP8560A50Hz29GHzVI from '../assets/components/Spectrum Analyzer HP 8560A 50Hz-2.9GHz-VI.jpeg';
+import SpectrumAnalyzerHP8594E9KHz29GHzIII from '../assets/components/Spectrum Analyzer HP 8594E 9KHz-2.9GHz -III.jpeg';
+import SpectrumAnalyzerHP8594E9KHz29GHzII from '../assets/components/Spectrum Analyzer HP 8594E 9KHz-2.9GHz-II.jpeg';
+import SpectrumAnalyzerHP8594E9KHz29GHz from '../assets/components/Spectrum Analyzer HP 8594E 9KHz-2.9GHz.jpeg';
+import SpectrumAnalyzerHP8595E9KHz65GHzII from '../assets/components/Spectrum Analyzer HP 8595E 9KHz-6.5GHz-II.jpeg';
+import SpectrumAnalyzerHP8595E9KHz65GHzIII from '../assets/components/Spectrum Analyzer HP 8595E 9KHz-6.5GHz-III.jpeg';
+import SpectrumAnalyzerHP8593E9KHz22GHzII from '../assets/components/Spectrum Analyzer HP8593E 9KHz-22GHz-II.jpeg';
+import SpectrumAnalyzerHP8593E9KHz22GHzIII from '../assets/components/Spectrum Analyzer HP8593E 9KHz-22GHz-III.jpg';
+import SpectrumAnalyzerHP8593E9KHz22GHzV from '../assets/components/Spectrum Analyzer HP8593E 9KHz-22GHz-V.jpg';
+import SpectrumAnalyzerHP8593E9KHz22GHzVI from '../assets/components/Spectrum Analyzer HP8593E 9KHz-22GHz-VI.jpg';
+import SpectrumAnalyzerHP8593E9KHz22GHz from '../assets/components/Spectrum Analyzer HP8593E 9KHz-22GHz.jpeg';
+import SpectrumAnalyzerMS710E100KHz23GHzII from '../assets/components/Spectrum Analyzer MS710E 100KHz-23GHz-II.jpg';
+import SpectrumAnalyzerMS710E100KHz23GHzIII from '../assets/components/Spectrum Analyzer MS710E 100KHz-23GHz-III.jpg';
+import SpectrumAnalyzerMS710E100KHz23GHzV from '../assets/components/Spectrum Analyzer MS710E 100KHz-23GHz-V.jpg';
+import SpectrumAnalyzerMS710E100KHz23GHz from '../assets/components/Spectrum Analyzer MS710E 100KHz-23GHz.jpg';
+import SpectrumAnalyzerRSFSEM1079850020Hz265GHzII from '../assets/components/Spectrum Analyzer RS FSEM 1079-8500 20Hz-26.5GHz-II.jpeg';
+import SpectrumAnalyzerRSFSEM1079850020Hz265GHzIII from '../assets/components/Spectrum Analyzer RS FSEM 1079-8500 20Hz-26.5GHz-III.jpeg';
+import SpectrumAnalyzerRSFSEM1079850020Hz265GHzIV from '../assets/components/Spectrum Analyzer RS FSEM 1079-8500 20Hz-26.5GHz-IV.jpeg';
+import SpectrumAnalyzerRSFSEM1079850020Hz265GHz from '../assets/components/Spectrum Analyzer RS FSEM 1079-8500 20Hz-26.5GHz.jpeg';
 
 
 
@@ -595,26 +617,14 @@ const productsLocalData = [
   { name: "STOREMACHINE60", slug: "storemachine60", image: STOREMACHINE60 },
   { name: "SWRMETER", slug: "SWRMETER", image: SWRMETER },
   { name: "HF ANTENNA SWITCH", slug: "HF-ANTENNA-SWITCH", image: HFANTENNASWITCH },
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  { name: "SPECTRUM ANALYZER HP 8560A 50Hz-2.9GHz-II", slug: "SPECTRUM-ANALYZER-HP-8560A-50Hz-2.9GHz-II", image: SpectrumAnalyzerHP8560A50Hz29GHzII },
+  { name: "SPECTRUM ANALYZER MS710E 100KHz-23GHz-II", slug: "SPECTRUM-ANALYZER-MS710E-100KHz-23GHz-II", image: SpectrumAnalyzerMS710E100KHz23GHzII },
+  { name: "SPECTRUM ANALYZER MS710E 100KHz-23GHz-III", slug: "SPECTRUM-ANALYZER-MS710E-100KHz-23GHz-III", image: SpectrumAnalyzerMS710E100KHz23GHzIII },
+  { name: "SPECTRUM ANALYZER MS710E 100KHz-23GHz-V", slug: "SPECTRUM-ANALYZER-MS710E-100KHz-23GHz-V", image: SpectrumAnalyzerMS710E100KHz23GHzV },
+  { name: "SPECTRUM ANALYZER MS710E 100KHz-23GHz", slug: "SPECTRUM-ANALYZER-MS710E-100KHz-23GHz", image: SpectrumAnalyzerMS710E100KHz23GHz },
+  { name: "SPECTRUM ANALYZER RS FSEM 1079-8500 20Hz-26.5GHz-II", slug: "SPECTRUM-ANALYZER-RS-FSEM-1079-8500-20Hz-26.5GHz-II", image: SpectrumAnalyzerRSFSEM1079850020Hz265GHzII },
+  
+  
 
 
 
