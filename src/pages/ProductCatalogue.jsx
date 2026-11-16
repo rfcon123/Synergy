@@ -13,6 +13,30 @@ const catalogueLinks = [
 { name: "Hybrid Combiner 698-3800MHz", link: "/pdfs/Component/Hybrid Combiner 698-3800MHz.pdf" },
 { name: "Power Splitter 617-4200MHz", link: "/pdfs/Component/Power Splitter 617-4200MHz.pdf" },
 
+{ name: "20-500MHz Simulation direction diagram", link: "/pdfs/Component/data 1/20-500MHz Simulation direction diagram.pdf" },
+{ name: "2000M-8000MHz Biconical Antenna", link: "/pdfs/Component/data 1/2000M-8000MHz Biconical Antenna.pdf" },
+{ name: "30MHz-3000MH Diconical Antenna", link: "/pdfs/Component/data 1/30MHz-3000MH Diconical Antenna.pdf" },
+{ name: "Antenna technical parameter-7530-6000MHz", link: "/pdfs/Component/data 1/Antenna technical parameter-7530-6000MHz.pdf" },
+{ name: "Antenna technical parameter-antenna 1350-9500MHz", link: "/pdfs/Component/data 1/Antenna technical parameter-antenna 1350-9500MHz.pdf" },
+{ name: "BROAD BAND HORN ANTENNA", link: "/pdfs/Component/data 1/BROAD BAND HORN ANTENNA.pdf" },
+{ name: "clamp for 1-14 radiating cable", link: "/pdfs/Component/data 1/clamp for 1-14 radiating cable.pdf" },
+{ name: "Folded dipole", link: "/pdfs/Component/data 1/Folded dipole.pdf" },
+{ name: "GAIN HORN ANTENNA", link: "/pdfs/Component/data 1/GAIN HORN ANTENNA.pdf" },
+{ name: "GPS&BD Active Antenna", link: "/pdfs/Component/data 1/GPS&BD Active Antenna.pdf" },
+{ name: "HIGH EFFICIENCY 5KW FM", link: "/pdfs/Component/data 1/HIGH EFFICIENCY 5KW FM.pdf" },
+{ name: "ST-2. 1000W", link: "/pdfs/Component/data 1/ST-2. 1000W.pdf" },
+{ name: "ST-518D-5000W Digital TV Transmitter", link: "/pdfs/Component/data 1/ST-518D-5000W Digital TV Transmitter.pdf" },
+{ name: "ST-618F-5000W FM Transmitter(19inch)", link: "/pdfs/Component/data 1/ST-618F-5000W FM Transmitter(19inch).pdf" },
+{ name: "ST-A5 Airborne Low-Altitude Surveillance", link: "/pdfs/Component/data 1/ST-A5 Airborne Low-Altitude Surveillance.pdf" },
+{ name: "ST5-S Variable Attenuator", link: "/pdfs/Component/data 1/ST5-S Variable Attenuator.pdf" },
+{ name: "SY-2310-5000W FM Transmitter", link: "/pdfs/Component/data 1/SY-2310-5000W FM Transmitter.pdf" },
+{ name: "Technical proposal of Pneumatic Telescopic Mast CM.5811.H_4AGT - with tripod  - Synergy Telecom India", link: "/pdfs/Component/data 1/Technical proposal of Pneumatic Telescopic Mast CM.5811.H_4AGT - with tripod  - Synergy Telecom India.pdf" },
+{ name: "test report", link: "/pdfs/Component/data 1/test report.pdf" },
+{ name: "Waveguide Termination ST", link: "/pdfs/Component/data 1/Waveguide Termination ST.pdf" },
+
+
+
+
 { name: "12dBi_698-2700MHz X pol 12dB6i 5 °Directional Outdoor Antenna", link: "/pdfs/antennas/12dBi_698-2700MHz X pol 12dB6i 5 °Directional Outdoor Antenna.pdf" },
 { name: "4.3-10 connectors_22mm_Torque_Wrench", link: "/pdfs/antennas/4.3-10 connectors_22mm_Torque_Wrench.pdf" },
 { name: "4dBi_380-3800MHz dual port MI MO Indoor Omni Antenna", link: "/pdfs/antennas/4dBi_380-3800MHz dual port MI MO Indoor Omni Antenna.pdf" },
